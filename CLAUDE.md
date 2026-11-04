@@ -24,7 +24,7 @@ Fly Visuals is a vehicle wrap, custom sign, and window tinting studio based in N
 | `sync-and-publish.js` | Takes a JSON export of the Product Manager dashboard's `products` collection, converts it to `products-data.json`, runs `generate-products.js`, and copies everything into `dist/`. Usage: `node sync-and-publish.js <export.json>`. |
 | `generate-merchant-feed.js` | Reads `products/products-data.json`, writes `dist/google-merchant-feed.xml` (the Google Shopping feed). Run automatically by `sync-and-publish.js`; run alone with `node generate-merchant-feed.js`. |
 | `generate-policy-pages.js` | Builds the store policy pages Google Merchant Center requires: `/return-policy/`, `/shipping-policy/`, `/privacy-policy/`, `/terms/` (writes to repo root + `dist/`). Policy text lives in this file. Run by `sync-and-publish.js`; run alone with `node generate-policy-pages.js`. Footer links to these are in `products.html`, and `products/_product-template.html` (not bookonline.html). Policies cover online-store products only, not wraps/tint/installed services. Policy decisions (2026-10-13): custom items final sale, defects/our errors reprinted or refunded if reported within 7 days; free local pickup + US shipping (lower 48). |
-| `dist/` | Generated static site — **deploy this folder to Netlify** |
+| `dist/` | Generated static site — Netlify publishes this folder automatically on every push to `main` (GitHub repo Radomski13/FlyVisuals) |
 | `sitemap.xml` | Auto-generated inside `dist/` — submit to Google Search Console |
 | `FLYVISUALS_PROJECT.md` | Full business context, services, pricing, brand, SEO, todos |
 | `FLY_VISUALS_BRAND_CONTEXT.md` | Brand voice, tone, do-not-use list, preferred phrasing |
@@ -40,10 +40,10 @@ It's a Cowork Artifact with its own database (a `products` collection, one doc p
 1. Pull the current `products` collection with the Artifact tool's `read_db` action (`db_op: "list"`, `collection: "products"`).
 2. Save it as a JSON array of the flat docs (drop the `id`/`version`/wrapper, keep just `data`) to a local file.
 3. Run `node sync-and-publish.js <that-file>` — it rewrites `products/products-data.json`, regenerates every product page + the catalog grid via `generate-products.js`, regenerates `dist/google-merchant-feed.xml` via `generate-merchant-feed.js`, and copies everything into `dist/`.
-4. Deploy `dist/` to Netlify (drag the whole folder).
+4. Commit and push to `main` on GitHub (Radomski13/FlyVisuals). Netlify deploys `dist/` automatically within about a minute.
 5. Write the new `lastPublishedAt` (ISO timestamp) to the dashboard's `meta/status` doc via `write_db` so the dashboard reflects that the sync happened.
 
-Do this whenever Brian says "publish" (or similar) after editing in the dashboard — that's the agreed workflow (chosen over full auto-deploy, since the site isn't on git-connected Netlify continuous deployment). A brand-new product (a new slug that doesn't exist in `products/`) is created automatically by this same flow — `generate-products.js` makes the folder if it doesn't exist.
+Do this whenever Brian says "publish" (or similar) after editing in the dashboard — that's the agreed workflow (chosen over full auto-deploy, the site is git-connected: pushing to `main` publishes it). A brand-new product (a new slug that doesn't exist in `products/`) is created automatically by this same flow — `generate-products.js` makes the folder if it doesn't exist.
 
 The dashboard's per-product fields map onto `products-data.json` like this: `name` → both `panelHeading` and `productLabel`; `seoTitle`/`seoDescription` → `seo.title`/`seo.description`; `heroEyebrow`/`heroH1`/`heroSub` → `hero.*`; `catalogDesc`/`catalogCta`/`priceFrom` → `catalogCard.*`; `designFee`/`minQty`/`qtyStep`/`volumeDiscounts`/`sizes` → `pricing.*`; `imageUrl` → top-level `imageUrl` (also drives the Google Merchant feed — see below). `sync-and-publish.js` does this conversion — see `flatToNested()` in that file if the mapping ever needs to change.
 
