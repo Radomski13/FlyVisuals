@@ -1,0 +1,14 @@
+{
+  "name": "fly-visuals-generator",
+  "version": "1.0.0",
+  "description": "Static site generator for Fly Visuals",
+  "scripts": {
+    "generate": "node generate.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.0.0",
+    "jsdom": "^20.0.3",
+    "puppeteer": "^22.0.0",
+    "puppeteer-core": "^14.4.1"
+  }
+}

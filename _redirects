@@ -1,0 +1,81 @@
+# Fly Visuals — Netlify redirects
+# 301 redirects from deleted city subpages → main service pages
+# (Main pages are NPR-optimized; NPR and Port Richey customers land here cleanly.)
+
+# Deleted: new-port-richey city subpages
+/acrylic-signs/new-port-richey/             /acrylic-signs/             301
+/aluminum-signs/new-port-richey/            /aluminum-signs/            301
+/auto-tinting/new-port-richey/              /auto-tinting/              301
+/boat-graphics/new-port-richey/             /boat-graphics/             301
+/boat-wraps/new-port-richey/                /boat-wraps/                301
+/bus-wraps/new-port-richey/                 /bus-wraps/                 301
+/business-signs/new-port-richey/            /business-signs/            301
+/business-wraps/new-port-richey/            /business-wraps/            301
+/car-wraps/new-port-richey/                 /car-wraps/                 301
+/commercial-tinting/new-port-richey/        /commercial-tinting/        301
+/corrugated-signs/new-port-richey/          /corrugated-signs/          301
+/fleet-graphics/new-port-richey/            /fleet-graphics/            301
+/fleet-wraps/new-port-richey/               /vehicle-wraps/               301
+/floor-graphics/new-port-richey/            /floor-graphics/            301
+/indoor-signs/new-port-richey/              /indoor-signs/              301
+/logo-design/new-port-richey/               /logo-design/               301
+/magnets/new-port-richey/                   /magnets/                   301
+/outdoor-signs/new-port-richey/             /outdoor-signs/             301
+/residential-tinting/new-port-richey/       /residential-tinting/       301
+/trailer-wraps/new-port-richey/             /trailer-wraps/             301
+/truck-wraps/new-port-richey/               /truck-wraps/               301
+/van-wraps/new-port-richey/                 /van-wraps/                 301
+/vehicle-decals-lettering/new-port-richey/  /vehicle-decals-lettering/  301
+/vehicle-graphics/new-port-richey/          /vehicle-graphics/          301
+/vehicle-window-film/new-port-richey/       /vehicle-window-film/       301
+/vehicle-wraps/new-port-richey/             /vehicle-wraps/             301
+/vinyl-banners/new-port-richey/             /vinyl-banners/             301
+/wall-wraps/new-port-richey/                /wall-wraps/                301
+/window-graphics/new-port-richey/           /window-graphics/           301
+/yard-signs/new-port-richey/                /yard-signs/                301
+
+# Deleted: port-richey city subpages (consolidated into main NPR-optimized pages)
+/acrylic-signs/port-richey/                 /acrylic-signs/             301
+/aluminum-signs/port-richey/                /aluminum-signs/            301
+/auto-tinting/port-richey/                  /auto-tinting/              301
+/boat-graphics/port-richey/                 /boat-graphics/             301
+/boat-wraps/port-richey/                    /boat-wraps/                301
+/bus-wraps/port-richey/                     /bus-wraps/                 301
+/business-signs/port-richey/                /business-signs/            301
+/business-wraps/port-richey/                /business-wraps/            301
+/car-wraps/port-richey/                     /car-wraps/                 301
+/commercial-tinting/port-richey/            /commercial-tinting/        301
+/corrugated-signs/port-richey/              /corrugated-signs/          301
+/fleet-graphics/port-richey/                /fleet-graphics/            301
+/fleet-wraps/port-richey/                   /vehicle-wraps/               301
+/floor-graphics/port-richey/                /floor-graphics/            301
+/indoor-signs/port-richey/                  /indoor-signs/              301
+/logo-design/port-richey/                   /logo-design/               301
+/magnets/port-richey/                       /magnets/                   301
+/outdoor-signs/port-richey/                 /outdoor-signs/             301
+/residential-tinting/port-richey/           /residential-tinting/       301
+/trailer-wraps/port-richey/                 /trailer-wraps/             301
+/truck-wraps/port-richey/                   /truck-wraps/               301
+/van-wraps/port-richey/                     /van-wraps/                 301
+/vehicle-decals-lettering/port-richey/      /vehicle-decals-lettering/  301
+/vehicle-graphics/port-richey/              /vehicle-graphics/          301
+/vehicle-window-film/port-richey/           /vehicle-window-film/       301
+/vehicle-wraps/port-richey/                 /vehicle-wraps/             301
+/vinyl-banners/port-richey/                 /vinyl-banners/             301
+/wall-wraps/port-richey/                    /wall-wraps/                301
+/window-graphics/port-richey/               /window-graphics/           301
+/yard-signs/port-richey/                    /yard-signs/                301
+
+# 2026-10-14 — /fleet-wraps/ deleted (consolidated into /vehicle-wraps/ Commercial Vehicle Wraps)
+/fleet-wraps                                   /vehicle-wraps/  301!
+/fleet-wraps/                                  /vehicle-wraps/  301!
+/fleet-wraps/holiday/                          /vehicle-wraps/holiday/  301!
+/fleet-wraps/hudson-bayonet-point/             /vehicle-wraps/hudson-bayonet-point/  301!
+/fleet-wraps/land-o-lakes/                     /vehicle-wraps/land-o-lakes/  301!
+/fleet-wraps/odessa/                           /vehicle-wraps/odessa/  301!
+/fleet-wraps/spring-hill/                      /vehicle-wraps/spring-hill/  301!
+/fleet-wraps/tarpon-springs/                   /vehicle-wraps/tarpon-springs/  301!
+/fleet-wraps/trinity/                          /vehicle-wraps/trinity/  301!
+/fleet-wraps/wesley-chapel/                    /vehicle-wraps/wesley-chapel/  301!
+/fleet-wraps/zephyrhills/                      /vehicle-wraps/zephyrhills/  301!
+/fleet-wraps/*                                 /vehicle-wraps/  301!

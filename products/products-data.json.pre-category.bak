@@ -1,0 +1,3154 @@
+{
+  "products": [
+    {
+      "slug": "vinyl-banners",
+      "active": true,
+      "sortOrder": 20,
+      "seo": {
+        "title": "Vinyl Banners — Fly Visuals | Port Richey, FL",
+        "description": "Order custom vinyl banners online. Priced upfront, volume discounts applied automatically, pay securely with Stripe. Fly Visuals — Port Richey, FL."
+      },
+      "hero": {
+        "eyebrow": "Shop Vinyl Banners — Pay Securely with Stripe",
+        "h1": "VINYL BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Vinyl Banners",
+      "productLabel": "Vinyl Banners",
+      "catalogCard": {
+        "desc": "Full-color vinyl banners for grand openings, events, and promotions.",
+        "priceFrom": 45,
+        "cta": "Shop Vinyl Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x4",
+            "label": "2' × 4'",
+            "unitPrice": 45
+          },
+          {
+            "isCustom": false,
+            "key": "2x6",
+            "label": "2' × 6'",
+            "unitPrice": 65
+          },
+          {
+            "isCustom": false,
+            "key": "3x6",
+            "label": "3' × 6'",
+            "unitPrice": 85
+          },
+          {
+            "isCustom": false,
+            "key": "3x8",
+            "label": "3' × 8'",
+            "unitPrice": 110
+          },
+          {
+            "isCustom": false,
+            "key": "4x8",
+            "label": "4' × 8'",
+            "unitPrice": 130
+          },
+          {
+            "isCustom": true,
+            "key": "custom",
+            "label": "Custom Size",
+            "unitPrice": 150
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "yard-signs",
+      "active": true,
+      "sortOrder": 10,
+      "seo": {
+        "title": "Yard Signs — Fly Visuals | Port Richey, FL",
+        "description": "Order custom yard signs online. Priced upfront, volume discounts applied automatically, pay securely with Stripe. Fly Visuals — Port Richey, FL."
+      },
+      "hero": {
+        "eyebrow": "Shop Yard Signs — Pay Securely with Stripe",
+        "h1": "YARD SIGNS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in 2–3 days."
+      },
+      "panelHeading": "Yard Signs",
+      "productLabel": "Yard Signs",
+      "catalogCard": {
+        "desc": "Coroplast yard signs for real estate, contractors, and events. 2–3 day turnaround.",
+        "priceFrom": 8,
+        "cta": "Shop Yard Signs →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "18x24",
+            "label": "18\" × 24\"",
+            "unitPrice": 8
+          },
+          {
+            "isCustom": false,
+            "key": "24x36",
+            "label": "24\" × 36\"",
+            "unitPrice": 12
+          },
+          {
+            "isCustom": true,
+            "key": "custom",
+            "label": "Custom Size",
+            "unitPrice": 14
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "pole-banners",
+      "active": true,
+      "sortOrder": 30,
+      "seo": {
+        "title": "Custom Pole Banners | Fast Turnaround",
+        "description": "Custom printed banner made to hang from light poles and posts. Weather-resistant for street and campus use."
+      },
+      "hero": {
+        "eyebrow": "Shop Pole Banners — Pay Securely with Stripe",
+        "h1": "POLE BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Pole Banners",
+      "productLabel": "Pole Banners",
+      "catalogCard": {
+        "desc": "Custom printed banner made to hang from light poles and posts. Weather-resistant for street and campus use.",
+        "priceFrom": 27.9,
+        "cta": "Shop Pole Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x3",
+            "label": "2' x 3'",
+            "unitPrice": 27.9
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "outdoor-banners",
+      "active": true,
+      "sortOrder": 40,
+      "seo": {
+        "title": "Custom Outdoor Banners | Fast Turnaround",
+        "description": "Heavy-duty custom banner built for outdoor promotion. Weather-resistant with hemmed edges and grommets."
+      },
+      "hero": {
+        "eyebrow": "Shop Outdoor Banners — Pay Securely with Stripe",
+        "h1": "OUTDOOR BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Outdoor Banners",
+      "productLabel": "Outdoor Banners",
+      "catalogCard": {
+        "desc": "Heavy-duty custom banner built for outdoor promotion. Weather-resistant with hemmed edges and grommets.",
+        "priceFrom": 27.9,
+        "cta": "Shop Outdoor Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "3x2",
+            "label": "3' x 2'",
+            "unitPrice": 27.9
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "fabric-banners",
+      "active": true,
+      "sortOrder": 50,
+      "seo": {
+        "title": "Custom Fabric Banners | Fast Turnaround",
+        "description": "Polyester fabric banner with dye-sublimation print. Wrinkle-resistant, premium look for indoor displays and trade shows."
+      },
+      "hero": {
+        "eyebrow": "Shop Fabric Banners — Pay Securely with Stripe",
+        "h1": "FABRIC BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Fabric Banners",
+      "productLabel": "Fabric Banners",
+      "catalogCard": {
+        "desc": "Polyester fabric banner with dye-sublimation print. Wrinkle-resistant, premium look for indoor displays and trade shows.",
+        "priceFrom": 40.95,
+        "cta": "Shop Fabric Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "3x2",
+            "label": "3' x 2'",
+            "unitPrice": 40.95
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "vinyl-mesh-banners",
+      "active": true,
+      "sortOrder": 60,
+      "seo": {
+        "title": "Custom Vinyl Mesh Banners | Fast Turnaround",
+        "description": "8 oz PVC mesh banner that lets wind pass through. Ideal for fences, construction sites and windy locations."
+      },
+      "hero": {
+        "eyebrow": "Shop Vinyl Mesh Banners — Pay Securely with Stripe",
+        "h1": "VINYL MESH BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Vinyl Mesh Banners",
+      "productLabel": "Vinyl Mesh Banners",
+      "catalogCard": {
+        "desc": "8 oz PVC mesh banner that lets wind pass through. Ideal for fences, construction sites and windy locations.",
+        "priceFrom": 47.12,
+        "cta": "Shop Vinyl Mesh Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "3x2",
+            "label": "3' x 2'",
+            "unitPrice": 47.12
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "fence-banners",
+      "active": true,
+      "sortOrder": 70,
+      "seo": {
+        "title": "Custom Fence Banners | Fast Turnaround",
+        "description": "Custom banner for fences and barriers. Choose solid vinyl or mesh. Great for job sites, ball fields and events."
+      },
+      "hero": {
+        "eyebrow": "Shop Fence Banners — Pay Securely with Stripe",
+        "h1": "FENCE BANNERS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Fence Banners",
+      "productLabel": "Fence Banners",
+      "catalogCard": {
+        "desc": "Custom banner for fences and barriers. Choose solid vinyl or mesh. Great for job sites, ball fields and events.",
+        "priceFrom": 27.9,
+        "cta": "Shop Fence Banners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "3x2",
+            "label": "3' x 2'",
+            "unitPrice": 27.9
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banners"
+    },
+    {
+      "slug": "roll-up-retractable-banner-stands",
+      "active": true,
+      "sortOrder": 80,
+      "seo": {
+        "title": "Custom Roll Up Retractable Banner Stands | Fast Turnaround",
+        "description": "Spring-loaded roll-up stand with aluminum base and printed graphic. Sets up in seconds. Carry bag included."
+      },
+      "hero": {
+        "eyebrow": "Shop Roll Up Retractable Banner Stands — Pay Securely with Stripe",
+        "h1": "ROLL UP RETRACTABLE BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Roll Up Retractable Banner Stands",
+      "productLabel": "Roll Up Retractable Banner Stands",
+      "catalogCard": {
+        "desc": "Spring-loaded roll-up stand with aluminum base and printed graphic. Sets up in seconds. Carry bag included.",
+        "priceFrom": 133.78,
+        "cta": "Shop Roll Up Retractable Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x5",
+            "label": "2' x 5'",
+            "unitPrice": 133.78
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "steppy-retractable-banner-stands",
+      "active": true,
+      "sortOrder": 90,
+      "seo": {
+        "title": "Custom Steppy Retractable Banner Stands | Fast Turnaround",
+        "description": "Taller retractable banner stand with aluminum hardware and UV-printed graphic. Carry bag included."
+      },
+      "hero": {
+        "eyebrow": "Shop Steppy Retractable Banner Stands — Pay Securely with Stripe",
+        "h1": "STEPPY RETRACTABLE BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Steppy Retractable Banner Stands",
+      "productLabel": "Steppy Retractable Banner Stands",
+      "catalogCard": {
+        "desc": "Taller retractable banner stand with aluminum hardware and UV-printed graphic. Carry bag included.",
+        "priceFrom": 227.48,
+        "cta": "Shop Steppy Retractable Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x6.5",
+            "label": "2' x 6.5'",
+            "unitPrice": 227.48
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "l-style-banner-stands",
+      "active": true,
+      "sortOrder": 100,
+      "seo": {
+        "title": "Custom L-Style Banner Stands | Fast Turnaround",
+        "description": "Lightweight L-frame banner stand with printed polypropylene graphic. Good for retail and lobbies."
+      },
+      "hero": {
+        "eyebrow": "Shop L-Style Banner Stands — Pay Securely with Stripe",
+        "h1": "L-STYLE BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "L-Style Banner Stands",
+      "productLabel": "L-Style Banner Stands",
+      "catalogCard": {
+        "desc": "Lightweight L-frame banner stand with printed polypropylene graphic. Good for retail and lobbies.",
+        "priceFrom": 103.94,
+        "cta": "Shop L-Style Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x5.33",
+            "label": "2' x 5.33'",
+            "unitPrice": 103.94
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "korean-style-x-banner-stands",
+      "active": true,
+      "sortOrder": 110,
+      "seo": {
+        "title": "Custom Korean Style X Banner Stands | Fast Turnaround",
+        "description": "Lightweight X-frame stand with printed PVC graphic. Low-cost, portable promo display."
+      },
+      "hero": {
+        "eyebrow": "Shop Korean Style X Banner Stands — Pay Securely with Stripe",
+        "h1": "KOREAN STYLE X BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Korean Style X Banner Stands",
+      "productLabel": "Korean Style X Banner Stands",
+      "catalogCard": {
+        "desc": "Lightweight X-frame stand with printed PVC graphic. Low-cost, portable promo display.",
+        "priceFrom": 106.31,
+        "cta": "Shop Korean Style X Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x5",
+            "label": "2' x 5'",
+            "unitPrice": 106.31
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "adjustable-x-frame-banner-stands",
+      "active": true,
+      "sortOrder": 120,
+      "seo": {
+        "title": "Custom Adjustable X-Frame Banner Stands | Fast Turnaround",
+        "description": "Adjustable X-frame banner stand with 4-point tension. Portable single-sided display."
+      },
+      "hero": {
+        "eyebrow": "Shop Adjustable X-Frame Banner Stands — Pay Securely with Stripe",
+        "h1": "ADJUSTABLE X-FRAME BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Adjustable X-Frame Banner Stands",
+      "productLabel": "Adjustable X-Frame Banner Stands",
+      "catalogCard": {
+        "desc": "Adjustable X-frame banner stand with 4-point tension. Portable single-sided display.",
+        "priceFrom": 125.52,
+        "cta": "Shop Adjustable X-Frame Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2.5x5",
+            "label": "2.5' x 5'",
+            "unitPrice": 125.52
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "non-retractable-adjustable-banner-stands",
+      "active": true,
+      "sortOrder": 130,
+      "seo": {
+        "title": "Custom Non-Retractable Adjustable Banner Stands | Fast Turnaround",
+        "description": "Telescopic aluminum frame with fabric graphic. Adjustable height and width. Single or double sided."
+      },
+      "hero": {
+        "eyebrow": "Shop Non-Retractable Adjustable Banner Stands — Pay Securely with Stripe",
+        "h1": "NON-RETRACTABLE ADJUSTABLE BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Non-Retractable Adjustable Banner Stands",
+      "productLabel": "Non-Retractable Adjustable Banner Stands",
+      "catalogCard": {
+        "desc": "Telescopic aluminum frame with fabric graphic. Adjustable height and width. Single or double sided.",
+        "priceFrom": 295.82,
+        "cta": "Shop Non-Retractable Adjustable Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "5x6",
+            "label": "5' x 6'",
+            "unitPrice": 295.82
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "premium-ez-extend-banner-stands",
+      "active": true,
+      "sortOrder": 140,
+      "seo": {
+        "title": "Custom Premium EZ Extend Banner Stands | Fast Turnaround",
+        "description": "Tubular aluminum frame with stretch fabric graphic. Single or double sided. Great for events and trade shows."
+      },
+      "hero": {
+        "eyebrow": "Shop Premium EZ Extend Banner Stands — Pay Securely with Stripe",
+        "h1": "PREMIUM EZ EXTEND BANNER STANDS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Premium EZ Extend Banner Stands",
+      "productLabel": "Premium EZ Extend Banner Stands",
+      "catalogCard": {
+        "desc": "Tubular aluminum frame with stretch fabric graphic. Single or double sided. Great for events and trade shows.",
+        "priceFrom": 266.27,
+        "cta": "Shop Premium EZ Extend Banner Stands →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x6.5",
+            "label": "2' x 6.5'",
+            "unitPrice": 266.27
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Banner Stands"
+    },
+    {
+      "slug": "yard-signs-with-stakes",
+      "active": true,
+      "sortOrder": 150,
+      "seo": {
+        "title": "Custom Yard Signs with Stakes | Fast Turnaround",
+        "description": "Corrugated plastic yard sign with optional H-stakes. UV printed, single or double sided."
+      },
+      "hero": {
+        "eyebrow": "Shop Yard Signs with Stakes — Pay Securely with Stripe",
+        "h1": "YARD SIGNS WITH STAKES.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Yard Signs with Stakes",
+      "productLabel": "Yard Signs with Stakes",
+      "catalogCard": {
+        "desc": "Corrugated plastic yard sign with optional H-stakes. UV printed, single or double sided.",
+        "priceFrom": 30.53,
+        "cta": "Shop Yard Signs with Stakes →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "12x12",
+            "label": "12\" x 12\"",
+            "unitPrice": 30.53
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "big-head-cutouts",
+      "active": true,
+      "sortOrder": 160,
+      "seo": {
+        "title": "Custom Big Head Cutouts | Fast Turnaround",
+        "description": "Custom cut-to-shape face cutout sign. Fun for sports games, graduations and parties."
+      },
+      "hero": {
+        "eyebrow": "Shop Big Head Cutouts — Pay Securely with Stripe",
+        "h1": "BIG HEAD CUTOUTS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Big Head Cutouts",
+      "productLabel": "Big Head Cutouts",
+      "catalogCard": {
+        "desc": "Custom cut-to-shape face cutout sign. Fun for sports games, graduations and parties.",
+        "priceFrom": 31.13,
+        "cta": "Shop Big Head Cutouts →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "12x12",
+            "label": "12\" x 12\"",
+            "unitPrice": 31.13
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "pvc-foam-board-signs",
+      "active": true,
+      "sortOrder": 170,
+      "seo": {
+        "title": "Custom PVC Foam Board Signs | Fast Turnaround",
+        "description": "Rigid PVC foam board sign printed in full color. Lightweight for indoor signage and displays."
+      },
+      "hero": {
+        "eyebrow": "Shop PVC Foam Board Signs — Pay Securely with Stripe",
+        "h1": "PVC FOAM BOARD SIGNS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "PVC Foam Board Signs",
+      "productLabel": "PVC Foam Board Signs",
+      "catalogCard": {
+        "desc": "Rigid PVC foam board sign printed in full color. Lightweight for indoor signage and displays.",
+        "priceFrom": 10.78,
+        "cta": "Shop PVC Foam Board Signs →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "12x12",
+            "label": "12\" x 12\"",
+            "unitPrice": 10.78
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "sintra-boards",
+      "active": true,
+      "sortOrder": 180,
+      "seo": {
+        "title": "Custom Sintra Boards | Fast Turnaround",
+        "description": "Durable Sintra PVC board sign. Smooth, rigid and good for indoor or covered outdoor use."
+      },
+      "hero": {
+        "eyebrow": "Shop Sintra Boards — Pay Securely with Stripe",
+        "h1": "SINTRA BOARDS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Sintra Boards",
+      "productLabel": "Sintra Boards",
+      "catalogCard": {
+        "desc": "Durable Sintra PVC board sign. Smooth, rigid and good for indoor or covered outdoor use.",
+        "priceFrom": 40.5,
+        "cta": "Shop Sintra Boards →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x24",
+            "label": "6\" x 24\"",
+            "unitPrice": 40.5
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "gator-boards",
+      "active": true,
+      "sortOrder": 190,
+      "seo": {
+        "title": "Custom Gator Boards | Fast Turnaround",
+        "description": "Lightweight, warp-resistant foam board sign for presentations, displays and events."
+      },
+      "hero": {
+        "eyebrow": "Shop Gator Boards — Pay Securely with Stripe",
+        "h1": "GATOR BOARDS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Gator Boards",
+      "productLabel": "Gator Boards",
+      "catalogCard": {
+        "desc": "Lightweight, warp-resistant foam board sign for presentations, displays and events.",
+        "priceFrom": 36.27,
+        "cta": "Shop Gator Boards →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "12x16",
+            "label": "12\" x 16\"",
+            "unitPrice": 36.27
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "metal-a-frame-signs",
+      "active": true,
+      "sortOrder": 200,
+      "seo": {
+        "title": "Custom Metal A-Frame Signs | Fast Turnaround",
+        "description": "Steel A-frame sidewalk sign with printed inserts. Double sided, portable."
+      },
+      "hero": {
+        "eyebrow": "Shop Metal A-Frame Signs — Pay Securely with Stripe",
+        "h1": "METAL A-FRAME SIGNS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Metal A-Frame Signs",
+      "productLabel": "Metal A-Frame Signs",
+      "catalogCard": {
+        "desc": "Steel A-frame sidewalk sign with printed inserts. Double sided, portable.",
+        "priceFrom": 209.89,
+        "cta": "Shop Metal A-Frame Signs →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "24x36",
+            "label": "24\" x 36\"",
+            "unitPrice": 209.89
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "plastic-a-frame-signs",
+      "active": true,
+      "sortOrder": 210,
+      "seo": {
+        "title": "Custom Plastic A-Frame Signs | Fast Turnaround",
+        "description": "Weather-resistant plastic A-frame sidewalk sign with printed panels. Double sided."
+      },
+      "hero": {
+        "eyebrow": "Shop Plastic A-Frame Signs — Pay Securely with Stripe",
+        "h1": "PLASTIC A-FRAME SIGNS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Plastic A-Frame Signs",
+      "productLabel": "Plastic A-Frame Signs",
+      "catalogCard": {
+        "desc": "Weather-resistant plastic A-frame sidewalk sign with printed panels. Double sided.",
+        "priceFrom": 222.59,
+        "cta": "Shop Plastic A-Frame Signs →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "24x36",
+            "label": "24\" x 36\"",
+            "unitPrice": 222.59
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "poster-signs",
+      "active": true,
+      "sortOrder": 220,
+      "seo": {
+        "title": "Custom Poster Signs | Fast Turnaround",
+        "description": "Full-color printed poster on premium paper. Standard or custom sizes for retail, office and events."
+      },
+      "hero": {
+        "eyebrow": "Shop Poster Signs — Pay Securely with Stripe",
+        "h1": "POSTER SIGNS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Poster Signs",
+      "productLabel": "Poster Signs",
+      "catalogCard": {
+        "desc": "Full-color printed poster on premium paper. Standard or custom sizes for retail, office and events.",
+        "priceFrom": 53.25,
+        "cta": "Shop Poster Signs →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x10",
+            "label": "8\" x 10\"",
+            "unitPrice": 53.25
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Custom Signs"
+    },
+    {
+      "slug": "table-runners",
+      "active": true,
+      "sortOrder": 230,
+      "seo": {
+        "title": "Custom Table Runners | Fast Turnaround",
+        "description": "Printed fabric table runner to brand any event table."
+      },
+      "hero": {
+        "eyebrow": "Shop Table Runners — Pay Securely with Stripe",
+        "h1": "TABLE RUNNERS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Table Runners",
+      "productLabel": "Table Runners",
+      "catalogCard": {
+        "desc": "Printed fabric table runner to brand any event table.",
+        "priceFrom": 60.86,
+        "cta": "Shop Table Runners →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x7.5",
+            "label": "2' x 7.5'",
+            "unitPrice": 60.86
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "stretch-table-covers",
+      "active": true,
+      "sortOrder": 240,
+      "seo": {
+        "title": "Custom Stretch Table Covers | Fast Turnaround",
+        "description": "Fitted spandex-style stretch table cover with full-color print. Tight, modern look."
+      },
+      "hero": {
+        "eyebrow": "Shop Stretch Table Covers — Pay Securely with Stripe",
+        "h1": "STRETCH TABLE COVERS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Stretch Table Covers",
+      "productLabel": "Stretch Table Covers",
+      "catalogCard": {
+        "desc": "Fitted spandex-style stretch table cover with full-color print. Tight, modern look.",
+        "priceFrom": 141.26,
+        "cta": "Shop Stretch Table Covers →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "4x2.5",
+            "label": "4' x 2.5'",
+            "unitPrice": 141.26
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "premium-table-covers",
+      "active": true,
+      "sortOrder": 250,
+      "seo": {
+        "title": "Custom Premium Table Covers | Fast Turnaround",
+        "description": "Draped polyester table cover with dye-sublimation print. Covers front and sides."
+      },
+      "hero": {
+        "eyebrow": "Shop Premium Table Covers — Pay Securely with Stripe",
+        "h1": "PREMIUM TABLE COVERS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Premium Table Covers",
+      "productLabel": "Premium Table Covers",
+      "catalogCard": {
+        "desc": "Draped polyester table cover with dye-sublimation print. Covers front and sides.",
+        "priceFrom": 127.56,
+        "cta": "Shop Premium Table Covers →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "4x2.5",
+            "label": "4' x 2.5'",
+            "unitPrice": 127.56
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "fitted-table-covers",
+      "active": true,
+      "sortOrder": 260,
+      "seo": {
+        "title": "Custom Fitted Table Covers | Fast Turnaround",
+        "description": "Tailored fitted table cover with printed logo. Clean, box-style fit."
+      },
+      "hero": {
+        "eyebrow": "Shop Fitted Table Covers — Pay Securely with Stripe",
+        "h1": "FITTED TABLE COVERS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Fitted Table Covers",
+      "productLabel": "Fitted Table Covers",
+      "catalogCard": {
+        "desc": "Tailored fitted table cover with printed logo. Clean, box-style fit.",
+        "priceFrom": 144.36,
+        "cta": "Shop Fitted Table Covers →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "4x2.5",
+            "label": "4' x 2.5'",
+            "unitPrice": 144.36
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "straight-pillow-case-backdrop-displays",
+      "active": true,
+      "sortOrder": 270,
+      "seo": {
+        "title": "Custom Straight Pillow Case Backdrop Displays | Fast Turnaround",
+        "description": "Straight tube-frame backdrop with zip-on pillowcase fabric graphic. Tool-free setup."
+      },
+      "hero": {
+        "eyebrow": "Shop Straight Pillow Case Backdrop Displays — Pay Securely with Stripe",
+        "h1": "STRAIGHT PILLOW CASE BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Straight Pillow Case Backdrop Displays",
+      "productLabel": "Straight Pillow Case Backdrop Displays",
+      "catalogCard": {
+        "desc": "Straight tube-frame backdrop with zip-on pillowcase fabric graphic. Tool-free setup.",
+        "priceFrom": 629.42,
+        "cta": "Shop Straight Pillow Case Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 629.42
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "curved-pillow-case-backdrop-displays",
+      "active": true,
+      "sortOrder": 280,
+      "seo": {
+        "title": "Custom Curved Pillow Case Backdrop Displays | Fast Turnaround",
+        "description": "Curved tube-frame backdrop with pillowcase fabric graphic for added depth."
+      },
+      "hero": {
+        "eyebrow": "Shop Curved Pillow Case Backdrop Displays — Pay Securely with Stripe",
+        "h1": "CURVED PILLOW CASE BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Curved Pillow Case Backdrop Displays",
+      "productLabel": "Curved Pillow Case Backdrop Displays",
+      "catalogCard": {
+        "desc": "Curved tube-frame backdrop with pillowcase fabric graphic for added depth.",
+        "priceFrom": 524.78,
+        "cta": "Shop Curved Pillow Case Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 524.78
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "straight-pop-up-backdrop-displays",
+      "active": true,
+      "sortOrder": 290,
+      "seo": {
+        "title": "Custom Straight Pop Up Backdrop Displays | Fast Turnaround",
+        "description": "Collapsible pop-up frame with fabric graphic. Fast setup for booths and events."
+      },
+      "hero": {
+        "eyebrow": "Shop Straight Pop Up Backdrop Displays — Pay Securely with Stripe",
+        "h1": "STRAIGHT POP UP BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Straight Pop Up Backdrop Displays",
+      "productLabel": "Straight Pop Up Backdrop Displays",
+      "catalogCard": {
+        "desc": "Collapsible pop-up frame with fabric graphic. Fast setup for booths and events.",
+        "priceFrom": 605.19,
+        "cta": "Shop Straight Pop Up Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 605.19
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "curved-pop-up-backdrop-displays",
+      "active": true,
+      "sortOrder": 300,
+      "seo": {
+        "title": "Custom Curved Pop Up Backdrop Displays | Fast Turnaround",
+        "description": "Curved pop-up frame with printed fabric graphic. Quick setup, wraparound look."
+      },
+      "hero": {
+        "eyebrow": "Shop Curved Pop Up Backdrop Displays — Pay Securely with Stripe",
+        "h1": "CURVED POP UP BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Curved Pop Up Backdrop Displays",
+      "productLabel": "Curved Pop Up Backdrop Displays",
+      "catalogCard": {
+        "desc": "Curved pop-up frame with printed fabric graphic. Quick setup, wraparound look.",
+        "priceFrom": 611.94,
+        "cta": "Shop Curved Pop Up Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 611.94
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "straight-wall-box-backdrop-displays",
+      "active": true,
+      "sortOrder": 310,
+      "seo": {
+        "title": "Custom Straight Wall Box Backdrop Displays | Fast Turnaround",
+        "description": "Box-style frame backdrop with deep sides for a structured booth wall."
+      },
+      "hero": {
+        "eyebrow": "Shop Straight Wall Box Backdrop Displays — Pay Securely with Stripe",
+        "h1": "STRAIGHT WALL BOX BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Straight Wall Box Backdrop Displays",
+      "productLabel": "Straight Wall Box Backdrop Displays",
+      "catalogCard": {
+        "desc": "Box-style frame backdrop with deep sides for a structured booth wall.",
+        "priceFrom": 1084.23,
+        "cta": "Shop Straight Wall Box Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "10x8",
+            "label": "10' x 8'",
+            "unitPrice": 1084.23
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "adjustable-backdrop-displays",
+      "active": true,
+      "sortOrder": 320,
+      "seo": {
+        "title": "Custom Adjustable Backdrop Displays | Fast Turnaround",
+        "description": "Telescopic adjustable backdrop with printed fabric. Change height and width per event."
+      },
+      "hero": {
+        "eyebrow": "Shop Adjustable Backdrop Displays — Pay Securely with Stripe",
+        "h1": "ADJUSTABLE BACKDROP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Adjustable Backdrop Displays",
+      "productLabel": "Adjustable Backdrop Displays",
+      "catalogCard": {
+        "desc": "Telescopic adjustable backdrop with printed fabric. Change height and width per event.",
+        "priceFrom": 287.01,
+        "cta": "Shop Adjustable Backdrop Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "5x6",
+            "label": "5' x 6'",
+            "unitPrice": 287.01
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "step-repeat-straight-pop-up-displays",
+      "active": true,
+      "sortOrder": 330,
+      "seo": {
+        "title": "Custom Step & Repeat Straight Pop Up Displays | Fast Turnaround",
+        "description": "Step and repeat backdrop on a pop-up frame. Repeated logo pattern for photo walls."
+      },
+      "hero": {
+        "eyebrow": "Shop Step & Repeat Straight Pop Up Displays — Pay Securely with Stripe",
+        "h1": "STEP & REPEAT STRAIGHT POP UP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Step & Repeat Straight Pop Up Displays",
+      "productLabel": "Step & Repeat Straight Pop Up Displays",
+      "catalogCard": {
+        "desc": "Step and repeat backdrop on a pop-up frame. Repeated logo pattern for photo walls.",
+        "priceFrom": 629.68,
+        "cta": "Shop Step & Repeat Straight Pop Up Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 629.68
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "step-repeat-curved-pop-up-displays",
+      "active": true,
+      "sortOrder": 340,
+      "seo": {
+        "title": "Custom Step & Repeat Curved Pop Up Displays | Fast Turnaround",
+        "description": "Curved pop-up step and repeat backdrop for red-carpet and photo areas."
+      },
+      "hero": {
+        "eyebrow": "Shop Step & Repeat Curved Pop Up Displays — Pay Securely with Stripe",
+        "h1": "STEP & REPEAT CURVED POP UP DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Step & Repeat Curved Pop Up Displays",
+      "productLabel": "Step & Repeat Curved Pop Up Displays",
+      "catalogCard": {
+        "desc": "Curved pop-up step and repeat backdrop for red-carpet and photo areas.",
+        "priceFrom": 674.28,
+        "cta": "Shop Step & Repeat Curved Pop Up Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 674.28
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "straight-pillow-case-step-repeat-displays",
+      "active": true,
+      "sortOrder": 350,
+      "seo": {
+        "title": "Custom Straight Pillow Case Step & Repeat Displays | Fast Turnaround",
+        "description": "Straight tube-frame step and repeat with pillowcase fabric graphic."
+      },
+      "hero": {
+        "eyebrow": "Shop Straight Pillow Case Step & Repeat Displays — Pay Securely with Stripe",
+        "h1": "STRAIGHT PILLOW CASE STEP & REPEAT DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Straight Pillow Case Step & Repeat Displays",
+      "productLabel": "Straight Pillow Case Step & Repeat Displays",
+      "catalogCard": {
+        "desc": "Straight tube-frame step and repeat with pillowcase fabric graphic.",
+        "priceFrom": 533.46,
+        "cta": "Shop Straight Pillow Case Step & Repeat Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 533.46
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "step-repeat-curved-pillow-case-displays",
+      "active": true,
+      "sortOrder": 360,
+      "seo": {
+        "title": "Custom Step & Repeat Curved Pillow Case Displays | Fast Turnaround",
+        "description": "Curved tube-frame step and repeat with pillowcase fabric graphic."
+      },
+      "hero": {
+        "eyebrow": "Shop Step & Repeat Curved Pillow Case Displays — Pay Securely with Stripe",
+        "h1": "STEP & REPEAT CURVED PILLOW CASE DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Step & Repeat Curved Pillow Case Displays",
+      "productLabel": "Step & Repeat Curved Pillow Case Displays",
+      "catalogCard": {
+        "desc": "Curved tube-frame step and repeat with pillowcase fabric graphic.",
+        "priceFrom": 501.25,
+        "cta": "Shop Step & Repeat Curved Pillow Case Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "8x8",
+            "label": "8' x 8'",
+            "unitPrice": 501.25
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "step-repeat-straight-wall-box-displays",
+      "active": true,
+      "sortOrder": 370,
+      "seo": {
+        "title": "Custom Step & Repeat Straight Wall-Box Displays | Fast Turnaround",
+        "description": "Wall-box frame step and repeat backdrop with structured sides."
+      },
+      "hero": {
+        "eyebrow": "Shop Step & Repeat Straight Wall-Box Displays — Pay Securely with Stripe",
+        "h1": "STEP & REPEAT STRAIGHT WALL-BOX DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Step & Repeat Straight Wall-Box Displays",
+      "productLabel": "Step & Repeat Straight Wall-Box Displays",
+      "catalogCard": {
+        "desc": "Wall-box frame step and repeat backdrop with structured sides.",
+        "priceFrom": 792.42,
+        "cta": "Shop Step & Repeat Straight Wall-Box Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "10x8",
+            "label": "10' x 8'",
+            "unitPrice": 792.42
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "step-repeat-adjustable-straight-displays",
+      "active": true,
+      "sortOrder": 380,
+      "seo": {
+        "title": "Custom Step & Repeat Adjustable Straight Displays | Fast Turnaround",
+        "description": "Adjustable telescopic step and repeat backdrop. Resize for any space."
+      },
+      "hero": {
+        "eyebrow": "Shop Step & Repeat Adjustable Straight Displays — Pay Securely with Stripe",
+        "h1": "STEP & REPEAT ADJUSTABLE STRAIGHT DISPLAYS.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Step & Repeat Adjustable Straight Displays",
+      "productLabel": "Step & Repeat Adjustable Straight Displays",
+      "catalogCard": {
+        "desc": "Adjustable telescopic step and repeat backdrop. Resize for any space.",
+        "priceFrom": 287.01,
+        "cta": "Shop Step & Repeat Adjustable Straight Displays →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "5x6",
+            "label": "5' x 6'",
+            "unitPrice": 287.01
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Trade Show Displays"
+    },
+    {
+      "slug": "rectangle-flags",
+      "active": true,
+      "sortOrder": 390,
+      "seo": {
+        "title": "Custom Rectangle Flags | Fast Turnaround",
+        "description": "Custom printed rectangle flag for poles, walls and events."
+      },
+      "hero": {
+        "eyebrow": "Shop Rectangle Flags — Pay Securely with Stripe",
+        "h1": "RECTANGLE FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Rectangle Flags",
+      "productLabel": "Rectangle Flags",
+      "catalogCard": {
+        "desc": "Custom printed rectangle flag for poles, walls and events.",
+        "priceFrom": 38.12,
+        "cta": "Shop Rectangle Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "3x2",
+            "label": "3' x 2'",
+            "unitPrice": 38.12
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "personalized-flags",
+      "active": true,
+      "sortOrder": 400,
+      "seo": {
+        "title": "Custom Personalized Flags | Fast Turnaround",
+        "description": "Custom flag printed with your design, logo or photo."
+      },
+      "hero": {
+        "eyebrow": "Shop Personalized Flags — Pay Securely with Stripe",
+        "h1": "PERSONALIZED FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Personalized Flags",
+      "productLabel": "Personalized Flags",
+      "catalogCard": {
+        "desc": "Custom flag printed with your design, logo or photo.",
+        "priceFrom": 26.63,
+        "cta": "Shop Personalized Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "1x2",
+            "label": "1' x 2'",
+            "unitPrice": 26.63
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "feather-flags",
+      "active": true,
+      "sortOrder": 410,
+      "seo": {
+        "title": "Custom Feather Flags | Fast Turnaround",
+        "description": "Feather-shaped advertising flag with pole and base. Single or double sided."
+      },
+      "hero": {
+        "eyebrow": "Shop Feather Flags — Pay Securely with Stripe",
+        "h1": "FEATHER FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Feather Flags",
+      "productLabel": "Feather Flags",
+      "catalogCard": {
+        "desc": "Feather-shaped advertising flag with pole and base. Single or double sided.",
+        "priceFrom": 174.49,
+        "cta": "Shop Feather Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "1.5x5.5",
+            "label": "1.5' x 5.5'",
+            "unitPrice": 174.49
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "blade-flags",
+      "active": true,
+      "sortOrder": 420,
+      "seo": {
+        "title": "Custom Blade Flags | Fast Turnaround",
+        "description": "Blade-style advertising flag with pole and base options for grass or pavement."
+      },
+      "hero": {
+        "eyebrow": "Shop Blade Flags — Pay Securely with Stripe",
+        "h1": "BLADE FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Blade Flags",
+      "productLabel": "Blade Flags",
+      "catalogCard": {
+        "desc": "Blade-style advertising flag with pole and base options for grass or pavement.",
+        "priceFrom": 167.46,
+        "cta": "Shop Blade Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "1.5x5.5",
+            "label": "1.5' x 5.5'",
+            "unitPrice": 167.46
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "teardrop-flags",
+      "active": true,
+      "sortOrder": 430,
+      "seo": {
+        "title": "Custom Teardrop Flags | Fast Turnaround",
+        "description": "Teardrop flag that keeps its shape in wind. Pole and base included."
+      },
+      "hero": {
+        "eyebrow": "Shop Teardrop Flags — Pay Securely with Stripe",
+        "h1": "TEARDROP FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Teardrop Flags",
+      "productLabel": "Teardrop Flags",
+      "catalogCard": {
+        "desc": "Teardrop flag that keeps its shape in wind. Pole and base included.",
+        "priceFrom": 165.81,
+        "cta": "Shop Teardrop Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2x5",
+            "label": "2' x 5'",
+            "unitPrice": 165.81
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "sail-flags",
+      "active": true,
+      "sortOrder": 440,
+      "seo": {
+        "title": "Custom Sail Flags | Fast Turnaround",
+        "description": "Sail-shaped advertising flag with pole and base. Holds shape in wind."
+      },
+      "hero": {
+        "eyebrow": "Shop Sail Flags — Pay Securely with Stripe",
+        "h1": "SAIL FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Sail Flags",
+      "productLabel": "Sail Flags",
+      "catalogCard": {
+        "desc": "Sail-shaped advertising flag with pole and base. Holds shape in wind.",
+        "priceFrom": 161.92,
+        "cta": "Shop Sail Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "1.5x5.5",
+            "label": "1.5' x 5.5'",
+            "unitPrice": 161.92
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "giant-flags",
+      "active": true,
+      "sortOrder": 450,
+      "seo": {
+        "title": "Custom Giant Flags | Fast Turnaround",
+        "description": "Extra-tall advertising flag for roadside visibility."
+      },
+      "hero": {
+        "eyebrow": "Shop Giant Flags — Pay Securely with Stripe",
+        "h1": "GIANT FLAGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Giant Flags",
+      "productLabel": "Giant Flags",
+      "catalogCard": {
+        "desc": "Extra-tall advertising flag for roadside visibility.",
+        "priceFrom": 583.89,
+        "cta": "Shop Giant Flags →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "2.6x10",
+            "label": "2.6' x 10'",
+            "unitPrice": 583.89
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "6-ft-canopy-tent",
+      "active": true,
+      "sortOrder": 460,
+      "seo": {
+        "title": "Custom 6 Ft Canopy Tent | Fast Turnaround",
+        "description": "6x6 pop-up canopy tent with custom printed top. Tool-free setup."
+      },
+      "hero": {
+        "eyebrow": "Shop 6 Ft Canopy Tent — Pay Securely with Stripe",
+        "h1": "6 FT CANOPY TENT.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "6 Ft Canopy Tent",
+      "productLabel": "6 Ft Canopy Tent",
+      "catalogCard": {
+        "desc": "6x6 pop-up canopy tent with custom printed top. Tool-free setup.",
+        "priceFrom": 499.0,
+        "cta": "Shop 6 Ft Canopy Tent →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6' x 6'",
+            "unitPrice": 499.0
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "10-ft-canopy-tent",
+      "active": true,
+      "sortOrder": 470,
+      "seo": {
+        "title": "Custom 10 Ft Canopy Tent | Fast Turnaround",
+        "description": "10x10 pop-up canopy tent with full-color printed canopy. Quick-lock frame."
+      },
+      "hero": {
+        "eyebrow": "Shop 10 Ft Canopy Tent — Pay Securely with Stripe",
+        "h1": "10 FT CANOPY TENT.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "10 Ft Canopy Tent",
+      "productLabel": "10 Ft Canopy Tent",
+      "catalogCard": {
+        "desc": "10x10 pop-up canopy tent with full-color printed canopy. Quick-lock frame.",
+        "priceFrom": 779.22,
+        "cta": "Shop 10 Ft Canopy Tent →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "10x10",
+            "label": "10' x 10'",
+            "unitPrice": 779.22
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "custom-canopy-tent-10-x-15",
+      "active": true,
+      "sortOrder": 480,
+      "seo": {
+        "title": "Custom Custom Canopy Tent 10 x 15 | Fast Turnaround",
+        "description": "10x15 pop-up canopy tent with custom print for larger booths."
+      },
+      "hero": {
+        "eyebrow": "Shop Custom Canopy Tent 10 x 15 — Pay Securely with Stripe",
+        "h1": "CUSTOM CANOPY TENT 10 X 15.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Custom Canopy Tent 10 x 15",
+      "productLabel": "Custom Canopy Tent 10 x 15",
+      "catalogCard": {
+        "desc": "10x15 pop-up canopy tent with custom print for larger booths.",
+        "priceFrom": 430.65,
+        "cta": "Shop Custom Canopy Tent 10 x 15 →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "10x15",
+            "label": "10' x 15'",
+            "unitPrice": 430.65
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "custom-canopy-tent-10-x-20",
+      "active": true,
+      "sortOrder": 490,
+      "seo": {
+        "title": "Custom Custom Canopy Tent 10 x 20 | Fast Turnaround",
+        "description": "10x20 pop-up canopy tent with custom print for large event spaces."
+      },
+      "hero": {
+        "eyebrow": "Shop Custom Canopy Tent 10 x 20 — Pay Securely with Stripe",
+        "h1": "CUSTOM CANOPY TENT 10 X 20.",
+        "sub": "Priced upfront. No calls required. Ordered as a single unit — no case quantities."
+      },
+      "panelHeading": "Custom Canopy Tent 10 x 20",
+      "productLabel": "Custom Canopy Tent 10 x 20",
+      "catalogCard": {
+        "desc": "10x20 pop-up canopy tent with custom print for large event spaces.",
+        "priceFrom": 516.01,
+        "cta": "Shop Custom Canopy Tent 10 x 20 →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 1,
+        "qtyStep": 1,
+        "volumeDiscounts": [
+          {
+            "minQty": 1,
+            "pct": 0
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "10x20",
+            "label": "10' x 20'",
+            "unitPrice": 516.01
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Outdoor Displays"
+    },
+    {
+      "slug": "clear-window-clings",
+      "active": true,
+      "sortOrder": 500,
+      "seo": {
+        "title": "Custom Clear Window Clings | Fast Turnaround",
+        "description": "Static cling on clear film. No adhesive, removable and reusable."
+      },
+      "hero": {
+        "eyebrow": "Shop Clear Window Clings — Pay Securely with Stripe",
+        "h1": "CLEAR WINDOW CLINGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Clear Window Clings",
+      "productLabel": "Clear Window Clings",
+      "catalogCard": {
+        "desc": "Static cling on clear film. No adhesive, removable and reusable.",
+        "priceFrom": 18.75,
+        "cta": "Shop Clear Window Clings →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "opaque-window-clings",
+      "active": true,
+      "sortOrder": 510,
+      "seo": {
+        "title": "Custom Opaque Window Clings | Fast Turnaround",
+        "description": "Static cling on white film for bold, full-color window graphics. Removable."
+      },
+      "hero": {
+        "eyebrow": "Shop Opaque Window Clings — Pay Securely with Stripe",
+        "h1": "OPAQUE WINDOW CLINGS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Opaque Window Clings",
+      "productLabel": "Opaque Window Clings",
+      "catalogCard": {
+        "desc": "Static cling on white film for bold, full-color window graphics. Removable.",
+        "priceFrom": 18.75,
+        "cta": "Shop Opaque Window Clings →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "perforated-window-decals",
+      "active": true,
+      "sortOrder": 520,
+      "seo": {
+        "title": "Custom Perforated Window Decals | Fast Turnaround",
+        "description": "One-way vision perforated window decal. Graphic outside, see-through from inside."
+      },
+      "hero": {
+        "eyebrow": "Shop Perforated Window Decals — Pay Securely with Stripe",
+        "h1": "PERFORATED WINDOW DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Perforated Window Decals",
+      "productLabel": "Perforated Window Decals",
+      "catalogCard": {
+        "desc": "One-way vision perforated window decal. Graphic outside, see-through from inside.",
+        "priceFrom": 26.63,
+        "cta": "Shop Perforated Window Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 26.63
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "clear-window-decals",
+      "active": true,
+      "sortOrder": 530,
+      "seo": {
+        "title": "Custom Clear Window Decals | Fast Turnaround",
+        "description": "Adhesive window decal on clear vinyl."
+      },
+      "hero": {
+        "eyebrow": "Shop Clear Window Decals — Pay Securely with Stripe",
+        "h1": "CLEAR WINDOW DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Clear Window Decals",
+      "productLabel": "Clear Window Decals",
+      "catalogCard": {
+        "desc": "Adhesive window decal on clear vinyl.",
+        "priceFrom": 18.75,
+        "cta": "Shop Clear Window Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "opaque-window-decals",
+      "active": true,
+      "sortOrder": 540,
+      "seo": {
+        "title": "Custom Opaque Window Decals | Fast Turnaround",
+        "description": "Adhesive window decal on white vinyl for solid, full-color graphics."
+      },
+      "hero": {
+        "eyebrow": "Shop Opaque Window Decals — Pay Securely with Stripe",
+        "h1": "OPAQUE WINDOW DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Opaque Window Decals",
+      "productLabel": "Opaque Window Decals",
+      "catalogCard": {
+        "desc": "Adhesive window decal on white vinyl for solid, full-color graphics.",
+        "priceFrom": 18.75,
+        "cta": "Shop Opaque Window Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "frosted-window-decals",
+      "active": true,
+      "sortOrder": 550,
+      "seo": {
+        "title": "Custom Frosted Window Decals | Fast Turnaround",
+        "description": "Printed frosted window decal for privacy and branding on glass."
+      },
+      "hero": {
+        "eyebrow": "Shop Frosted Window Decals — Pay Securely with Stripe",
+        "h1": "FROSTED WINDOW DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Frosted Window Decals",
+      "productLabel": "Frosted Window Decals",
+      "catalogCard": {
+        "desc": "Printed frosted window decal for privacy and branding on glass.",
+        "priceFrom": 18.75,
+        "cta": "Shop Frosted Window Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "wall-decals",
+      "active": true,
+      "sortOrder": 560,
+      "seo": {
+        "title": "Custom Wall Decals | Fast Turnaround",
+        "description": "Adhesive vinyl wall decal for offices, stores and event spaces."
+      },
+      "hero": {
+        "eyebrow": "Shop Wall Decals — Pay Securely with Stripe",
+        "h1": "WALL DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Wall Decals",
+      "productLabel": "Wall Decals",
+      "catalogCard": {
+        "desc": "Adhesive vinyl wall decal for offices, stores and event spaces.",
+        "priceFrom": 18.75,
+        "cta": "Shop Wall Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "floor-decals",
+      "active": true,
+      "sortOrder": 570,
+      "seo": {
+        "title": "Custom Floor Decals | Fast Turnaround",
+        "description": "Textured, slip-resistant floor decal for directions, promos and social distancing."
+      },
+      "hero": {
+        "eyebrow": "Shop Floor Decals — Pay Securely with Stripe",
+        "h1": "FLOOR DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Floor Decals",
+      "productLabel": "Floor Decals",
+      "catalogCard": {
+        "desc": "Textured, slip-resistant floor decal for directions, promos and social distancing.",
+        "priceFrom": 41.13,
+        "cta": "Shop Floor Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "12x12",
+            "label": "12\" x 12\"",
+            "unitPrice": 41.13
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "clear-vehicle-decals",
+      "active": true,
+      "sortOrder": 580,
+      "seo": {
+        "title": "Custom Clear Vehicle Decals | Fast Turnaround",
+        "description": "Clear vinyl vehicle decal for windows and paint."
+      },
+      "hero": {
+        "eyebrow": "Shop Clear Vehicle Decals — Pay Securely with Stripe",
+        "h1": "CLEAR VEHICLE DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Clear Vehicle Decals",
+      "productLabel": "Clear Vehicle Decals",
+      "catalogCard": {
+        "desc": "Clear vinyl vehicle decal for windows and paint.",
+        "priceFrom": 18.75,
+        "cta": "Shop Clear Vehicle Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    },
+    {
+      "slug": "opaque-vehicle-decals",
+      "active": true,
+      "sortOrder": 590,
+      "seo": {
+        "title": "Custom Opaque Vehicle Decals | Fast Turnaround",
+        "description": "White vinyl vehicle decal for bold full-color graphics on cars, vans and trucks."
+      },
+      "hero": {
+        "eyebrow": "Shop Opaque Vehicle Decals — Pay Securely with Stripe",
+        "h1": "OPAQUE VEHICLE DECALS.",
+        "sub": "Priced upfront. No calls required. Most orders ready in days — not weeks."
+      },
+      "panelHeading": "Opaque Vehicle Decals",
+      "productLabel": "Opaque Vehicle Decals",
+      "catalogCard": {
+        "desc": "White vinyl vehicle decal for bold full-color graphics on cars, vans and trucks.",
+        "priceFrom": 18.75,
+        "cta": "Shop Opaque Vehicle Decals →"
+      },
+      "pricing": {
+        "designFee": 25,
+        "minQty": 12,
+        "qtyStep": 12,
+        "volumeDiscounts": [
+          {
+            "minQty": 12,
+            "pct": 0
+          },
+          {
+            "minQty": 24,
+            "pct": 10
+          },
+          {
+            "minQty": 36,
+            "pct": 15
+          },
+          {
+            "minQty": 48,
+            "pct": 20
+          },
+          {
+            "minQty": 60,
+            "pct": 25
+          }
+        ],
+        "sizes": [
+          {
+            "isCustom": false,
+            "key": "6x6",
+            "label": "6\" x 6\"",
+            "unitPrice": 18.75
+          }
+        ]
+      },
+      "stripeLink": "#",
+      "netlifyForm": "signs-order",
+      "imageUrl": "",
+      "category": "Stickers and Decals"
+    }
+  ]
+}

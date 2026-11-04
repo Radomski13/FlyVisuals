@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Premium Table Covers | Fast Turnaround</title>
+  <meta name="description" content="Draped polyester table cover with dye-sublimation print. Covers front and sides.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #cc1414;
+      --red-dark:   #aa1010;
+      --bg:         #ffffff;
+      --bg2:        #f6f5f3;
+      --bg3:        #eeece9;
+      --bg4:        #e4e2de;
+      --border:     #e3e1dd;
+      --border-hi:  #cfccc6;
+      --text:       #1a1a1a;
+      --muted:      #5f5c57;
+      --dim:        #9a9690;
+      --font-d:     'Bebas Neue', sans-serif;
+      --font-b:     'Barlow', sans-serif;
+      --max-w:      1100px;
+      --r:          4px;
+      --ease:       0.15s ease;
+      --black:      #f0f0f0;
+      --dark:       #ffffff;
+      --dark2:      #e4e4e4;
+      --red-bright: #e81c1c;
+      --nav-red-dark: #8b0000;
+      --white:      #1a1a1a;
+      --grey-light: #333333;
+      --grey:       #666666;
+      --grey-dark:  #cccccc;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:  'Barlow', sans-serif;
+    }
+
+    
+    /* ══════════════════════ MAIN-SITE NAVBAR (ported) ══════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.97);
+      border-bottom: 2px solid var(--red);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--red); }
+
+    nav { display: flex; align-items: center; gap: 0; }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      transition: color 0.2s;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--red-bright); }
+    .nav-link svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+    /* Level 1 dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--dark2);
+      border: 1px solid var(--grey-dark);
+      border-top: 2px solid var(--red);
+      min-width: 200px;
+      z-index: 200;
+    }
+    .nav-item:hover .dropdown { display: block; }
+
+    .dropdown-item {
+      position: relative;
+    }
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .dropdown-link:hover { background: var(--red); color: #ffffff; }
+    .dropdown-link svg { width: 8px; height: 8px; }
+
+    /* Level 2 dropdown */
+    .sub-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: var(--dark);
+      border: 1px solid var(--grey-dark);
+      border-left: 2px solid var(--red);
+      min-width: 210px;
+      z-index: 300;
+    }
+    .dropdown-item:hover .sub-dropdown { display: block; }
+    .sub-dropdown a {
+      display: block;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      transition: background 0.15s, color 0.15s;
+    }
+    .sub-dropdown a:hover { background: var(--nav-red-dark); color: #ffffff; }
+
+    /* ========== NAV CALL BUTTON ========== */
+    .nav-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-left: 0.8rem;
+      background: var(--red);
+      color: var(--white) !important;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .nav-call-btn:hover { background: transparent; color: var(--red) !important; }
+    .nav-call-btn svg { flex-shrink: 0; }
+
+    .mob-call-btn {
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.85rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mob-call-btn:hover { background: transparent; color: var(--red); }
+
+    /* Mobile Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 7px;
+      cursor: pointer;
+      padding: 12px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hamburger span {
+      display: block;
+      width: 34px;
+      height: 3px;
+      background: #ffffff;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      overflow-y: auto;
+      z-index: 999;
+      padding: 1rem 0 3rem;
+    }
+    .mobile-menu.open { display: block; }
+
+    .mobile-section-header {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      padding: 1rem 1.5rem 0.3rem;
+      border-top: 1px solid var(--grey-dark);
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mobile-menu a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mobile-menu a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* Mobile accordion */
+    .mob-accordion { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mob-accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--grey-light);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: left;
+    }
+    .mob-accordion-header:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-acc-arrow {
+      width: 12px; height: 12px;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .mob-accordion-header.open .mob-acc-arrow { transform: rotate(180deg); }
+    .mob-accordion-body {
+      display: none;
+      background: rgba(0,0,0,0.25);
+    }
+    .mob-accordion-body.open { display: block; }
+    .mob-accordion-body a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mob-accordion-body a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mob-accordion-body a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-main-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mob-main-link:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* ========== BOTTOM NAVBAR (mobile only) ========== */
+    #bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(10,10,10,0.98);
+      border-top: 2px solid var(--red);
+      z-index: 1001;
+      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    @media (max-width: 768px) { #bottom-nav { display: flex; } }
+    .bot-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .bot-call-btn:hover { background: transparent; color: var(--red); }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      /* ---- Top navbar mobile layout ---- */
+      #navbar {
+        overflow: visible;
+        justify-content: space-between;
+        height: 52px;
+      }
+      .logo {
+        position: fixed;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        z-index: 1002;
+        pointer-events: auto;
+        display: flex;
+        align-items: flex-start;
+      }
+      .logo img {
+        height: 58px !important;
+        width: auto !important;
+        filter:
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 2px #000)
+          drop-shadow(0 0 2px #000);
+      }
+      .mob-call-btn { display: none; }
+      #navbar .hamburger { display: none; }
+      .mobile-menu { bottom: 60px; }
+    }
+    /* ══════════════════════ END MAIN-SITE NAVBAR ══════════════════════ */
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font-b); border: none; background: none; }
+    h1, h2, h3 { font-family: var(--font-d); letter-spacing: 0.02em; line-height: 1; }
+
+    /* ── HEADER ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 60px;
+    }
+    .hdr-back { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0.02em; transition: color var(--ease); }
+    .hdr-back:hover { color: var(--text); }
+    .hdr-logo { font-family: var(--font-d); font-size: 22px; letter-spacing: 0.08em; }
+    .hdr-logo span { color: var(--red); }
+    .hdr-phone { font-size: 13px; font-weight: 600; color: var(--red); letter-spacing: 0.02em; }
+    .hdr-phone:hover { color: #e01515; }
+
+    /* ── TAB BAR ──────────────────────────────────────────────── */
+    #tab-bar {
+      position: sticky; top: 60px; z-index: 90;
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      display: flex;
+    }
+    .tab-btn {
+      flex: 1; padding: 16px 12px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); border-bottom: 3px solid transparent;
+      transition: all var(--ease);
+    }
+    .tab-btn:hover { color: var(--text); background: rgba(0,0,0,0.03); }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+
+    /* ── MAIN ─────────────────────────────────────────────────── */
+    #store-main { max-width: var(--max-w); margin: 0 auto; padding: 104px 20px 80px; }
+    .tab-content { display: none; padding: 44px 0; }
+    .tab-content.active { display: block; }
+
+    .sec-head { margin-bottom: 28px; }
+    .sec-head h1 { font-size: 34px; margin-bottom: 6px; }
+    .sec-head p { color: var(--muted); font-size: 14px; font-weight: 300; }
+
+    /* ── PRODUCT PHOTO (under the heading) ───────────────────── */
+    .product-photo {
+      margin-bottom: 24px; border-radius: var(--r); overflow: hidden;
+      border: 1px solid var(--border); background: var(--bg3);
+    }
+    .product-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+    .product-photo-placeholder {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 8px; padding: 56px 20px; color: var(--dim); text-align: center;
+    }
+    .product-photo-placeholder .ph-icon { font-size: 32px; line-height: 1; }
+    .product-photo-placeholder p { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+
+    /* ── STEP INDICATOR ───────────────────────────────────────── */
+    .step-bar {
+      display: flex; align-items: center; margin-bottom: 36px;
+      overflow-x: auto; padding-bottom: 2px;
+    }
+    .step-dot { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .step-dot .dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--border-hi); font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0; color: var(--muted);
+    }
+    .step-dot .slabel {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--dim); white-space: nowrap;
+    }
+    .step-dot.active .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.active .slabel { color: var(--text); }
+    .step-dot.done .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.done .slabel { color: var(--muted); }
+    .step-line { flex: 1; height: 2px; background: var(--border); margin: 0 10px; min-width: 20px; }
+    .step-line.done { background: var(--red); }
+
+    /* ── SELECTION SUMMARY BAR ────────────────────────────────── */
+    .sel-summary {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: var(--r); padding: 14px 20px;
+      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .sel-item .s-lbl {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 2px;
+    }
+    .sel-item .s-val { font-size: 13px; font-weight: 600; }
+
+    /* ── OPTION CARDS (vehicle / generic) ─────────────────────── */
+    .opt-grid { display: grid; gap: 12px; }
+    .opt-grid.c5 { grid-template-columns: repeat(5, 1fr); }
+    .opt-grid.c2 { grid-template-columns: repeat(2, 1fr); }
+    .opt-grid.c3 { grid-template-columns: repeat(3, 1fr); }
+
+    .opt-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 20px 14px; text-align: center; cursor: pointer;
+      transition: all var(--ease); user-select: none;
+    }
+    .opt-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .opt-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .opt-card .oc-icon { font-size: 30px; display: block; margin-bottom: 8px; line-height: 1; }
+    .opt-card .oc-label { font-weight: 700; font-size: 13px; display: block; }
+    .opt-card .oc-price { font-family: var(--font-d); font-size: 20px; color: var(--red); margin-top: 6px; display: block; }
+
+    /* ── PACKAGE CARDS (left-aligned, wider) ──────────────────── */
+    .pkg-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 22px 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .pkg-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .pkg-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .pkg-radio {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 50%;
+      flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .pkg-card.sel .pkg-radio { border-color: var(--red); background: var(--red); }
+    .pkg-card.sel .pkg-radio::after { content: '✓'; font-size: 11px; color: white; font-weight: 700; }
+    .pkg-body { flex: 1; }
+    .pkg-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .pkg-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.4; }
+    .pkg-price { font-family: var(--font-d); font-size: 26px; color: var(--red); flex-shrink: 0; align-self: center; }
+
+    /* ── FILM CARDS ───────────────────────────────────────────── */
+    .film-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+    }
+    .film-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .film-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .film-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .film-label { font-weight: 700; font-size: 16px; }
+    .film-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px; background: var(--red); color: white;
+    }
+    .film-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+    .film-price { font-family: var(--font-d); font-size: 30px; color: var(--red); margin-top: 14px; }
+
+    /* ── STEP NAV BUTTONS ─────────────────────────────────────── */
+    .step-nav { display: flex; gap: 12px; margin-top: 32px; align-items: center; }
+    .btn-back {
+      padding: 12px 22px; border: 1px solid var(--border-hi); border-radius: var(--r);
+      color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      transition: all var(--ease);
+    }
+    .btn-back:hover { color: var(--text); border-color: var(--muted); }
+    .btn-next {
+      flex: 1; max-width: 280px; padding: 14px 28px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: background var(--ease);
+    }
+    .btn-next:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 36px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: background var(--ease); width: 100%; max-width: 400px;
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── PRICE CALLOUT ────────────────────────────────────────── */
+    .price-callout {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red); border-radius: var(--r);
+      padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .pc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .pc-val { font-family: var(--font-d); font-size: 44px; color: var(--text); line-height: 1; }
+
+    /* ── FORM ─────────────────────────────────────────────────── */
+    .form-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg.full { grid-column: 1 / -1; }
+    .fg label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .fg input, .fg select, .fg textarea {
+      background: var(--bg3); border: 1px solid var(--border-hi); color: var(--text);
+      padding: 12px 14px; border-radius: var(--r); font-family: var(--font-b);
+      font-size: 14px; transition: border-color var(--ease);
+      -webkit-appearance: none; appearance: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--red); }
+    .fg input::placeholder, .fg textarea::placeholder { color: var(--dim); }
+    .fg textarea { resize: vertical; min-height: 88px; }
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+    /* Time slots */
+    .time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .tslot {
+      padding: 10px 6px; text-align: center; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border-hi); border-radius: var(--r); cursor: pointer;
+      transition: all var(--ease); color: var(--muted); background: var(--bg3);
+    }
+    .tslot:hover { border-color: var(--red); color: var(--text); }
+    .tslot.sel { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* ── NOTE BOX ─────────────────────────────────────────────── */
+    .note-box {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 14px 18px; font-size: 13px; color: var(--muted); font-weight: 300;
+      line-height: 1.6; margin-top: 20px;
+    }
+    .note-box strong { color: var(--text); font-weight: 600; }
+
+    /* ── ALERTS ───────────────────────────────────────────────── */
+    .alert { padding: 12px 16px; border-radius: var(--r); font-size: 13px; font-weight: 500; margin-top: 16px; }
+    .alert-err { background: rgba(204,20,20,0.08); border: 1px solid rgba(204,20,20,0.35); color: #a01111; display: none; }
+    .alert-ok  { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.35); color: #15803d; display: none; }
+
+    /* ── SIGNS LAYOUT ─────────────────────────────────────────── */
+    .signs-layout { display: grid; grid-template-columns: 1fr 320px; gap: 36px; align-items: start; }
+    .signs-panel {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 24px; position: sticky; top: 136px;
+    }
+
+    .type-toggle {
+      display: flex; border: 1px solid var(--border-hi); border-radius: var(--r);
+      overflow: hidden; margin-bottom: 32px;
+    }
+    .tt-btn {
+      flex: 1; padding: 13px 10px; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+      border-right: 1px solid var(--border-hi);
+    }
+    .tt-btn:last-child { border-right: none; }
+    .tt-btn.active { background: var(--red); color: white; border-right-color: var(--red); }
+
+    .field-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 10px;
+    }
+
+    /* Size grid */
+    .size-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 28px; }
+    .size-card {
+      background: var(--bg3); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 14px 10px; text-align: center; cursor: pointer; transition: all var(--ease);
+    }
+    .size-card:hover { border-color: var(--border-hi); }
+    .size-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .size-card .sc-lbl { font-weight: 700; font-size: 13px; display: block; margin-bottom: 4px; }
+    .size-card .sc-price { font-size: 12px; color: var(--muted); }
+
+    /* Custom dimension inputs */
+    .custom-dims { display: none; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .custom-dims.show { display: grid; }
+
+    /* Quantity stepper */
+    .qty-wrap { margin-bottom: 16px; }
+    .qty-stepper { display: flex; align-items: center; }
+    .qty-btn {
+      width: 44px; height: 44px; border: 1px solid var(--border-hi); background: var(--bg3);
+      color: var(--text); font-size: 22px; font-weight: 300; display: flex;
+      align-items: center; justify-content: center; transition: all var(--ease);
+    }
+    .qty-btn:first-child { border-radius: var(--r) 0 0 var(--r); }
+    .qty-btn:last-child  { border-radius: 0 var(--r) var(--r) 0; }
+    .qty-btn:hover { background: var(--bg4); border-color: var(--red); color: var(--red); }
+    .qty-display {
+      flex: 1; height: 44px; background: var(--bg2);
+      border: 1px solid var(--border-hi); border-left: none; border-right: none;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; min-width: 70px;
+    }
+
+    /* Volume tiers */
+    .vol-tiers { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .vol-badge {
+      padding: 4px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+      border-radius: 2px; border: 1px solid var(--border-hi); color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+    }
+    .vol-badge.active { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* Design add-on */
+    .addon-row {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 16px 18px; display: flex; align-items: center; gap: 14px;
+      cursor: pointer; transition: border-color var(--ease); margin-bottom: 28px; user-select: none;
+    }
+    .addon-row:hover { border-color: var(--border-hi); }
+    .addon-row.checked { border-color: var(--red); background: rgba(204,20,20,0.06); }
+    .addon-chk {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 3px;
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .addon-row.checked .addon-chk { background: var(--red); border-color: var(--red); }
+    .addon-row.checked .addon-chk::after { content: '✓'; color: white; font-size: 12px; font-weight: 700; }
+    .addon-info { flex: 1; }
+    .addon-info strong { font-size: 14px; font-weight: 700; display: block; }
+    .addon-info span { font-size: 12px; color: var(--muted); }
+    .addon-price { font-family: var(--font-d); font-size: 22px; color: var(--red); }
+
+    /* ── OPTION GROUPS (per-size add-ons: print sides, lamination, mounting…) ── */
+    .opt-group { margin-bottom: 24px; }
+    .opt-group .field-label { margin-bottom: 8px; }
+    .choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice-chip {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+      background: var(--bg3); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 9px 14px; cursor: pointer; transition: all var(--ease); user-select: none;
+      min-width: 110px;
+    }
+    .choice-chip:hover { border-color: var(--border-hi); }
+    .choice-chip.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .choice-chip .ch-lbl { font-weight: 700; font-size: 12.5px; }
+    .choice-chip .ch-price { font-size: 11px; color: var(--muted); }
+    .choice-chip.sel .ch-price { color: var(--red); font-weight: 600; }
+
+    /* ── PACKAGE TOGGLE (Complete vs. Replacement Graphic Only) ──────────── */
+    .pkg-grid { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .pkg-grid .pkg-card { padding: 16px 18px; }
+    .pkg-grid .pkg-title { font-size: 13.5px; }
+    .pkg-grid .pkg-price { font-size: 20px; }
+
+    /* ── PICKUP / SHIPPING CHOICE ─────────────────────────────── */
+    .pickup-badge {
+      display: flex; align-items: center; gap: 8px; margin: -8px 0 24px;
+      font-size: 14px; font-weight: 600; color: #15803d;
+    }
+    .pickup-badge .pb-dot { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; flex: none; }
+    .pickup-badge .pb-where { color: var(--muted); font-weight: 400; }
+    .ful-wrap { margin: 18px 0 4px; }
+    .ful-opt {
+      display: block; width: 100%; text-align: left; cursor: pointer;
+      background: var(--bg); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 12px 14px; margin-bottom: 8px; font: inherit; color: var(--text);
+      transition: border-color var(--ease);
+    }
+    .ful-opt:hover { border-color: var(--border-hi); }
+    .ful-opt.sel { border-color: var(--red); background: rgba(204,20,20,0.04); }
+    .ful-head { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 13.5px; }
+    .ful-radio {
+      width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--border-hi);
+      flex: none; position: relative;
+    }
+    .ful-opt.sel .ful-radio { border-color: var(--red); }
+    .ful-opt.sel .ful-radio::after {
+      content: ''; position: absolute; inset: 2px; border-radius: 50%; background: var(--red);
+    }
+    .ful-price { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--muted); }
+    .ful-opt.sel .ful-price { color: var(--red); }
+    .ful-detail { display: none; margin: 10px 0 2px 26px; font-size: 12.5px; line-height: 1.6; color: var(--muted); }
+    .ful-opt.sel .ful-detail { display: block; }
+    .ful-detail strong { color: var(--text); font-weight: 600; }
+    .ful-detail .ful-ready { color: #15803d; font-weight: 700; }
+    .ful-detail a { color: var(--red); }
+    #ful-mobile { display: none; margin-bottom: 24px; }
+    #ship-fields { display: none; }
+
+    /* Summary panel rows */
+    .sum-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px;
+    }
+    .sum-row:last-of-type { border-bottom: none; }
+    .sum-row .sr-lbl { color: var(--muted); }
+    .sum-row .sr-val { font-weight: 600; }
+    .sum-total {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 16px; padding-top: 16px; border-top: 2px solid var(--border-hi);
+    }
+    .st-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .st-price { font-family: var(--font-d); font-size: 38px; line-height: 1; }
+    .disc-tag {
+      display: inline-block; padding: 2px 8px; background: rgba(204,20,20,0.15);
+      color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+      border-radius: 2px; margin-left: 8px;
+    }
+
+    /* ── GRAPHIC PACKAGES ─────────────────────────────────────── */
+    .gfx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .gfx-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 32px 26px; position: relative; display: flex; flex-direction: column;
+      transition: border-color var(--ease);
+    }
+    .gfx-card:hover { border-color: var(--border-hi); }
+    .gfx-card.featured { border-color: var(--red); }
+    .gfx-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px;
+      border-radius: 0 0 4px 4px; white-space: nowrap;
+    }
+    .gfx-title { font-family: var(--font-d); font-size: 28px; margin-bottom: 8px; margin-top: 16px; }
+    .gfx-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; margin-bottom: 20px; }
+    .gfx-price { font-family: var(--font-d); font-size: 52px; color: var(--red); line-height: 1; margin-bottom: 4px; }
+    .gfx-price sup { font-family: var(--font-b); font-size: 22px; font-weight: 600; vertical-align: super; line-height: 0; }
+    .gfx-turn { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 22px; letter-spacing: 0.02em; }
+    .gfx-includes { list-style: none; margin-bottom: 28px; flex: 1; }
+    .gfx-includes li {
+      font-size: 13px; color: var(--muted); font-weight: 300;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .gfx-includes li::before { content: '—'; color: var(--red); font-weight: 600; flex-shrink: 0; }
+    .gfx-includes li:last-child { border-bottom: none; }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-ov {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88); z-index: 200;
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-ov.open { display: flex; }
+    .modal-box {
+      background: var(--bg2); border: 1px solid var(--border-hi); border-radius: var(--r);
+      padding: 36px; width: 100%; max-width: 500px; max-height: 90vh;
+      overflow-y: auto; position: relative;
+    }
+    .modal-title { font-family: var(--font-d); font-size: 30px; margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 10px; font-weight: 300; }
+    .modal-price { font-family: var(--font-d); font-size: 22px; color: var(--red); margin-bottom: 24px; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 20px; border-radius: 50%; transition: all var(--ease);
+    }
+    .modal-close:hover { color: var(--text); background: var(--bg4); }
+
+    /* ── TRUST BAR ────────────────────────────────────────────── */
+    #trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2); padding: 28px 24px; margin-top: 0;
+    }
+    .trust-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+    }
+    .trust-val { font-family: var(--font-d); font-size: 30px; color: var(--red); display: block; }
+    .trust-lbl { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.03em; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    #store-footer {
+      padding: 36px 24px; text-align: center;
+      background: var(--bg); border-top: 1px solid var(--border);
+    }
+    .footer-logo { font-family: var(--font-d); font-size: 20px; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .footer-logo span { color: var(--red); }
+    .footer-info { font-size: 13px; color: var(--muted); line-height: 1.9; }
+    .footer-info a { color: var(--red); }
+
+    /* ── MOBILE PRICE BAR ─────────────────────────────────────── */
+    #mpb {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--bg2); border-top: 2px solid var(--border);
+      padding: 12px 20px; z-index: 80; align-items: center; gap: 14px;
+    }
+    .mpb-left { flex: 1; }
+    .mpb-lbl { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; display: block; }
+    .mpb-price { font-family: var(--font-d); font-size: 30px; line-height: 1; }
+    .mpb-cta {
+      padding: 12px 22px; background: var(--red); color: white; border-radius: var(--r);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      white-space: nowrap; transition: background var(--ease);
+    }
+    .mpb-cta:hover { background: var(--red-dark); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .opt-grid.c5 { grid-template-columns: repeat(3, 1fr); }
+      .gfx-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      #store-main { padding-top: 76px; }
+
+      .tab-btn { font-size: 11px; padding: 13px 6px; }
+
+      .step-dot .slabel { display: none; }
+      .step-line { min-width: 12px; margin: 0 6px; }
+
+      .opt-grid.c5 { grid-template-columns: repeat(2, 1fr); }
+      .opt-grid.c2 { grid-template-columns: 1fr; }
+
+      .form-grid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+
+      .signs-layout { grid-template-columns: 1fr; }
+      .signs-panel { display: none; }
+      #ful-mobile { display: block; }
+
+      .size-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+      #mpb { display: flex; bottom: 60px; }
+      #store-main { padding-bottom: 160px; }
+
+      .modal-box { padding: 24px 18px; }
+      .btn-next { max-width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .opt-grid.c5 { grid-template-columns: 1fr 1fr; }
+      .hdr-phone { display: none; }
+      .time-slots { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NETLIFY FORM DECLARATIONS (required for Netlify to detect) ── -->
+  <form name="signs-order" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="sign-type">
+    <input type="text" name="size">
+    <input type="text" name="custom-dimensions">
+    <input type="text" name="package">
+    <input type="text" name="options">
+    <input type="text" name="quantity">
+    <input type="text" name="design-service">
+    <input type="text" name="notes">
+    <input type="text" name="total">
+    <input type="text" name="fulfillment">
+    <input type="text" name="pickup-date">
+    <input type="text" name="shipping-address">
+    <input type="text" name="bot-field">
+  </form>
+
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header id="navbar">
+  <a class="logo" href="/">
+    <img src="fly-visuals-logo.png" alt="Fly Visuals Logo" style="height:52px;width:auto;" />
+  </a>
+
+  <nav>
+    <!-- SERVICES dropdown -->
+    <div class="nav-item">
+      <button class="nav-link">
+        Services
+        <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <div class="dropdown">
+        <!-- WRAPS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/wraps/">
+            Wraps
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown" style="min-width:220px;">
+            <a href="/vehicle-wraps/">Vehicle Wraps</a>
+            <a href="/fleet-wraps/">Fleet Wraps</a>
+            <a href="/boat-wraps/">Boat Wraps</a>
+            <a href="/wall-wraps/">Wall Wraps</a>
+          </div>
+        </div>
+        <!-- SIGNS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/signs/">
+            Signs
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/indoor-signs/">Indoor Signs</a>
+            <a href="/outdoor-signs/">Outdoor Signs</a>
+            <a href="/business-signs/">Business Signs</a>
+            <a href="/vinyl-banners/">Vinyl Banners</a>
+            <a href="/yard-signs/">Yard Signs</a>
+            <a href="/corrugated-signs/">Corrugated Plastic Signs</a>
+            <a href="/aluminum-signs/">Custom Aluminum Signs</a>
+            <a href="/acrylic-signs/">Custom Acrylic Signs</a>
+          </div>
+        </div>
+        <!-- WINDOW TINTING sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/tinting/">
+            Window Tinting
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/auto-tinting/">Auto Window Tinting</a>
+            <a href="/residential-tinting/">Residential Window Tinting</a>
+            <a href="/commercial-tinting/">Commercial Window Tinting</a>
+          </div>
+        </div>
+        <!-- GRAPHICS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/graphics/">
+            Graphics
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/vehicle-graphics/">Vehicle Graphics</a>
+            <a href="/floor-graphics/">Floor Graphics</a>
+            <a href="/fleet-graphics/">Fleet Graphics</a>
+            <a href="/logo-design/">Logo Design</a>
+            <a href="/window-graphics/">Window Graphics</a>
+            <a href="/boat-graphics/">Boat Graphics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/wrap-visualizer/">Wrap Visualizer</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/gallery/">Gallery</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/contact/">Contact Us</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/bookonline.html">Book Online</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="/products.html">Products</a>
+    </div>
+    <a href="tel:7274946162" class="nav-call-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 494-6162
+    </a>
+  </nav>
+
+  <a href="tel:7274946162" class="mob-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Bottom Navigation (mobile only) -->
+<nav id="bottom-nav">
+  <a href="tel:7274946162" class="bot-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu" style="display:flex;">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- WRAPS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Wraps</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/wraps/">All Wraps</a>
+      <a href="/vehicle-wraps/" class="sub">Vehicle Wraps</a>
+      <a href="/fleet-wraps/" class="sub">Fleet Wraps</a>
+      <a href="/boat-wraps/" class="sub">Boat Wraps</a>
+      <a href="/wall-wraps/" class="sub">Wall Wraps</a>
+    </div>
+  </div>
+
+  <!-- SIGNS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Signs</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/signs/">All Signs</a>
+      <a href="/indoor-signs/" class="sub">Indoor Signs</a>
+      <a href="/outdoor-signs/" class="sub">Outdoor Signs</a>
+      <a href="/business-signs/" class="sub">Business Signs</a>
+      <a href="/vinyl-banners/" class="sub">Vinyl Banners</a>
+  <a href="/yard-signs/" class="sub">Yard Signs</a>
+  <a href="/corrugated-signs/" class="sub">Corrugated Plastic Signs</a>
+  <a href="/aluminum-signs/" class="sub">Custom Aluminum Signs</a>
+  <a href="/acrylic-signs/" class="sub">Custom Acrylic Signs</a>
+    </div>
+  </div>
+
+  <!-- WINDOW TINTING accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Window Tinting</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/tinting/">All Window Tinting</a>
+      <a href="/auto-tinting/" class="sub">Auto Window Tinting</a>
+      <a href="/residential-tinting/" class="sub">Residential Window Tinting</a>
+      <a href="/commercial-tinting/" class="sub">Commercial Window Tinting</a>
+    </div>
+  </div>
+
+  <!-- GRAPHICS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Graphics</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/graphics/">All Graphics</a>
+      <a href="/vehicle-graphics/" class="sub">Vehicle Graphics</a>
+      <a href="/floor-graphics/" class="sub">Floor Graphics</a>
+      <a href="/fleet-graphics/" class="sub">Fleet Graphics</a>
+      <a href="/logo-design/" class="sub">Logo Design</a>
+      <a href="/window-graphics/" class="sub">Window Graphics</a>
+      <a href="/boat-graphics/" class="sub">Boat Graphics</a>
+    </div>
+  </div>
+
+  <a href="/wrap-visualizer/" class="mob-main-link">Wrap Visualizer</a>
+  <a href="/gallery/" class="mob-main-link">Gallery</a>
+  <a href="/contact/" class="mob-main-link">Contact Us</a>
+  <a href="/bookonline.html" class="mob-main-link">Book Online</a>
+  <a href="/products.html" class="mob-main-link">Products</a>
+</div>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+  <main id="store-main">
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         CUSTOM SIGNS
+    ════════════════════════════════════════════════════════════ -->
+    <section id="tab-signs" class="tab-content active">
+
+      <div class="signs-layout">
+        <div class="signs-options">
+
+          <div class="sec-head">
+            <h1>Premium Table Covers</h1>
+          </div>
+
+          <!-- Product photo (or placeholder until one's added) -->
+          <div class="product-photo"><div class="product-photo-placeholder">
+          <span class="ph-icon">📷</span>
+          <p>Photo coming soon</p>
+        </div></div>
+
+          <div class="pickup-badge"><span class="pb-dot"></span><span>Available for pickup <span class="js-pickup-date">now</span></span><span class="pb-where">· Port Richey, FL store</span></div>
+
+          <p style="color:var(--muted);font-size:14px;font-weight:300;margin-bottom:28px">Volume discounts applied automatically as you raise the quantity.</p>
+
+          <!-- Size selector (incl. Custom Size tile when the product supports it) -->
+          <span class="field-label">Select Size</span>
+          <div id="sign-size-grid" class="size-grid"></div>
+
+          <!-- Custom dimensions -->
+          <div id="custom-dims" class="custom-dims">
+            <div class="fg">
+              <label>Width (<span id="custom-unit-w">ft</span>)</label>
+              <input type="number" id="custom-w" placeholder="e.g. 5" min="0.1" step="0.1" oninput="onCustomDimsInput()">
+            </div>
+            <div class="fg">
+              <label>Height (<span id="custom-unit-h">ft</span>)</label>
+              <input type="number" id="custom-h" placeholder="e.g. 3" min="0.1" step="0.1" oninput="onCustomDimsInput()">
+            </div>
+          </div>
+          <div id="custom-max-note" class="note-box" style="display:none;margin-top:-16px;margin-bottom:24px;"></div>
+
+          <!-- Package toggle (Complete vs. Replacement Graphic Only) -->
+          <div id="package-section" style="display:none;">
+            <span class="field-label">Package</span>
+            <div id="package-grid" class="pkg-grid"></div>
+          </div>
+
+          <!-- Option groups (print sides, lamination, mounting, etc.) -->
+          <div id="option-groups"></div>
+
+          <!-- Quantity -->
+          <span class="field-label">Quantity</span>
+          <div class="qty-wrap">
+            <div class="qty-stepper">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <div class="qty-display" id="qty-display">1</div>
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <!-- Quantity discount badges -->
+          <div id="vol-tiers" class="vol-tiers"></div>
+
+          <!-- Pickup / shipping (mobile — desktop shows it in the Order Summary) -->
+          <div id="ful-mobile">
+            <span class="field-label">Pickup or Shipping</span>
+            <div class="ful-choices"></div>
+          </div>
+
+          <!-- Contact form -->
+          <span class="field-label">Your Info</span>
+          <div class="form-grid" style="margin-bottom:20px">
+            <div class="fg">
+              <label>Full Name *</label>
+              <input type="text" id="sign-name" placeholder="John Smith">
+            </div>
+            <div class="fg">
+              <label>Email *</label>
+              <input type="email" id="sign-email" placeholder="john@email.com">
+            </div>
+            <div class="fg full">
+              <label>Phone *</label>
+              <input type="tel" id="sign-phone" placeholder="(727) 000-0000">
+            </div>
+            <div class="fg full" id="ship-fields">
+              <label>Shipping Address *</label>
+              <textarea id="sign-ship-addr" placeholder="Street, City, State, ZIP" style="min-height:70px"></textarea>
+            </div>
+            <div class="fg full">
+              <label>Notes (optional)</label>
+              <textarea id="sign-notes" placeholder="Colors, deadline, artwork details..."></textarea>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <strong>Artwork:</strong> If you have your own file, email it to us after placing your order — we'll reach out within 1 business day to confirm and collect files. Print-ready PDF, AI, or EPS preferred.
+          </div>
+
+          <div id="signs-error" class="alert alert-err" style="margin-top:16px"></div>
+
+          <div style="margin-top:20px">
+            <button class="btn-primary" id="signs-submit-btn" onclick="submitSigns()">
+              Place Order &amp; Pay Securely
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop summary panel -->
+        <div class="signs-panel">
+          <div style="font-family:var(--font-d);font-size:22px;margin-bottom:20px;letter-spacing:0.04em">ORDER SUMMARY</div>
+          <div id="sign-sum-rows">
+            <div class="sum-row"><span class="sr-lbl">Type</span><span class="sr-val" id="sp-type">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Size</span><span class="sr-val" id="sp-size">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Package</span><span class="sr-val" id="sp-pkg">—</span></div>
+            <div id="sp-breakdown"></div>
+            <div class="sum-row"><span class="sr-lbl">Quantity</span><span class="sr-val" id="sp-qty">1</span></div>
+            <div class="sum-row"><span class="sr-lbl">Unit Price</span><span class="sr-val" id="sp-unit">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Quantity Discount</span><span class="sr-val" id="sp-disc">—</span></div>
+            <div class="sum-row"><span class="sr-lbl" id="sp-ful-lbl">Pickup</span><span class="sr-val" id="sp-ful">Free</span></div>
+          </div>
+          <div class="ful-wrap ful-choices"></div>
+          <div class="sum-total">
+            <span class="st-lbl">Total</span>
+            <span class="st-price" id="sp-total">—</span>
+          </div>
+          <button class="btn-primary" onclick="submitSigns()" style="margin-top:24px;max-width:100%">
+            Place Order &amp; Pay
+          </button>
+        </div>
+
+      </div>
+    </section><!-- /tab-signs -->
+
+
+  </main>
+
+  <!-- ── TRUST BAR ───────────────────────────────────────────────── -->
+  <div id="trust-bar">
+    <div class="trust-grid">
+      <div>
+        <span class="trust-val">10%</span>
+        <span class="trust-lbl">Price Match Guarantee</span>
+      </div>
+      <div>
+        <span class="trust-val">500+</span>
+        <span class="trust-lbl">Projects Completed</span>
+      </div>
+      <div>
+        <span class="trust-val">3M</span>
+        <span class="trust-lbl">3M &amp; Avery Dennison Certified</span>
+      </div>
+      <div>
+        <span class="trust-val">FL</span>
+        <span class="trust-lbl">Pasco County Local Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+  <footer id="store-footer">
+    <div class="footer-logo">FLY <span>VISUALS</span></div>
+    <div class="footer-info">
+      8132 Cormel St, Port Richey, FL 34668<br>
+      <a href="tel:7274946162">(727) 494-6162</a> · Mon–Fri 9AM–5PM<br>
+      <a href="/return-policy/">Return &amp; Refund Policy</a> · <a href="/shipping-policy/">Shipping &amp; Pickup Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a><br>
+      <a href="/products.html">← All Products</a> · <a href="/index.html">Back to main site</a>
+    </div>
+  </footer>
+
+  <!-- ── MOBILE PRICE BAR ────────────────────────────────────────── -->
+  <div id="mpb">
+    <div class="mpb-left">
+      <span class="mpb-lbl" id="mpb-lbl">Your Total</span>
+      <span class="mpb-price" id="mpb-price">—</span>
+    </div>
+    <button class="mpb-cta" id="mpb-cta" onclick="mobileCta()">Place Order</button>
+  </div>
+
+  <script src="/products/pricing.js"></script>
+  <script src="/products/price-display.js"></script>
+  <script>
+    // ╔══════════════════════════════════════════════════════════════════════╗
+    // ║   PRODUCT DATA — written by generate-products.js from                ║
+    // ║   products/products-data.json. Edit prices there (or in the          ║
+    // ║   Product Manager dashboard), never here directly.                   ║
+    // ╚══════════════════════════════════════════════════════════════════════╝
+    const PRODUCT = {"slug":"premium-table-covers","label":"Premium Table Covers","stripeLink":"#","netlifyForm":"signs-order","markup":0.9,"designFee":0,"minQty":1,"qtyStep":1,"sizes":[{"key":"4x2.5","label":"4' x 2.5'","price":159.45,"salePrice":null,"graphicPrice":159.45,"hardwarePrice":0,"isCustom":false},{"key":"6x2.5","label":"6' x 2.5'","price":192.39,"salePrice":null,"graphicPrice":192.39,"hardwarePrice":0,"isCustom":false},{"key":"8x2.5","label":"8' x 2.5'","price":218.94,"salePrice":null,"graphicPrice":218.94,"hardwarePrice":0,"isCustom":false}],"customSize":null,"options":[{"code":"back_style","name":"Back Style","choices":[{"code":"open_back","label":"Open Back","priceType":"included","value":0,"default":true},{"code":"closed_back","label":"Closed Back","priceType":"percent","value":30,"default":false}]},{"code":"edge_finish","name":"Edge Finish","choices":[{"code":"hot_knife_cut","label":"Hot-Knife Cut","priceType":"included","value":0,"default":true},{"code":"stitched_edges","label":"Stitched Edges","priceType":"flat","value":5,"default":false}]},{"code":"fabric_color","name":"Fabric Color","choices":[{"code":"black","label":"Black","priceType":"included","value":0,"default":true},{"code":"white","label":"White","priceType":"included","value":0,"default":false},{"code":"blue","label":"Blue","priceType":"included","value":0,"default":false},{"code":"gray","label":"Gray","priceType":"included","value":0,"default":false},{"code":"pink","label":"Pink","priceType":"included","value":0,"default":false},{"code":"red","label":"Red","priceType":"included","value":0,"default":false},{"code":"green","label":"Green","priceType":"included","value":0,"default":false},{"code":"brown","label":"Brown","priceType":"included","value":0,"default":false},{"code":"orange","label":"Orange","priceType":"included","value":0,"default":false},{"code":"sky_blue","label":"Sky Blue","priceType":"included","value":0,"default":false},{"code":"yellow","label":"Yellow","priceType":"included","value":0,"default":false}]}],"packages":null,"quantityDiscounts":[{"minQty":2,"percentOff":5},{"minQty":6,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15}]};
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  STATE
+    // ══════════════════════════════════════════════════════════════════════
+    const S = {
+      size: (PRODUCT.sizes && PRODUCT.sizes[0]) ? PRODUCT.sizes[0].label : null,
+      useCustom: false,
+      package: (PRODUCT.packages && PRODUCT.packages.length) ? PRODUCT.packages[0].code : null,
+      options: {},
+      qty: PRODUCT.minQty || 1,
+    };
+    (PRODUCT.options || []).forEach(function (grp) {
+      const def = grp.choices.find(function (c) { return c.default; }) || grp.choices[0];
+      if (def) S.options[grp.code] = def.code;
+    });
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  UTILS
+    // ══════════════════════════════════════════════════════════════════════
+    const $ = id => document.getElementById(id);
+    const fmt = n => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    // Safely embed a JS value as an argument inside a double-quoted HTML
+    // attribute (onclick="fn(...)"): JSON.stringify's own quoting uses
+    // double quotes, which would otherwise terminate the attribute early
+    // whenever a label contains one (labels never contain apostrophes
+    // here, but sizes like 2' x 5' do contain single quotes, which are
+    // safe inside a double-quoted attribute — only the double quotes
+    // from JSON.stringify itself need escaping).
+    const jsAttr = v => JSON.stringify(v).replace(/"/g, '&quot;');
+
+    async function netlifyPost(formName, data) {
+      const body = new URLSearchParams(Object.assign({ 'form-name': formName }, data)).toString();
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+    }
+
+    function showErr(id, msg) {
+      const el = $(id);
+      if (!el) return;
+      el.textContent = msg;
+      el.style.display = msg ? 'block' : 'none';
+    }
+
+    function stripeRedirect(url, totalDollars) {
+      if (!url || url === '#') {
+        alert('Payment link coming soon — call us at (727) 494-6162 to complete your order.');
+        return;
+      }
+      const final = url.includes('?')
+        ? url + '&prefilled_quantity=' + Math.round(totalDollars)
+        : url + '?prefilled_quantity=' + Math.round(totalDollars);
+      window.location.href = final;
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  PRICING — delegates to pricing.js (calcPrice) + price-display.js
+    //  (calcDisplayPrice: applies this product's markup + rounds to a
+    //  .49/.99 ending). Neither file is modified by this page.
+    // ══════════════════════════════════════════════════════════════════════
+    function currentSelection(overrideQty) {
+      const sel = {
+        qty: overrideQty != null ? overrideQty : S.qty,
+        options: S.options,
+      };
+      if (S.package) sel.package = S.package;
+      if (S.useCustom && PRODUCT.customSize) {
+        sel.custom = { width: parseFloat($('custom-w').value) || 0, height: parseFloat($('custom-h').value) || 0 };
+      } else {
+        sel.size = S.size;
+      }
+      return sel;
+    }
+
+    function priceFor(sel) {
+      try { return calcDisplayPrice(PRODUCT, sel); }
+      catch (e) { return null; }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  SIZE PICKER (incl. Custom Size)
+    // ══════════════════════════════════════════════════════════════════════
+    function customFromPrice() {
+      const r = priceFor({ custom: { width: 0.1, height: 0.1 }, options: S.options, package: S.package, qty: 1 });
+      return r ? r.unit : null;
+    }
+
+    function buildSizeGrid() {
+      const sizes = PRODUCT.sizes || [];
+      let html = sizes.map(function (s) {
+        const r = priceFor({ size: s.label, options: S.options, package: S.package, qty: 1 });
+        const sel = !S.useCustom && S.size === s.label;
+        return '<div class="size-card ' + (sel ? 'sel' : '') + '" onclick="selectSize(' + jsAttr(s.label) + ')">' +
+          '<span class="sc-lbl">' + s.label + '</span><span class="sc-price">' + (r ? fmt(r.unit) : '—') + ' / each</span></div>';
+      }).join('');
+      if (PRODUCT.customSize) {
+        const from = customFromPrice();
+        html += '<div class="size-card ' + (S.useCustom ? 'sel' : '') + '" onclick="selectCustom()">' +
+          '<span class="sc-lbl">Custom Size</span><span class="sc-price">' + (from != null ? 'from ' + fmt(from) : '—') + '</span></div>';
+      }
+      $('sign-size-grid').innerHTML = html;
+      $('custom-dims').classList.toggle('show', S.useCustom);
+      if (PRODUCT.customSize) {
+        $('custom-unit-w').textContent = PRODUCT.customSize.unit;
+        $('custom-unit-h').textContent = PRODUCT.customSize.unit;
+      }
+    }
+
+    function updateCustomNote() {
+      const note = $('custom-max-note');
+      if (!PRODUCT.customSize || !S.useCustom) { note.style.display = 'none'; return; }
+      const cs = PRODUCT.customSize;
+      const w = parseFloat($('custom-w').value) || 0;
+      const h = parseFloat($('custom-h').value) || 0;
+      note.style.display = 'block';
+      if ((cs.maxWidth && w > cs.maxWidth) || (cs.maxHeight && h > cs.maxHeight)) {
+        note.innerHTML = '<strong>Too large:</strong> max size is ' + cs.maxWidth + ' × ' + cs.maxHeight + ' ' + cs.unit + '.';
+      } else {
+        note.innerHTML = '<strong>Max size:</strong> ' + cs.maxWidth + ' × ' + cs.maxHeight + ' ' + cs.unit + '.';
+      }
+    }
+
+    function selectSize(label) {
+      S.useCustom = false;
+      S.size = label;
+      buildSizeGrid();
+      refresh();
+    }
+
+    function selectCustom() {
+      S.useCustom = true;
+      buildSizeGrid();
+      refresh();
+    }
+
+    function onCustomDimsInput() { refresh(); }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  PACKAGE TOGGLE (Complete vs. Replacement Graphic Only)
+    // ══════════════════════════════════════════════════════════════════════
+    function buildPackageGrid() {
+      const pkgs = PRODUCT.packages || [];
+      $('package-section').style.display = pkgs.length > 1 ? 'block' : 'none';
+      if (pkgs.length <= 1) return;
+      $('package-grid').innerHTML = pkgs.map(function (pk) {
+        const sel = S.package === pk.code;
+        const sel1 = currentSelection(1);
+        sel1.package = pk.code;
+        const r = priceFor(sel1);
+        return '<div class="pkg-card ' + (sel ? 'sel' : '') + '" onclick="selectPackage(' + jsAttr(pk.code) + ')">' +
+          '<div class="pkg-radio"></div>' +
+          '<div class="pkg-body"><div class="pkg-title">' + pk.label + '</div></div>' +
+          '<div class="pkg-price">' + (r ? fmt(r.unit) : '—') + '</div></div>';
+      }).join('');
+    }
+
+    function selectPackage(code) {
+      S.package = code;
+      buildSizeGrid();
+      buildPackageGrid();
+      refresh();
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  OPTION GROUPS (print sides, lamination, mounting, etc.)
+    // ══════════════════════════════════════════════════════════════════════
+    function buildOptionGroups() {
+      const groups = PRODUCT.options || [];
+      $('option-groups').innerHTML = groups.map(function (grp) {
+        const includedChoice = grp.choices.find(function (c) { return c.priceType === 'included'; }) || grp.choices[0];
+        const baseSel = currentSelection(1);
+        baseSel.options = Object.assign({}, S.options);
+        baseSel.options[grp.code] = includedChoice.code;
+        const base = priceFor(baseSel);
+
+        const chips = grp.choices.map(function (ch) {
+          const isSel = S.options[grp.code] === ch.code;
+          const trySel = currentSelection(1);
+          trySel.options = Object.assign({}, S.options);
+          trySel.options[grp.code] = ch.code;
+          const withCh = priceFor(trySel);
+          let priceLabel = 'included';
+          if (base && withCh) {
+            const diff = withCh.unit - base.unit;
+            if (diff > 0.004) priceLabel = '+' + fmt(diff);
+            else if (diff < -0.004) priceLabel = '-' + fmt(-diff);
+          }
+          return '<div class="choice-chip ' + (isSel ? 'sel' : '') + '" onclick="selectOption(' + jsAttr(grp.code) + ',' + jsAttr(ch.code) + ')">' +
+            '<span class="ch-lbl">' + ch.label + '</span><span class="ch-price">' + priceLabel + '</span></div>';
+        }).join('');
+
+        return '<div class="opt-group"><span class="field-label">' + grp.name + '</span><div class="choice-row">' + chips + '</div></div>';
+      }).join('');
+    }
+
+    function selectOption(groupCode, choiceCode) {
+      S.options[groupCode] = choiceCode;
+      buildSizeGrid();
+      buildPackageGrid();
+      buildOptionGroups();
+      refresh();
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  PICKUP / SHIPPING
+    //  Pickup timing is based on the shop's clock (Eastern time), not the
+    //  visitor's: Mon–Fri before 5 PM ET → pick up NOW (before 9 AM → today
+    //  at 9 AM); after 5 PM or on a weekend → 9 AM the next business day.
+    // ══════════════════════════════════════════════════════════════════════
+    const STORE = {
+      name: 'Fly Visuals — Port Richey, FL store',
+      address: '8132 Cormel St, Port Richey, FL 34668',
+      phone: '(727) 494-6162',
+      phoneHref: 'tel:7274946162',
+      hours: 'Mon–Fri 9 AM–5 PM',
+      pickupWindow: '9 AM–5 PM',
+    };
+    S.fulfill = 'pickup';
+
+    function nowET() {
+      const parts = {};
+      new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', year: 'numeric', month: 'numeric', day: 'numeric',
+        hour: 'numeric', minute: 'numeric', hourCycle: 'h23',
+      }).formatToParts(new Date()).forEach(function (p) { parts[p.type] = p.value; });
+      // A plain Date holding the ET wall-clock values (only used for calendar math)
+      return new Date(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute);
+    }
+
+    // Returns { short, long } — short for the badge/summary, long for the store card.
+    function pickupInfo() {
+      const t = nowET();
+      const day = t.getDay(), mins = t.getHours() * 60 + t.getMinutes();
+      const weekday = day >= 1 && day <= 5;
+      if (weekday && mins >= 9 * 60 && mins < 17 * 60) {
+        return { short: 'now', long: 'Available for pickup now', note: 'until 5 PM today' };
+      }
+      if (weekday && mins < 9 * 60) {
+        return { short: 'today at 9 AM', long: 'Available for pickup today at 9 AM', note: 'open until 5 PM' };
+      }
+      const d = new Date(t.getFullYear(), t.getMonth(), t.getDate() + 1);
+      while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() + 1);
+      const isTomorrow = (d - new Date(t.getFullYear(), t.getMonth(), t.getDate())) === 864e5;
+      const when = (isTomorrow ? 'tomorrow' : d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })) + ' at 9 AM';
+      return { short: when, long: 'Available for pickup ' + when, note: 'open until 5 PM' };
+    }
+
+    // Plain-text pickup time for the order email
+    function pickupDate() { return pickupInfo().long.replace('Available for pickup ', ''); }
+
+    function renderFulfillment() {
+      const pk = pickupInfo();
+      document.querySelectorAll('.js-pickup-date').forEach(function (el) { el.textContent = pk.short; });
+      const html =
+        '<button type="button" class="ful-opt' + (S.fulfill === 'pickup' ? ' sel' : '') + '" onclick="setFulfill(\'pickup\')">' +
+          '<div class="ful-head"><span class="ful-radio"></span>In-Store Pickup<span class="ful-price">FREE</span></div>' +
+          '<div class="ful-detail">' +
+            '<strong>' + STORE.name + '</strong><br>' +
+            STORE.address + '<br>' +
+            '<a href="' + STORE.phoneHref + '" onclick="event.stopPropagation()">' + STORE.phone + '</a><br>' +
+            'Hours: ' + STORE.hours + '<br>' +
+            '<span class="ful-ready">' + pk.long + '</span> · ' + pk.note +
+          '</div>' +
+        '</button>' +
+        '<button type="button" class="ful-opt' + (S.fulfill === 'ship' ? ' sel' : '') + '" onclick="setFulfill(\'ship\')">' +
+          '<div class="ful-head"><span class="ful-radio"></span>Ship to Me<span class="ful-price">QUOTED</span></div>' +
+          '<div class="ful-detail">' +
+            'Ships anywhere in the lower 48 in 2–3 business days, then 1–5 days in transit. ' +
+            'We\'ll email your shipping cost to approve before it ships. ' +
+            '<a href="/shipping-policy/" onclick="event.stopPropagation()">Shipping policy</a>' +
+          '</div>' +
+        '</button>';
+      document.querySelectorAll('.ful-choices').forEach(function (el) { el.innerHTML = html; });
+      $('ship-fields').style.display = S.fulfill === 'ship' ? 'block' : 'none';
+      $('sp-ful-lbl').textContent = S.fulfill === 'ship' ? 'Shipping' : 'Pickup ' + pk.short;
+      $('sp-ful').textContent = S.fulfill === 'ship' ? 'Quoted by email' : 'Free';
+    }
+
+    function setFulfill(mode) {
+      S.fulfill = mode;
+      renderFulfillment();
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  QUANTITY + SUMMARY
+    // ══════════════════════════════════════════════════════════════════════
+    function changeQty(dir) {
+      const step = PRODUCT.qtyStep || 1;
+      const min = PRODUCT.minQty || 1;
+      S.qty = Math.max(min, S.qty + dir * step);
+      refresh();
+    }
+
+    function buildVolTiers(r) {
+      const tiers = PRODUCT.quantityDiscounts || [];
+      const applicable = tiers.slice().reverse().find(function (t) { return S.qty >= t.minQty; });
+      $('vol-tiers').innerHTML = tiers.map(function (t) {
+        const active = applicable === t;
+        const label = !t.percentOff ? (t.minQty + '+') : (t.minQty + '+ (' + t.percentOff + '% off)');
+        return '<div class="vol-badge ' + (active ? 'active' : '') + '">' + label + '</div>';
+      }).join('');
+    }
+
+    function buildSummary() {
+      updateCustomNote();
+      const sel = currentSelection();
+      const r = priceFor(sel);
+
+      $('sp-type').textContent = PRODUCT.label;
+      if (S.useCustom && PRODUCT.customSize) {
+        const w = sel.custom.width || '?', h = sel.custom.height || '?';
+        $('sp-size').textContent = w + ' × ' + h + ' ' + PRODUCT.customSize.unit + ' (custom)';
+      } else {
+        $('sp-size').textContent = S.size || '—';
+      }
+
+      const pkgDef = (PRODUCT.packages || []).find(function (p) { return p.code === S.package; });
+      const pkgRow = $('sp-pkg').closest('.sum-row');
+      if (PRODUCT.packages && PRODUCT.packages.length > 1) {
+        pkgRow.style.display = 'flex';
+        $('sp-pkg').textContent = pkgDef ? pkgDef.label : '—';
+      } else {
+        pkgRow.style.display = 'none';
+      }
+
+      $('sp-breakdown').innerHTML = r ? r.breakdown.map(function (b) {
+        return '<div class="sum-row"><span class="sr-lbl">' + b.item + '</span><span class="sr-val">' + fmt(b.amount) + '</span></div>';
+      }).join('') : '';
+
+      $('sp-qty').textContent = S.qty;
+      $('qty-display').textContent = S.qty;
+      $('sp-unit').textContent = r ? fmt(r.unit) : '—';
+      $('sp-disc').textContent = (r && r.qtyDiscountPct) ? r.qtyDiscountPct + '% off' : 'None';
+      $('sp-total').innerHTML = r ? fmt(r.subtotal) + (r.qtyDiscountPct ? '<span class="disc-tag">' + r.qtyDiscountPct + '% off</span>' : '') : '—';
+
+      buildVolTiers(r);
+      return r;
+    }
+
+    function refresh() {
+      const r = buildSummary();
+      updateMpb(r);
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  SUBMIT
+    // ══════════════════════════════════════════════════════════════════════
+    async function submitSigns() {
+      const name = $('sign-name').value.trim();
+      const email = $('sign-email').value.trim();
+      const phone = $('sign-phone').value.trim();
+
+      if (!name || !email || !phone) {
+        showErr('signs-error', 'Please fill in your name, email, and phone.');
+        return;
+      }
+
+      const sel = currentSelection();
+      if (S.useCustom) {
+        const cs = PRODUCT.customSize;
+        if (!sel.custom.width || !sel.custom.height) {
+          showErr('signs-error', 'Please enter a width and height for your custom size.');
+          return;
+        }
+        if (cs.maxWidth && sel.custom.width > cs.maxWidth) {
+          showErr('signs-error', 'Max width is ' + cs.maxWidth + ' ' + cs.unit + '.');
+          return;
+        }
+        if (cs.maxHeight && sel.custom.height > cs.maxHeight) {
+          showErr('signs-error', 'Max height is ' + cs.maxHeight + ' ' + cs.unit + '.');
+          return;
+        }
+      } else if (!S.size) {
+        showErr('signs-error', 'Please select a size.');
+        return;
+      }
+      const shipAddr = $('sign-ship-addr').value.trim();
+      if (S.fulfill === 'ship' && !shipAddr) {
+        showErr('signs-error', 'Please enter your shipping address, or choose free in-store pickup.');
+        return;
+      }
+      showErr('signs-error', '');
+
+      const r = priceFor(sel);
+      if (!r) {
+        showErr('signs-error', 'Could not calculate a price for that combination — please call (727) 494-6162.');
+        return;
+      }
+
+      const sizeLabel = S.useCustom
+        ? (sel.custom.width + ' × ' + sel.custom.height + ' ' + PRODUCT.customSize.unit + ' (custom)')
+        : S.size;
+      const pkgDef = (PRODUCT.packages || []).find(function (p) { return p.code === S.package; });
+      const optionsSummary = (PRODUCT.options || []).map(function (grp) {
+        const ch = grp.choices.find(function (c) { return c.code === S.options[grp.code]; });
+        return grp.name + ': ' + (ch ? ch.label : '—');
+      }).join('; ');
+
+      const btn = $('signs-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      try {
+        await netlifyPost(PRODUCT.netlifyForm || 'signs-order', {
+          name: name, email: email, phone: phone,
+          'sign-type': PRODUCT.label,
+          size: sizeLabel,
+          'custom-dimensions': S.useCustom ? (sel.custom.width + ' x ' + sel.custom.height + ' ' + PRODUCT.customSize.unit) : '',
+          package: pkgDef ? pkgDef.label : '',
+          options: optionsSummary,
+          quantity: S.qty,
+          'design-service': 'No',
+          notes: $('sign-notes').value.trim(),
+          total: fmt(r.subtotal),
+          fulfillment: S.fulfill === 'ship' ? 'Ship to customer (quote shipping by email)' : 'In-store pickup — Port Richey',
+          'pickup-date': S.fulfill === 'pickup' ? pickupDate() : '',
+          'shipping-address': S.fulfill === 'ship' ? shipAddr : '',
+        });
+        btn.textContent = 'Redirecting to payment...';
+        setTimeout(function () { stripeRedirect(PRODUCT.stripeLink, r.subtotal); }, 400);
+      } catch (e) {
+        btn.disabled = false;
+        btn.textContent = 'Place Order & Pay Securely';
+        showErr('signs-error', 'Something went wrong. Please try again or call (727) 494-6162.');
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  MOBILE PRICE BAR
+    // ══════════════════════════════════════════════════════════════════════
+    function updateMpb(r) {
+      const bar = $('mpb');
+      const priceEl = $('mpb-price');
+      const ctaEl = $('mpb-cta');
+      const lblEl = $('mpb-lbl');
+
+      priceEl.textContent = r ? fmt(r.subtotal) : '—';
+      lblEl.textContent = 'Order Total';
+      ctaEl.textContent = 'Place Order';
+      ctaEl.onclick = submitSigns;
+      bar.style.display = 'flex';
+    }
+
+    function mobileCta() { const cta = $('mpb-cta'); if (cta && cta.onclick) cta.onclick(); }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  INIT
+    // ══════════════════════════════════════════════════════════════════════
+    function init() {
+      buildSizeGrid();
+      buildPackageGrid();
+      buildOptionGroups();
+      renderFulfillment();
+      setInterval(renderFulfillment, 60 * 1000);
+      refresh();
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  
+    function toggleMobile() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.toggle('open');
+      document.querySelectorAll('.hamburger').forEach(h => h.classList.toggle('open', isOpen));
+    }
+
+    function toggleMobAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.mob-accordion-body.open').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.mob-accordion-header.open').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburgers = document.querySelectorAll('.hamburger');
+      const clickedHamburger = Array.from(hamburgers).some(h => h.contains(e.target));
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !clickedHamburger) {
+        menu.classList.remove('open');
+        hamburgers.forEach(h => h.classList.remove('open'));
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (!navbar) return;
+      if (window.scrollY > 30) {
+        navbar.style.background = 'rgba(10,10,10,0.99)';
+      } else {
+        navbar.style.background = 'rgba(10,10,10,0.97)';
+      }
+    });
+
+  </script>
+</body>
+</html>

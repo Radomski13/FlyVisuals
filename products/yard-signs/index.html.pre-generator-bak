@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yard Signs — Fly Visuals | Port Richey, FL</title>
+  <meta name="description" content="Order custom yard signs online. Priced upfront, volume discounts applied automatically, pay securely with Stripe. Fly Visuals — Port Richey, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #cc1414;
+      --red-dark:   #aa1010;
+      --bg:         #0f0f0f;
+      --bg2:        #1a1a1a;
+      --bg3:        #222222;
+      --bg4:        #2a2a2a;
+      --border:     #2a2a2a;
+      --border-hi:  #3a3a3a;
+      --text:       #ffffff;
+      --muted:      #999999;
+      --dim:        #555555;
+      --font-d:     'Bebas Neue', sans-serif;
+      --font-b:     'Barlow', sans-serif;
+      --max-w:      1100px;
+      --r:          4px;
+      --ease:       0.15s ease;
+      --black:      #f0f0f0;
+      --dark:       #ffffff;
+      --dark2:      #e4e4e4;
+      --red-bright: #e81c1c;
+      --nav-red-dark: #8b0000;
+      --white:      #1a1a1a;
+      --grey-light: #333333;
+      --grey:       #666666;
+      --grey-dark:  #cccccc;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:  'Barlow', sans-serif;
+    }
+
+    
+    /* ══════════════════════ MAIN-SITE NAVBAR (ported) ══════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.97);
+      border-bottom: 2px solid var(--red);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--red); }
+
+    nav { display: flex; align-items: center; gap: 0; }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      transition: color 0.2s;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--red-bright); }
+    .nav-link svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+    /* Level 1 dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--dark2);
+      border: 1px solid var(--grey-dark);
+      border-top: 2px solid var(--red);
+      min-width: 200px;
+      z-index: 200;
+    }
+    .nav-item:hover .dropdown { display: block; }
+
+    .dropdown-item {
+      position: relative;
+    }
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .dropdown-link:hover { background: var(--red); color: #ffffff; }
+    .dropdown-link svg { width: 8px; height: 8px; }
+
+    /* Level 2 dropdown */
+    .sub-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: var(--dark);
+      border: 1px solid var(--grey-dark);
+      border-left: 2px solid var(--red);
+      min-width: 210px;
+      z-index: 300;
+    }
+    .dropdown-item:hover .sub-dropdown { display: block; }
+    .sub-dropdown a {
+      display: block;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      transition: background 0.15s, color 0.15s;
+    }
+    .sub-dropdown a:hover { background: var(--nav-red-dark); color: #ffffff; }
+
+    /* ========== NAV CALL BUTTON ========== */
+    .nav-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-left: 0.8rem;
+      background: var(--red);
+      color: var(--white) !important;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .nav-call-btn:hover { background: transparent; color: var(--red) !important; }
+    .nav-call-btn svg { flex-shrink: 0; }
+
+    .mob-call-btn {
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.85rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mob-call-btn:hover { background: transparent; color: var(--red); }
+
+    /* Mobile Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 7px;
+      cursor: pointer;
+      padding: 12px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hamburger span {
+      display: block;
+      width: 34px;
+      height: 3px;
+      background: #ffffff;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      overflow-y: auto;
+      z-index: 999;
+      padding: 1rem 0 3rem;
+    }
+    .mobile-menu.open { display: block; }
+
+    .mobile-section-header {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      padding: 1rem 1.5rem 0.3rem;
+      border-top: 1px solid var(--grey-dark);
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mobile-menu a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mobile-menu a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* Mobile accordion */
+    .mob-accordion { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mob-accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--grey-light);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: left;
+    }
+    .mob-accordion-header:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-acc-arrow {
+      width: 12px; height: 12px;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .mob-accordion-header.open .mob-acc-arrow { transform: rotate(180deg); }
+    .mob-accordion-body {
+      display: none;
+      background: rgba(0,0,0,0.25);
+    }
+    .mob-accordion-body.open { display: block; }
+    .mob-accordion-body a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mob-accordion-body a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mob-accordion-body a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-main-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mob-main-link:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* ========== BOTTOM NAVBAR (mobile only) ========== */
+    #bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(10,10,10,0.98);
+      border-top: 2px solid var(--red);
+      z-index: 1001;
+      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    @media (max-width: 768px) { #bottom-nav { display: flex; } }
+    .bot-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .bot-call-btn:hover { background: transparent; color: var(--red); }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      /* ---- Top navbar mobile layout ---- */
+      #navbar {
+        overflow: visible;
+        justify-content: space-between;
+        height: 52px;
+      }
+      .logo {
+        position: fixed;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        z-index: 1002;
+        pointer-events: auto;
+        display: flex;
+        align-items: flex-start;
+      }
+      .logo img {
+        height: 58px !important;
+        width: auto !important;
+        filter:
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 2px #000)
+          drop-shadow(0 0 2px #000);
+      }
+      .mob-call-btn { display: none; }
+      #navbar .hamburger { display: none; }
+      .mobile-menu { bottom: 60px; }
+    }
+    /* ══════════════════════ END MAIN-SITE NAVBAR ══════════════════════ */
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font-b); border: none; background: none; }
+    h1, h2, h3 { font-family: var(--font-d); letter-spacing: 0.02em; line-height: 1; }
+
+    /* ── HEADER ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 60px;
+    }
+    .hdr-back { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0.02em; transition: color var(--ease); }
+    .hdr-back:hover { color: var(--text); }
+    .hdr-logo { font-family: var(--font-d); font-size: 22px; letter-spacing: 0.08em; }
+    .hdr-logo span { color: var(--red); }
+    .hdr-phone { font-size: 13px; font-weight: 600; color: var(--red); letter-spacing: 0.02em; }
+    .hdr-phone:hover { color: #e01515; }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    #store-hero {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(204,20,20,0.08) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23fff' fill-opacity='0.03'/%3E%3C/svg%3E");
+      padding: 132px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.15em; color: var(--red);
+      font-weight: 600; margin-bottom: 16px; text-transform: uppercase;
+    }
+    #store-hero h1 { font-size: clamp(48px, 8vw, 80px); margin-bottom: 16px; }
+    .hero-sub {
+      font-size: 17px; color: var(--muted); max-width: 520px;
+      margin: 0 auto 28px; font-weight: 300; line-height: 1.6;
+    }
+    .hero-trust { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+    .hero-trust span {
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .hero-trust span::before { content: '— '; color: var(--red); }
+
+    /* ── TAB BAR ──────────────────────────────────────────────── */
+    #tab-bar {
+      position: sticky; top: 60px; z-index: 90;
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      display: flex;
+    }
+    .tab-btn {
+      flex: 1; padding: 16px 12px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); border-bottom: 3px solid transparent;
+      transition: all var(--ease);
+    }
+    .tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+
+    /* ── MAIN ─────────────────────────────────────────────────── */
+    #store-main { max-width: var(--max-w); margin: 0 auto; padding: 0 20px 80px; }
+    .tab-content { display: none; padding: 44px 0; }
+    .tab-content.active { display: block; }
+
+    .sec-head { margin-bottom: 28px; }
+    .sec-head h2 { font-size: 34px; margin-bottom: 6px; }
+    .sec-head p { color: var(--muted); font-size: 14px; font-weight: 300; }
+
+    /* ── STEP INDICATOR ───────────────────────────────────────── */
+    .step-bar {
+      display: flex; align-items: center; margin-bottom: 36px;
+      overflow-x: auto; padding-bottom: 2px;
+    }
+    .step-dot { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .step-dot .dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--border-hi); font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0; color: var(--muted);
+    }
+    .step-dot .slabel {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--dim); white-space: nowrap;
+    }
+    .step-dot.active .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.active .slabel { color: var(--text); }
+    .step-dot.done .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.done .slabel { color: var(--muted); }
+    .step-line { flex: 1; height: 2px; background: var(--border); margin: 0 10px; min-width: 20px; }
+    .step-line.done { background: var(--red); }
+
+    /* ── SELECTION SUMMARY BAR ────────────────────────────────── */
+    .sel-summary {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: var(--r); padding: 14px 20px;
+      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .sel-item .s-lbl {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 2px;
+    }
+    .sel-item .s-val { font-size: 13px; font-weight: 600; }
+
+    /* ── OPTION CARDS (vehicle / generic) ─────────────────────── */
+    .opt-grid { display: grid; gap: 12px; }
+    .opt-grid.c5 { grid-template-columns: repeat(5, 1fr); }
+    .opt-grid.c2 { grid-template-columns: repeat(2, 1fr); }
+    .opt-grid.c3 { grid-template-columns: repeat(3, 1fr); }
+
+    .opt-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 20px 14px; text-align: center; cursor: pointer;
+      transition: all var(--ease); user-select: none;
+    }
+    .opt-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .opt-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .opt-card .oc-icon { font-size: 30px; display: block; margin-bottom: 8px; line-height: 1; }
+    .opt-card .oc-label { font-weight: 700; font-size: 13px; display: block; }
+    .opt-card .oc-price { font-family: var(--font-d); font-size: 20px; color: var(--red); margin-top: 6px; display: block; }
+
+    /* ── PACKAGE CARDS (left-aligned, wider) ──────────────────── */
+    .pkg-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 22px 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .pkg-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .pkg-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .pkg-radio {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 50%;
+      flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .pkg-card.sel .pkg-radio { border-color: var(--red); background: var(--red); }
+    .pkg-card.sel .pkg-radio::after { content: '✓'; font-size: 11px; color: white; font-weight: 700; }
+    .pkg-body { flex: 1; }
+    .pkg-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .pkg-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.4; }
+    .pkg-price { font-family: var(--font-d); font-size: 26px; color: var(--red); flex-shrink: 0; align-self: center; }
+
+    /* ── FILM CARDS ───────────────────────────────────────────── */
+    .film-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+    }
+    .film-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .film-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .film-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .film-label { font-weight: 700; font-size: 16px; }
+    .film-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px; background: var(--red); color: white;
+    }
+    .film-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+    .film-price { font-family: var(--font-d); font-size: 30px; color: var(--red); margin-top: 14px; }
+
+    /* ── STEP NAV BUTTONS ─────────────────────────────────────── */
+    .step-nav { display: flex; gap: 12px; margin-top: 32px; align-items: center; }
+    .btn-back {
+      padding: 12px 22px; border: 1px solid var(--border-hi); border-radius: var(--r);
+      color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      transition: all var(--ease);
+    }
+    .btn-back:hover { color: var(--text); border-color: var(--muted); }
+    .btn-next {
+      flex: 1; max-width: 280px; padding: 14px 28px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: background var(--ease);
+    }
+    .btn-next:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 36px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: background var(--ease); width: 100%; max-width: 400px;
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── PRICE CALLOUT ────────────────────────────────────────── */
+    .price-callout {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red); border-radius: var(--r);
+      padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .pc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .pc-val { font-family: var(--font-d); font-size: 44px; color: var(--text); line-height: 1; }
+
+    /* ── FORM ─────────────────────────────────────────────────── */
+    .form-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg.full { grid-column: 1 / -1; }
+    .fg label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .fg input, .fg select, .fg textarea {
+      background: var(--bg3); border: 1px solid var(--border-hi); color: var(--text);
+      padding: 12px 14px; border-radius: var(--r); font-family: var(--font-b);
+      font-size: 14px; transition: border-color var(--ease);
+      -webkit-appearance: none; appearance: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--red); }
+    .fg input::placeholder, .fg textarea::placeholder { color: var(--dim); }
+    .fg textarea { resize: vertical; min-height: 88px; }
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+    /* Time slots */
+    .time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .tslot {
+      padding: 10px 6px; text-align: center; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border-hi); border-radius: var(--r); cursor: pointer;
+      transition: all var(--ease); color: var(--muted); background: var(--bg3);
+    }
+    .tslot:hover { border-color: var(--red); color: var(--text); }
+    .tslot.sel { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* ── NOTE BOX ─────────────────────────────────────────────── */
+    .note-box {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 14px 18px; font-size: 13px; color: var(--muted); font-weight: 300;
+      line-height: 1.6; margin-top: 20px;
+    }
+    .note-box strong { color: var(--text); font-weight: 600; }
+
+    /* ── ALERTS ───────────────────────────────────────────────── */
+    .alert { padding: 12px 16px; border-radius: var(--r); font-size: 13px; font-weight: 500; margin-top: 16px; }
+    .alert-err { background: rgba(204,20,20,0.12); border: 1px solid rgba(204,20,20,0.4); color: #ff9999; display: none; }
+    .alert-ok  { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.35); color: #86efac; display: none; }
+
+    /* ── SIGNS LAYOUT ─────────────────────────────────────────── */
+    .signs-layout { display: grid; grid-template-columns: 1fr 320px; gap: 36px; align-items: start; }
+    .signs-panel {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 24px; position: sticky; top: 136px;
+    }
+
+    .type-toggle {
+      display: flex; border: 1px solid var(--border-hi); border-radius: var(--r);
+      overflow: hidden; margin-bottom: 32px;
+    }
+    .tt-btn {
+      flex: 1; padding: 13px 10px; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+      border-right: 1px solid var(--border-hi);
+    }
+    .tt-btn:last-child { border-right: none; }
+    .tt-btn.active { background: var(--red); color: white; border-right-color: var(--red); }
+
+    .field-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 10px;
+    }
+
+    /* Size grid */
+    .size-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 28px; }
+    .size-card {
+      background: var(--bg3); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 14px 10px; text-align: center; cursor: pointer; transition: all var(--ease);
+    }
+    .size-card:hover { border-color: var(--border-hi); }
+    .size-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .size-card .sc-lbl { font-weight: 700; font-size: 13px; display: block; margin-bottom: 4px; }
+    .size-card .sc-price { font-size: 12px; color: var(--muted); }
+
+    /* Custom dimension inputs */
+    .custom-dims { display: none; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .custom-dims.show { display: grid; }
+
+    /* Quantity stepper */
+    .qty-wrap { margin-bottom: 16px; }
+    .qty-stepper { display: flex; align-items: center; }
+    .qty-btn {
+      width: 44px; height: 44px; border: 1px solid var(--border-hi); background: var(--bg3);
+      color: var(--text); font-size: 22px; font-weight: 300; display: flex;
+      align-items: center; justify-content: center; transition: all var(--ease);
+    }
+    .qty-btn:first-child { border-radius: var(--r) 0 0 var(--r); }
+    .qty-btn:last-child  { border-radius: 0 var(--r) var(--r) 0; }
+    .qty-btn:hover { background: var(--bg4); border-color: var(--red); color: var(--red); }
+    .qty-display {
+      flex: 1; height: 44px; background: var(--bg2);
+      border: 1px solid var(--border-hi); border-left: none; border-right: none;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; min-width: 70px;
+    }
+
+    /* Volume tiers */
+    .vol-tiers { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .vol-badge {
+      padding: 4px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+      border-radius: 2px; border: 1px solid var(--border-hi); color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+    }
+    .vol-badge.active { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* Design add-on */
+    .addon-row {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 16px 18px; display: flex; align-items: center; gap: 14px;
+      cursor: pointer; transition: border-color var(--ease); margin-bottom: 28px; user-select: none;
+    }
+    .addon-row:hover { border-color: var(--border-hi); }
+    .addon-row.checked { border-color: var(--red); background: rgba(204,20,20,0.06); }
+    .addon-chk {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 3px;
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .addon-row.checked .addon-chk { background: var(--red); border-color: var(--red); }
+    .addon-row.checked .addon-chk::after { content: '✓'; color: white; font-size: 12px; font-weight: 700; }
+    .addon-info { flex: 1; }
+    .addon-info strong { font-size: 14px; font-weight: 700; display: block; }
+    .addon-info span { font-size: 12px; color: var(--muted); }
+    .addon-price { font-family: var(--font-d); font-size: 22px; color: var(--red); }
+
+    /* Summary panel rows */
+    .sum-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px;
+    }
+    .sum-row:last-of-type { border-bottom: none; }
+    .sum-row .sr-lbl { color: var(--muted); }
+    .sum-row .sr-val { font-weight: 600; }
+    .sum-total {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 16px; padding-top: 16px; border-top: 2px solid var(--border-hi);
+    }
+    .st-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .st-price { font-family: var(--font-d); font-size: 38px; line-height: 1; }
+    .disc-tag {
+      display: inline-block; padding: 2px 8px; background: rgba(204,20,20,0.15);
+      color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+      border-radius: 2px; margin-left: 8px;
+    }
+
+    /* ── GRAPHIC PACKAGES ─────────────────────────────────────── */
+    .gfx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .gfx-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 32px 26px; position: relative; display: flex; flex-direction: column;
+      transition: border-color var(--ease);
+    }
+    .gfx-card:hover { border-color: var(--border-hi); }
+    .gfx-card.featured { border-color: var(--red); }
+    .gfx-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px;
+      border-radius: 0 0 4px 4px; white-space: nowrap;
+    }
+    .gfx-title { font-family: var(--font-d); font-size: 28px; margin-bottom: 8px; margin-top: 16px; }
+    .gfx-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; margin-bottom: 20px; }
+    .gfx-price { font-family: var(--font-d); font-size: 52px; color: var(--red); line-height: 1; margin-bottom: 4px; }
+    .gfx-price sup { font-family: var(--font-b); font-size: 22px; font-weight: 600; vertical-align: super; line-height: 0; }
+    .gfx-turn { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 22px; letter-spacing: 0.02em; }
+    .gfx-includes { list-style: none; margin-bottom: 28px; flex: 1; }
+    .gfx-includes li {
+      font-size: 13px; color: var(--muted); font-weight: 300;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .gfx-includes li::before { content: '—'; color: var(--red); font-weight: 600; flex-shrink: 0; }
+    .gfx-includes li:last-child { border-bottom: none; }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-ov {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88); z-index: 200;
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-ov.open { display: flex; }
+    .modal-box {
+      background: var(--bg2); border: 1px solid var(--border-hi); border-radius: var(--r);
+      padding: 36px; width: 100%; max-width: 500px; max-height: 90vh;
+      overflow-y: auto; position: relative;
+    }
+    .modal-title { font-family: var(--font-d); font-size: 30px; margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 10px; font-weight: 300; }
+    .modal-price { font-family: var(--font-d); font-size: 22px; color: var(--red); margin-bottom: 24px; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 20px; border-radius: 50%; transition: all var(--ease);
+    }
+    .modal-close:hover { color: var(--text); background: var(--bg4); }
+
+    /* ── TRUST BAR ────────────────────────────────────────────── */
+    #trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2); padding: 28px 24px; margin-top: 0;
+    }
+    .trust-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+    }
+    .trust-val { font-family: var(--font-d); font-size: 30px; color: var(--red); display: block; }
+    .trust-lbl { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.03em; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    #store-footer {
+      padding: 36px 24px; text-align: center;
+      background: var(--bg); border-top: 1px solid var(--border);
+    }
+    .footer-logo { font-family: var(--font-d); font-size: 20px; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .footer-logo span { color: var(--red); }
+    .footer-info { font-size: 13px; color: var(--muted); line-height: 1.9; }
+    .footer-info a { color: var(--red); }
+
+    /* ── MOBILE PRICE BAR ─────────────────────────────────────── */
+    #mpb {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--bg2); border-top: 2px solid var(--border);
+      padding: 12px 20px; z-index: 80; align-items: center; gap: 14px;
+    }
+    .mpb-left { flex: 1; }
+    .mpb-lbl { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; display: block; }
+    .mpb-price { font-family: var(--font-d); font-size: 30px; line-height: 1; }
+    .mpb-cta {
+      padding: 12px 22px; background: var(--red); color: white; border-radius: var(--r);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      white-space: nowrap; transition: background var(--ease);
+    }
+    .mpb-cta:hover { background: var(--red-dark); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .opt-grid.c5 { grid-template-columns: repeat(3, 1fr); }
+      .gfx-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      #store-hero { padding: 92px 20px 32px; }
+      #store-hero h1 { font-size: 48px; }
+      .hero-trust { gap: 14px; }
+
+      .tab-btn { font-size: 11px; padding: 13px 6px; }
+
+      .step-dot .slabel { display: none; }
+      .step-line { min-width: 12px; margin: 0 6px; }
+
+      .opt-grid.c5 { grid-template-columns: repeat(2, 1fr); }
+      .opt-grid.c2 { grid-template-columns: 1fr; }
+
+      .form-grid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+
+      .signs-layout { grid-template-columns: 1fr; }
+      .signs-panel { display: none; }
+
+      .size-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+      #mpb { display: flex; bottom: 60px; }
+      #store-main { padding-bottom: 160px; }
+
+      .modal-box { padding: 24px 18px; }
+      .btn-next { max-width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .opt-grid.c5 { grid-template-columns: 1fr 1fr; }
+      .hdr-phone { display: none; }
+      .time-slots { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NETLIFY FORM DECLARATIONS (required for Netlify to detect) ── -->
+  <form name="signs-order" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="sign-type">
+    <input type="text" name="size">
+    <input type="text" name="quantity">
+    <input type="text" name="design-service">
+    <input type="text" name="notes">
+    <input type="text" name="total">
+    <input type="text" name="bot-field">
+  </form>
+
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header id="navbar">
+  <a class="logo" href="/">
+    <img src="fly-visuals-logo.png" alt="Fly Visuals Logo" style="height:52px;width:auto;" />
+  </a>
+
+  <nav>
+    <!-- SERVICES dropdown -->
+    <div class="nav-item">
+      <button class="nav-link">
+        Services
+        <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <div class="dropdown">
+        <!-- WRAPS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/wraps/">
+            Wraps
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown" style="min-width:220px;">
+            <a href="/vehicle-wraps/">Vehicle Wraps</a>
+            <a href="/fleet-wraps/">Fleet Wraps</a>
+            <a href="/boat-wraps/">Boat Wraps</a>
+            <a href="/wall-wraps/">Wall Wraps</a>
+          </div>
+        </div>
+        <!-- SIGNS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/signs/">
+            Signs
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/indoor-signs/">Indoor Signs</a>
+            <a href="/outdoor-signs/">Outdoor Signs</a>
+            <a href="/business-signs/">Business Signs</a>
+            <a href="/vinyl-banners/">Vinyl Banners</a>
+            <a href="/yard-signs/">Yard Signs</a>
+            <a href="/corrugated-signs/">Corrugated Plastic Signs</a>
+            <a href="/aluminum-signs/">Custom Aluminum Signs</a>
+            <a href="/acrylic-signs/">Custom Acrylic Signs</a>
+          </div>
+        </div>
+        <!-- WINDOW TINTING sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/tinting/">
+            Window Tinting
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/auto-tinting/">Auto Window Tinting</a>
+            <a href="/residential-tinting/">Residential Window Tinting</a>
+            <a href="/commercial-tinting/">Commercial Window Tinting</a>
+          </div>
+        </div>
+        <!-- GRAPHICS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/graphics/">
+            Graphics
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/vehicle-graphics/">Vehicle Graphics</a>
+            <a href="/floor-graphics/">Floor Graphics</a>
+            <a href="/fleet-graphics/">Fleet Graphics</a>
+            <a href="/logo-design/">Logo Design</a>
+            <a href="/window-graphics/">Window Graphics</a>
+            <a href="/boat-graphics/">Boat Graphics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/wrap-visualizer/">Wrap Visualizer</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/gallery/">Gallery</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/contact/">Contact Us</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/bookonline.html">Book Online</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="/products.html">Products</a>
+    </div>
+    <a href="tel:7274946162" class="nav-call-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 494-6162
+    </a>
+  </nav>
+
+  <a href="tel:7274946162" class="mob-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Bottom Navigation (mobile only) -->
+<nav id="bottom-nav">
+  <a href="tel:7274946162" class="bot-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu" style="display:flex;">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- WRAPS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Wraps</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/wraps/">All Wraps</a>
+      <a href="/vehicle-wraps/" class="sub">Vehicle Wraps</a>
+      <a href="/fleet-wraps/" class="sub">Fleet Wraps</a>
+      <a href="/boat-wraps/" class="sub">Boat Wraps</a>
+      <a href="/wall-wraps/" class="sub">Wall Wraps</a>
+    </div>
+  </div>
+
+  <!-- SIGNS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Signs</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/signs/">All Signs</a>
+      <a href="/indoor-signs/" class="sub">Indoor Signs</a>
+      <a href="/outdoor-signs/" class="sub">Outdoor Signs</a>
+      <a href="/business-signs/" class="sub">Business Signs</a>
+      <a href="/vinyl-banners/" class="sub">Vinyl Banners</a>
+  <a href="/yard-signs/" class="sub">Yard Signs</a>
+  <a href="/corrugated-signs/" class="sub">Corrugated Plastic Signs</a>
+  <a href="/aluminum-signs/" class="sub">Custom Aluminum Signs</a>
+  <a href="/acrylic-signs/" class="sub">Custom Acrylic Signs</a>
+    </div>
+  </div>
+
+  <!-- WINDOW TINTING accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Window Tinting</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/tinting/">All Window Tinting</a>
+      <a href="/auto-tinting/" class="sub">Auto Window Tinting</a>
+      <a href="/residential-tinting/" class="sub">Residential Window Tinting</a>
+      <a href="/commercial-tinting/" class="sub">Commercial Window Tinting</a>
+    </div>
+  </div>
+
+  <!-- GRAPHICS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Graphics</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/graphics/">All Graphics</a>
+      <a href="/vehicle-graphics/" class="sub">Vehicle Graphics</a>
+      <a href="/floor-graphics/" class="sub">Floor Graphics</a>
+      <a href="/fleet-graphics/" class="sub">Fleet Graphics</a>
+      <a href="/logo-design/" class="sub">Logo Design</a>
+      <a href="/window-graphics/" class="sub">Window Graphics</a>
+      <a href="/boat-graphics/" class="sub">Boat Graphics</a>
+    </div>
+  </div>
+
+  <a href="/wrap-visualizer/" class="mob-main-link">Wrap Visualizer</a>
+  <a href="/gallery/" class="mob-main-link">Gallery</a>
+  <a href="/contact/" class="mob-main-link">Contact Us</a>
+  <a href="/bookonline.html" class="mob-main-link">Book Online</a>
+  <a href="/products.html" class="mob-main-link">Products</a>
+</div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section id="store-hero">
+    <p class="hero-eyebrow">Shop Yard Signs — Pay Securely with Stripe</p>
+    <h1>YARD SIGNS.</h1>
+    <p class="hero-sub">Priced upfront. No calls required. Most orders ready in 2–3 days.</p>
+    <div class="hero-trust">
+      <span>5.0 Google Rating</span>
+      <span>500+ Projects</span>
+      <span>3M &amp; Avery Certified</span>
+      <span>Madico &amp; LLumar Certified</span>
+    </div>
+  </section>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+  <main id="store-main">
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         CUSTOM SIGNS
+    ════════════════════════════════════════════════════════════ -->
+    <section id="tab-signs" class="tab-content active">
+
+      <div class="signs-layout">
+        <div class="signs-options">
+
+          <div class="sec-head">
+            <h2>Yard Signs</h2>
+            <p>Minimum 12. Order in increments of 12. Volume discounts applied automatically.</p>
+          </div>
+
+          <!-- Size selector -->
+          <span class="field-label">Select Size</span>
+          <div id="sign-size-grid" class="size-grid"></div>
+
+          <!-- Custom dimensions -->
+          <div id="custom-dims" class="custom-dims">
+            <div class="fg">
+              <label>Width (inches)</label>
+              <input type="number" id="custom-w" placeholder="e.g. 30" min="1" oninput="updateSignTotal()">
+            </div>
+            <div class="fg">
+              <label>Height (inches)</label>
+              <input type="number" id="custom-h" placeholder="e.g. 24" min="1" oninput="updateSignTotal()">
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <span class="field-label">Quantity</span>
+          <div class="qty-wrap">
+            <div class="qty-stepper">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <div class="qty-display" id="qty-display">12</div>
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <!-- Volume discount badges -->
+          <div id="vol-tiers" class="vol-tiers"></div>
+
+          <!-- Design add-on -->
+          <div class="addon-row" id="design-addon" onclick="toggleDesign()">
+            <div class="addon-chk"></div>
+            <div class="addon-info">
+              <strong>Add Design Service</strong>
+              <span>Don't have artwork? We'll design it — print-ready files included.</span>
+            </div>
+            <div class="addon-price" id="addon-price-label">+$25</div>
+          </div>
+
+          <!-- Contact form -->
+          <span class="field-label">Your Info</span>
+          <div class="form-grid" style="margin-bottom:20px">
+            <div class="fg">
+              <label>Full Name *</label>
+              <input type="text" id="sign-name" placeholder="John Smith">
+            </div>
+            <div class="fg">
+              <label>Email *</label>
+              <input type="email" id="sign-email" placeholder="john@email.com">
+            </div>
+            <div class="fg full">
+              <label>Phone *</label>
+              <input type="tel" id="sign-phone" placeholder="(727) 000-0000">
+            </div>
+            <div class="fg full">
+              <label>Notes (optional)</label>
+              <textarea id="sign-notes" placeholder="Colors, deadline, artwork details..."></textarea>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <strong>Artwork:</strong> If you have your own file, email it to us after placing your order — we'll reach out within 1 business day to confirm and collect files. Print-ready PDF, AI, or EPS preferred.
+          </div>
+
+          <div id="signs-error" class="alert alert-err" style="margin-top:16px"></div>
+
+          <div style="margin-top:20px">
+            <button class="btn-primary" id="signs-submit-btn" onclick="submitSigns()">
+              Place Order &amp; Pay Securely
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop summary panel -->
+        <div class="signs-panel">
+          <div style="font-family:var(--font-d);font-size:22px;margin-bottom:20px;letter-spacing:0.04em">ORDER SUMMARY</div>
+          <div id="sign-sum-rows">
+            <div class="sum-row"><span class="sr-lbl">Type</span><span class="sr-val" id="sp-type">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Size</span><span class="sr-val" id="sp-size">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Quantity</span><span class="sr-val" id="sp-qty">12</span></div>
+            <div class="sum-row"><span class="sr-lbl">Unit Price</span><span class="sr-val" id="sp-unit">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Volume Discount</span><span class="sr-val" id="sp-disc">—</span></div>
+            <div class="sum-row"><span class="sr-lbl">Design Add-on</span><span class="sr-val" id="sp-design">No</span></div>
+          </div>
+          <div class="sum-total">
+            <span class="st-lbl">Total</span>
+            <span class="st-price" id="sp-total">—</span>
+          </div>
+          <button class="btn-primary" onclick="submitSigns()" style="margin-top:24px;max-width:100%">
+            Place Order &amp; Pay
+          </button>
+        </div>
+
+      </div>
+    </section><!-- /tab-signs -->
+
+
+  </main>
+
+  <!-- ── TRUST BAR ───────────────────────────────────────────────── -->
+  <div id="trust-bar">
+    <div class="trust-grid">
+      <div>
+        <span class="trust-val">5.0★</span>
+        <span class="trust-lbl">Google Rating · 120+ Reviews</span>
+      </div>
+      <div>
+        <span class="trust-val">500+</span>
+        <span class="trust-lbl">Projects Completed</span>
+      </div>
+      <div>
+        <span class="trust-val">3M</span>
+        <span class="trust-lbl">3M &amp; Avery Dennison Certified</span>
+      </div>
+      <div>
+        <span class="trust-val">FL</span>
+        <span class="trust-lbl">Pasco County Local Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+  <footer id="store-footer">
+    <div class="footer-logo">FLY <span>VISUALS</span></div>
+    <div class="footer-info">
+      8132 Cormel St, Port Richey, FL 34668<br>
+      <a href="tel:7274946162">(727) 494-6162</a> · Mon–Fri 8AM–6PM<br>
+      <a href="/products.html">← All Products</a> · <a href="/index.html">Back to main site</a>
+    </div>
+  </footer>
+
+  <!-- ── MOBILE PRICE BAR ────────────────────────────────────────── -->
+  <div id="mpb">
+    <div class="mpb-left">
+      <span class="mpb-lbl" id="mpb-lbl">Your Total</span>
+      <span class="mpb-price" id="mpb-price">—</span>
+    </div>
+    <button class="mpb-cta" id="mpb-cta" onclick="mobileCta()">Place Order</button>
+  </div>
+
+  <script>
+    // ╔══════════════════════════════════════════════════════════════════════╗
+    // ║                                                                      ║
+    // ║   ✏️  CONFIG — THE ONLY SECTION YOU NEED TO EDIT                     ║
+    // ║                                                                      ║
+    // ║   Change prices and paste your Stripe Payment Link URLs here.        ║
+    // ║   All prices are in whole US dollars.                                ║
+    // ║                                                                      ║
+    // ╚══════════════════════════════════════════════════════════════════════╝
+
+    const CONFIG = {
+
+      // ── CUSTOM SIGNS ───────────────────────────────────────────────────
+      //
+      // STRIPE SETUP: Create one Stripe product called "Signs Order" priced
+      // at $1.00 per unit. Enable "adjustable quantity" on the Payment Link.
+      // Paste that single Payment Link URL into stripeLink below.
+      // The store calculates the total and appends ?prefilled_quantity=TOTAL
+      // so the customer pays the correct amount in Stripe checkout.
+      //
+      signs: {
+        designFee: 25,   // flat add-on design fee
+        minQty:    12,   // minimum order quantity
+        qtyStep:   12,   // increment size
+
+        // Volume discount tiers — minQty = minimum to qualify, pct = % off unit price
+        volumeDiscounts: [
+          { minQty: 12,  pct: 0  },   // base price
+          { minQty: 24,  pct: 10 },   // 10% off per unit
+          { minQty: 36,  pct: 15 },   // 15% off per unit
+          { minQty: 48,  pct: 20 },   // 20% off per unit
+          { minQty: 60,  pct: 25 },   // 25% off per unit
+        ],
+
+        yardSigns: {
+          sizes: [
+            { key: '18x24',  label: '18" × 24"',  unitPrice: 8.00 },
+            { key: '24x36',  label: '24" × 36"',  unitPrice: 12.00 },
+            { key: 'custom', label: 'Custom Size', unitPrice: 14.00, isCustom: true },
+          ],
+        },
+
+        vinylBanners: {
+          sizes: [
+            { key: '2x4',    label: "2' × 4'",    unitPrice: 45  },
+            { key: '2x6',    label: "2' × 6'",    unitPrice: 65  },
+            { key: '3x6',    label: "3' × 6'",    unitPrice: 85  },
+            { key: '3x8',    label: "3' × 8'",    unitPrice: 110 },
+            { key: '4x8',    label: "4' × 8'",    unitPrice: 130 },
+            { key: 'custom', label: 'Custom Size', unitPrice: 150, isCustom: true },
+          ],
+        },
+
+        // Replace '#' with your Stripe Payment Link for "Signs Order" ($1 unit, adjustable qty)
+        stripeLink: '#',
+      },
+
+    }; // end CONFIG — ✅ nothing below this line needs to change
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  STATE
+    // ══════════════════════════════════════════════════════════════════════
+    const S = {
+      signs: { type: 'yard', size: null, qty: 12, design: false },
+    };
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  UTILS
+    // ══════════════════════════════════════════════════════════════════════
+    const $ = id => document.getElementById(id);
+    const fmt = n => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+
+    async function netlifyPost(formName, data) {
+      const body = new URLSearchParams({ 'form-name': formName, ...data }).toString();
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+    }
+
+    function setBtn(id, loading, text) {
+      const btn = $(id);
+      if (!btn) return;
+      btn.disabled = loading;
+      btn.textContent = text || btn.dataset.orig || btn.textContent;
+      if (!loading && !btn.dataset.orig) btn.dataset.orig = btn.textContent;
+    }
+
+    function showErr(id, msg) {
+      const el = $(id);
+      if (!el) return;
+      el.textContent = msg;
+      el.style.display = msg ? 'block' : 'none';
+    }
+
+    function stripeRedirect(url, totalDollars) {
+      if (!url || url === '#') {
+        alert('Payment link coming soon — call us at (727) 494-6162 to complete your order.');
+        return;
+      }
+      const final = url.includes('?')
+        ? url + '&prefilled_quantity=' + Math.round(totalDollars)
+        : url + '?prefilled_quantity=' + Math.round(totalDollars);
+      window.location.href = final;
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  CUSTOM SIGNS
+    // ══════════════════════════════════════════════════════════════════════
+
+    function getSignSizes() {
+      return S.signs.type === 'yard'
+        ? CONFIG.signs.yardSigns.sizes
+        : CONFIG.signs.vinylBanners.sizes;
+    }
+
+    function getDiscountPct(qty) {
+      const tiers = [...CONFIG.signs.volumeDiscounts].reverse();
+      return (tiers.find(t => qty >= t.minQty) || { pct: 0 }).pct;
+    }
+
+    function getSignUnitPrice() {
+      const size = getSignSizes().find(s => s.key === S.signs.size);
+      return size ? size.unitPrice : 0;
+    }
+
+    function getSignTotal() {
+      const unit  = getSignUnitPrice();
+      const disc  = getDiscountPct(S.signs.qty);
+      const sub   = unit * (1 - disc / 100) * S.signs.qty;
+      const design = S.signs.design ? CONFIG.signs.designFee : 0;
+      return Math.round(sub + design);
+    }
+
+    function setSignType(type) {
+      S.signs.type = type;
+      S.signs.size = null;
+      document.querySelectorAll('.tt-btn').forEach((b, i) =>
+        b.classList.toggle('active', ['yard','banner'][i] === type));
+      buildSizeGrid();
+      updateSignPanel();
+    }
+
+    function buildSizeGrid() {
+      const sizes = getSignSizes();
+      $('sign-size-grid').innerHTML = sizes.map(s => `
+        <div class="size-card ${S.signs.size === s.key ? 'sel' : ''}" onclick="selectSignSize('${s.key}')">
+          <span class="sc-lbl">${s.label}</span>
+          <span class="sc-price">${fmt(s.unitPrice)} / each</span>
+        </div>`).join('');
+
+      const isCustom = S.signs.size && getSignSizes().find(s => s.key === S.signs.size)?.isCustom;
+      $('custom-dims').classList.toggle('show', !!isCustom);
+    }
+
+    function buildVolTiers() {
+      const tiers = CONFIG.signs.volumeDiscounts;
+      $('vol-tiers').innerHTML = tiers.map(t => {
+        const active = S.signs.qty >= t.minQty &&
+          (tiers.indexOf(t) === tiers.length - 1 || S.signs.qty < tiers[tiers.indexOf(t) + 1].minQty);
+        const label = t.pct === 0 ? `${t.minQty}+` : `${t.minQty}+ (${t.pct}% off)`;
+        return `<div class="vol-badge ${active ? 'active' : ''}">${label}</div>`;
+      }).join('');
+    }
+
+    function selectSignSize(key) {
+      S.signs.size = key;
+      buildSizeGrid();
+      updateSignPanel();
+    }
+
+    function changeQty(dir) {
+      const step = CONFIG.signs.qtyStep;
+      const min  = CONFIG.signs.minQty;
+      S.signs.qty = Math.max(min, S.signs.qty + dir * step);
+      $('qty-display').textContent = S.signs.qty;
+      buildVolTiers();
+      updateSignPanel();
+    }
+
+    function toggleDesign() {
+      S.signs.design = !S.signs.design;
+      $('design-addon').classList.toggle('checked', S.signs.design);
+      updateSignPanel();
+    }
+
+    function updateSignPanel() {
+      const total = getSignTotal();
+      const unit  = getSignUnitPrice();
+      const disc  = getDiscountPct(S.signs.qty);
+      const type  = S.signs.type === 'yard' ? 'Yard Signs' : 'Vinyl Banners';
+      const size  = getSignSizes().find(s => s.key === S.signs.size);
+
+      $('sp-type').textContent   = type;
+      $('sp-size').textContent   = size ? size.label : '—';
+      $('sp-qty').textContent    = S.signs.qty;
+      $('sp-unit').textContent   = unit ? `${fmt(unit)} ${disc ? `→ ${fmt(unit * (1 - disc/100))}` : ''}` : '—';
+      $('sp-disc').textContent   = disc ? `${disc}% off` : 'None';
+      $('sp-design').textContent = S.signs.design ? `Yes (+${fmt(CONFIG.signs.designFee)})` : 'No';
+      $('sp-total').innerHTML    = total ? `${fmt(total)}${disc ? `<span class="disc-tag">${disc}% off</span>` : ''}` : '—';
+
+      updateMpb();
+    }
+
+    function updateSignTotal() { updateSignPanel(); }
+
+    async function submitSigns() {
+      const name  = $('sign-name').value.trim();
+      const email = $('sign-email').value.trim();
+      const phone = $('sign-phone').value.trim();
+
+      if (!name || !email || !phone) {
+        showErr('signs-error', 'Please fill in your name, email, and phone.');
+        return;
+      }
+      if (!S.signs.size) {
+        showErr('signs-error', 'Please select a sign size.');
+        return;
+      }
+      showErr('signs-error', '');
+
+      const total  = getSignTotal();
+      const type   = S.signs.type === 'yard' ? 'Yard Signs' : 'Vinyl Banners';
+      const size   = getSignSizes().find(s => s.key === S.signs.size);
+      const link   = CONFIG.signs.stripeLink;
+
+      const btn = $('signs-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      try {
+        await netlifyPost('signs-order', {
+          name, email, phone,
+          'sign-type': type,
+          size: size?.label || S.signs.size,
+          quantity: S.signs.qty,
+          'design-service': S.signs.design ? `Yes (+$${CONFIG.signs.designFee})` : 'No',
+          notes: $('sign-notes').value.trim(),
+          total: fmt(total),
+        });
+        btn.textContent = 'Redirecting to payment...';
+        setTimeout(() => stripeRedirect(link, total), 400);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Place Order & Pay Securely';
+        showErr('signs-error', 'Something went wrong. Please try again or call (727) 494-6162.');
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  MOBILE PRICE BAR
+    // ══════════════════════════════════════════════════════════════════════
+    function updateMpb() {
+      const bar = $('mpb');
+      const priceEl = $('mpb-price');
+      const ctaEl = $('mpb-cta');
+      const lblEl = $('mpb-lbl');
+
+      const total = getSignTotal();
+      priceEl.textContent = total ? fmt(total) : '—';
+      lblEl.textContent = 'Order Total';
+      ctaEl.textContent = 'Place Order';
+      ctaEl.onclick = submitSigns;
+      bar.style.display = 'flex';
+    }
+
+    function mobileCta() { $('mpb-cta').onclick?.(); }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  INIT
+    // ══════════════════════════════════════════════════════════════════════
+    function init() {
+      setSignType('yard');
+      buildVolTiers();
+      updateMpb();
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  
+    function toggleMobile() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.toggle('open');
+      document.querySelectorAll('.hamburger').forEach(h => h.classList.toggle('open', isOpen));
+    }
+
+    function toggleMobAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.mob-accordion-body.open').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.mob-accordion-header.open').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburgers = document.querySelectorAll('.hamburger');
+      const clickedHamburger = Array.from(hamburgers).some(h => h.contains(e.target));
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !clickedHamburger) {
+        menu.classList.remove('open');
+        hamburgers.forEach(h => h.classList.remove('open'));
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (!navbar) return;
+      if (window.scrollY > 30) {
+        navbar.style.background = 'rgba(10,10,10,0.99)';
+      } else {
+        navbar.style.background = 'rgba(10,10,10,0.97)';
+      }
+    });
+
+  </script>
+</body>
+</html>

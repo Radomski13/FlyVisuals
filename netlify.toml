@@ -1,0 +1,3 @@
+# Netlify serves the generated site in dist/ (no build step).
+[build]
+  publish = "dist"

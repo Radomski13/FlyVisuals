@@ -1,0 +1,17 @@
+# Fly Visuals — robots.txt
+# https://flyvisualsfl.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block common crawler traps / dev artifacts if they ever ship
+Disallow: /*?*sessionid=
+Disallow: /*?*utm_
+Disallow: /404
+Disallow: /500
+
+# Sitemap
+Sitemap: https://flyvisualsfl.com/sitemap.xml
+
+# LLM / AI content guide (llms.txt convention)
+# https://flyvisualsfl.com/llms.txt

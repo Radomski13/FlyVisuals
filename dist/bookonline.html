@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Online — Fly Visuals | Port Richey, FL</title>
+  <meta name="description" content="Book window tinting appointments, start a vinyl wrap project, and order graphic design services online. Fly Visuals — Port Richey, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #cc1414;
+      --red-dark:   #aa1010;
+      --bg:         #0f0f0f;
+      --bg2:        #1a1a1a;
+      --bg3:        #222222;
+      --bg4:        #2a2a2a;
+      --border:     #2a2a2a;
+      --border-hi:  #3a3a3a;
+      --text:       #ffffff;
+      --muted:      #999999;
+      --dim:        #555555;
+      --font-d:     'Bebas Neue', sans-serif;
+      --font-b:     'Barlow', sans-serif;
+      --max-w:      1100px;
+      --r:          4px;
+      --ease:       0.15s ease;
+      --black:      #f0f0f0;
+      --dark:       #ffffff;
+      --dark2:      #e4e4e4;
+      --red-bright: #e81c1c;
+      --nav-red-dark: #8b0000;
+      --white:      #1a1a1a;
+      --grey-light: #333333;
+      --grey:       #666666;
+      --grey-dark:  #cccccc;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:  'Barlow', sans-serif;
+    }
+
+    
+    /* ══════════════════════ MAIN-SITE NAVBAR (ported) ══════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.97);
+      border-bottom: 2px solid var(--red);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--red); }
+
+    nav { display: flex; align-items: center; gap: 0; }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      transition: color 0.2s;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--red-bright); }
+    .nav-link svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+    /* Level 1 dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--dark2);
+      border: 1px solid var(--grey-dark);
+      border-top: 2px solid var(--red);
+      min-width: 200px;
+      z-index: 200;
+    }
+    .nav-item:hover .dropdown { display: block; }
+
+    .dropdown-item {
+      position: relative;
+    }
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .dropdown-link:hover { background: var(--red); color: #ffffff; }
+    .dropdown-link svg { width: 8px; height: 8px; }
+
+    /* Level 2 dropdown */
+    .sub-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: var(--dark);
+      border: 1px solid var(--grey-dark);
+      border-left: 2px solid var(--red);
+      min-width: 210px;
+      z-index: 300;
+    }
+    .dropdown-item:hover .sub-dropdown { display: block; }
+    .sub-dropdown a {
+      display: block;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      transition: background 0.15s, color 0.15s;
+    }
+    .sub-dropdown a:hover { background: var(--nav-red-dark); color: #ffffff; }
+
+    /* ========== NAV CALL BUTTON ========== */
+    .nav-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-left: 0.8rem;
+      background: var(--red);
+      color: var(--white) !important;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .nav-call-btn:hover { background: transparent; color: var(--red) !important; }
+    .nav-call-btn svg { flex-shrink: 0; }
+
+    .mob-call-btn {
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.85rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mob-call-btn:hover { background: transparent; color: var(--red); }
+
+    /* Mobile Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 7px;
+      cursor: pointer;
+      padding: 12px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hamburger span {
+      display: block;
+      width: 34px;
+      height: 3px;
+      background: #ffffff;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      overflow-y: auto;
+      z-index: 999;
+      padding: 1rem 0 3rem;
+    }
+    .mobile-menu.open { display: block; }
+
+    .mobile-section-header {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      padding: 1rem 1.5rem 0.3rem;
+      border-top: 1px solid var(--grey-dark);
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mobile-menu a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mobile-menu a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* Mobile accordion */
+    .mob-accordion { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mob-accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--grey-light);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: left;
+    }
+    .mob-accordion-header:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-acc-arrow {
+      width: 12px; height: 12px;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .mob-accordion-header.open .mob-acc-arrow { transform: rotate(180deg); }
+    .mob-accordion-body {
+      display: none;
+      background: rgba(0,0,0,0.25);
+    }
+    .mob-accordion-body.open { display: block; }
+    .mob-accordion-body a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mob-accordion-body a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mob-accordion-body a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-main-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mob-main-link:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* ========== BOTTOM NAVBAR (mobile only) ========== */
+    #bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(10,10,10,0.98);
+      border-top: 2px solid var(--red);
+      z-index: 1001;
+      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    @media (max-width: 768px) { #bottom-nav { display: flex; } }
+    .bot-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .bot-call-btn:hover { background: transparent; color: var(--red); }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      /* ---- Top navbar mobile layout ---- */
+      #navbar {
+        overflow: visible;
+        justify-content: space-between;
+        height: 52px;
+      }
+      .logo {
+        position: fixed;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        z-index: 1002;
+        pointer-events: auto;
+        display: flex;
+        align-items: flex-start;
+      }
+      .logo img {
+        height: 58px !important;
+        width: auto !important;
+        filter:
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 2px #000)
+          drop-shadow(0 0 2px #000);
+      }
+      .mob-call-btn { display: none; }
+      #navbar .hamburger { display: none; }
+      .mobile-menu { bottom: 60px; }
+    }
+    /* ══════════════════════ END MAIN-SITE NAVBAR ══════════════════════ */
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font-b); border: none; background: none; }
+    h1, h2, h3 { font-family: var(--font-d); letter-spacing: 0.02em; line-height: 1; }
+
+    /* ── HEADER ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 60px;
+    }
+    .hdr-back { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0.02em; transition: color var(--ease); }
+    .hdr-back:hover { color: var(--text); }
+    .hdr-logo { font-family: var(--font-d); font-size: 22px; letter-spacing: 0.08em; }
+    .hdr-logo span { color: var(--red); }
+    .hdr-phone { font-size: 13px; font-weight: 600; color: var(--red); letter-spacing: 0.02em; }
+    .hdr-phone:hover { color: #e01515; }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    #store-hero {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(204,20,20,0.08) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23fff' fill-opacity='0.03'/%3E%3C/svg%3E");
+      padding: 132px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.15em; color: var(--red);
+      font-weight: 600; margin-bottom: 16px; text-transform: uppercase;
+    }
+    #store-hero h1 { font-size: clamp(48px, 8vw, 80px); margin-bottom: 16px; }
+    .hero-sub {
+      font-size: 17px; color: var(--muted); max-width: 520px;
+      margin: 0 auto 28px; font-weight: 300; line-height: 1.6;
+    }
+    .hero-trust { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+    .hero-trust span {
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .hero-trust span::before { content: '— '; color: var(--red); }
+
+    /* ── SERVICE CARDS (was tab bar) ─────────────────────────────── */
+    #tab-bar {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 8px 20px 32px;
+    }
+    .tab-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 24px 14px;
+      color: var(--muted); text-align: center; cursor: pointer;
+      transition: all var(--ease); user-select: none;
+    }
+    .tab-btn:hover { border-color: var(--border-hi); background: var(--bg3); color: var(--text); }
+    .tab-btn.active { color: var(--text); border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .tab-icon { font-size: 28px; line-height: 1; }
+    .tab-label { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .tab-desc { font-size: 11px; font-weight: 400; letter-spacing: 0.01em; color: var(--muted); }
+
+    /* ── MAIN ─────────────────────────────────────────────────── */
+    #store-main { max-width: var(--max-w); margin: 0 auto; padding: 0 20px 80px; }
+    .tab-content { display: none; padding: 44px 0; }
+    .tab-content.active { display: block; }
+
+    .sec-head { margin-bottom: 28px; }
+    .sec-head h2 { font-size: 34px; margin-bottom: 6px; }
+    .sec-head p { color: var(--muted); font-size: 14px; font-weight: 300; }
+
+    /* ── STEP INDICATOR ───────────────────────────────────────── */
+    .step-bar {
+      display: flex; align-items: center; margin-bottom: 36px;
+      overflow-x: auto; padding-bottom: 2px;
+    }
+    .step-dot { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .step-dot .dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--border-hi); font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0; color: var(--muted);
+    }
+    .step-dot .slabel {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--dim); white-space: nowrap;
+    }
+    .step-dot.active .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.active .slabel { color: var(--text); }
+    .step-dot.done .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.done .slabel { color: var(--muted); }
+    .step-line { flex: 1; height: 2px; background: var(--border); margin: 0 10px; min-width: 20px; }
+    .step-line.done { background: var(--red); }
+
+    /* ── SELECTION SUMMARY BAR ────────────────────────────────── */
+    .sel-summary {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: var(--r); padding: 14px 20px;
+      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .sel-item .s-lbl {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 2px;
+    }
+    .sel-item .s-val { font-size: 13px; font-weight: 600; }
+
+    /* ── OPTION CARDS (vehicle / generic) ─────────────────────── */
+    .opt-grid { display: grid; gap: 12px; }
+    .opt-grid.c5 { grid-template-columns: repeat(5, 1fr); }
+    .opt-grid.c2 { grid-template-columns: repeat(2, 1fr); }
+    .opt-grid.c3 { grid-template-columns: repeat(3, 1fr); }
+    .opt-grid.c1 { grid-template-columns: 1fr; }
+
+    .opt-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 20px 14px; text-align: center; cursor: pointer;
+      transition: all var(--ease); user-select: none;
+    }
+    .opt-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .opt-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .opt-card .oc-icon { font-size: 30px; display: block; margin-bottom: 8px; line-height: 1; }
+    .opt-card .oc-label { font-weight: 700; font-size: 13px; display: block; }
+    .opt-card .oc-price { font-family: var(--font-d); font-size: 20px; color: var(--red); margin-top: 6px; display: block; }
+
+    /* ── PACKAGE CARDS (left-aligned, wider) ──────────────────── */
+    .pkg-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 22px 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .pkg-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .pkg-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .pkg-radio {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 50%;
+      flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .pkg-card.sel .pkg-radio { border-color: var(--red); background: var(--red); }
+    .pkg-card.sel .pkg-radio::after { content: '✓'; font-size: 11px; color: white; font-weight: 700; }
+    .pkg-body { flex: 1; }
+    .pkg-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .pkg-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.4; }
+    .pkg-price { font-family: var(--font-d); font-size: 26px; color: var(--red); flex-shrink: 0; align-self: center; }
+
+    /* ── FILM CARDS ───────────────────────────────────────────── */
+    .film-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+    }
+    .film-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .film-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .film-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .film-label { font-weight: 700; font-size: 16px; }
+    .film-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px; background: var(--red); color: white;
+    }
+    .film-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+    .film-price { font-family: var(--font-d); font-size: 30px; color: var(--red); margin-top: 14px; }
+
+    /* ── STEP NAV BUTTONS ─────────────────────────────────────── */
+    .step-nav { display: flex; gap: 12px; margin-top: 32px; align-items: center; }
+    .btn-back {
+      padding: 12px 22px; border: 1px solid var(--border-hi); border-radius: var(--r);
+      color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      transition: all var(--ease);
+    }
+    .btn-back:hover { color: var(--text); border-color: var(--muted); }
+    .btn-next {
+      flex: 1; max-width: 280px; padding: 14px 28px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: background var(--ease);
+    }
+    .btn-next:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 36px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: background var(--ease); width: 100%; max-width: 400px;
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── PRICE CALLOUT ────────────────────────────────────────── */
+    .price-callout {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red); border-radius: var(--r);
+      padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .pc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .pc-val { font-family: var(--font-d); font-size: 44px; color: var(--text); line-height: 1; }
+
+    /* ── FORM ─────────────────────────────────────────────────── */
+    .form-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg.full { grid-column: 1 / -1; }
+    .fg label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .fg input, .fg select, .fg textarea {
+      background: var(--bg3); border: 1px solid var(--border-hi); color: var(--text);
+      padding: 12px 14px; border-radius: var(--r); font-family: var(--font-b);
+      font-size: 14px; transition: border-color var(--ease);
+      -webkit-appearance: none; appearance: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--red); }
+    .fg input::placeholder, .fg textarea::placeholder { color: var(--dim); }
+    .fg textarea { resize: vertical; min-height: 88px; }
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+    /* Time slots */
+    .time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .tslot {
+      padding: 10px 6px; text-align: center; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border-hi); border-radius: var(--r); cursor: pointer;
+      transition: all var(--ease); color: var(--muted); background: var(--bg3);
+    }
+    .tslot:hover { border-color: var(--red); color: var(--text); }
+    .tslot.sel { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* ── NOTE BOX ─────────────────────────────────────────────── */
+    .note-box {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 14px 18px; font-size: 13px; color: var(--muted); font-weight: 300;
+      line-height: 1.6; margin-top: 20px;
+    }
+    .note-box strong { color: var(--text); font-weight: 600; }
+
+    /* ── ALERTS ───────────────────────────────────────────────── */
+    .alert { padding: 12px 16px; border-radius: var(--r); font-size: 13px; font-weight: 500; margin-top: 16px; }
+    .alert-err { background: rgba(204,20,20,0.12); border: 1px solid rgba(204,20,20,0.4); color: #ff9999; display: none; }
+    .alert-ok  { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.35); color: #86efac; display: none; }
+
+    /* ── GRAPHIC PACKAGES ─────────────────────────────────────── */
+    .gfx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .gfx-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 32px 26px; position: relative; display: flex; flex-direction: column;
+      transition: border-color var(--ease);
+    }
+    .gfx-card:hover { border-color: var(--border-hi); }
+    .gfx-card.featured { border-color: var(--red); }
+    .gfx-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px;
+      border-radius: 0 0 4px 4px; white-space: nowrap;
+    }
+    .gfx-title { font-family: var(--font-d); font-size: 28px; margin-bottom: 8px; margin-top: 16px; }
+    .gfx-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; margin-bottom: 20px; }
+    .gfx-price { font-family: var(--font-d); font-size: 52px; color: var(--red); line-height: 1; margin-bottom: 4px; }
+    .gfx-price sup { font-family: var(--font-b); font-size: 22px; font-weight: 600; vertical-align: super; line-height: 0; }
+    .gfx-turn { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 22px; letter-spacing: 0.02em; }
+    .gfx-includes { list-style: none; margin-bottom: 28px; flex: 1; }
+    .gfx-includes li {
+      font-size: 13px; color: var(--muted); font-weight: 300;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .gfx-includes li::before { content: '—'; color: var(--red); font-weight: 600; flex-shrink: 0; }
+    .gfx-includes li:last-child { border-bottom: none; }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-ov {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88); z-index: 200;
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-ov.open { display: flex; }
+    .modal-box {
+      background: var(--bg2); border: 1px solid var(--border-hi); border-radius: var(--r);
+      padding: 36px; width: 100%; max-width: 500px; max-height: 90vh;
+      overflow-y: auto; position: relative;
+    }
+    .modal-title { font-family: var(--font-d); font-size: 30px; margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 10px; font-weight: 300; }
+    .modal-price { font-family: var(--font-d); font-size: 22px; color: var(--red); margin-bottom: 24px; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 20px; border-radius: 50%; transition: all var(--ease);
+    }
+    .modal-close:hover { color: var(--text); background: var(--bg4); }
+
+    /* ── TRUST BAR ────────────────────────────────────────────── */
+    #trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2); padding: 28px 24px; margin-top: 0;
+    }
+    .trust-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+    }
+    .trust-val { font-family: var(--font-d); font-size: 30px; color: var(--red); display: block; }
+    .trust-lbl { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.03em; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    #store-footer {
+      padding: 36px 24px; text-align: center;
+      background: var(--bg); border-top: 1px solid var(--border);
+    }
+    .footer-logo { font-family: var(--font-d); font-size: 20px; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .footer-logo span { color: var(--red); }
+    .footer-info { font-size: 13px; color: var(--muted); line-height: 1.9; }
+    .footer-info a { color: var(--red); }
+
+    /* ── MOBILE PRICE BAR ─────────────────────────────────────── */
+    #mpb {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--bg2); border-top: 2px solid var(--border);
+      padding: 12px 20px; z-index: 80; align-items: center; gap: 14px;
+    }
+    .mpb-left { flex: 1; }
+    .mpb-lbl { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; display: block; }
+    .mpb-price { font-family: var(--font-d); font-size: 30px; line-height: 1; }
+    .mpb-cta {
+      padding: 12px 22px; background: var(--red); color: white; border-radius: var(--r);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      white-space: nowrap; transition: background var(--ease);
+    }
+    .mpb-cta:hover { background: var(--red-dark); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .opt-grid.c5 { grid-template-columns: repeat(3, 1fr); }
+      .gfx-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      #store-hero { padding: 92px 20px 32px; }
+      #store-hero h1 { font-size: 48px; }
+      .hero-trust { gap: 14px; }
+
+      #tab-bar { grid-template-columns: 1fr; gap: 10px; padding: 8px 16px 24px; }
+      .tab-btn { flex-direction: row; justify-content: flex-start; text-align: left; padding: 14px 16px; gap: 12px; }
+
+      .step-dot .slabel { display: none; }
+      .step-line { min-width: 12px; margin: 0 6px; }
+
+      .opt-grid.c5 { grid-template-columns: repeat(2, 1fr); }
+      .opt-grid.c2 { grid-template-columns: 1fr; }
+      .opt-grid.c3 { grid-template-columns: 1fr; }
+
+      .form-grid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+
+
+      .size-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+      #mpb { display: flex; bottom: 60px; }
+      #store-main { padding-bottom: 160px; }
+
+      .modal-box { padding: 24px 18px; }
+      .btn-next { max-width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .opt-grid.c5 { grid-template-columns: 1fr 1fr; }
+      .hdr-phone { display: none; }
+      .time-slots { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NETLIFY FORM DECLARATIONS (required for Netlify to detect) ── -->
+  <form name="tinting-booking" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="vehicle-type">
+    <input type="text" name="package">
+    <input type="text" name="film">
+    <input type="text" name="vehicle-info">
+    <input type="date" name="date">
+    <input type="text" name="time">
+    <input type="text" name="total">
+    <input type="text" name="bot-field">
+  </form>
+  <form name="wraps-deposit" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="category">
+    <input type="text" name="coverage">
+    <input type="text" name="item-info">
+    <input type="text" name="notes">
+    <input type="text" name="estimate-from">
+    <input type="text" name="deposit">
+    <input type="text" name="bot-field">
+  </form>
+  <form name="graphics-order" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="package">
+    <input type="text" name="project-details">
+    <input type="text" name="total">
+    <input type="text" name="bot-field">
+  </form>
+
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header id="navbar">
+  <a class="logo" href="/">
+    <img src="fly-visuals-logo.png" alt="Fly Visuals Logo" style="height:52px;width:auto;" />
+  </a>
+
+  <nav>
+    <!-- SERVICES dropdown -->
+    <div class="nav-item">
+      <button class="nav-link">
+        Services
+        <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <div class="dropdown">
+        <!-- WRAPS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/wraps/">
+            Wraps
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown" style="min-width:220px;">
+            <a href="/vehicle-wraps/">Vehicle Wraps</a>
+            <a href="/boat-wraps/">Boat Wraps</a>
+            <a href="/wall-wraps/">Wall Wraps</a>
+          </div>
+        </div>
+        <!-- SIGNS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/signs/">
+            Signs
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/indoor-signs/">Indoor Signs</a>
+            <a href="/outdoor-signs/">Outdoor Signs</a>
+            <a href="/business-signs/">Business Signs</a>
+            <a href="/vinyl-banners/">Vinyl Banners</a>
+            <a href="/yard-signs/">Yard Signs</a>
+            <a href="/corrugated-signs/">Corrugated Plastic Signs</a>
+            <a href="/aluminum-signs/">Custom Aluminum Signs</a>
+            <a href="/acrylic-signs/">Custom Acrylic Signs</a>
+          </div>
+        </div>
+        <!-- WINDOW TINTING sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/tinting/">
+            Window Tinting
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/auto-tinting/">Auto Window Tinting</a>
+            <a href="/residential-tinting/">Residential Window Tinting</a>
+            <a href="/commercial-tinting/">Commercial Window Tinting</a>
+          </div>
+        </div>
+        <!-- GRAPHICS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/graphics/">
+            Graphics
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/vehicle-graphics/">Vehicle Graphics</a>
+            <a href="/floor-graphics/">Floor Graphics</a>
+            <a href="/fleet-graphics/">Fleet Graphics</a>
+            <a href="/logo-design/">Logo Design</a>
+            <a href="/window-graphics/">Window Graphics</a>
+            <a href="/boat-graphics/">Boat Graphics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/wrap-visualizer/">Wrap Visualizer</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/gallery/">Gallery</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/contact/">Contact Us</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="/bookonline.html">Book Online</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/products.html">Products</a>
+    </div>
+    <a href="tel:7274946162" class="nav-call-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 494-6162
+    </a>
+  </nav>
+
+  <a href="tel:7274946162" class="mob-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Bottom Navigation (mobile only) -->
+<nav id="bottom-nav">
+  <a href="tel:7274946162" class="bot-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu" style="display:flex;">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- WRAPS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Wraps</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/wraps/">All Wraps</a>
+      <a href="/vehicle-wraps/" class="sub">Vehicle Wraps</a>
+      <a href="/boat-wraps/" class="sub">Boat Wraps</a>
+      <a href="/wall-wraps/" class="sub">Wall Wraps</a>
+    </div>
+  </div>
+
+  <!-- SIGNS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Signs</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/signs/">All Signs</a>
+      <a href="/indoor-signs/" class="sub">Indoor Signs</a>
+      <a href="/outdoor-signs/" class="sub">Outdoor Signs</a>
+      <a href="/business-signs/" class="sub">Business Signs</a>
+      <a href="/vinyl-banners/" class="sub">Vinyl Banners</a>
+  <a href="/yard-signs/" class="sub">Yard Signs</a>
+  <a href="/corrugated-signs/" class="sub">Corrugated Plastic Signs</a>
+  <a href="/aluminum-signs/" class="sub">Custom Aluminum Signs</a>
+  <a href="/acrylic-signs/" class="sub">Custom Acrylic Signs</a>
+    </div>
+  </div>
+
+  <!-- WINDOW TINTING accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Window Tinting</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/tinting/">All Window Tinting</a>
+      <a href="/auto-tinting/" class="sub">Auto Window Tinting</a>
+      <a href="/residential-tinting/" class="sub">Residential Window Tinting</a>
+      <a href="/commercial-tinting/" class="sub">Commercial Window Tinting</a>
+    </div>
+  </div>
+
+  <!-- GRAPHICS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Graphics</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/graphics/">All Graphics</a>
+      <a href="/vehicle-graphics/" class="sub">Vehicle Graphics</a>
+      <a href="/floor-graphics/" class="sub">Floor Graphics</a>
+      <a href="/fleet-graphics/" class="sub">Fleet Graphics</a>
+      <a href="/logo-design/" class="sub">Logo Design</a>
+      <a href="/window-graphics/" class="sub">Window Graphics</a>
+      <a href="/boat-graphics/" class="sub">Boat Graphics</a>
+    </div>
+  </div>
+
+  <a href="/wrap-visualizer/" class="mob-main-link">Wrap Visualizer</a>
+  <a href="/gallery/" class="mob-main-link">Gallery</a>
+  <a href="/contact/" class="mob-main-link">Contact Us</a>
+  <a href="/bookonline.html" class="mob-main-link">Book Online</a>
+  <a href="/products.html" class="mob-main-link">Products</a>
+</div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section id="store-hero">
+    <h1>BOOK. PAY. DONE.</h1>
+    <p class="hero-sub">Priced upfront. No calls required. Most jobs ready in days — not weeks.</p>
+  </section>
+
+  <!-- ── SERVICE CARDS ──────────────────────────────────────────── -->
+  <div id="tab-bar">
+    <button class="tab-btn active" onclick="setTab('tinting')">
+      <span class="tab-icon">🪟</span>
+      <span class="tab-label">Window Tinting</span>
+      <span class="tab-desc">Auto tint, priced upfront</span>
+    </button>
+    <button class="tab-btn" onclick="setTab('wraps')">
+      <span class="tab-icon">🚗</span>
+      <span class="tab-label">Vinyl Wraps</span>
+      <span class="tab-desc">Vehicle, boat &amp; wall wraps</span>
+    </button>
+    <button class="tab-btn" onclick="setTab('graphics')">
+      <span class="tab-icon">🎨</span>
+      <span class="tab-label">Graphic Services</span>
+      <span class="tab-desc">Custom design, in-house</span>
+    </button>
+  </div>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+  <main id="store-main">
+
+    <!-- ════════════════════════════════════════════════════════════
+         WINDOW TINTING
+    ════════════════════════════════════════════════════════════ -->
+    <section id="tab-tinting" class="tab-content active">
+
+      <!-- Step indicator -->
+      <div class="step-bar" id="tint-step-bar">
+        <!-- built by JS -->
+      </div>
+
+      <!-- Step 1: Vehicle -->
+      <div id="tint-s1" class="tint-step">
+        <div class="sec-head">
+          <h2>Select Your Vehicle</h2>
+          <p>Choose your vehicle type for exact pricing.</p>
+        </div>
+        <div id="vehicle-grid" class="opt-grid c5"></div>
+        <div class="step-nav">
+          <button class="btn-next" id="tnt-n1" onclick="tintGoTo(2)" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Package -->
+      <div id="tint-s2" class="tint-step" style="display:none">
+        <div class="sel-summary" id="sel-s2"></div>
+        <div class="sec-head">
+          <h2>Choose Your Package</h2>
+          <p>Front windshield is a separate tint — different film and heat exposure.</p>
+        </div>
+        <div id="package-grid" class="opt-grid c2"></div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="tintGoTo(1)">← Back</button>
+          <button class="btn-next" id="tnt-n2" onclick="tintGoTo(3)" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Film -->
+      <div id="tint-s3" class="tint-step" style="display:none">
+        <div class="sel-summary" id="sel-s3"></div>
+        <div class="sec-head">
+          <h2>Select Film Type</h2>
+          <p>In Gulf Coast heat, ceramic pays for itself in comfort and UV protection.</p>
+        </div>
+        <div id="film-grid" class="opt-grid c2"></div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="tintGoTo(2)">← Back</button>
+          <button class="btn-next" id="tnt-n3" onclick="tintGoTo(4)" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Contact + Booking -->
+      <div id="tint-s4" class="tint-step" style="display:none">
+        <div class="sel-summary" id="sel-s4"></div>
+        <div class="sec-head">
+          <h2>Your Booking Info</h2>
+          <p>Most appointments available within 3–5 days. We'll confirm via email.</p>
+        </div>
+
+        <div class="price-callout">
+          <div>
+            <div class="pc-label">Your Total</div>
+          </div>
+          <div class="pc-val" id="tint-price-display">—</div>
+        </div>
+
+        <div class="form-grid">
+          <div class="fg">
+            <label>Full Name *</label>
+            <input type="text" id="tint-name" placeholder="John Smith">
+          </div>
+          <div class="fg">
+            <label>Email *</label>
+            <input type="email" id="tint-email" placeholder="john@email.com">
+          </div>
+          <div class="fg">
+            <label>Phone *</label>
+            <input type="tel" id="tint-phone" placeholder="(727) 000-0000">
+          </div>
+          <div class="fg">
+            <label>Vehicle Make &amp; Model</label>
+            <input type="text" id="tint-vehicle-info" placeholder="2022 Toyota 4Runner">
+          </div>
+          <div class="fg">
+            <label>Preferred Date *</label>
+            <input type="date" id="tint-date">
+          </div>
+          <div class="fg full">
+            <label>Preferred Time *</label>
+            <div id="tint-time-slots" class="time-slots"></div>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <strong>What happens next:</strong> Your payment goes through Stripe — then we'll send a confirmation email within a few hours to lock in your appointment. If your preferred time isn't available, we'll reach out with the next closest slot.
+        </div>
+
+        <div id="tint-error" class="alert alert-err"></div>
+
+        <div class="step-nav" style="margin-top:24px">
+          <button class="btn-back" onclick="tintGoTo(3)">← Back</button>
+          <button class="btn-primary" id="tint-submit-btn" onclick="submitTinting()" style="flex:1;max-width:360px">
+            Book &amp; Pay Securely
+          </button>
+        </div>
+      </div>
+
+    </section><!-- /tab-tinting -->
+
+    <!-- ════════════════════════════════════════════════════════════
+         VINYL WRAPS
+    ════════════════════════════════════════════════════════════ -->
+    <section id="tab-wraps" class="tab-content">
+
+      <!-- Step indicator -->
+      <div class="step-bar" id="wrap-step-bar">
+        <!-- built by JS -->
+      </div>
+
+      <!-- Step 1: Category -->
+      <div id="wrap-s1" class="wrap-step">
+        <div class="sec-head">
+          <h2>What Are We Wrapping?</h2>
+          <p>Pick a category to see coverage options and starting prices.</p>
+        </div>
+        <div id="wrap-category-grid" class="opt-grid c3"></div>
+        <div class="step-nav">
+          <button class="btn-next" id="wrp-n1" onclick="wrapGoTo(2)" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Coverage -->
+      <div id="wrap-s2" class="wrap-step" style="display:none">
+        <div class="sel-summary" id="wsel-s2"></div>
+        <div class="sec-head">
+          <h2>Choose Your Coverage</h2>
+          <p>Starting prices — your exact total depends on size, condition, and design. We'll confirm before work begins.</p>
+        </div>
+        <div id="wrap-coverage-grid" class="opt-grid c1"></div>
+        <div class="step-nav">
+          <button class="btn-back" onclick="wrapGoTo(1)">← Back</button>
+          <button class="btn-next" id="wrp-n2" onclick="wrapGoTo(3)" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Project Details + Deposit -->
+      <div id="wrap-s3" class="wrap-step" style="display:none">
+        <div class="sel-summary" id="wsel-s3"></div>
+        <div class="sec-head">
+          <h2>Tell Us About Your Project</h2>
+          <p>Reserve your spot with a deposit. We'll follow up to confirm exact pricing and schedule your install.</p>
+        </div>
+
+        <div class="price-callout">
+          <div>
+            <div class="pc-label">Starting At</div>
+          </div>
+          <div class="pc-val" id="wrap-price-display">—</div>
+        </div>
+
+        <div class="form-grid">
+          <div class="fg">
+            <label>Full Name *</label>
+            <input type="text" id="wrap-name" placeholder="John Smith">
+          </div>
+          <div class="fg">
+            <label>Email *</label>
+            <input type="email" id="wrap-email" placeholder="john@email.com">
+          </div>
+          <div class="fg">
+            <label>Phone *</label>
+            <input type="tel" id="wrap-phone" placeholder="(727) 000-0000">
+          </div>
+          <div class="fg">
+            <label>Year / Make / Model or Boat Length</label>
+            <input type="text" id="wrap-item-info" placeholder="2022 Ford Transit / 24' Center Console / etc.">
+          </div>
+          <div class="fg full">
+            <label>Project Details</label>
+            <textarea id="wrap-notes" placeholder="Colors, coverage area, design ideas, timeline..."></textarea>
+          </div>
+        </div>
+
+        <div class="price-callout" style="margin-top:8px">
+          <div>
+            <div class="pc-label">Deposit Due Now</div>
+          </div>
+          <div class="pc-val" id="wrap-deposit-display">—</div>
+        </div>
+
+        <div class="note-box">
+          <strong>What happens next:</strong> Your deposit reserves your project and goes toward the final total. We'll follow up within 1 business day to confirm exact pricing (based on photos or an in-person look) and schedule your install.
+        </div>
+
+        <div id="wrap-error" class="alert alert-err"></div>
+
+        <div class="step-nav" style="margin-top:24px">
+          <button class="btn-back" onclick="wrapGoTo(2)">← Back</button>
+          <button class="btn-primary" id="wrap-submit-btn" onclick="submitWraps()" style="flex:1;max-width:360px">
+            Reserve &amp; Pay Deposit
+          </button>
+        </div>
+      </div>
+
+    </section><!-- /tab-wraps -->
+
+
+
+    <!-- ════════════════════════════════════════════════════════════
+         GRAPHIC SERVICES
+    ════════════════════════════════════════════════════════════ -->
+    <section id="tab-graphics" class="tab-content">
+      <div class="sec-head">
+        <h2>Graphic Services</h2>
+        <p>In-house design from concept to print-ready files. You own everything when it's done.</p>
+      </div>
+      <div id="gfx-grid" class="gfx-grid"></div>
+    </section><!-- /tab-graphics -->
+
+  </main>
+
+  <!-- ── TRUST BAR ───────────────────────────────────────────────── -->
+  <div id="trust-bar">
+    <div class="trust-grid">
+      <div>
+        <span class="trust-val">10%</span>
+        <span class="trust-lbl">Price Match Guarantee</span>
+      </div>
+      <div>
+        <span class="trust-val">500+</span>
+        <span class="trust-lbl">Projects Completed</span>
+      </div>
+      <div>
+        <span class="trust-val">3M</span>
+        <span class="trust-lbl">3M &amp; Avery Dennison Certified</span>
+      </div>
+      <div>
+        <span class="trust-val">FL</span>
+        <span class="trust-lbl">Pasco County Local Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+  <footer id="store-footer">
+    <div class="footer-logo">FLY <span>VISUALS</span></div>
+    <div class="footer-info">
+      8132 Cormel St, Port Richey, FL 34668<br>
+      <a href="tel:7274946162">(727) 494-6162</a> · Mon–Fri 9AM–5PM<br>
+      <a href="index.html">← Back to main site</a>
+    </div>
+  </footer>
+
+  <!-- ── MOBILE PRICE BAR ────────────────────────────────────────── -->
+  <div id="mpb">
+    <div class="mpb-left">
+      <span class="mpb-lbl" id="mpb-lbl">Your Total</span>
+      <span class="mpb-price" id="mpb-price">—</span>
+    </div>
+    <button class="mpb-cta" id="mpb-cta" onclick="mobileCta()">Book &amp; Pay</button>
+  </div>
+
+  <!-- ── GRAPHIC SERVICES MODAL ─────────────────────────────────── -->
+  <div id="gfx-modal" class="modal-ov" onclick="closeGfxModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeGfxModal()">✕</button>
+      <div class="modal-title" id="gfx-m-title">Wrap Design</div>
+      <div class="modal-sub" id="gfx-m-sub">Tell us about your project.</div>
+      <div class="modal-price" id="gfx-m-price">$299</div>
+      <div class="form-grid">
+        <div class="fg">
+          <label>Full Name *</label>
+          <input type="text" id="gfx-name" placeholder="John Smith">
+        </div>
+        <div class="fg">
+          <label>Email *</label>
+          <input type="email" id="gfx-email" placeholder="john@email.com">
+        </div>
+        <div class="fg full">
+          <label>Phone *</label>
+          <input type="tel" id="gfx-phone" placeholder="(727) 000-0000">
+        </div>
+        <div class="fg full">
+          <label>Project Details</label>
+          <textarea id="gfx-details" placeholder="Vehicle type, business name, colors, inspiration..."></textarea>
+        </div>
+      </div>
+      <div id="gfx-error" class="alert alert-err" style="margin-top:12px"></div>
+      <button class="btn-primary" id="gfx-submit-btn" onclick="submitGraphics()" style="margin-top:20px;max-width:100%">
+        Purchase &amp; Pay Securely
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // ╔══════════════════════════════════════════════════════════════════════╗
+    // ║                                                                      ║
+    // ║   ✏️  CONFIG — THE ONLY SECTION YOU NEED TO EDIT                     ║
+    // ║                                                                      ║
+    // ║   Change prices and paste your Stripe Payment Link URLs here.        ║
+    // ║   All prices are in whole US dollars.                                ║
+    // ║                                                                      ║
+    // ╚══════════════════════════════════════════════════════════════════════╝
+
+    const CONFIG = {
+
+      // ── WINDOW TINTING ─────────────────────────────────────────────────
+      //
+      // STRIPE SETUP: Create one Payment Link per combination in Stripe.
+      // Each link should have a fixed price matching the dollar amounts below.
+      // That's 5 vehicles × 2 packages × 2 films = 20 links total.
+      // Paste each link URL into stripeLinks below.
+      //
+      tinting: {
+
+        // Available appointment time slots shown to customer
+        timeSlots: [
+          '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
+          '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
+        ],
+
+        vehicles: [
+          { key: 'sedan', label: 'Sedan',          icon: '🚗' },
+          { key: 'coupe', label: 'Coupe',           icon: '🚘' },
+          { key: 'suv',   label: 'SUV / Crossover', icon: '🚙' },
+          { key: 'truck', label: 'Truck',            icon: '🛻' },
+          { key: 'van',   label: 'Van / Minivan',    icon: '🚐' },
+        ],
+
+        packages: [
+          { key: '4win',    label: 'All 4 Windows',               desc: 'Front, rear, and both side windows' },
+          { key: '4win+ws', label: 'All 4 Windows + Windshield',  desc: 'Full cabin coverage including front windshield' },
+        ],
+
+        films: [
+          {
+            key: 'standard',
+            label: 'Standard Film',
+            badge: null,
+            desc: 'Solid heat rejection. Multiple shade levels available. Great baseline option for everyday driving.',
+          },
+          {
+            key: 'ceramic',
+            label: 'Ceramic Film',
+            badge: 'Recommended',
+            desc: 'Top-tier heat rejection, UV protection, and crystal clarity — with zero signal interference. Madico & LLumar certified. Built for Florida heat.',
+          },
+        ],
+
+        // pricing[vehicleKey][packageKey][filmKey] = price in dollars
+        pricing: {
+          sedan: {
+            '4win':    { standard: 199, ceramic: 279 },
+            '4win+ws': { standard: 249, ceramic: 349 },
+          },
+          coupe: {
+            '4win':    { standard: 179, ceramic: 259 },
+            '4win+ws': { standard: 229, ceramic: 329 },
+          },
+          suv: {
+            '4win':    { standard: 229, ceramic: 319 },
+            '4win+ws': { standard: 289, ceramic: 399 },
+          },
+          truck: {
+            '4win':    { standard: 199, ceramic: 279 },
+            '4win+ws': { standard: 249, ceramic: 349 },
+          },
+          van: {
+            '4win':    { standard: 249, ceramic: 349 },
+            '4win+ws': { standard: 299, ceramic: 419 },
+          },
+        },
+
+        // stripeLinks[vehicleKey][packageKey][filmKey] = 'https://buy.stripe.com/...'
+        // Replace each '#' with the corresponding Stripe Payment Link URL.
+        stripeLinks: {
+          sedan: {
+            '4win':    { standard: '#', ceramic: '#' },
+            '4win+ws': { standard: '#', ceramic: '#' },
+          },
+          coupe: {
+            '4win':    { standard: '#', ceramic: '#' },
+            '4win+ws': { standard: '#', ceramic: '#' },
+          },
+          suv: {
+            '4win':    { standard: '#', ceramic: '#' },
+            '4win+ws': { standard: '#', ceramic: '#' },
+          },
+          truck: {
+            '4win':    { standard: '#', ceramic: '#' },
+            '4win+ws': { standard: '#', ceramic: '#' },
+          },
+          van: {
+            '4win':    { standard: '#', ceramic: '#' },
+            '4win+ws': { standard: '#', ceramic: '#' },
+          },
+        },
+      },
+
+      // ── VINYL WRAPS ──────────────────────────────────────────────────
+      //
+      // These are STARTING prices, not fixed prices — wrap cost depends on
+      // vehicle/boat size, surface condition, and design complexity, so the
+      // customer pays a deposit now and the final total gets confirmed after
+      // photos or an in-person look.
+      //
+      // STRIPE SETUP: Create one Payment Link per coverage tier below
+      // (9 total: 3 categories × 3 tiers). Each link's price should match
+      // that tier's "deposit" amount exactly. Paste each URL into
+      // stripeLinks below.
+      //
+      wraps: {
+        categories: [
+          { key: 'vehicle',   label: 'Vehicle Wraps',     icon: '🚗' },
+          { key: 'boat',      label: 'Boat Wraps',        icon: '🚤' },
+          { key: 'wallfloor', label: 'Wall & Floor Wraps', icon: '🏢' },
+        ],
+
+        // coverage[categoryKey] = tiers shown in Step 2, in order
+        coverage: {
+          vehicle: [
+            { key: 'partial',     label: 'Partial Wrap',             desc: 'Hood, tailgate, or partial panels — great for business advertising.', priceFrom: 850,  deposit: 150 },
+            { key: 'full-color',  label: 'Full Wrap — Color Change', desc: 'Full exterior color change in a solid, satin, or matte finish.',        priceFrom: 2600, deposit: 400 },
+            { key: 'full-custom', label: 'Full Wrap — Custom Print', desc: 'Full exterior custom-printed design — fleet or business graphics.',     priceFrom: 3800, deposit: 600 },
+          ],
+          boat: [
+            { key: 'partial',     label: 'Partial / Hull Graphics',      desc: 'Registration numbers, hull lettering, sponsor decals, accent graphics.', priceFrom: 600,  deposit: 150 },
+            { key: 'full-hull',   label: 'Full Hull Wrap',               desc: 'Complete hull color change or wrap in a single design.',                 priceFrom: 2500, deposit: 400 },
+            { key: 'full-custom', label: 'Full Wrap + Graphics Package', desc: 'Full hull wrap with custom tournament or sponsor graphics.',              priceFrom: 3800, deposit: 600 },
+          ],
+          wallfloor: [
+            { key: 'accent',     label: 'Accent Wall / Small Area', desc: 'Up to ~200 sq ft — office accent wall or small retail space.', priceFrom: 750,  deposit: 150 },
+            { key: 'full-mural', label: 'Full Wall Mural',          desc: 'Large-format interior or exterior wall graphics.',              priceFrom: 1800, deposit: 400 },
+            { key: 'floor',      label: 'Floor Graphics',           desc: 'Slip-resistant, full-color floor graphics per room or area.',   priceFrom: 1200, deposit: 400 },
+          ],
+        },
+
+        // stripeLinks[categoryKey][coverageKey] = 'https://buy.stripe.com/...'
+        // Replace each '#' with the corresponding Stripe Payment Link URL.
+        // The link's price should equal that tier's deposit amount above.
+        stripeLinks: {
+          vehicle:   { partial: '#', 'full-color': '#',  'full-custom': '#' },
+          boat:      { partial: '#', 'full-hull': '#',   'full-custom': '#' },
+          wallfloor: { accent: '#',  'full-mural': '#',  floor: '#' },
+        },
+      },
+
+      // ── GRAPHIC SERVICES ───────────────────────────────────────────────
+      //
+      // STRIPE SETUP: Create one Payment Link per package below (3 total).
+      // Each link should have a fixed price matching the price field.
+      // Paste each URL into stripeLink for the matching package.
+      //
+      graphics: {
+        packages: [
+          {
+            key:       'wrap-design',
+            label:     'Wrap Design',
+            price:     299,
+            badge:     'Most Popular',
+            turnaround:'5–7 business days',
+            desc:      'Custom full or partial wrap layout — designed for your vehicle and ready to send straight to print.',
+            includes: [
+              'Full or partial wrap layout',
+              'Print-ready files (AI + PDF)',
+              'Color and brand matching',
+              '2 rounds of revisions',
+            ],
+            stripeLink: '#',
+          },
+          {
+            key:       'logo-design',
+            label:     'Logo Design',
+            price:     199,
+            badge:     null,
+            turnaround:'5–7 business days',
+            desc:      'A clean, professional logo you own outright. Vector files, multiple formats, no subscriptions.',
+            includes: [
+              '3 initial concept options',
+              'Vector files (AI, EPS, PDF, PNG)',
+              'Full ownership — no licensing',
+              '2 rounds of revisions',
+            ],
+            stripeLink: '#',
+          },
+          {
+            key:       'custom-artwork',
+            label:     'Custom Artwork',
+            price:     149,
+            badge:     null,
+            turnaround:'3–5 business days',
+            desc:      'Decal design, sticker artwork, or custom graphic — built to spec and print-ready.',
+            includes: [
+              'Custom artwork or decal design',
+              'Print-ready high-res export',
+              'Multiple format delivery',
+              '2 rounds of revisions',
+            ],
+            stripeLink: '#',
+          },
+        ],
+      },
+
+    }; // end CONFIG — ✅ nothing below this line needs to change
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  STATE
+    // ══════════════════════════════════════════════════════════════════════
+    const S = {
+      tab: 'tinting',
+      tint: { step: 1, vehicle: null, pkg: null, film: null, time: null },
+      wraps: { step: 1, category: null, coverage: null },
+      gfx: { pkg: null },
+    };
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  UTILS
+    // ══════════════════════════════════════════════════════════════════════
+    const $ = id => document.getElementById(id);
+    const fmt = n => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+
+    async function netlifyPost(formName, data) {
+      const body = new URLSearchParams({ 'form-name': formName, ...data }).toString();
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+    }
+
+    function setBtn(id, loading, text) {
+      const btn = $(id);
+      if (!btn) return;
+      btn.disabled = loading;
+      btn.textContent = text || btn.dataset.orig || btn.textContent;
+      if (!loading && !btn.dataset.orig) btn.dataset.orig = btn.textContent;
+    }
+
+    function showErr(id, msg) {
+      const el = $(id);
+      if (!el) return;
+      el.textContent = msg;
+      el.style.display = msg ? 'block' : 'none';
+    }
+
+    function stripeRedirect(url, totalDollars) {
+      if (!url || url === '#') {
+        alert('Payment link coming soon — call us at (727) 494-6162 to complete your order.');
+        return;
+      }
+      const final = url.includes('?')
+        ? url + '&prefilled_quantity=' + Math.round(totalDollars)
+        : url + '?prefilled_quantity=' + Math.round(totalDollars);
+      window.location.href = final;
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  TAB NAVIGATION
+    // ══════════════════════════════════════════════════════════════════════
+    function setTab(tab) {
+      S.tab = tab;
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      $('tab-' + tab).classList.add('active');
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        if (['tinting','wraps','graphics'][i] === tab) btn.classList.add('active');
+      });
+      updateMpb();
+      window.scrollTo({ top: $('tab-bar').offsetTop - 61, behavior: 'smooth' });
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  WINDOW TINTING
+    // ══════════════════════════════════════════════════════════════════════
+
+    function buildTintStepBar() {
+      const steps = ['Vehicle', 'Package', 'Film', 'Book'];
+      const bar = $('tint-step-bar');
+      bar.innerHTML = steps.map((label, i) => {
+        const n = i + 1;
+        let cls = 'step-dot';
+        if (n < S.tint.step) cls += ' done';
+        else if (n === S.tint.step) cls += ' active';
+        const lineCls = n < S.tint.step ? 'step-line done' : 'step-line';
+        const dot = n < S.tint.step ? '✓' : n;
+        return `
+          ${i > 0 ? `<div class="${lineCls}"></div>` : ''}
+          <div class="${cls}">
+            <div class="dot">${dot}</div>
+            <span class="slabel">${label}</span>
+          </div>`;
+      }).join('');
+    }
+
+    function buildVehicleGrid() {
+      $('vehicle-grid').innerHTML = CONFIG.tinting.vehicles.map(v => `
+        <div class="opt-card ${S.tint.vehicle === v.key ? 'sel' : ''}" onclick="selectVehicle('${v.key}')">
+          <span class="oc-icon">${v.icon}</span>
+          <span class="oc-label">${v.label}</span>
+          ${S.tint.pkg && S.tint.film ? `<span class="oc-price">${fmt(getTintPrice(v.key, S.tint.pkg, S.tint.film))}</span>` : ''}
+        </div>`).join('');
+    }
+
+    function buildPackageGrid() {
+      $('package-grid').innerHTML = CONFIG.tinting.packages.map(p => {
+        const price = S.tint.vehicle && S.tint.film
+          ? getTintPrice(S.tint.vehicle, p.key, S.tint.film) : null;
+        return `
+        <div class="pkg-card ${S.tint.pkg === p.key ? 'sel' : ''}" onclick="selectPkg('${p.key}')">
+          <div class="pkg-radio"></div>
+          <div class="pkg-body">
+            <div class="pkg-title">${p.label}</div>
+            <div class="pkg-desc">${p.desc}</div>
+          </div>
+          ${price !== null ? `<div class="pkg-price">${fmt(price)}</div>` : ''}
+        </div>`;
+      }).join('');
+    }
+
+    function buildFilmGrid() {
+      $('film-grid').innerHTML = CONFIG.tinting.films.map(f => {
+        const price = S.tint.vehicle && S.tint.pkg
+          ? getTintPrice(S.tint.vehicle, S.tint.pkg, f.key) : null;
+        return `
+        <div class="film-card ${S.tint.film === f.key ? 'sel' : ''}" onclick="selectFilm('${f.key}')">
+          <div class="film-head">
+            <span class="film-label">${f.label}</span>
+            ${f.badge ? `<span class="film-badge">${f.badge}</span>` : ''}
+          </div>
+          <div class="film-desc">${f.desc}</div>
+          ${price !== null ? `<div class="film-price">${fmt(price)}</div>` : ''}
+        </div>`;
+      }).join('');
+    }
+
+    function buildTimeSlots() {
+      $('tint-time-slots').innerHTML = CONFIG.tinting.timeSlots.map(t => `
+        <div class="tslot ${S.tint.time === t ? 'sel' : ''}" onclick="selectTime('${t}')">${t}</div>`
+      ).join('');
+    }
+
+    function buildSelSummary(stepEl, from) {
+      const { vehicle: v, pkg: p, film: f } = S.tint;
+      const vLabel = v ? CONFIG.tinting.vehicles.find(x => x.key === v)?.label : null;
+      const pLabel = p ? CONFIG.tinting.packages.find(x => x.key === p)?.label : null;
+      const fLabel = f ? CONFIG.tinting.films.find(x => x.key === f)?.label : null;
+      const items = [
+        vLabel && { label: 'Vehicle', val: vLabel },
+        from >= 3 && pLabel && { label: 'Package', val: pLabel },
+        from >= 4 && fLabel && { label: 'Film', val: fLabel },
+      ].filter(Boolean);
+      const el = $(stepEl);
+      if (el) el.innerHTML = items.map(i => `
+        <div class="sel-item">
+          <span class="s-lbl">${i.label}</span>
+          <span class="s-val">${i.val}</span>
+        </div>`).join('');
+    }
+
+    function getTintPrice(v, p, f) {
+      v = v || S.tint.vehicle;
+      p = p || S.tint.pkg;
+      f = f || S.tint.film;
+      try { return CONFIG.tinting.pricing[v][p][f]; } catch { return null; }
+    }
+
+    function getTintLink() {
+      const { vehicle: v, pkg: p, film: f } = S.tint;
+      try { return CONFIG.tinting.stripeLinks[v][p][f]; } catch { return null; }
+    }
+
+    function selectVehicle(key) {
+      S.tint.vehicle = key;
+      buildVehicleGrid();
+      $('tnt-n1').disabled = false;
+    }
+
+    function selectPkg(key) {
+      S.tint.pkg = key;
+      buildPackageGrid();
+      $('tnt-n2').disabled = false;
+    }
+
+    function selectFilm(key) {
+      S.tint.film = key;
+      buildFilmGrid();
+      $('tnt-n3').disabled = false;
+      updateMpb();
+    }
+
+    function selectTime(t) {
+      S.tint.time = t;
+      buildTimeSlots();
+    }
+
+    function tintGoTo(step) {
+      S.tint.step = step;
+      document.querySelectorAll('.tint-step').forEach(el => el.style.display = 'none');
+      $('tint-s' + step).style.display = 'block';
+      buildTintStepBar();
+
+      if (step === 2) { buildSelSummary('sel-s2', 2); buildPackageGrid(); }
+      if (step === 3) { buildSelSummary('sel-s3', 3); buildFilmGrid(); }
+      if (step === 4) {
+        buildSelSummary('sel-s4', 4);
+        buildTimeSlots();
+        const price = getTintPrice();
+        $('tint-price-display').textContent = price ? fmt(price) : '—';
+        const today = new Date().toISOString().split('T')[0];
+        $('tint-date').min = today;
+        updateMpb();
+      }
+      window.scrollTo({ top: $('tab-bar').offsetTop - 61, behavior: 'smooth' });
+    }
+
+    async function submitTinting() {
+      const name  = $('tint-name').value.trim();
+      const email = $('tint-email').value.trim();
+      const phone = $('tint-phone').value.trim();
+      const date  = $('tint-date').value;
+
+      if (!name || !email || !phone || !date || !S.tint.time) {
+        showErr('tint-error', 'Please fill in all required fields and select a time.');
+        return;
+      }
+      showErr('tint-error', '');
+
+      const price = getTintPrice();
+      const link  = getTintLink();
+      const vLabel = CONFIG.tinting.vehicles.find(x => x.key === S.tint.vehicle)?.label;
+      const pLabel = CONFIG.tinting.packages.find(x => x.key === S.tint.pkg)?.label;
+      const fLabel = CONFIG.tinting.films.find(x => x.key === S.tint.film)?.label;
+
+      const btn = $('tint-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Booking...';
+
+      try {
+        await netlifyPost('tinting-booking', {
+          name, email, phone,
+          'vehicle-type': vLabel,
+          package: pLabel,
+          film: fLabel,
+          'vehicle-info': $('tint-vehicle-info').value.trim(),
+          date,
+          time: S.tint.time,
+          total: fmt(price),
+        });
+        btn.textContent = 'Redirecting to payment...';
+        setTimeout(() => stripeRedirect(link, price), 400);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Book & Pay Securely';
+        showErr('tint-error', 'Something went wrong. Please try again or call (727) 494-6162.');
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  VINYL WRAPS
+    // ══════════════════════════════════════════════════════════════════════
+
+    function buildWrapStepBar() {
+      const steps = ['Category', 'Coverage', 'Details'];
+      const bar = $('wrap-step-bar');
+      bar.innerHTML = steps.map((label, i) => {
+        const n = i + 1;
+        let cls = 'step-dot';
+        if (n < S.wraps.step) cls += ' done';
+        else if (n === S.wraps.step) cls += ' active';
+        const lineCls = n < S.wraps.step ? 'step-line done' : 'step-line';
+        const dot = n < S.wraps.step ? '✓' : n;
+        return `
+          ${i > 0 ? `<div class="${lineCls}"></div>` : ''}
+          <div class="${cls}">
+            <div class="dot">${dot}</div>
+            <span class="slabel">${label}</span>
+          </div>`;
+      }).join('');
+    }
+
+    function buildWrapCategoryGrid() {
+      $('wrap-category-grid').innerHTML = CONFIG.wraps.categories.map(cat => `
+        <div class="opt-card ${S.wraps.category === cat.key ? 'sel' : ''}" onclick="selectWrapCategory('${cat.key}')">
+          <span class="oc-icon">${cat.icon}</span>
+          <span class="oc-label">${cat.label}</span>
+        </div>`).join('');
+    }
+
+    function buildWrapCoverageGrid() {
+      const tiers = CONFIG.wraps.coverage[S.wraps.category] || [];
+      $('wrap-coverage-grid').innerHTML = tiers.map(t => `
+        <div class="pkg-card ${S.wraps.coverage === t.key ? 'sel' : ''}" onclick="selectWrapCoverage('${t.key}')">
+          <div class="pkg-radio"></div>
+          <div class="pkg-body">
+            <div class="pkg-title">${t.label}</div>
+            <div class="pkg-desc">${t.desc}</div>
+          </div>
+          <div class="pkg-price">${fmt(t.priceFrom)}<span style="font-family:var(--font-b);font-size:11px;color:var(--muted);font-weight:500;"> from</span></div>
+        </div>`).join('');
+    }
+
+    function buildWrapSelSummary(stepEl) {
+      const cat = CONFIG.wraps.categories.find(c => c.key === S.wraps.category);
+      const tier = cat ? (CONFIG.wraps.coverage[S.wraps.category] || []).find(t => t.key === S.wraps.coverage) : null;
+      const items = [
+        cat && { label: 'Category', val: cat.label },
+        tier && { label: 'Coverage', val: tier.label },
+      ].filter(Boolean);
+      const el = $(stepEl);
+      if (el) el.innerHTML = items.map(i => `
+        <div class="sel-item">
+          <span class="s-lbl">${i.label}</span>
+          <span class="s-val">${i.val}</span>
+        </div>`).join('');
+    }
+
+    function getWrapTier() {
+      const tiers = CONFIG.wraps.coverage[S.wraps.category] || [];
+      return tiers.find(t => t.key === S.wraps.coverage) || null;
+    }
+
+    function getWrapLink() {
+      try { return CONFIG.wraps.stripeLinks[S.wraps.category][S.wraps.coverage]; } catch { return null; }
+    }
+
+    function selectWrapCategory(key) {
+      S.wraps.category = key;
+      S.wraps.coverage = null;
+      buildWrapCategoryGrid();
+      $('wrp-n1').disabled = false;
+    }
+
+    function selectWrapCoverage(key) {
+      S.wraps.coverage = key;
+      buildWrapCoverageGrid();
+      $('wrp-n2').disabled = false;
+    }
+
+    function wrapGoTo(step) {
+      S.wraps.step = step;
+      document.querySelectorAll('.wrap-step').forEach(el => el.style.display = 'none');
+      $('wrap-s' + step).style.display = 'block';
+      buildWrapStepBar();
+
+      if (step === 2) { buildWrapSelSummary('wsel-s2'); buildWrapCoverageGrid(); }
+      if (step === 3) {
+        buildWrapSelSummary('wsel-s3');
+        const tier = getWrapTier();
+        $('wrap-price-display').textContent = tier ? fmt(tier.priceFrom) + '+' : '—';
+        $('wrap-deposit-display').textContent = tier ? fmt(tier.deposit) : '—';
+        updateMpb();
+      }
+      window.scrollTo({ top: $('tab-bar').offsetTop - 61, behavior: 'smooth' });
+    }
+
+    async function submitWraps() {
+      const name  = $('wrap-name').value.trim();
+      const email = $('wrap-email').value.trim();
+      const phone = $('wrap-phone').value.trim();
+
+      if (!name || !email || !phone) {
+        showErr('wrap-error', 'Please fill in your name, email, and phone.');
+        return;
+      }
+      showErr('wrap-error', '');
+
+      const tier = getWrapTier();
+      const link = getWrapLink();
+      const cat  = CONFIG.wraps.categories.find(c => c.key === S.wraps.category);
+
+      const btn = $('wrap-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      try {
+        await netlifyPost('wraps-deposit', {
+          name, email, phone,
+          category: cat?.label,
+          coverage: tier?.label,
+          'item-info': $('wrap-item-info').value.trim(),
+          notes: $('wrap-notes').value.trim(),
+          'estimate-from': fmt(tier.priceFrom),
+          deposit: fmt(tier.deposit),
+        });
+        btn.textContent = 'Redirecting to payment...';
+        setTimeout(() => stripeRedirect(link, tier.deposit), 400);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Reserve & Pay Deposit';
+        showErr('wrap-error', 'Something went wrong. Please try again or call (727) 494-6162.');
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  GRAPHIC SERVICES
+    // ══════════════════════════════════════════════════════════════════════
+
+    function buildGfxGrid() {
+      $('gfx-grid').innerHTML = CONFIG.graphics.packages.map(pkg => `
+        <div class="gfx-card ${pkg.badge ? 'featured' : ''}">
+          ${pkg.badge ? `<div class="gfx-badge">${pkg.badge}</div>` : ''}
+          <div class="gfx-title">${pkg.label}</div>
+          <div class="gfx-desc">${pkg.desc}</div>
+          <div class="gfx-price"><sup>$</sup>${pkg.price}</div>
+          <div class="gfx-turn">Turnaround: ${pkg.turnaround}</div>
+          <ul class="gfx-includes">
+            ${pkg.includes.map(i => `<li>${i}</li>`).join('')}
+          </ul>
+          <button class="btn-primary" onclick="openGfxModal('${pkg.key}')" style="max-width:100%">
+            Get Started
+          </button>
+        </div>`).join('');
+    }
+
+    function openGfxModal(key) {
+      const pkg = CONFIG.graphics.packages.find(p => p.key === key);
+      S.gfx.pkg = key;
+      $('gfx-m-title').textContent = pkg.label;
+      $('gfx-m-sub').textContent = pkg.desc;
+      $('gfx-m-price').textContent = fmt(pkg.price);
+      $('gfx-modal').classList.add('open');
+      showErr('gfx-error', '');
+      ['gfx-name','gfx-email','gfx-phone','gfx-details'].forEach(id => $(id).value = '');
+      const btn = $('gfx-submit-btn');
+      btn.disabled = false;
+      btn.textContent = 'Purchase & Pay Securely';
+    }
+
+    function closeGfxModal(e) {
+      if (!e || e.target === $('gfx-modal') || !e.target) {
+        $('gfx-modal').classList.remove('open');
+      }
+    }
+
+    async function submitGraphics() {
+      const name  = $('gfx-name').value.trim();
+      const email = $('gfx-email').value.trim();
+      const phone = $('gfx-phone').value.trim();
+
+      if (!name || !email || !phone) {
+        showErr('gfx-error', 'Please fill in your name, email, and phone.');
+        return;
+      }
+      showErr('gfx-error', '');
+
+      const pkg = CONFIG.graphics.packages.find(p => p.key === S.gfx.pkg);
+      const btn = $('gfx-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      try {
+        await netlifyPost('graphics-order', {
+          name, email, phone,
+          package: pkg.label,
+          'project-details': $('gfx-details').value.trim(),
+          total: fmt(pkg.price),
+        });
+        btn.textContent = 'Redirecting to payment...';
+        setTimeout(() => stripeRedirect(pkg.stripeLink, pkg.price), 400);
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Purchase & Pay Securely';
+        showErr('gfx-error', 'Something went wrong. Please try again or call (727) 494-6162.');
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  MOBILE PRICE BAR
+    // ══════════════════════════════════════════════════════════════════════
+    function updateMpb() {
+      const bar = $('mpb');
+      const priceEl = $('mpb-price');
+      const ctaEl = $('mpb-cta');
+      const lblEl = $('mpb-lbl');
+
+      if (S.tab === 'tinting') {
+        const price = getTintPrice();
+        priceEl.textContent = price ? fmt(price) : '—';
+        lblEl.textContent = 'Your Total';
+        ctaEl.textContent = S.tint.step < 4 ? 'Continue →' : 'Book & Pay';
+        ctaEl.onclick = S.tint.step < 4
+          ? () => { if (canAdvanceTint()) tintGoTo(S.tint.step + 1); }
+          : () => submitTinting();
+      } else if (S.tab === 'wraps') {
+        const tier = getWrapTier();
+        priceEl.textContent = tier ? fmt(tier.deposit) : '—';
+        lblEl.textContent = 'Deposit';
+        ctaEl.textContent = S.wraps.step < 3 ? 'Continue →' : 'Reserve & Pay';
+        ctaEl.onclick = S.wraps.step < 3
+          ? () => { if (canAdvanceWrap()) wrapGoTo(S.wraps.step + 1); }
+          : () => submitWraps();
+      } else {
+        priceEl.textContent = '—';
+        lblEl.textContent = 'Select a package';
+        ctaEl.textContent = 'Get Started';
+        ctaEl.onclick = null;
+        bar.style.display = 'none';
+        return;
+      }
+      bar.style.display = 'flex';
+    }
+
+    function mobileCta() { $('mpb-cta').onclick?.(); }
+
+    function canAdvanceTint() {
+      if (S.tint.step === 1) return !!S.tint.vehicle;
+      if (S.tint.step === 2) return !!S.tint.pkg;
+      if (S.tint.step === 3) return !!S.tint.film;
+      return true;
+    }
+
+    function canAdvanceWrap() {
+      if (S.wraps.step === 1) return !!S.wraps.category;
+      if (S.wraps.step === 2) return !!S.wraps.coverage;
+      return true;
+    }
+
+    // ══════════════════════════════════════════════════════════════════════
+    //  INIT
+    // ══════════════════════════════════════════════════════════════════════
+    function init() {
+      buildTintStepBar();
+      buildVehicleGrid();
+      buildWrapCategoryGrid();
+      buildGfxGrid();
+      updateMpb();
+
+      // Set date min to today
+      const today = new Date().toISOString().split('T')[0];
+      const dateInput = $('tint-date');
+      if (dateInput) dateInput.min = today;
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  
+    function toggleMobile() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.toggle('open');
+      document.querySelectorAll('.hamburger').forEach(h => h.classList.toggle('open', isOpen));
+    }
+
+    function toggleMobAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.mob-accordion-body.open').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.mob-accordion-header.open').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburgers = document.querySelectorAll('.hamburger');
+      const clickedHamburger = Array.from(hamburgers).some(h => h.contains(e.target));
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !clickedHamburger) {
+        menu.classList.remove('open');
+        hamburgers.forEach(h => h.classList.remove('open'));
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (!navbar) return;
+      if (window.scrollY > 30) {
+        navbar.style.background = 'rgba(10,10,10,0.99)';
+      } else {
+        navbar.style.background = 'rgba(10,10,10,0.97)';
+      }
+    });
+
+  </script>
+</body>
+</html>
