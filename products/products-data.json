@@ -398,7 +398,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/6-ft-canopy-tent.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/6-ft-canopy-tent-2.jpg"
+        "https://flyvisualsfl.com/product-photos/6-ft-canopy-tent-2.jpg",
+        "https://flyvisualsfl.com/product-photos/6-ft-canopy-tent-3.jpg"
       ]
     },
     {
@@ -853,7 +854,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/big-head-cutouts.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/big-head-cutouts-2.jpg",
+        "https://flyvisualsfl.com/product-photos/big-head-cutouts-3.jpg"
+      ]
     },
     {
       "slug": "blade-flags",
@@ -2245,7 +2249,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/custom-canopy-tent-10-x-15.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/custom-canopy-tent-10-x-15-2.jpg"
+        "https://flyvisualsfl.com/product-photos/custom-canopy-tent-10-x-15-2.jpg",
+        "https://flyvisualsfl.com/product-photos/custom-canopy-tent-10-x-15-3.jpg"
       ]
     },
     {
@@ -2849,7 +2854,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/fabric-banners.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/fabric-banners-2.jpg",
+        "https://flyvisualsfl.com/product-photos/fabric-banners-3.jpg"
+      ]
     },
     {
       "slug": "feather-flags",
@@ -3001,7 +3009,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/feather-flags.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/feather-flags-2.jpg",
+        "https://flyvisualsfl.com/product-photos/feather-flags-3.jpg"
+      ]
     },
     {
       "slug": "fitted-table-covers",
@@ -3439,7 +3450,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/floor-decals.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/floor-decals-2.jpg"
+        "https://flyvisualsfl.com/product-photos/floor-decals-2.jpg",
+        "https://flyvisualsfl.com/product-photos/floor-decals-3.jpg"
       ]
     },
     {
@@ -3709,7 +3721,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/frosted-window-decals.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/frosted-window-decals-2.jpg"
+        "https://flyvisualsfl.com/product-photos/frosted-window-decals-2.jpg",
+        "https://flyvisualsfl.com/product-photos/frosted-window-decals-3.jpg"
       ]
     },
     {
@@ -3974,7 +3987,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/gator-boards.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/gator-boards-2.jpg"
+        "https://flyvisualsfl.com/product-photos/gator-boards-2.jpg",
+        "https://flyvisualsfl.com/product-photos/gator-boards-3.jpg"
       ]
     },
     {
@@ -4083,7 +4097,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/giant-flags.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/giant-flags-2.jpg"
+        "https://flyvisualsfl.com/product-photos/giant-flags-2.jpg",
+        "https://flyvisualsfl.com/product-photos/giant-flags-3.jpg"
       ]
     },
     {
@@ -4352,7 +4367,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/metal-a-frame-signs.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/metal-a-frame-signs-2.jpg",
+        "https://flyvisualsfl.com/product-photos/metal-a-frame-signs-3.jpg"
+      ]
     },
     {
       "slug": "non-retractable-adjustable-banner-stands",
@@ -4518,7 +4536,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/non-retractable-adjustable-banner-stands.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/non-retractable-adjustable-banner-stands-2.jpg"
+        "https://flyvisualsfl.com/product-photos/non-retractable-adjustable-banner-stands-2.jpg",
+        "https://flyvisualsfl.com/product-photos/non-retractable-adjustable-banner-stands-3.jpg"
       ]
     },
     {
@@ -4760,7 +4779,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/opaque-vehicle-decals.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/opaque-vehicle-decals-2.jpg",
+        "https://flyvisualsfl.com/product-photos/opaque-vehicle-decals-3.jpg"
+      ]
     },
     {
       "slug": "opaque-window-clings",
@@ -5560,7 +5582,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/outdoor-banners.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/outdoor-banners-2.jpg"
+        "https://flyvisualsfl.com/product-photos/outdoor-banners-2.jpg",
+        "https://flyvisualsfl.com/product-photos/outdoor-banners-3.jpg"
       ]
     },
     {
@@ -6235,7 +6258,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/plastic-a-frame-signs.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/plastic-a-frame-signs-2.jpg",
+        "https://flyvisualsfl.com/product-photos/plastic-a-frame-signs-3.jpg"
+      ]
     },
     {
       "slug": "pole-banners",
@@ -6445,7 +6471,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/pole-banners.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/pole-banners-2.jpg",
+        "https://flyvisualsfl.com/product-photos/pole-banners-3.jpg"
+      ]
     },
     {
       "slug": "poster-signs",
@@ -6973,7 +7002,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/poster-signs.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/poster-signs-2.jpg"
+        "https://flyvisualsfl.com/product-photos/poster-signs-2.jpg",
+        "https://flyvisualsfl.com/product-photos/poster-signs-3.jpg"
       ]
     },
     {
@@ -7104,7 +7134,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/premium-ez-extend-banner-stands.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/premium-ez-extend-banner-stands-2.jpg"
+        "https://flyvisualsfl.com/product-photos/premium-ez-extend-banner-stands-2.jpg",
+        "https://flyvisualsfl.com/product-photos/premium-ez-extend-banner-stands-3.jpg"
       ]
     },
     {
@@ -7796,7 +7827,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/rectangle-flags.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/rectangle-flags-2.jpg"
+        "https://flyvisualsfl.com/product-photos/rectangle-flags-2.jpg",
+        "https://flyvisualsfl.com/product-photos/rectangle-flags-3.jpg"
       ]
     },
     {
@@ -7927,7 +7959,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/roll-up-retractable-banner-stands.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/roll-up-retractable-banner-stands-2.jpg"
+        "https://flyvisualsfl.com/product-photos/roll-up-retractable-banner-stands-2.jpg",
+        "https://flyvisualsfl.com/product-photos/roll-up-retractable-banner-stands-3.jpg"
       ]
     },
     {
@@ -8511,7 +8544,9 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/step-repeat-adjustable-straight-displays.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/step-repeat-adjustable-straight-displays-2.jpg"
+      ]
     },
     {
       "slug": "step-repeat-curved-pillow-case-displays",
@@ -8669,7 +8704,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/step-repeat-curved-pillow-case-displays.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/step-repeat-curved-pillow-case-displays-2.jpg"
+        "https://flyvisualsfl.com/product-photos/step-repeat-curved-pillow-case-displays-2.jpg",
+        "https://flyvisualsfl.com/product-photos/step-repeat-curved-pillow-case-displays-3.jpg"
       ]
     },
     {
@@ -8946,10 +8982,7 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/step-repeat-straight-pop-up-displays.jpg",
-      "extraImages": [
-        "https://flyvisualsfl.com/product-photos/step-repeat-straight-pop-up-displays-2.jpg",
-        "https://flyvisualsfl.com/product-photos/step-repeat-straight-pop-up-displays-3.jpg"
-      ]
+      "extraImages": []
     },
     {
       "slug": "step-repeat-straight-wall-box-displays",
@@ -9169,9 +9202,7 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/step-repeat-straight-wall-box-displays.jpg",
-      "extraImages": [
-        "https://flyvisualsfl.com/product-photos/step-repeat-straight-wall-box-displays-2.jpg"
-      ]
+      "extraImages": []
     },
     {
       "slug": "steppy-retractable-banner-stands",
@@ -9575,7 +9606,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/straight-pillow-case-step-repeat-displays.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/straight-pillow-case-step-repeat-displays-2.jpg"
+        "https://flyvisualsfl.com/product-photos/straight-pillow-case-step-repeat-displays-2.jpg",
+        "https://flyvisualsfl.com/product-photos/straight-pillow-case-step-repeat-displays-3.jpg"
       ]
     },
     {
@@ -10229,7 +10261,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/table-runners.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/table-runners-2.jpg"
+        "https://flyvisualsfl.com/product-photos/table-runners-2.jpg",
+        "https://flyvisualsfl.com/product-photos/table-runners-3.jpg"
       ]
     },
     {
@@ -10382,7 +10415,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/teardrop-flags.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/teardrop-flags-2.jpg",
+        "https://flyvisualsfl.com/product-photos/teardrop-flags-3.jpg"
+      ]
     },
     {
       "slug": "vinyl-banners",
@@ -10721,7 +10757,7 @@
       },
       "stripeLink": "#",
       "netlifyForm": "signs-order",
-      "imageUrl": "https://flyvisualsfl.com/product-photos/harbor-point-grand-opening-banner.png",
+      "imageUrl": "https://flyvisualsfl.com/product-photos/vinyl-banners.jpg",
       "extraImages": [
         "https://flyvisualsfl.com/product-photos/vinyl-banners-2.jpg",
         "https://flyvisualsfl.com/product-photos/vinyl-banners-3.jpg"
@@ -11004,7 +11040,8 @@
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/vinyl-mesh-banners.jpg",
       "extraImages": [
-        "https://flyvisualsfl.com/product-photos/vinyl-mesh-banners-2.jpg"
+        "https://flyvisualsfl.com/product-photos/vinyl-mesh-banners-2.jpg",
+        "https://flyvisualsfl.com/product-photos/vinyl-mesh-banners-3.jpg"
       ]
     },
     {
@@ -11238,7 +11275,10 @@
       "stripeLink": "#",
       "netlifyForm": "signs-order",
       "imageUrl": "https://flyvisualsfl.com/product-photos/yard-signs.jpg",
-      "extraImages": []
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/yard-signs-2.jpg",
+        "https://flyvisualsfl.com/product-photos/yard-signs-3.jpg"
+      ]
     },
     {
       "slug": "wall-decals",
@@ -11469,7 +11509,11 @@
       },
       "stripeLink": "#",
       "netlifyForm": "signs-order",
-      "imageUrl": "https://flyvisualsfl.com/product-photos/wall-decals.jpg"
+      "imageUrl": "https://flyvisualsfl.com/product-photos/wall-decals.jpg",
+      "extraImages": [
+        "https://flyvisualsfl.com/product-photos/wall-decals-2.jpg",
+        "https://flyvisualsfl.com/product-photos/wall-decals-3.jpg"
+      ]
     },
     {
       "slug": "fence-banners",

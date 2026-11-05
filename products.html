@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Products — Signs, Banners &amp; Displays | Fly Visuals</title>
+  <meta name="description" content="Shop banners, banner stands, custom signs, trade show displays, outdoor displays, and stickers and decals online. Pick a product and get pricing instantly. Fly Visuals — Port Richey, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #cc1414;
+      --red-dark:   #aa1010;
+      --bg:         #ffffff;
+      --bg2:        #f6f5f3;
+      --bg3:        #eeece9;
+      --bg4:        #e4e2de;
+      --border:     #e3e1dd;
+      --border-hi:  #cfccc6;
+      --text:       #1a1a1a;
+      --muted:      #5f5c57;
+      --dim:        #9a9690;
+      --font-d:     'Bebas Neue', sans-serif;
+      --font-b:     'Barlow', sans-serif;
+      --max-w:      1100px;
+      --r:          4px;
+      --ease:       0.15s ease;
+      --black:      #f0f0f0;
+      --dark:       #ffffff;
+      --dark2:      #e4e4e4;
+      --red-bright: #e81c1c;
+      --nav-red-dark: #8b0000;
+      --white:      #1a1a1a;
+      --grey-light: #333333;
+      --grey:       #666666;
+      --grey-dark:  #cccccc;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:  'Barlow', sans-serif;
+    }
+
+    
+    /* ══════════════════════ MAIN-SITE NAVBAR (ported) ══════════════════════ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.97);
+      border-bottom: 2px solid var(--red);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--red); }
+
+    nav { display: flex; align-items: center; gap: 0; }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      transition: color 0.2s;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--red-bright); }
+    .nav-link svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+    /* Level 1 dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--dark2);
+      border: 1px solid var(--grey-dark);
+      border-top: 2px solid var(--red);
+      min-width: 200px;
+      z-index: 200;
+    }
+    .nav-item:hover .dropdown { display: block; }
+
+    .dropdown-item {
+      position: relative;
+    }
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .dropdown-link:hover { background: var(--red); color: #ffffff; }
+    .dropdown-link svg { width: 8px; height: 8px; }
+
+    /* Level 2 dropdown */
+    .sub-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: var(--dark);
+      border: 1px solid var(--grey-dark);
+      border-left: 2px solid var(--red);
+      min-width: 210px;
+      z-index: 300;
+    }
+    .dropdown-item:hover .sub-dropdown { display: block; }
+    .sub-dropdown a {
+      display: block;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      transition: background 0.15s, color 0.15s;
+    }
+    .sub-dropdown a:hover { background: var(--nav-red-dark); color: #ffffff; }
+
+    /* ========== NAV CALL BUTTON ========== */
+    .nav-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-left: 0.8rem;
+      background: var(--red);
+      color: var(--white) !important;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .nav-call-btn:hover { background: transparent; color: var(--red) !important; }
+    .nav-call-btn svg { flex-shrink: 0; }
+
+    .mob-call-btn {
+      display: none;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.85rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mob-call-btn:hover { background: transparent; color: var(--red); }
+
+    /* Mobile Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 7px;
+      cursor: pointer;
+      padding: 12px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hamburger span {
+      display: block;
+      width: 34px;
+      height: 3px;
+      background: #ffffff;
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      overflow-y: auto;
+      z-index: 999;
+      padding: 1rem 0 3rem;
+    }
+    .mobile-menu.open { display: block; }
+
+    .mobile-section-header {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      padding: 1rem 1.5rem 0.3rem;
+      border-top: 1px solid var(--grey-dark);
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mobile-menu a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mobile-menu a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* Mobile accordion */
+    .mob-accordion { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mob-accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--grey-light);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-align: left;
+    }
+    .mob-accordion-header:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-acc-arrow {
+      width: 12px; height: 12px;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .mob-accordion-header.open .mob-acc-arrow { transform: rotate(180deg); }
+    .mob-accordion-body {
+      display: none;
+      background: rgba(0,0,0,0.25);
+    }
+    .mob-accordion-body.open { display: block; }
+    .mob-accordion-body a {
+      display: block;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .mob-accordion-body a.sub { padding-left: 2.5rem; font-size: 0.78rem; color: var(--grey); }
+    .mob-accordion-body a:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+    .mob-main-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mob-main-link:hover { color: #ffffff; background: rgba(204,20,20,0.85); }
+
+    /* ========== BOTTOM NAVBAR (mobile only) ========== */
+    #bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(10,10,10,0.98);
+      border-top: 2px solid var(--red);
+      z-index: 1001;
+      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    @media (max-width: 768px) { #bottom-nav { display: flex; } }
+    .bot-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--red);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .bot-call-btn:hover { background: transparent; color: var(--red); }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      /* ---- Top navbar mobile layout ---- */
+      #navbar {
+        overflow: visible;
+        justify-content: space-between;
+        height: 52px;
+      }
+      .logo {
+        position: fixed;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        z-index: 1002;
+        pointer-events: auto;
+        display: flex;
+        align-items: flex-start;
+      }
+      .logo img {
+        height: 58px !important;
+        width: auto !important;
+        filter:
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 1px #000)
+          drop-shadow(0 0 2px #000)
+          drop-shadow(0 0 2px #000);
+      }
+      .mob-call-btn { display: none; }
+      #navbar .hamburger { display: none; }
+      .mobile-menu { bottom: 60px; }
+    }
+    /* ══════════════════════ END MAIN-SITE NAVBAR ══════════════════════ */
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font-b); border: none; background: none; }
+    h1, h2, h3 { font-family: var(--font-d); letter-spacing: 0.02em; line-height: 1; }
+
+    /* ── HEADER ───────────────────────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 60px;
+    }
+    .hdr-back { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0.02em; transition: color var(--ease); }
+    .hdr-back:hover { color: var(--text); }
+    .hdr-logo { font-family: var(--font-d); font-size: 22px; letter-spacing: 0.08em; }
+    .hdr-logo span { color: var(--red); }
+    .hdr-phone { font-size: 13px; font-weight: 600; color: var(--red); letter-spacing: 0.02em; }
+    .hdr-phone:hover { color: #e01515; }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    #store-hero {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(204,20,20,0.08) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23fff' fill-opacity='0.03'/%3E%3C/svg%3E");
+      padding: 132px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.15em; color: var(--red);
+      font-weight: 600; margin-bottom: 16px; text-transform: uppercase;
+    }
+    #store-hero h1 { font-size: clamp(48px, 8vw, 80px); margin-bottom: 16px; }
+    .hero-sub {
+      font-size: 17px; color: var(--muted); max-width: 520px;
+      margin: 0 auto 28px; font-weight: 300; line-height: 1.6;
+    }
+    .hero-trust { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+    .hero-trust span {
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .hero-trust span::before { content: '— '; color: var(--red); }
+
+    /* ── TAB BAR ──────────────────────────────────────────────── */
+    #tab-bar {
+      position: sticky; top: 72px; z-index: 90;
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      display: flex; flex-wrap: wrap;
+    }
+    .tab-btn {
+      flex: 1; padding: 16px 12px; min-width: 120px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); border-bottom: 3px solid transparent;
+      transition: all var(--ease);
+    }
+    .tab-btn:hover { color: var(--text); background: rgba(0,0,0,0.03); }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+
+    /* ── MAIN ─────────────────────────────────────────────────── */
+    #store-main { max-width: var(--max-w); margin: 0 auto; padding: 0 20px 80px; }
+    .tab-content { display: none; padding: 44px 0; }
+    .tab-content.active { display: block; }
+
+    .sec-head { margin-bottom: 28px; }
+    .sec-head h2 { font-size: 34px; margin-bottom: 6px; }
+    .sec-head p { color: var(--muted); font-size: 14px; font-weight: 300; }
+
+    /* ── STEP INDICATOR ───────────────────────────────────────── */
+    .step-bar {
+      display: flex; align-items: center; margin-bottom: 36px;
+      overflow-x: auto; padding-bottom: 2px;
+    }
+    .step-dot { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .step-dot .dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--border-hi); font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0; color: var(--muted);
+    }
+    .step-dot .slabel {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--dim); white-space: nowrap;
+    }
+    .step-dot.active .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.active .slabel { color: var(--text); }
+    .step-dot.done .dot { border-color: var(--red); background: var(--red); color: white; }
+    .step-dot.done .slabel { color: var(--muted); }
+    .step-line { flex: 1; height: 2px; background: var(--border); margin: 0 10px; min-width: 20px; }
+    .step-line.done { background: var(--red); }
+
+    /* ── SELECTION SUMMARY BAR ────────────────────────────────── */
+    .sel-summary {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: var(--r); padding: 14px 20px;
+      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .sel-item .s-lbl {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 2px;
+    }
+    .sel-item .s-val { font-size: 13px; font-weight: 600; }
+
+    /* ── OPTION CARDS (vehicle / generic) ─────────────────────── */
+    .opt-grid { display: grid; gap: 12px; }
+    .opt-grid.c5 { grid-template-columns: repeat(5, 1fr); }
+    .opt-grid.c2 { grid-template-columns: repeat(2, 1fr); }
+    .opt-grid.c3 { grid-template-columns: repeat(3, 1fr); }
+
+    .opt-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 20px 14px; text-align: center; cursor: pointer;
+      transition: all var(--ease); user-select: none;
+    }
+    .opt-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .opt-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .opt-card .oc-icon { font-size: 30px; display: block; margin-bottom: 8px; line-height: 1; }
+    .opt-card .oc-label { font-weight: 700; font-size: 13px; display: block; }
+    .opt-card .oc-price { font-family: var(--font-d); font-size: 20px; color: var(--red); margin-top: 6px; display: block; }
+
+    /* ── PACKAGE CARDS (left-aligned, wider) ──────────────────── */
+    .pkg-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 22px 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .pkg-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .pkg-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .pkg-radio {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 50%;
+      flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .pkg-card.sel .pkg-radio { border-color: var(--red); background: var(--red); }
+    .pkg-card.sel .pkg-radio::after { content: '✓'; font-size: 11px; color: white; font-weight: 700; }
+    .pkg-body { flex: 1; }
+    .pkg-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .pkg-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.4; }
+    .pkg-price { font-family: var(--font-d); font-size: 26px; color: var(--red); flex-shrink: 0; align-self: center; }
+
+    /* ── FILM CARDS ───────────────────────────────────────────── */
+    .film-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 24px; cursor: pointer; transition: all var(--ease); user-select: none;
+    }
+    .film-card:hover { border-color: var(--border-hi); background: var(--bg3); }
+    .film-card.sel { border-color: var(--red); background: rgba(204,20,20,0.07); }
+    .film-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .film-label { font-weight: 700; font-size: 16px; }
+    .film-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px; background: var(--red); color: white;
+    }
+    .film-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+    .film-price { font-family: var(--font-d); font-size: 30px; color: var(--red); margin-top: 14px; }
+
+    /* ── STEP NAV BUTTONS ─────────────────────────────────────── */
+    .step-nav { display: flex; gap: 12px; margin-top: 32px; align-items: center; }
+    .btn-back {
+      padding: 12px 22px; border: 1px solid var(--border-hi); border-radius: var(--r);
+      color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      transition: all var(--ease);
+    }
+    .btn-back:hover { color: var(--text); border-color: var(--muted); }
+    .btn-next {
+      flex: 1; max-width: 280px; padding: 14px 28px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: background var(--ease);
+    }
+    .btn-next:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 36px; background: var(--red); color: white;
+      border-radius: var(--r); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: background var(--ease); width: 100%; max-width: 400px;
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--red-dark); }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* ── PRICE CALLOUT ────────────────────────────────────────── */
+    .price-callout {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--red); border-radius: var(--r);
+      padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .pc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .pc-val { font-family: var(--font-d); font-size: 44px; color: var(--text); line-height: 1; }
+
+    /* ── FORM ─────────────────────────────────────────────────── */
+    .form-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg.full { grid-column: 1 / -1; }
+    .fg label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .fg input, .fg select, .fg textarea {
+      background: var(--bg3); border: 1px solid var(--border-hi); color: var(--text);
+      padding: 12px 14px; border-radius: var(--r); font-family: var(--font-b);
+      font-size: 14px; transition: border-color var(--ease);
+      -webkit-appearance: none; appearance: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--red); }
+    .fg input::placeholder, .fg textarea::placeholder { color: var(--dim); }
+    .fg textarea { resize: vertical; min-height: 88px; }
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+    /* Time slots */
+    .time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .tslot {
+      padding: 10px 6px; text-align: center; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border-hi); border-radius: var(--r); cursor: pointer;
+      transition: all var(--ease); color: var(--muted); background: var(--bg3);
+    }
+    .tslot:hover { border-color: var(--red); color: var(--text); }
+    .tslot.sel { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* ── NOTE BOX ─────────────────────────────────────────────── */
+    .note-box {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 14px 18px; font-size: 13px; color: var(--muted); font-weight: 300;
+      line-height: 1.6; margin-top: 20px;
+    }
+    .note-box strong { color: var(--text); font-weight: 600; }
+
+    /* ── ALERTS ───────────────────────────────────────────────── */
+    .alert { padding: 12px 16px; border-radius: var(--r); font-size: 13px; font-weight: 500; margin-top: 16px; }
+    .alert-err { background: rgba(204,20,20,0.12); border: 1px solid rgba(204,20,20,0.4); color: #ff9999; display: none; }
+    .alert-ok  { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.35); color: #86efac; display: none; }
+
+    /* ── SIGNS LAYOUT ─────────────────────────────────────────── */
+    .signs-layout { display: grid; grid-template-columns: 1fr 320px; gap: 36px; align-items: start; }
+    .signs-panel {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 24px; position: sticky; top: 136px;
+    }
+
+    .type-toggle {
+      display: flex; border: 1px solid var(--border-hi); border-radius: var(--r);
+      overflow: hidden; margin-bottom: 32px;
+    }
+    .tt-btn {
+      flex: 1; padding: 13px 10px; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+      border-right: 1px solid var(--border-hi);
+    }
+    .tt-btn:last-child { border-right: none; }
+    .tt-btn.active { background: var(--red); color: white; border-right-color: var(--red); }
+
+    .field-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 10px;
+    }
+
+    /* Size grid */
+    .size-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 28px; }
+    .size-card {
+      background: var(--bg3); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 14px 10px; text-align: center; cursor: pointer; transition: all var(--ease);
+    }
+    .size-card:hover { border-color: var(--border-hi); }
+    .size-card.sel { border-color: var(--red); background: rgba(204,20,20,0.08); }
+    .size-card .sc-lbl { font-weight: 700; font-size: 13px; display: block; margin-bottom: 4px; }
+    .size-card .sc-price { font-size: 12px; color: var(--muted); }
+
+    /* Custom dimension inputs */
+    .custom-dims { display: none; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .custom-dims.show { display: grid; }
+
+    /* Quantity stepper */
+    .qty-wrap { margin-bottom: 16px; }
+    .qty-stepper { display: flex; align-items: center; }
+    .qty-btn {
+      width: 44px; height: 44px; border: 1px solid var(--border-hi); background: var(--bg3);
+      color: var(--text); font-size: 22px; font-weight: 300; display: flex;
+      align-items: center; justify-content: center; transition: all var(--ease);
+    }
+    .qty-btn:first-child { border-radius: var(--r) 0 0 var(--r); }
+    .qty-btn:last-child  { border-radius: 0 var(--r) var(--r) 0; }
+    .qty-btn:hover { background: var(--bg4); border-color: var(--red); color: var(--red); }
+    .qty-display {
+      flex: 1; height: 44px; background: var(--bg2);
+      border: 1px solid var(--border-hi); border-left: none; border-right: none;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; min-width: 70px;
+    }
+
+    /* Volume tiers */
+    .vol-tiers { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .vol-badge {
+      padding: 4px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+      border-radius: 2px; border: 1px solid var(--border-hi); color: var(--muted);
+      background: var(--bg3); transition: all var(--ease);
+    }
+    .vol-badge.active { border-color: var(--red); background: rgba(204,20,20,0.14); color: var(--text); }
+
+    /* Design add-on */
+    .addon-row {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 16px 18px; display: flex; align-items: center; gap: 14px;
+      cursor: pointer; transition: border-color var(--ease); margin-bottom: 28px; user-select: none;
+    }
+    .addon-row:hover { border-color: var(--border-hi); }
+    .addon-row.checked { border-color: var(--red); background: rgba(204,20,20,0.06); }
+    .addon-chk {
+      width: 22px; height: 22px; border: 2px solid var(--border-hi); border-radius: 3px;
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      transition: all var(--ease);
+    }
+    .addon-row.checked .addon-chk { background: var(--red); border-color: var(--red); }
+    .addon-row.checked .addon-chk::after { content: '✓'; color: white; font-size: 12px; font-weight: 700; }
+    .addon-info { flex: 1; }
+    .addon-info strong { font-size: 14px; font-weight: 700; display: block; }
+    .addon-info span { font-size: 12px; color: var(--muted); }
+    .addon-price { font-family: var(--font-d); font-size: 22px; color: var(--red); }
+
+    /* Summary panel rows */
+    .sum-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px;
+    }
+    .sum-row:last-of-type { border-bottom: none; }
+    .sum-row .sr-lbl { color: var(--muted); }
+    .sum-row .sr-val { font-weight: 600; }
+    .sum-total {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 16px; padding-top: 16px; border-top: 2px solid var(--border-hi);
+    }
+    .st-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .st-price { font-family: var(--font-d); font-size: 38px; line-height: 1; }
+    .disc-tag {
+      display: inline-block; padding: 2px 8px; background: rgba(204,20,20,0.15);
+      color: var(--red); font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+      border-radius: 2px; margin-left: 8px;
+    }
+
+    /* ── GRAPHIC PACKAGES ─────────────────────────────────────── */
+    .gfx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .gfx-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 32px 26px; position: relative; display: flex; flex-direction: column;
+      transition: border-color var(--ease);
+    }
+    .gfx-card:hover { border-color: var(--border-hi); }
+    .gfx-card.featured { border-color: var(--red); }
+    .gfx-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--red); color: white; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px;
+      border-radius: 0 0 4px 4px; white-space: nowrap;
+    }
+    .gfx-title { font-family: var(--font-d); font-size: 28px; margin-bottom: 8px; margin-top: 16px; }
+    .gfx-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; margin-bottom: 20px; }
+    .gfx-price { font-family: var(--font-d); font-size: 52px; color: var(--red); line-height: 1; margin-bottom: 4px; }
+    .gfx-price sup { font-family: var(--font-b); font-size: 22px; font-weight: 600; vertical-align: super; line-height: 0; }
+    .gfx-turn { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 22px; letter-spacing: 0.02em; }
+    .gfx-includes { list-style: none; margin-bottom: 28px; flex: 1; }
+    .gfx-includes li {
+      font-size: 13px; color: var(--muted); font-weight: 300;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .gfx-includes li::before { content: '—'; color: var(--red); font-weight: 600; flex-shrink: 0; }
+    .gfx-includes li:last-child { border-bottom: none; }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-ov {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88); z-index: 200;
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-ov.open { display: flex; }
+    .modal-box {
+      background: var(--bg2); border: 1px solid var(--border-hi); border-radius: var(--r);
+      padding: 36px; width: 100%; max-width: 500px; max-height: 90vh;
+      overflow-y: auto; position: relative;
+    }
+    .modal-title { font-family: var(--font-d); font-size: 30px; margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 10px; font-weight: 300; }
+    .modal-price { font-family: var(--font-d); font-size: 22px; color: var(--red); margin-bottom: 24px; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 20px; border-radius: 50%; transition: all var(--ease);
+    }
+    .modal-close:hover { color: var(--text); background: var(--bg4); }
+
+    /* ── TRUST BAR ────────────────────────────────────────────── */
+    #trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2); padding: 28px 24px; margin-top: 0;
+    }
+    .trust-grid {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+    }
+    .trust-val { font-family: var(--font-d); font-size: 30px; color: var(--red); display: block; }
+    .trust-lbl { font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.03em; }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    #store-footer {
+      padding: 36px 24px; text-align: center;
+      background: var(--bg); border-top: 1px solid var(--border);
+    }
+    .footer-logo { font-family: var(--font-d); font-size: 20px; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .footer-logo span { color: var(--red); }
+    .footer-info { font-size: 13px; color: var(--muted); line-height: 1.9; }
+    .footer-info a { color: var(--red); }
+
+    /* ── MOBILE PRICE BAR ─────────────────────────────────────── */
+    #mpb {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--bg2); border-top: 2px solid var(--border);
+      padding: 12px 20px; z-index: 80; align-items: center; gap: 14px;
+    }
+    .mpb-left { flex: 1; }
+    .mpb-lbl { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; display: block; }
+    .mpb-price { font-family: var(--font-d); font-size: 30px; line-height: 1; }
+    .mpb-cta {
+      padding: 12px 22px; background: var(--red); color: white; border-radius: var(--r);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      white-space: nowrap; transition: background var(--ease);
+    }
+    .mpb-cta:hover { background: var(--red-dark); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .opt-grid.c5 { grid-template-columns: repeat(3, 1fr); }
+      .gfx-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      #store-hero { padding: 92px 20px 32px; }
+      #store-hero h1 { font-size: 48px; }
+      .hero-trust { gap: 14px; }
+
+      #tab-bar { top: 52px; }
+      .tab-btn { font-size: 11px; padding: 13px 6px; min-width: 96px; }
+
+      .step-dot .slabel { display: none; }
+      .step-line { min-width: 12px; margin: 0 6px; }
+
+      .opt-grid.c5 { grid-template-columns: repeat(2, 1fr); }
+      .opt-grid.c2 { grid-template-columns: 1fr; }
+
+      .form-grid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+
+      .signs-layout { grid-template-columns: 1fr; }
+      .signs-panel { display: none; }
+
+      .size-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+
+      #mpb { display: flex; }
+      #store-main { padding-bottom: 100px; }
+
+      .modal-box { padding: 24px 18px; }
+      .btn-next { max-width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .opt-grid.c5 { grid-template-columns: 1fr 1fr; }
+      .hdr-phone { display: none; }
+      .time-slots { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ── PRODUCT GRID (catalog) ──────────────────────────────── */
+    .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .product-card {
+      background: var(--bg2); border: 2px solid var(--border); border-radius: var(--r);
+      padding: 32px 26px; display: flex; flex-direction: column; gap: 10px;
+      transition: border-color var(--ease), background var(--ease); cursor: pointer;
+    }
+    .product-card:hover { border-color: var(--red); background: var(--bg3); }
+    .product-card-img { margin: -32px -26px 8px; aspect-ratio: 1 / 1; overflow: hidden; background: var(--bg3); border-bottom: 1px solid var(--border); border-radius: var(--r) var(--r) 0 0; }
+    .product-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+    .product-card:hover .product-card-img img { transform: scale(1.03); }
+    .product-card-title { font-family: var(--font-d); font-size: 30px; letter-spacing: 0.02em; }
+    .product-card-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; flex: 1; }
+    .product-card-price { font-family: var(--font-d); font-size: 26px; color: var(--red); }
+    .product-card-price span { font-family: var(--font-b); font-size: 12px; color: var(--muted); font-weight: 500; }
+    .product-card-cta { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); margin-top: 8px; }
+    @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- ── NETLIFY FORM DECLARATIONS (required for Netlify to detect) ── -->
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header id="navbar">
+  <a class="logo" href="/">
+    <img src="fly-visuals-logo.png" alt="Fly Visuals Logo" style="height:52px;width:auto;" />
+  </a>
+
+  <nav>
+    <!-- SERVICES dropdown -->
+    <div class="nav-item">
+      <button class="nav-link">
+        Services
+        <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <div class="dropdown">
+        <!-- WRAPS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/wraps/">
+            Wraps
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown" style="min-width:220px;">
+            <a href="/vehicle-wraps/">Vehicle Wraps</a>
+            <a href="/fleet-wraps/">Fleet Wraps</a>
+            <a href="/boat-wraps/">Boat Wraps</a>
+            <a href="/wall-wraps/">Wall Wraps</a>
+          </div>
+        </div>
+        <!-- SIGNS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/signs/">
+            Signs
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/indoor-signs/">Indoor Signs</a>
+            <a href="/outdoor-signs/">Outdoor Signs</a>
+            <a href="/business-signs/">Business Signs</a>
+            <a href="/vinyl-banners/">Vinyl Banners</a>
+            <a href="/yard-signs/">Yard Signs</a>
+            <a href="/corrugated-signs/">Corrugated Plastic Signs</a>
+            <a href="/aluminum-signs/">Custom Aluminum Signs</a>
+            <a href="/acrylic-signs/">Custom Acrylic Signs</a>
+          </div>
+        </div>
+        <!-- WINDOW TINTING sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/tinting/">
+            Window Tinting
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/auto-tinting/">Auto Window Tinting</a>
+            <a href="/residential-tinting/">Residential Window Tinting</a>
+            <a href="/commercial-tinting/">Commercial Window Tinting</a>
+          </div>
+        </div>
+        <!-- GRAPHICS sub -->
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/graphics/">
+            Graphics
+            <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <div class="sub-dropdown">
+            <a href="/vehicle-graphics/">Vehicle Graphics</a>
+            <a href="/floor-graphics/">Floor Graphics</a>
+            <a href="/fleet-graphics/">Fleet Graphics</a>
+            <a href="/logo-design/">Logo Design</a>
+            <a href="/window-graphics/">Window Graphics</a>
+            <a href="/boat-graphics/">Boat Graphics</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" href="/wrap-visualizer/">Wrap Visualizer</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/gallery/">Gallery</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/contact/">Contact Us</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="/bookonline.html">Book Online</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="/products.html">Products</a>
+    </div>
+    <a href="tel:7274946162" class="nav-call-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 494-6162
+    </a>
+  </nav>
+
+  <a href="tel:7274946162" class="mob-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Bottom Navigation (mobile only) -->
+<nav id="bottom-nav">
+  <a href="tel:7274946162" class="bot-call-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+    (727) 494-6162
+  </a>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu" style="display:flex;">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- WRAPS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Wraps</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/wraps/">All Wraps</a>
+      <a href="/vehicle-wraps/" class="sub">Vehicle Wraps</a>
+      <a href="/fleet-wraps/" class="sub">Fleet Wraps</a>
+      <a href="/boat-wraps/" class="sub">Boat Wraps</a>
+      <a href="/wall-wraps/" class="sub">Wall Wraps</a>
+    </div>
+  </div>
+
+  <!-- SIGNS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Signs</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/signs/">All Signs</a>
+      <a href="/indoor-signs/" class="sub">Indoor Signs</a>
+      <a href="/outdoor-signs/" class="sub">Outdoor Signs</a>
+      <a href="/business-signs/" class="sub">Business Signs</a>
+      <a href="/vinyl-banners/" class="sub">Vinyl Banners</a>
+  <a href="/yard-signs/" class="sub">Yard Signs</a>
+  <a href="/corrugated-signs/" class="sub">Corrugated Plastic Signs</a>
+  <a href="/aluminum-signs/" class="sub">Custom Aluminum Signs</a>
+  <a href="/acrylic-signs/" class="sub">Custom Acrylic Signs</a>
+    </div>
+  </div>
+
+  <!-- WINDOW TINTING accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Window Tinting</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/tinting/">All Window Tinting</a>
+      <a href="/auto-tinting/" class="sub">Auto Window Tinting</a>
+      <a href="/residential-tinting/" class="sub">Residential Window Tinting</a>
+      <a href="/commercial-tinting/" class="sub">Commercial Window Tinting</a>
+    </div>
+  </div>
+
+  <!-- GRAPHICS accordion -->
+  <div class="mob-accordion">
+    <button class="mob-accordion-header" onclick="toggleMobAccordion(this)">
+      <span>Graphics</span>
+      <svg class="mob-acc-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="mob-accordion-body">
+      <a href="/graphics/">All Graphics</a>
+      <a href="/vehicle-graphics/" class="sub">Vehicle Graphics</a>
+      <a href="/floor-graphics/" class="sub">Floor Graphics</a>
+      <a href="/fleet-graphics/" class="sub">Fleet Graphics</a>
+      <a href="/logo-design/" class="sub">Logo Design</a>
+      <a href="/window-graphics/" class="sub">Window Graphics</a>
+      <a href="/boat-graphics/" class="sub">Boat Graphics</a>
+    </div>
+  </div>
+
+  <a href="/wrap-visualizer/" class="mob-main-link">Wrap Visualizer</a>
+  <a href="/gallery/" class="mob-main-link">Gallery</a>
+  <a href="/contact/" class="mob-main-link">Contact Us</a>
+  <a href="/bookonline.html" class="mob-main-link">Book Online</a>
+  <a href="/products.html" class="mob-main-link">Products</a>
+</div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section id="store-hero">
+    <h1>PRODUCTS.</h1>
+    <p class="hero-sub">Pick a product below. Pricing, sizes, and checkout are all on that page.</p>
+    <div class="hero-trust">
+      <span>Locally Owned &amp; Operated</span>
+      <span>500+ Projects</span>
+      <span>3M &amp; Avery Certified</span>
+      <span>Madico &amp; LLumar Certified</span>
+    </div>
+  </section>
+
+  <!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+  <main id="store-main">
+
+    <div class="sec-head">
+      <h2>Shop Products</h2>
+      <p>Priced upfront. Most orders ready in days — not weeks.</p>
+    </div>
+
+    <!-- PRODUCT_GRID:START (auto-generated by generate-products.js — do not hand-edit) -->
+        <div id="tab-bar">
+          <button type="button" class="tab-btn active" data-category="banners" onclick="showCategory('banners')">Banners</button>
+          <button type="button" class="tab-btn" data-category="banner-stands" onclick="showCategory('banner-stands')">Banner Stands</button>
+          <button type="button" class="tab-btn" data-category="custom-signs" onclick="showCategory('custom-signs')">Custom Signs</button>
+          <button type="button" class="tab-btn" data-category="trade-show-displays" onclick="showCategory('trade-show-displays')">Trade Show Displays</button>
+          <button type="button" class="tab-btn" data-category="outdoor-displays" onclick="showCategory('outdoor-displays')">Outdoor Displays</button>
+          <button type="button" class="tab-btn" data-category="stickers-and-decals" onclick="showCategory('stickers-and-decals')">Stickers and Decals</button>
+        </div>
+
+        <section id="cat-banners" class="tab-content active" data-category="banners">
+          <div class="product-grid">
+          <a class="product-card" href="/products/vinyl-banners/">
+            <div class="product-card-img"><img src="/product-photos/vinyl-banners.jpg" alt="Vinyl Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Vinyl Banners</div>
+            <div class="product-card-desc">Full-color vinyl banners for grand openings, events, and promotions.</div>
+            <div class="product-card-price">From $33.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Vinyl Banners →</div>
+          </a>
+          <a class="product-card" href="/products/pole-banners/">
+            <div class="product-card-img"><img src="/product-photos/pole-banners.jpg" alt="Pole Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Pole Banners</div>
+            <div class="product-card-desc">Custom printed banner made to hang from light poles and posts. Weather-resistant for street and campus use.</div>
+            <div class="product-card-price">From $33.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Pole Banners →</div>
+          </a>
+          <a class="product-card" href="/products/outdoor-banners/">
+            <div class="product-card-img"><img src="/product-photos/outdoor-banners.jpg" alt="Outdoor Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Outdoor Banners</div>
+            <div class="product-card-desc">Heavy-duty custom banner built for outdoor promotion. Weather-resistant with hemmed edges and grommets.</div>
+            <div class="product-card-price">From $33.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Outdoor Banners →</div>
+          </a>
+          <a class="product-card" href="/products/fabric-banners/">
+            <div class="product-card-img"><img src="/product-photos/fabric-banners.jpg" alt="Fabric Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Fabric Banners</div>
+            <div class="product-card-desc">Polyester fabric banner with dye-sublimation print. Wrinkle-resistant, premium look for indoor displays and trade shows.</div>
+            <div class="product-card-price">From $48.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Fabric Banners →</div>
+          </a>
+          <a class="product-card" href="/products/vinyl-mesh-banners/">
+            <div class="product-card-img"><img src="/product-photos/vinyl-mesh-banners.jpg" alt="Vinyl Mesh Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Vinyl Mesh Banners</div>
+            <div class="product-card-desc">8 oz PVC mesh banner that lets wind pass through. Ideal for fences, construction sites and windy locations.</div>
+            <div class="product-card-price">From $56.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Vinyl Mesh Banners →</div>
+          </a>
+          <a class="product-card" href="/products/fence-banners/">
+            <div class="product-card-img"><img src="/product-photos/fence-banners.jpg" alt="Fence Banners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Fence Banners</div>
+            <div class="product-card-desc">Custom banner for fences and barriers. Choose solid vinyl or mesh. Great for job sites, ball fields and events.</div>
+            <div class="product-card-price">From $33.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Fence Banners →</div>
+          </a>
+          </div>
+        </section>
+
+        <section id="cat-banner-stands" class="tab-content" data-category="banner-stands">
+          <div class="product-grid">
+          <a class="product-card" href="/products/roll-up-retractable-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/roll-up-retractable-banner-stands.jpg" alt="Roll Up Retractable Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Roll Up Retractable Banner Stands</div>
+            <div class="product-card-desc">Spring-loaded roll-up stand with aluminum base and printed graphic. Sets up in seconds. Carry bag included.</div>
+            <div class="product-card-price">From $136.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Roll Up Retractable Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/steppy-retractable-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/steppy-retractable-banner-stands.jpg" alt="Steppy Retractable Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Steppy Retractable Banner Stands</div>
+            <div class="product-card-desc">Taller retractable banner stand with aluminum hardware and UV-printed graphic. Carry bag included.</div>
+            <div class="product-card-price">From $232.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Steppy Retractable Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/l-style-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/l-style-banner-stands.jpg" alt="L-Style Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">L-Style Banner Stands</div>
+            <div class="product-card-desc">Lightweight L-frame banner stand with printed polypropylene graphic. Good for retail and lobbies.</div>
+            <div class="product-card-price">From $106.49<span> / each</span></div>
+            <div class="product-card-cta">Shop L-Style Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/korean-style-x-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/korean-style-x-banner-stands.jpg" alt="Korean Style X Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Korean Style X Banner Stands</div>
+            <div class="product-card-desc">Lightweight X-frame stand with printed PVC graphic. Low-cost, portable promo display.</div>
+            <div class="product-card-price">From $108.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Korean Style X Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/adjustable-x-frame-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/adjustable-x-frame-banner-stands.jpg" alt="Adjustable X-Frame Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Adjustable X-Frame Banner Stands</div>
+            <div class="product-card-desc">Adjustable X-frame banner stand with 4-point tension. Portable single-sided display.</div>
+            <div class="product-card-price">From $128.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Adjustable X-Frame Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/non-retractable-adjustable-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/non-retractable-adjustable-banner-stands.jpg" alt="Non-Retractable Adjustable Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Non-Retractable Adjustable Banner Stands</div>
+            <div class="product-card-desc">Telescopic aluminum frame with fabric graphic. Adjustable height and width. Single or double sided.</div>
+            <div class="product-card-price">From $302.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Non-Retractable Adjustable Banner Stands →</div>
+          </a>
+          <a class="product-card" href="/products/premium-ez-extend-banner-stands/">
+            <div class="product-card-img"><img src="/product-photos/premium-ez-extend-banner-stands.jpg" alt="Premium EZ Extend Banner Stands — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Premium EZ Extend Banner Stands</div>
+            <div class="product-card-desc">Tubular aluminum frame with stretch fabric graphic. Single or double sided. Great for events and trade shows.</div>
+            <div class="product-card-price">From $272.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Premium EZ Extend Banner Stands →</div>
+          </a>
+          </div>
+        </section>
+
+        <section id="cat-custom-signs" class="tab-content" data-category="custom-signs">
+          <div class="product-grid">
+          <a class="product-card" href="/products/yard-signs/">
+            <div class="product-card-img"><img src="/product-photos/yard-signs.jpg" alt="Yard Signs — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Yard Signs</div>
+            <div class="product-card-desc">Coroplast yard signs for real estate, contractors, and events. 2–3 day turnaround.</div>
+            <div class="product-card-price">From $36.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Yard Signs →</div>
+          </a>
+          <a class="product-card" href="/products/big-head-cutouts/">
+            <div class="product-card-img"><img src="/product-photos/big-head-cutouts.jpg" alt="Big Head Cutouts — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Big Head Cutouts</div>
+            <div class="product-card-desc">Custom cut-to-shape face cutout sign. Fun for sports games, graduations and parties.</div>
+            <div class="product-card-price">From $37.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Big Head Cutouts →</div>
+          </a>
+          <a class="product-card" href="/products/pvc-foam-board-signs/">
+            <div class="product-card-img"><img src="/product-photos/pvc-foam-board-signs.jpg" alt="PVC Foam Board Signs — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">PVC Foam Board Signs</div>
+            <div class="product-card-desc">Rigid PVC foam board sign printed in full color. Lightweight for indoor signage and displays.</div>
+            <div class="product-card-price">From $12.99<span> / each</span></div>
+            <div class="product-card-cta">Shop PVC Foam Board Signs →</div>
+          </a>
+          <a class="product-card" href="/products/sintra-boards/">
+            <div class="product-card-img"><img src="/product-photos/sintra-boards.jpg" alt="Sintra Boards — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Sintra Boards</div>
+            <div class="product-card-desc">Durable Sintra PVC board sign. Smooth, rigid and good for indoor or covered outdoor use.</div>
+            <div class="product-card-price">From $36.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Sintra Boards →</div>
+          </a>
+          <a class="product-card" href="/products/gator-boards/">
+            <div class="product-card-img"><img src="/product-photos/gator-boards.jpg" alt="Gator Boards — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Gator Boards</div>
+            <div class="product-card-desc">Lightweight, warp-resistant foam board sign for presentations, displays and events.</div>
+            <div class="product-card-price">From $38.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Gator Boards →</div>
+          </a>
+          <a class="product-card" href="/products/metal-a-frame-signs/">
+            <div class="product-card-img"><img src="/product-photos/metal-a-frame-signs.jpg" alt="Metal A-Frame Signs — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Metal A-Frame Signs</div>
+            <div class="product-card-desc">Steel A-frame sidewalk sign with printed inserts. Double sided, portable.</div>
+            <div class="product-card-price">From $214.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Metal A-Frame Signs →</div>
+          </a>
+          <a class="product-card" href="/products/plastic-a-frame-signs/">
+            <div class="product-card-img"><img src="/product-photos/plastic-a-frame-signs.jpg" alt="Plastic A-Frame Signs — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Plastic A-Frame Signs</div>
+            <div class="product-card-desc">Weather-resistant plastic A-frame sidewalk sign with printed panels. Double sided.</div>
+            <div class="product-card-price">From $227.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Plastic A-Frame Signs →</div>
+          </a>
+          <a class="product-card" href="/products/poster-signs/">
+            <div class="product-card-img"><img src="/product-photos/poster-signs.jpg" alt="Poster Signs — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Poster Signs</div>
+            <div class="product-card-desc">Full-color printed poster on premium paper. Standard or custom sizes for retail, office and events.</div>
+            <div class="product-card-price">From $57.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Poster Signs →</div>
+          </a>
+          </div>
+        </section>
+
+        <section id="cat-trade-show-displays" class="tab-content" data-category="trade-show-displays">
+          <div class="product-grid">
+          <a class="product-card" href="/products/table-runners/">
+            <div class="product-card-img"><img src="/product-photos/table-runners.jpg" alt="Table Runners — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Table Runners</div>
+            <div class="product-card-desc">Printed fabric table runner to brand any event table.</div>
+            <div class="product-card-price">From $72.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Table Runners →</div>
+          </a>
+          <a class="product-card" href="/products/stretch-table-covers/">
+            <div class="product-card-img"><img src="/product-photos/stretch-table-covers.jpg" alt="Stretch Table Covers — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Stretch Table Covers</div>
+            <div class="product-card-desc">Fitted spandex-style stretch table cover with full-color print. Tight, modern look.</div>
+            <div class="product-card-price">From $158.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Stretch Table Covers →</div>
+          </a>
+          <a class="product-card" href="/products/premium-table-covers/">
+            <div class="product-card-img"><img src="/product-photos/premium-table-covers.jpg" alt="Premium Table Covers — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Premium Table Covers</div>
+            <div class="product-card-desc">Draped polyester table cover with dye-sublimation print. Covers front and sides.</div>
+            <div class="product-card-price">From $143.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Premium Table Covers →</div>
+          </a>
+          <a class="product-card" href="/products/fitted-table-covers/">
+            <div class="product-card-img"><img src="/product-photos/fitted-table-covers.jpg" alt="Fitted Table Covers — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Fitted Table Covers</div>
+            <div class="product-card-desc">Tailored fitted table cover with printed logo. Clean, box-style fit.</div>
+            <div class="product-card-price">From $162.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Fitted Table Covers →</div>
+          </a>
+          <a class="product-card" href="/products/straight-pillow-case-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/straight-pillow-case-backdrop-displays.jpg" alt="Straight Pillow Case Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Straight Pillow Case Backdrop Displays</div>
+            <div class="product-card-desc">Straight tube-frame backdrop with zip-on pillowcase fabric graphic. Tool-free setup.</div>
+            <div class="product-card-price">From $643.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Straight Pillow Case Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/curved-pillow-case-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/curved-pillow-case-backdrop-displays.jpg" alt="Curved Pillow Case Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Curved Pillow Case Backdrop Displays</div>
+            <div class="product-card-desc">Curved tube-frame backdrop with pillowcase fabric graphic for added depth.</div>
+            <div class="product-card-price">From $536.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Curved Pillow Case Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/straight-pop-up-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/straight-pop-up-backdrop-displays.jpg" alt="Straight Pop Up Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Straight Pop Up Backdrop Displays</div>
+            <div class="product-card-desc">Collapsible pop-up frame with fabric graphic. Fast setup for booths and events.</div>
+            <div class="product-card-price">From $618.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Straight Pop Up Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/curved-pop-up-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/curved-pop-up-backdrop-displays.jpg" alt="Curved Pop Up Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Curved Pop Up Backdrop Displays</div>
+            <div class="product-card-desc">Curved pop-up frame with printed fabric graphic. Quick setup, wraparound look.</div>
+            <div class="product-card-price">From $625.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Curved Pop Up Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/straight-wall-box-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/straight-wall-box-backdrop-displays.jpg" alt="Straight Wall Box Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Straight Wall Box Backdrop Displays</div>
+            <div class="product-card-desc">Box-style frame backdrop with deep sides for a structured booth wall.</div>
+            <div class="product-card-price">From $1108.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Straight Wall Box Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/adjustable-backdrop-displays/">
+            <div class="product-card-img"><img src="/product-photos/adjustable-backdrop-displays.jpg" alt="Adjustable Backdrop Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Adjustable Backdrop Displays</div>
+            <div class="product-card-desc">Telescopic adjustable backdrop with printed fabric. Change height and width per event.</div>
+            <div class="product-card-price">From $293.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Adjustable Backdrop Displays →</div>
+          </a>
+          <a class="product-card" href="/products/step-repeat-straight-pop-up-displays/">
+            <div class="product-card-img"><img src="/product-photos/step-repeat-straight-pop-up-displays.jpg" alt="Step & Repeat Straight Pop Up Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Step & Repeat Straight Pop Up Displays</div>
+            <div class="product-card-desc">Step and repeat backdrop on a pop-up frame. Repeated logo pattern for photo walls.</div>
+            <div class="product-card-price">From $643.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Step & Repeat Straight Pop Up Displays →</div>
+          </a>
+          <a class="product-card" href="/products/step-repeat-curved-pop-up-displays/">
+            <div class="product-card-img"><img src="/product-photos/step-repeat-curved-pop-up-displays.jpg" alt="Step & Repeat Curved Pop Up Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Step & Repeat Curved Pop Up Displays</div>
+            <div class="product-card-desc">Curved pop-up step and repeat backdrop for red-carpet and photo areas.</div>
+            <div class="product-card-price">From $689.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Step & Repeat Curved Pop Up Displays →</div>
+          </a>
+          <a class="product-card" href="/products/straight-pillow-case-step-repeat-displays/">
+            <div class="product-card-img"><img src="/product-photos/straight-pillow-case-step-repeat-displays.jpg" alt="Straight Pillow Case Step & Repeat Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Straight Pillow Case Step & Repeat Displays</div>
+            <div class="product-card-desc">Straight tube-frame step and repeat with pillowcase fabric graphic.</div>
+            <div class="product-card-price">From $545.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Straight Pillow Case Step & Repeat Displays →</div>
+          </a>
+          <a class="product-card" href="/products/step-repeat-curved-pillow-case-displays/">
+            <div class="product-card-img"><img src="/product-photos/step-repeat-curved-pillow-case-displays.jpg" alt="Step & Repeat Curved Pillow Case Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Step & Repeat Curved Pillow Case Displays</div>
+            <div class="product-card-desc">Curved tube-frame step and repeat with pillowcase fabric graphic.</div>
+            <div class="product-card-price">From $512.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Step & Repeat Curved Pillow Case Displays →</div>
+          </a>
+          <a class="product-card" href="/products/step-repeat-straight-wall-box-displays/">
+            <div class="product-card-img"><img src="/product-photos/step-repeat-straight-wall-box-displays.jpg" alt="Step & Repeat Straight Wall-Box Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Step & Repeat Straight Wall-Box Displays</div>
+            <div class="product-card-desc">Wall-box frame step and repeat backdrop with structured sides.</div>
+            <div class="product-card-price">From $810.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Step & Repeat Straight Wall-Box Displays →</div>
+          </a>
+          <a class="product-card" href="/products/step-repeat-adjustable-straight-displays/">
+            <div class="product-card-img"><img src="/product-photos/step-repeat-adjustable-straight-displays.jpg" alt="Step & Repeat Adjustable Straight Displays — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Step & Repeat Adjustable Straight Displays</div>
+            <div class="product-card-desc">Adjustable telescopic step and repeat backdrop. Resize for any space.</div>
+            <div class="product-card-price">From $293.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Step & Repeat Adjustable Straight Displays →</div>
+          </a>
+          </div>
+        </section>
+
+        <section id="cat-outdoor-displays" class="tab-content" data-category="outdoor-displays">
+          <div class="product-grid">
+          <a class="product-card" href="/products/rectangle-flags/">
+            <div class="product-card-img"><img src="/product-photos/rectangle-flags.jpg" alt="Rectangle Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Rectangle Flags</div>
+            <div class="product-card-desc">Custom printed rectangle flag for poles, walls and events.</div>
+            <div class="product-card-price">From $45.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Rectangle Flags →</div>
+          </a>
+          <a class="product-card" href="/products/personalized-flags/">
+            <div class="product-card-img"><img src="/product-photos/personalized-flags.jpg" alt="Personalized Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Personalized Flags</div>
+            <div class="product-card-desc">Custom flag printed with your design, logo or photo.</div>
+            <div class="product-card-price">From $31.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Personalized Flags →</div>
+          </a>
+          <a class="product-card" href="/products/feather-flags/">
+            <div class="product-card-img"><img src="/product-photos/feather-flags.jpg" alt="Feather Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Feather Flags</div>
+            <div class="product-card-desc">Feather-shaped advertising flag with pole and base. Single or double sided.</div>
+            <div class="product-card-price">From $178.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Feather Flags →</div>
+          </a>
+          <a class="product-card" href="/products/blade-flags/">
+            <div class="product-card-img"><img src="/product-photos/blade-flags.jpg" alt="Blade Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Blade Flags</div>
+            <div class="product-card-desc">Blade-style advertising flag with pole and base options for grass or pavement.</div>
+            <div class="product-card-price">From $171.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Blade Flags →</div>
+          </a>
+          <a class="product-card" href="/products/teardrop-flags/">
+            <div class="product-card-img"><img src="/product-photos/teardrop-flags.jpg" alt="Teardrop Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Teardrop Flags</div>
+            <div class="product-card-desc">Teardrop flag that keeps its shape in wind. Pole and base included.</div>
+            <div class="product-card-price">From $169.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Teardrop Flags →</div>
+          </a>
+          <a class="product-card" href="/products/sail-flags/">
+            <div class="product-card-img"><img src="/product-photos/sail-flags.jpg" alt="Sail Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Sail Flags</div>
+            <div class="product-card-desc">Sail-shaped advertising flag with pole and base. Holds shape in wind.</div>
+            <div class="product-card-price">From $165.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Sail Flags →</div>
+          </a>
+          <a class="product-card" href="/products/giant-flags/">
+            <div class="product-card-img"><img src="/product-photos/giant-flags.jpg" alt="Giant Flags — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Giant Flags</div>
+            <div class="product-card-desc">Extra-tall advertising flag for roadside visibility.</div>
+            <div class="product-card-price">From $596.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Giant Flags →</div>
+          </a>
+          <a class="product-card" href="/products/6-ft-canopy-tent/">
+            <div class="product-card-img"><img src="/product-photos/6-ft-canopy-tent.jpg" alt="6 Ft Canopy Tent — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">6 Ft Canopy Tent</div>
+            <div class="product-card-desc">6x6 pop-up canopy tent with custom printed top. Tool-free setup.</div>
+            <div class="product-card-price">From $510.49<span> / each</span></div>
+            <div class="product-card-cta">Shop 6 Ft Canopy Tent →</div>
+          </a>
+          <a class="product-card" href="/products/10-ft-canopy-tent/">
+            <div class="product-card-img"><img src="/product-photos/10-ft-canopy-tent.jpg" alt="10 Ft Canopy Tent — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">10 Ft Canopy Tent</div>
+            <div class="product-card-desc">10x10 pop-up canopy tent with full-color printed canopy. Quick-lock frame.</div>
+            <div class="product-card-price">From $898.99<span> / each</span></div>
+            <div class="product-card-cta">Shop 10 Ft Canopy Tent →</div>
+          </a>
+          <a class="product-card" href="/products/custom-canopy-tent-10-x-15/">
+            <div class="product-card-img"><img src="/product-photos/custom-canopy-tent-10-x-15.jpg" alt="Custom Canopy Tent 10 x 15 — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Custom Canopy Tent 10 x 15</div>
+            <div class="product-card-desc">10x15 pop-up canopy tent with custom print for larger booths.</div>
+            <div class="product-card-price">From $912.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Custom Canopy Tent 10 x 15 →</div>
+          </a>
+          <a class="product-card" href="/products/custom-canopy-tent-10-x-20/">
+            <div class="product-card-img"><img src="/product-photos/custom-canopy-tent-10-x-20.jpg" alt="Custom Canopy Tent 10 x 20 — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Custom Canopy Tent 10 x 20</div>
+            <div class="product-card-desc">10x20 pop-up canopy tent with custom print for large event spaces.</div>
+            <div class="product-card-price">From $1297.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Custom Canopy Tent 10 x 20 →</div>
+          </a>
+          </div>
+        </section>
+
+        <section id="cat-stickers-and-decals" class="tab-content" data-category="stickers-and-decals">
+          <div class="product-grid">
+          <a class="product-card" href="/products/clear-window-clings/">
+            <div class="product-card-img"><img src="/product-photos/clear-window-clings.jpg" alt="Clear Window Clings — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Clear Window Clings</div>
+            <div class="product-card-desc">Static cling on clear film. No adhesive, removable and reusable.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Clear Window Clings →</div>
+          </a>
+          <a class="product-card" href="/products/opaque-window-clings/">
+            <div class="product-card-img"><img src="/product-photos/opaque-window-clings.jpg" alt="Opaque Window Clings — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Opaque Window Clings</div>
+            <div class="product-card-desc">Static cling on white film for bold, full-color window graphics. Removable.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Opaque Window Clings →</div>
+          </a>
+          <a class="product-card" href="/products/perforated-window-decals/">
+            <div class="product-card-img"><img src="/product-photos/perforated-window-decals.jpg" alt="Perforated Window Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Perforated Window Decals</div>
+            <div class="product-card-desc">One-way vision perforated window decal. Graphic outside, see-through from inside.</div>
+            <div class="product-card-price">From $31.99<span> / each</span></div>
+            <div class="product-card-cta">Shop Perforated Window Decals →</div>
+          </a>
+          <a class="product-card" href="/products/clear-window-decals/">
+            <div class="product-card-img"><img src="/product-photos/clear-window-decals.jpg" alt="Clear Window Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Clear Window Decals</div>
+            <div class="product-card-desc">Adhesive window decal on clear vinyl.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Clear Window Decals →</div>
+          </a>
+          <a class="product-card" href="/products/opaque-window-decals/">
+            <div class="product-card-img"><img src="/product-photos/opaque-window-decals.jpg" alt="Opaque Window Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Opaque Window Decals</div>
+            <div class="product-card-desc">Adhesive window decal on white vinyl for solid, full-color graphics.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Opaque Window Decals →</div>
+          </a>
+          <a class="product-card" href="/products/frosted-window-decals/">
+            <div class="product-card-img"><img src="/product-photos/frosted-window-decals.jpg" alt="Frosted Window Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Frosted Window Decals</div>
+            <div class="product-card-desc">Printed frosted window decal for privacy and branding on glass.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Frosted Window Decals →</div>
+          </a>
+          <a class="product-card" href="/products/wall-decals/">
+            <div class="product-card-img"><img src="/product-photos/wall-decals.jpg" alt="Wall Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Wall Decals</div>
+            <div class="product-card-desc">Adhesive vinyl wall decal for offices, stores and event spaces.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Wall Decals →</div>
+          </a>
+          <a class="product-card" href="/products/floor-decals/">
+            <div class="product-card-img"><img src="/product-photos/floor-decals.jpg" alt="Floor Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Floor Decals</div>
+            <div class="product-card-desc">Textured, slip-resistant floor decal for directions, promos and social distancing.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Floor Decals →</div>
+          </a>
+          <a class="product-card" href="/products/clear-vehicle-decals/">
+            <div class="product-card-img"><img src="/product-photos/clear-vehicle-decals.jpg" alt="Clear Vehicle Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Clear Vehicle Decals</div>
+            <div class="product-card-desc">Clear vinyl vehicle decal for windows and paint.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Clear Vehicle Decals →</div>
+          </a>
+          <a class="product-card" href="/products/opaque-vehicle-decals/">
+            <div class="product-card-img"><img src="/product-photos/opaque-vehicle-decals.jpg" alt="Opaque Vehicle Decals — Fly Visuals" loading="lazy" width="600" height="600"></div>
+            <div class="product-card-title">Opaque Vehicle Decals</div>
+            <div class="product-card-desc">White vinyl vehicle decal for bold full-color graphics on cars, vans and trucks.</div>
+            <div class="product-card-price">From $22.49<span> / each</span></div>
+            <div class="product-card-cta">Shop Opaque Vehicle Decals →</div>
+          </a>
+          </div>
+        </section>
+        <!-- PRODUCT_GRID:END -->
+
+  </main>
+
+  <!-- ── TRUST BAR ───────────────────────────────────────────────── -->
+  <div id="trust-bar">
+    <div class="trust-grid">
+      <div>
+        <span class="trust-val">10%</span>
+        <span class="trust-lbl">Price Match Guarantee</span>
+      </div>
+      <div>
+        <span class="trust-val">500+</span>
+        <span class="trust-lbl">Projects Completed</span>
+      </div>
+      <div>
+        <span class="trust-val">3M</span>
+        <span class="trust-lbl">3M &amp; Avery Dennison Certified</span>
+      </div>
+      <div>
+        <span class="trust-val">FL</span>
+        <span class="trust-lbl">Pasco County Local Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────── -->
+  <footer id="store-footer">
+    <div class="footer-logo">FLY <span>VISUALS</span></div>
+    <div class="footer-info">
+      8132 Cormel St, Port Richey, FL 34668<br>
+      <a href="tel:7274946162">(727) 494-6162</a> · Mon–Fri 9AM–5PM<br>
+      <a href="/return-policy/">Return &amp; Refund Policy</a> · <a href="/shipping-policy/">Shipping &amp; Pickup Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a><br>
+      <a href="index.html">← Back to main site</a>
+    </div>
+  </footer>
+
+  <script>
+    function showCategory(categorySlug) {
+      document.querySelectorAll('#tab-bar .tab-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.category === categorySlug);
+      });
+      document.querySelectorAll('#store-main .tab-content').forEach(function(section) {
+        section.classList.toggle('active', section.dataset.category === categorySlug);
+      });
+    }
+
+    function toggleMobile() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.toggle('open');
+      document.querySelectorAll('.hamburger').forEach(h => h.classList.toggle('open', isOpen));
+    }
+
+    function toggleMobAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.mob-accordion-body.open').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.mob-accordion-header.open').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburgers = document.querySelectorAll('.hamburger');
+      const clickedHamburger = Array.from(hamburgers).some(h => h.contains(e.target));
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !clickedHamburger) {
+        menu.classList.remove('open');
+        hamburgers.forEach(h => h.classList.remove('open'));
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (!navbar) return;
+      if (window.scrollY > 30) {
+        navbar.style.background = 'rgba(10,10,10,0.99)';
+      } else {
+        navbar.style.background = 'rgba(10,10,10,0.97)';
+      }
+    });
+
+  </script>
+</body>
+</html>
