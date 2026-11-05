@@ -1195,31 +1195,6 @@
             <div class="ful-choices"></div>
           </div>
 
-          <!-- Contact form -->
-          <span class="field-label">Your Info</span>
-          <div class="form-grid" style="margin-bottom:20px">
-            <div class="fg">
-              <label>Full Name *</label>
-              <input type="text" id="sign-name" placeholder="John Smith">
-            </div>
-            <div class="fg">
-              <label>Email *</label>
-              <input type="email" id="sign-email" placeholder="john@email.com">
-            </div>
-            <div class="fg full">
-              <label>Phone *</label>
-              <input type="tel" id="sign-phone" placeholder="(727) 000-0000">
-            </div>
-            <div class="fg full" id="ship-fields">
-              <label>Shipping Address *</label>
-              <textarea id="sign-ship-addr" placeholder="Street, City, State, ZIP" style="min-height:70px"></textarea>
-            </div>
-            <div class="fg full">
-              <label>Notes (optional)</label>
-              <textarea id="sign-notes" placeholder="Colors, deadline, artwork details..."></textarea>
-            </div>
-          </div>
-
           <div class="note-box">
             <strong>Artwork:</strong> If you have your own file, email it to us after placing your order — we'll reach out within 1 business day to confirm and collect files. Print-ready PDF, AI, or EPS preferred.
           </div>
@@ -1588,7 +1563,7 @@
           '</div>' +
         '</button>';
       document.querySelectorAll('.ful-choices').forEach(function (el) { el.innerHTML = html; });
-      $('ship-fields').style.display = S.fulfill === 'ship' ? 'block' : 'none';
+      if ($('ship-fields')) $('ship-fields').style.display = S.fulfill === 'ship' ? 'block' : 'none';
       $('sp-ful-lbl').textContent = S.fulfill === 'ship' ? 'Shipping' : 'Pickup ' + pk.short;
       $('sp-ful').textContent = S.fulfill === 'ship' ? 'Quoted by email' : 'Free';
     }
@@ -1663,14 +1638,9 @@
     //  SUBMIT
     // ══════════════════════════════════════════════════════════════════════
     async function submitSigns() {
-      const name = $('sign-name').value.trim();
-      const email = $('sign-email').value.trim();
-      const phone = $('sign-phone').value.trim();
-
-      if (!name || !email || !phone) {
-        showErr('signs-error', 'Please fill in your name, email, and phone.');
-        return;
-      }
+      // Your Info section removed (2026-11-05) - Stripe checkout collects contact details.
+      const fv = function (id) { var el = $(id); return el ? el.value.trim() : ''; };
+      const name = fv('sign-name'), email = fv('sign-email'), phone = fv('sign-phone');
 
       const sel = currentSelection();
       if (S.useCustom) {
@@ -1691,11 +1661,7 @@
         showErr('signs-error', 'Please select a size.');
         return;
       }
-      const shipAddr = $('sign-ship-addr').value.trim();
-      if (S.fulfill === 'ship' && !shipAddr) {
-        showErr('signs-error', 'Please enter your shipping address, or choose free in-store pickup.');
-        return;
-      }
+      const shipAddr = fv('sign-ship-addr');
       showErr('signs-error', '');
 
       const r = priceFor(sel);
@@ -1727,7 +1693,7 @@
           options: optionsSummary,
           quantity: S.qty,
           'design-service': 'No',
-          notes: $('sign-notes').value.trim(),
+          notes: fv('sign-notes'),
           total: fmt(r.subtotal),
           fulfillment: S.fulfill === 'ship' ? 'Ship to customer (quote shipping by email)' : 'In-store pickup — Port Richey',
           'pickup-date': S.fulfill === 'pickup' ? pickupDate() : '',
