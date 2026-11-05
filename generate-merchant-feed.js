@@ -66,9 +66,20 @@ const PICKUP_METHOD = 'buy';
 const PICKUP_SLA = 'same day';
 const STORE_CODE = 'FLY8132';
 
+
+// Feed titles (Merchant Center): products/feed-titles.json, modeled on Shopping sponsored titles.
+const FEED_TITLES = (() => { try { return JSON.parse(require('fs').readFileSync(require('path').join(__dirname, 'products', 'feed-titles.json'), 'utf8')); } catch (e) { return { titles: {}, ftUnits: [], inUnits: [] }; } })();
+function sizeWithUnits(slug, label) {
+  const m = String(label).match(/^\s*([\d.]+)\s*x\s*([\d.]+)\s*$/i);
+  if (!m) return label;
+  if ((FEED_TITLES.ftUnits || []).includes(slug)) return `${m[1]}' x ${m[2]}'`;
+  if ((FEED_TITLES.inUnits || []).includes(slug)) return `${m[1]}" x ${m[2]}"`;
+  return label;
+}
+
 function buildItem(product, size, unitPrice) {
   const id = `${product.slug}-${size.key}`;
-  const title = `${product.panelHeading} — ${size.label}`;
+  const title = `${FEED_TITLES.titles[product.slug] || product.panelHeading} - ${sizeWithUnits(product.slug, size.label)}`;
   const description = product.catalogCard.desc +
     ` Volume discounts applied automatically at checkout.`;
   const link = `${SITE}/products/${product.slug}/`;
