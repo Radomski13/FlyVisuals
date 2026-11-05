@@ -66,7 +66,7 @@ Modeling decisions:
 - `g:identifier_exists` is set to `no` (custom-made signage, no GTIN/MPN/brand-registered identifier) and `g:condition` to `new`.
 - `g:google_product_category` is currently hardcoded to `Business & Industrial > Advertising & Marketing > Signage` — a reasonable guess, not verified against Google's official taxonomy ID list. Consider letting Merchant Center auto-categorize instead, or confirm the ID at https://support.google.com/merchants/answer/6324436.
 
-**Product photos** live in `dist/product-photos/` with lowercase, hyphenated filenames (no spaces). The dashboard's Photo URL must be `https://flyvisualsfl.com/product-photos/<file>`. As of 2026-10-13 only Vinyl Banners has a photo (7 feed listings).
+**Product photos** live in `dist/product-photos/` with lowercase, hyphenated filenames (no spaces). The dashboard's Photo URL must be `https://flyvisualsfl.com/product-photos/<file>`. As of 2026-11-05 every product has photos — see "Product photos + gallery" below.
 
 **Local inventory feed:** the same script also writes `dist/google-local-inventory.tsv` (store_code, id, availability, pickup_method, pickup_sla — pickup_cost was removed, Merchant Center flagged it as unrecognized) — a second Merchant Center data source at https://flyvisualsfl.com/google-local-inventory.tsv that fixes "Missing local inventory data". `STORE_CODE` in the script must exactly match the Google Business Profile store code (case-sensitive); it is FLY8132 (changed 2026-10-25 from FLYVISUALS-PR; NOT the 20-digit Business Profile ID, which Google rejects).
 
@@ -218,3 +218,8 @@ Pages are not final — content, copy, and images are still being reviewed and u
 ---
 
 *See `FLYVISUALS_PROJECT.md` for full detail on everything above.*
+
+## Product photos + gallery (2026-11-05)
+- All 58 products have photos (243 Merchant feed listings). 57 are AI-generated (source: `Downloads/Business/Bora Signs US - PrintFly/Generated Product Photos`, hand-picked because many source folders mixed in photos of other products) and carry the IPTC XMP tag `DigitalSourceType = trainedAlgorithmicMedia`, which Google Merchant Center requires for AI images — keep that tag if re-exporting. Vinyl Banners leads with the real Harbor Point job photo.
+- Max 3 photos per product (pro / candid / simple). Main photo = dashboard Photo URL (`imageUrl`); up to 2 extras live in `products/product-images.json` (NOT the dashboard, so dashboard edits can't drop them) and are merged by `sync-and-publish.js` into `extraImages`. Product pages show main + thumbnails (`ppShow()` in the template); catalog cards on products.html show the main photo; the feed sends extras as `g:additional_image_link`. Files: `dist/product-photos/<slug>.jpg`, `<slug>-2.jpg`, `<slug>-3.jpg`.
+- Deploy = commit + push to `main`. Do NOT use the Netlify MCP zip-upload deploy for this site: because the site is git-connected, Netlify builds from the repo and ignores the uploaded zip (that's what happened on 2026-11-05).

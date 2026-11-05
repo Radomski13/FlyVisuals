@@ -61,7 +61,14 @@ function escAttr(s) {
 // SEO tracker) — rather than a broken image or an empty gap.
 function buildProductImageBlock(product) {
   if (product.imageUrl) {
-    return `<img src="${escAttr(product.imageUrl)}" alt="${escAttr(product.panelHeading)}" loading="lazy">`;
+    const imgs = [product.imageUrl].concat((product.extraImages || []).filter(Boolean)).slice(0, 3);
+    const alt = escAttr(product.panelHeading);
+    const main = `<img class="pp-main" id="pp-main" src="${escAttr(imgs[0])}" alt="${alt}" width="1200" height="1200">`;
+    if (imgs.length === 1) return main;
+    const thumbs = imgs.map((u, i) =>
+      `<button type="button" class="pp-thumb${i === 0 ? ' sel' : ''}" onclick="ppShow(this)" data-src="${escAttr(u)}" aria-label="Show photo ${i + 1} of ${imgs.length}"><img src="${escAttr(u)}" alt="${alt} — photo ${i + 1}" loading="lazy" width="200" height="200"></button>`
+    ).join('');
+    return `${main}<div class="pp-thumbs">${thumbs}</div>`;
   }
   return [
     '<div class="product-photo-placeholder">',
@@ -95,6 +102,7 @@ function renderProductCard(product) {
   const priceFrom = fmtMoney(product.catalogCard.priceFrom);
   return [
     `          <a class="product-card" href="/products/${product.slug}/">`,
+    ...(product.imageUrl ? [`            <div class="product-card-img"><img src="${product.imageUrl.replace(/^https?:\/\/[^/]+/, '')}" alt="${product.panelHeading} — Fly Visuals" loading="lazy" width="600" height="600"></div>`] : []),
     `            <div class="product-card-title">${product.panelHeading}</div>`,
     `            <div class="product-card-desc">${product.catalogCard.desc}</div>`,
     `            <div class="product-card-price">From ${priceFrom}<span> / each</span></div>`,

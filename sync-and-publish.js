@@ -33,6 +33,8 @@
 
 const fs = require('fs');
 const path = require('path');
+// Extra product photos live in products/product-images.json (not the dashboard) so dashboard edits can't drop them.
+const EXTRA_IMAGES = (() => { try { return JSON.parse(require('fs').readFileSync(require('path').join(__dirname, 'products', 'product-images.json'), 'utf-8')).extras || {}; } catch (e) { return {}; } })();
 const { execSync } = require('child_process');
 
 const ROOT = __dirname;
@@ -113,6 +115,7 @@ function flatToNested(doc) {
     stripeLink: doc.stripeLink || '#',
     netlifyForm: doc.netlifyForm || 'signs-order',
     imageUrl: doc.imageUrl || '',
+    extraImages: (EXTRA_IMAGES[doc.slug] || (Array.isArray(doc.extraImages) ? doc.extraImages : [])).filter(Boolean).slice(0, 2),
   };
 }
 

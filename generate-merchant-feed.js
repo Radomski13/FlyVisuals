@@ -81,6 +81,7 @@ function buildItem(product, size, unitPrice) {
     `      <description>${cdata(description)}</description>`,
     `      <link>${esc(link)}</link>`,
     `      <g:image_link>${esc(product.imageUrl)}</g:image_link>`,
+    ...(product.extraImages || []).filter(Boolean).slice(0, 2).map(u => `      <g:additional_image_link>${esc(u)}</g:additional_image_link>`),
     `      <g:availability>in_stock</g:availability>`,
     `      <g:price>${price}</g:price>`,
     `      <g:brand>${esc(BRAND)}</g:brand>`,
