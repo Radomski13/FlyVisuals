@@ -225,5 +225,5 @@ Pages are not final — content, copy, and images are still being reviewed and u
 - Deploy = commit + push to `main`. Do NOT use the Netlify MCP zip-upload deploy for this site: because the site is git-connected, Netlify builds from the repo and ignores the uploaded zip (that's what happened on 2026-11-05).
 
 ## Merchant feed titles (2026-11-05)
-- Feed `<title>` = `products/feed-titles.json` base title + " - " + size (units added: ft/in lists in that file). Titles were modeled on Bing/Google Shopping sponsored listing titles, fact-checked against each product's catalog description, no competitor brands or unverifiable claims. Edit that file (not the dashboard) and rerun `node generate-merchant-feed.js`.
+- Feed `<title>` = `products/feed-titles.json` SHORT base title (Brian 2026-11-06: keep total under ~70 chars, no size in base) + " - " + size (units added: ft/in lists in that file). Titles were modeled on Bing/Google Shopping sponsored listing titles, fact-checked against each product's catalog description, no competitor brands or unverifiable claims. Edit that file (not the dashboard) and rerun `node generate-merchant-feed.js`.
 - Product pages no longer have a "Your Info" section (name/email/phone/address/notes removed 2026-11-05). Stripe Payment Links must collect phone + shipping address.
