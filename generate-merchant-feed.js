@@ -65,6 +65,9 @@ function cdata(s) {
 const PICKUP_METHOD = 'buy';
 const PICKUP_SLA = 'same day';
 const STORE_CODE = 'FLY8132';
+// Made to order in-store, so there's no real stock count; quantity is sent because Merchant Center's
+// "Missing local inventory data" check lists it among the required local inventory attributes.
+const LOCAL_QTY = '100';
 
 
 // Feed titles (Merchant Center): products/feed-titles.json, modeled on Shopping sponsored titles.
@@ -137,7 +140,7 @@ function main() {
         continue;
       }
       items.push(buildItem(product, size, unitPrice));
-      localRows.push([STORE_CODE, `${product.slug}-${size.key}`, 'in_stock', PICKUP_METHOD, PICKUP_SLA]);
+      localRows.push([STORE_CODE, `${product.slug}-${size.key}`, LOCAL_QTY, 'in_stock', PICKUP_METHOD, PICKUP_SLA]);
     }
     const customCount = (product.pricing.sizes || []).length - fixedSizes.length;
     if (customCount > 0) {
@@ -165,7 +168,7 @@ function main() {
 
   // Local inventory: one row per listing at the Port Richey store.
   // Made to order, so no quantity column — availability = in_stock.
-  const tsv = [['store_code', 'id', 'availability', 'pickup_method', 'pickup_sla']]
+  const tsv = [['store_code', 'id', 'quantity', 'availability', 'pickup_method', 'pickup_sla']]
     .concat(localRows).map(r => r.join('\t')).join('\n') + '\n';
   fs.writeFileSync(LOCAL_OUT_PATH, tsv, 'utf-8');
   console.log(`Wrote ${localRows.length} row(s) to dist/google-local-inventory.tsv (store_code "${STORE_CODE}")`);
