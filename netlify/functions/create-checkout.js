@@ -49,9 +49,17 @@ async function createSession(key, o) {
   f.append('line_items[0][price_data][unit_amount]', String(o.unitCents));
   f.append('line_items[0][price_data][product_data][name]', o.name);
   f.append('line_items[0][price_data][product_data][description]', [o.description, o.ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${o.orderId}`].join(' | ').slice(0, 500));
+  (o.extras || []).forEach((x, i) => {
+    const n = i + 1;
+    f.append(`line_items[${n}][quantity]`, '1');
+    f.append(`line_items[${n}][price_data][currency]`, 'usd');
+    f.append(`line_items[${n}][price_data][unit_amount]`, String(x.cents));
+    f.append(`line_items[${n}][price_data][product_data][name]`, x.name);
+  });
   f.append('client_reference_id', o.orderId);
   f.append('metadata[order_id]', o.orderId);
   f.append('metadata[material]', o.material);
+  f.append('metadata[extras]', (o.extras || []).map((x) => x.name).join(', ') || 'none');
   f.append('metadata[size]', o.sizeText);
   f.append('metadata[qty]', String(o.qty));
   f.append('metadata[fulfillment]', o.ship ? 'ship' : 'pickup');
@@ -90,7 +98,7 @@ exports.handler = async (event) => {
 
   // ── Printed Vinyl (/logan/): $6/sq ft at the full 52" roll width x length ──
   if (req.product === 'printed-vinyl') {
-    const pv = printedVinylPrice(req.width, req.height, req.qty);
+    const pv = printedVinylPrice(req.width, req.height, req.qty, { vectorize: !!req.vectorize, design: !!req.design });
     if (pv.err) return json(400, { error: 'bad_size', message: pv.err });
     if (!key) return json(503, { error: 'not_configured', total: pv.subtotal });
     const w = Number(req.width), l = Number(req.height);
@@ -100,6 +108,10 @@ exports.handler = async (event) => {
       name: `Printed Vinyl (${sizeText})`,
       description: `Billed ${PV.ROLL_WIDTH_IN}" roll width x ${l}" = ${pv.billedSqft} sq ft @ $${PV.RATE_PER_SQFT}/sq ft`,
       material: 'Printed Vinyl', sizeText, total: pv.subtotal,
+      extras: [
+        pv.vectorizeFee ? { name: 'Vectorizing (redraw artwork)', cents: Math.round(pv.vectorizeFee * 100) } : null,
+        pv.designFee ? { name: 'Design fee (no artwork provided)', cents: Math.round(pv.designFee * 100) } : null,
+      ].filter(Boolean),
     });
   }
 

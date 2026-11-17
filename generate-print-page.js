@@ -73,6 +73,13 @@ head = head.replace(/\n  <\/style>/, `
     .pv-total span { color: var(--muted); font-size: 14px; }
     .pv-total strong { font-family: var(--font-d); font-size: 44px; letter-spacing: .02em; }
     .pv-each { color: var(--muted); font-size: 13px; text-align: right; margin-top: -12px; margin-bottom: 14px; min-height: 18px; }
+    .pv-check { display: flex; gap: 10px; align-items: flex-start; padding: 12px; border: 1.5px solid var(--border-hi); border-radius: var(--r); cursor: pointer; margin-top: 12px; font-size: 14px; font-weight: 600; }
+    .pv-check input { width: 18px; height: 18px; margin-top: 1px; accent-color: var(--red); flex: 0 0 18px; }
+    .pv-check small { display: block; font-weight: 400; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+    .pv-check .pv-fee { margin-left: auto; color: var(--text); white-space: nowrap; }
+    .pv-check.on { border-color: var(--red); background: rgba(204,20,20,0.04); }
+    .pv-or { text-align: center; color: var(--dim); font-size: 12px; margin: 12px 0 0; text-transform: uppercase; letter-spacing: .08em; }
+    .pv-wrap textarea { width: 100%; min-height: 96px; }
     .pv-wrap .btn-primary { width: 100%; max-width: 100%; }
     .pv-done { text-align: center; padding: 40px 20px; border: 1px solid var(--border); border-radius: var(--r); background: var(--bg2); }
     .pv-done h2 { font-family: var(--font-d); font-size: 34px; letter-spacing: .03em; margin-bottom: 8px; }
@@ -92,6 +99,8 @@ const FORM_DECL = `  <!-- ── NETLIFY FORM DECLARATION (printed vinyl orders,
     <input type="text" name="image-resolution">
     <input type="text" name="total">
     <input type="text" name="fulfillment">
+    <input type="text" name="vectorize">
+    <input type="text" name="design-service">
     <input type="text" name="notes">
     <input type="file" name="artwork">
     <input type="text" name="bot-field">
@@ -111,10 +120,11 @@ const MAIN = `  <main id="store-main">
 
       <div id="pv-form">
         <h1>Printed Vinyl</h1>
-        <p class="pv-sub">Upload your image, enter your size, pay. We'll email a proof before we print.</p>
+        <p class="pv-sub">Upload your image, enter your size, pay. We'll send a proof before we print.</p>
 
         <div class="pv-card">
-          <span class="field-label">1. Your Image</span>
+          <span class="field-label">1. Your Artwork</span>
+          <div id="pv-upload-area">
           <label class="pv-drop" id="pv-drop" for="pv-input">
             <strong>Tap to upload or drag your image here</strong>
             <small>JPG, PNG, PDF or SVG · up to 8 MB</small>
@@ -124,6 +134,10 @@ const MAIN = `  <main id="store-main">
             <div class="pv-thumb" id="pv-thumb"></div>
             <div><div class="pv-fname" id="pv-fname"></div><button type="button" class="pv-link" onclick="clearFile()">Change image</button></div>
           </div>
+          <label class="pv-check" id="pv-vec-row"><input type="checkbox" id="pv-vec" onchange="refresh()"><span>Vectorize my image<small>We redraw your logo or art so it prints sharp at any size.</small></span><span class="pv-fee">+$${PV.VECTORIZE_FEE}</span></label>
+          </div>
+          <div class="pv-or" id="pv-or">or</div>
+          <label class="pv-check" id="pv-design-row"><input type="checkbox" id="pv-design" onchange="onDesign()"><span>I don't have artwork, design it for me<small>Tell us what you want in the comments. We'll email a proof.</small></span><span class="pv-fee">+$${PV.DESIGN_FEE}</span></label>
         </div>
 
         <div class="pv-card">
@@ -154,12 +168,8 @@ const MAIN = `  <main id="store-main">
         </div>
 
         <div class="pv-card">
-          <span class="field-label">5. Your Info</span>
-          <div class="fg" style="margin-bottom:12px"><label for="pv-name">Name</label><input type="text" id="pv-name" autocomplete="name"></div>
-          <div class="pv-row">
-            <div class="fg"><label for="pv-phone">Phone</label><input type="tel" id="pv-phone" autocomplete="tel"></div>
-            <div class="fg"><label for="pv-email">Email</label><input type="email" id="pv-email" autocomplete="email"></div>
-          </div>
+          <span class="field-label">5. Comments</span>
+          <div class="fg"><textarea id="pv-notes" placeholder="Anything we should know? Colors, text, deadline, how it will be used..."></textarea></div>
         </div>
 
         <div class="pv-total"><span>Total</span><strong id="pv-total">—</strong></div>
@@ -191,7 +201,7 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
     }
     function price() {
       const s = size(); if (!s) return null;
-      return printedVinylPrice(s.width, s.height, S.qty);
+      return printedVinylPrice(s.width, s.height, S.qty, { vectorize: $('pv-vec').checked, design: $('pv-design').checked });
     }
 
     function refresh() {
@@ -201,7 +211,15 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
         ? 'Billed at the full ' + PV.ROLL_WIDTH_IN + '" roll width: ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft x $' + PV.RATE_PER_SQFT + '/sq ft (includes ' + p.wasteSqft + ' sq ft of trim waste).'
         : 'Printed on a ' + PV.ROLL_WIDTH_IN + '" roll. Price = ' + PV.ROLL_WIDTH_IN + '" x your length at $' + PV.RATE_PER_SQFT + '/sq ft.';
       $('pv-total').textContent = p && !p.err ? fmt(p.subtotal) : '—';
-      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' : '';
+      const parts = [];
+      if (p && !p.err) {
+        parts.push('Printing ' + fmt(p.printTotal) + (S.qty > 1 ? ' (' + S.qty + ' x ' + fmt(p.each) + ')' : ''));
+        if (p.vectorizeFee) parts.push('Vectorizing ' + fmt(p.vectorizeFee));
+        if (p.designFee) parts.push('Design ' + fmt(p.designFee));
+      }
+      $('pv-each').textContent = parts.length > 1 || S.qty > 1 ? parts.join(' + ') : '';
+      $('pv-vec-row').classList.toggle('on', $('pv-vec').checked);
+      $('pv-design-row').classList.toggle('on', $('pv-design').checked);
       showErr(p && p.err ? p.err : ($('pv-error').dataset.keep ? $('pv-error').textContent : ''));
       // Only warn when the image will clearly print blurry.
       const dpi = s && S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) : 0;
@@ -209,6 +227,13 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
       if (dpi && dpi < 50) $('pv-warn').textContent = 'Your image is small for this size and may print blurry. We\\'ll check it and contact you before printing.';
     }
 
+    function onDesign() {
+      const on = $('pv-design').checked;
+      $('pv-upload-area').style.display = on ? 'none' : '';
+      $('pv-or').style.display = on ? 'none' : '';
+      $('pv-notes').placeholder = on ? 'Describe what you want: text, logo, colors, style, how it will be used...' : 'Anything we should know? Colors, text, deadline, how it will be used...';
+      refresh();
+    }
     function changeQty(d) { S.qty = Math.max(1, Math.min(1000, S.qty + d)); refresh(); }
     function setFulfill(v) { S.fulfill = v; $('f-pickup').classList.toggle('sel', v === 'pickup'); $('f-ship').classList.toggle('sel', v === 'ship'); }
 
@@ -243,12 +268,12 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
     }
 
     async function submitOrder() {
-      const name = $('pv-name').value.trim(), phone = $('pv-phone').value.trim(), email = $('pv-email').value.trim();
+      const design = $('pv-design').checked, vectorize = $('pv-vec').checked && !design, notes = $('pv-notes').value.trim();
       const s = size(), p = price();
-      if (!S.file) return showErr('Please upload your image.', true);
+      if (!S.file && !design) return showErr('Please upload your image, or check "design it for me".', true);
+      if (design && !notes) { $('pv-notes').focus(); return showErr('Tell us what you want designed in the comments.', true); }
       if (!s) return showErr('Please enter your width and height.', true);
       if (!p || p.err) return showErr((p && p.err) || 'Please check your size.', true);
-      if (!name || !phone || !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(email)) return showErr('Please enter your name, phone and email.', true);
       showErr('');
       const id = orderId(), btn = $('pv-submit');
       btn.disabled = true; btn.textContent = 'Uploading...';
@@ -256,7 +281,6 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
         const fd = new FormData();
         fd.append('form-name', 'custom-print-order');
         fd.append('order-id', id);
-        fd.append('name', name); fd.append('email', email); fd.append('phone', phone);
         fd.append('material', 'Printed Vinyl');
         fd.append('size', s.width + '" wide x ' + s.height + '" long (billed ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft)');
         fd.append('options', '');
@@ -264,8 +288,10 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
         fd.append('image-resolution', S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) + ' ppi (' + S.imgW + 'x' + S.imgH + ' px)' : 'n/a');
         fd.append('total', fmt(p.subtotal) + (S.fulfill === 'ship' ? ' + shipping (quoted)' : ''));
         fd.append('fulfillment', S.fulfill === 'ship' ? 'Ship (quote shipping by email)' : 'Pickup, Port Richey');
-        fd.append('notes', '');
-        fd.append('artwork', S.file, S.file.name);
+        fd.append('vectorize', vectorize ? 'Yes (+' + fmt(PV.VECTORIZE_FEE) + ')' : 'No');
+        fd.append('design-service', design ? 'Yes, no artwork (+' + fmt(PV.DESIGN_FEE) + ')' : 'No');
+        fd.append('notes', notes);
+        if (S.file && !design) fd.append('artwork', S.file, S.file.name);
         const up = await fetch('/', { method: 'POST', body: fd });
         if (!up.ok) throw new Error('upload');
       } catch (e) {
@@ -276,7 +302,7 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
       try {
         const r = await fetch('/.netlify/functions/create-checkout', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ orderId: id, product: 'printed-vinyl', width: s.width, height: s.height, qty: S.qty, fulfillment: S.fulfill, email: email }),
+          body: JSON.stringify({ orderId: id, product: 'printed-vinyl', width: s.width, height: s.height, qty: S.qty, fulfillment: S.fulfill, vectorize: vectorize, design: design }),
         });
         const out = await r.json().catch(() => ({}));
         if (out.url) { location.href = out.url; return; }
@@ -286,8 +312,8 @@ const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
 
     function showDone(id, paid) {
       $('pv-done').innerHTML = paid
-        ? '<h2>Thank You!</h2><p>Payment received for order <strong>' + esc(id) + '</strong>.</p><p>We\\'ll email your proof within 1 business day.</p>'
-        : '<h2>Order Received</h2><p>Order <strong>' + esc(id) + '</strong> and your image are saved.</p><p>We\\'ll call or email you within 1 business day to take payment.</p>';
+        ? '<h2>Thank You!</h2><p>Payment received for order <strong>' + esc(id) + '</strong>.</p><p>We\\'ll email your proof to the address you used at checkout within 1 business day.</p>'
+        : '<h2>Order Saved</h2><p>Order <strong>' + esc(id) + '</strong> is saved, but online payment isn\\'t available right now.</p><p>Please call <a href="tel:7274946162">(727) 494-6162</a> with your order number to pay.</p>';
       $('pv-done').style.display = 'block'; $('pv-form').style.display = 'none';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
