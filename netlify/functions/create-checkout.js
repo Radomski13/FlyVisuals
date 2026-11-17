@@ -45,8 +45,12 @@ exports.handler = async (event) => {
   let req;
   try { req = JSON.parse(event.body || '{}'); } catch (e) { return json(400, { error: 'bad_json' }); }
 
-  const product = productFor(String(req.slug || ''));
+  // Named products the page can ask for, priced from an existing product's data.
+  const ALIASES = { 'printed-vinyl': { slug: 'wall-decals', label: 'Printed Vinyl' } }; // keep in sync with PRICE_SOURCE in generate-print-page.js
+  const alias = ALIASES[String(req.product || '')];
+  const product = productFor(alias ? alias.slug : String(req.slug || ''));
   if (!product) return json(400, { error: 'unknown_material' });
+  if (alias) { product.label = alias.label; req.options = {}; }
 
   const cs = product.customSize;
   const width = Number(req.width), height = Number(req.height);
@@ -87,9 +91,9 @@ exports.handler = async (event) => {
   f.append('line_items[0][quantity]', String(qty));
   f.append('line_items[0][price_data][currency]', 'usd');
   f.append('line_items[0][price_data][unit_amount]', String(Math.round(price.each * 100)));
-  f.append('line_items[0][price_data][product_data][name]', `Custom Print: ${product.label} (${sizeText})`);
+  f.append('line_items[0][price_data][product_data][name]', `${product.label} (${sizeText})`);
   f.append('line_items[0][price_data][product_data][description]',
-    [optLabels.join(' · '), ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${orderId}`].filter(Boolean).join(' | ').slice(0, 500));
+    [alias ? '' : optLabels.join(' · '), ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${orderId}`].filter(Boolean).join(' | ').slice(0, 500));
   f.append('client_reference_id', orderId);
   f.append('metadata[order_id]', orderId);
   f.append('metadata[material]', product.label);

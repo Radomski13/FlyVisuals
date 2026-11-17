@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Print Upload | Upload Your Image, Get a Price | Fly Visuals</title>
-  <meta name="description" content="Upload your image, enter the size you need and get an instant price on custom banners, signs and decals. Pay securely online. Pickup in Port Richey, FL or we ship.">
+  <title>Printed Vinyl Order | Fly Visuals</title>
+  <meta name="description" content="Upload your image, enter your size and pay online for printed vinyl from Fly Visuals in Port Richey, FL.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -912,55 +912,44 @@
       .hdr-phone { display: none; }
       .time-slots { grid-template-columns: repeat(3, 1fr); }
     }
-    /* ── Custom Print page ── */
-    .signs-layout > * { min-width: 0; }
-    .cp-block select, .cp-block input, .cp-block textarea { max-width: 100%; min-width: 0; width: 100%; }
-    .cp-dims > *, .cp-contact > * { min-width: 0; }
-    .cp-intro { color: var(--muted); font-size: 15px; font-weight: 300; margin: -14px 0 26px; max-width: 620px; }
-    .cp-step { display: flex; align-items: center; gap: 10px; margin: 6px 0 12px; }
-    .cp-step b { width: 26px; height: 26px; border-radius: 50%; background: var(--red); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }
-    .cp-step span { font-family: var(--font-d); font-size: 22px; letter-spacing: .04em; }
-    .cp-block { border: 1px solid var(--border); border-radius: var(--r); padding: 18px; margin-bottom: 26px; background: var(--bg); }
-    .cp-drop { border: 2px dashed var(--border-hi); border-radius: var(--r); padding: 28px 16px; text-align: center; cursor: pointer; background: var(--bg2); transition: border-color .15s, background .15s; }
-    .cp-drop:hover, .cp-drop.drag { border-color: var(--red); background: rgba(204,20,20,0.04); }
-    .cp-drop strong { display: block; font-size: 15px; margin-bottom: 4px; }
-    .cp-drop small { color: var(--muted); font-size: 12.5px; }
-    .cp-file { display: none; grid-template-columns: 110px 1fr; gap: 14px; align-items: center; }
-    .cp-file.show { display: grid; }
-    .cp-thumb { width: 110px; height: 110px; border: 1px solid var(--border); border-radius: var(--r); background: #fff center/contain no-repeat; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--muted); font-size: 13px; }
-    .cp-fname { font-weight: 600; font-size: 14px; word-break: break-all; }
-    .cp-fmeta { color: var(--muted); font-size: 12.5px; margin: 3px 0 8px; }
-    .cp-link { background: none; border: 0; color: var(--red); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 0; }
-    .cp-dims { display: grid; grid-template-columns: 1fr 1fr 110px; gap: 12px; align-items: end; }
-    .cp-unit { display: flex; border: 1px solid var(--border-hi); border-radius: var(--r); overflow: hidden; height: 44px; }
-    .cp-unit button { flex: 1; border: 0; background: var(--bg); font: inherit; font-weight: 600; font-size: 13px; cursor: pointer; color: var(--muted); }
-    .cp-unit button.sel { background: var(--text); color: #fff; }
-    .cp-lock { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-top: 12px; cursor: pointer; }
-    .cp-lock input { width: 16px; height: 16px; accent-color: var(--red); }
-    .cp-res { margin-top: 14px; padding: 10px 12px; border-radius: var(--r); font-size: 13px; display: none; }
-    .cp-res.good { display: block; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.35); color: #15803d; }
-    .cp-res.fair { display: block; background: rgba(234,179,8,0.10); border: 1px solid rgba(234,179,8,0.45); color: #854d0e; }
-    .cp-res.low  { display: block; background: rgba(204,20,20,0.08); border: 1px solid rgba(204,20,20,0.35); color: #a01111; }
-    .cp-mat { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; margin-top: 12px; }
-    .cp-mat img { width: 64px; height: 64px; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: var(--r); }
-    .cp-mat p { color: var(--muted); font-size: 13px; line-height: 1.45; }
-    .cp-max { color: var(--dim); font-size: 12px; margin-top: 6px; }
-    .cp-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .cp-contact .full { grid-column: 1 / -1; }
-    .cp-done { text-align: center; padding: 40px 20px; border: 1px solid var(--border); border-radius: var(--r); background: var(--bg2); margin-bottom: 30px; }
-    .cp-done h2 { font-family: var(--font-d); font-size: 34px; letter-spacing: .03em; margin-bottom: 8px; }
-    .cp-done p { color: var(--muted); max-width: 520px; margin: 0 auto 6px; }
-    @media (max-width: 768px) {
-      .cp-dims { grid-template-columns: 1fr 1fr; }
-      .cp-dims .cp-unit-wrap { grid-column: 1 / -1; }
-      .cp-contact { grid-template-columns: 1fr; }
-    }
-
+    /* ── Printed Vinyl order page (/logan/) ── */
+    .pv-wrap { max-width: 560px; margin: 0 auto; }
+    .pv-wrap h1 { font-size: 40px; margin-bottom: 6px; }
+    .pv-sub { color: var(--muted); font-size: 15px; font-weight: 300; margin-bottom: 26px; }
+    .pv-card { border: 1px solid var(--border); border-radius: var(--r); padding: 20px; margin-bottom: 18px; background: var(--bg); }
+    .pv-card > .field-label { margin-bottom: 10px; }
+    .pv-drop { display: block; border: 2px dashed var(--border-hi); border-radius: var(--r); padding: 30px 16px; text-align: center; cursor: pointer; background: var(--bg2); }
+    .pv-drop:hover, .pv-drop.drag { border-color: var(--red); background: rgba(204,20,20,0.04); }
+    .pv-drop strong { display: block; font-size: 15px; margin-bottom: 4px; }
+    .pv-drop small { color: var(--muted); font-size: 12.5px; }
+    .pv-file { display: none; gap: 14px; align-items: center; }
+    .pv-file.show { display: flex; }
+    .pv-thumb { flex: 0 0 84px; height: 84px; border: 1px solid var(--border); border-radius: var(--r); background: #fff center/contain no-repeat; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--muted); font-size: 12px; }
+    .pv-file div { min-width: 0; }
+    .pv-fname { font-weight: 600; font-size: 14px; word-break: break-all; }
+    .pv-link { background: none; border: 0; color: var(--red); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 0; margin-top: 4px; }
+    .pv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pv-row > * { min-width: 0; }
+    .pv-row input { width: 100%; }
+    .pv-hint { color: var(--dim); font-size: 12.5px; margin-top: 8px; }
+    .pv-warn { display: none; margin-top: 10px; padding: 9px 12px; border-radius: var(--r); font-size: 13px; background: rgba(234,179,8,0.10); border: 1px solid rgba(234,179,8,0.45); color: #854d0e; }
+    .pv-pills { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pv-pill { border: 1.5px solid var(--border-hi); border-radius: var(--r); background: var(--bg); padding: 12px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-align: left; }
+    .pv-pill small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .pv-pill.sel { border-color: var(--red); background: rgba(204,20,20,0.04); }
+    .pv-total { display: flex; justify-content: space-between; align-items: baseline; padding: 4px 2px 16px; }
+    .pv-total span { color: var(--muted); font-size: 14px; }
+    .pv-total strong { font-family: var(--font-d); font-size: 44px; letter-spacing: .02em; }
+    .pv-each { color: var(--muted); font-size: 13px; text-align: right; margin-top: -12px; margin-bottom: 14px; min-height: 18px; }
+    .pv-wrap .btn-primary { width: 100%; max-width: 100%; }
+    .pv-done { text-align: center; padding: 40px 20px; border: 1px solid var(--border); border-radius: var(--r); background: var(--bg2); }
+    .pv-done h2 { font-family: var(--font-d); font-size: 34px; letter-spacing: .03em; margin-bottom: 8px; }
+    .pv-done p { color: var(--muted); margin: 0 auto 6px; }
   </style>
 </head>
 <body>
 
-  <!-- ── NETLIFY FORM DECLARATION (custom print orders, with file upload) ── -->
+  <!-- ── NETLIFY FORM DECLARATION (printed vinyl orders, with file upload) ── -->
   <form name="custom-print-order" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
     <input type="text" name="order-id">
     <input type="text" name="name">
@@ -1169,136 +1158,74 @@
   <a href="/products.html" class="mob-main-link">Products</a>
 </div>
 
-  <!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
   <main id="store-main">
-    <section class="tab-content active">
+    <div class="pv-wrap">
 
-      <div id="cp-done" class="cp-done" style="display:none"></div>
+      <div id="pv-done" class="pv-done" style="display:none"></div>
 
-      <div class="signs-layout" id="cp-form">
-        <div class="signs-options">
+      <div id="pv-form">
+        <h1>Printed Vinyl</h1>
+        <p class="pv-sub">Upload your image, enter your size, pay. We'll email a proof before we print.</p>
 
-          <div class="sec-head"><h1>Custom Print Upload</h1></div>
-          <p class="cp-intro">Upload your image, choose what to print it on and type the size you need. Your price updates instantly. Pay securely online, then pick up in Port Richey or have it shipped.</p>
-
-          <!-- 1. Upload -->
-          <div class="cp-step"><b>1</b><span>Upload Your Image</span></div>
-          <div class="cp-block">
-            <label class="cp-drop" id="cp-drop" for="cp-input">
-              <strong>Drag &amp; drop your image here, or tap to choose a file</strong>
-              <small>JPG, PNG, WEBP, PDF, SVG, AI or EPS · max 8 MB</small>
-            </label>
-            <input type="file" id="cp-input" accept="image/*,.pdf,.ai,.eps,.svg,.tif,.tiff" style="display:none">
-            <div class="cp-file" id="cp-file">
-              <div class="cp-thumb" id="cp-thumb"></div>
-              <div>
-                <div class="cp-fname" id="cp-fname"></div>
-                <div class="cp-fmeta" id="cp-fmeta"></div>
-                <button type="button" class="cp-link" onclick="clearFile()">Change file</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. Material -->
-          <div class="cp-step"><b>2</b><span>Choose What to Print On</span></div>
-          <div class="cp-block">
-            <div class="fg">
-              <label for="cp-material">Material / Product</label>
-              <select id="cp-material" onchange="onMaterial()"></select>
-            </div>
-            <div class="cp-mat" id="cp-mat"></div>
-            <div id="option-groups" style="margin-top:18px"></div>
-          </div>
-
-          <!-- 3. Size -->
-          <div class="cp-step"><b>3</b><span>Enter Your Size</span></div>
-          <div class="cp-block">
-            <div class="cp-dims">
-              <div class="fg"><label for="cp-w">Width</label><input type="number" id="cp-w" min="0.1" step="0.1" inputmode="decimal" placeholder="e.g. 48" oninput="onDim('w')"></div>
-              <div class="fg"><label for="cp-h">Height</label><input type="number" id="cp-h" min="0.1" step="0.1" inputmode="decimal" placeholder="e.g. 24" oninput="onDim('h')"></div>
-              <div class="fg cp-unit-wrap"><label>Units</label>
-                <div class="cp-unit"><button type="button" id="u-in" onclick="setUnit('in')">in</button><button type="button" id="u-ft" onclick="setUnit('ft')">ft</button></div>
-              </div>
-            </div>
-            <label class="cp-lock"><input type="checkbox" id="cp-lock" checked onchange="onDim('w')"> Keep my image's proportions</label>
-            <div class="cp-max" id="cp-max"></div>
-            <div class="cp-res" id="cp-res"></div>
-          </div>
-
-          <!-- 4. Quantity -->
-          <span class="field-label">Quantity</span>
-          <div class="qty-wrap">
-            <div class="qty-stepper">
-              <button class="qty-btn" type="button" onclick="changeQty(-1)">−</button>
-              <div class="qty-display" id="qty-display">1</div>
-              <button class="qty-btn" type="button" onclick="changeQty(1)">+</button>
-            </div>
-          </div>
-          <div id="vol-tiers" class="vol-tiers"></div>
-
-          <span class="field-label">Pickup or Shipping</span>
-          <div class="ful-choices" style="margin-bottom:24px"></div>
-
-          <!-- 5. Contact -->
-          <div class="cp-step"><b>4</b><span>Your Contact Info</span></div>
-          <div class="cp-block">
-            <p style="color:var(--muted);font-size:13px;margin-bottom:12px">We'll email you a proof before we print.</p>
-            <div class="cp-contact">
-              <div class="fg"><label for="cp-name">Full Name *</label><input type="text" id="cp-name" autocomplete="name"></div>
-              <div class="fg"><label for="cp-phone">Phone *</label><input type="tel" id="cp-phone" autocomplete="tel"></div>
-              <div class="fg full"><label for="cp-email">Email *</label><input type="email" id="cp-email" autocomplete="email"></div>
-              <div class="fg full"><label for="cp-notes">Notes (optional)</label><textarea id="cp-notes" placeholder="Deadline, cropping, finishing details..."></textarea></div>
-            </div>
-          </div>
-
-          <div id="cp-error" class="alert alert-err"></div>
-          <div style="margin-top:20px">
-            <button class="btn-primary" id="cp-submit" type="button" onclick="submitOrder()">Pay Securely with Stripe</button>
+        <div class="pv-card">
+          <span class="field-label">1. Your Image</span>
+          <label class="pv-drop" id="pv-drop" for="pv-input">
+            <strong>Tap to upload or drag your image here</strong>
+            <small>JPG, PNG, PDF or SVG · up to 8 MB</small>
+          </label>
+          <input type="file" id="pv-input" accept="image/*,.pdf,.ai,.eps,.svg" style="display:none">
+          <div class="pv-file" id="pv-file">
+            <div class="pv-thumb" id="pv-thumb"></div>
+            <div><div class="pv-fname" id="pv-fname"></div><button type="button" class="pv-link" onclick="clearFile()">Change image</button></div>
           </div>
         </div>
 
-        <!-- Summary -->
-        <div class="signs-panel">
-          <div style="font-family:var(--font-d);font-size:22px;margin-bottom:20px;letter-spacing:0.04em">ORDER SUMMARY</div>
-          <div class="sum-row"><span class="sr-lbl">Material</span><span class="sr-val" id="sp-mat">—</span></div>
-          <div class="sum-row"><span class="sr-lbl">Size</span><span class="sr-val" id="sp-size">—</span></div>
-          <div class="sum-row"><span class="sr-lbl">Area</span><span class="sr-val" id="sp-area">—</span></div>
-          <div id="sp-opts"></div>
-          <div class="sum-row"><span class="sr-lbl">Quantity</span><span class="sr-val" id="sp-qty">1</span></div>
-          <div class="sum-row"><span class="sr-lbl">Price Each</span><span class="sr-val" id="sp-each">—</span></div>
-          <div class="sum-row"><span class="sr-lbl">Quantity Discount</span><span class="sr-val" id="sp-disc">None</span></div>
-          <div class="sum-row"><span class="sr-lbl">Image</span><span class="sr-val" id="sp-img">Not uploaded</span></div>
-          <div class="sum-row"><span class="sr-lbl" id="sp-ful-lbl">Pickup</span><span class="sr-val" id="sp-ful">Free</span></div>
-          <div class="sum-total"><span class="st-lbl">Total</span><span class="st-price" id="sp-total">—</span></div>
-          <button class="btn-primary" type="button" onclick="submitOrder()" style="margin-top:24px;max-width:100%">Pay Securely</button>
-          <p style="color:var(--dim);font-size:12px;margin-top:12px;text-align:center">Secure checkout by Stripe</p>
+        <div class="pv-card">
+          <span class="field-label">2. Size (inches)</span>
+          <div class="pv-row">
+            <div class="fg"><label for="pv-w">Width</label><input type="number" id="pv-w" min="1" step="0.25" inputmode="decimal" placeholder="24" oninput="refresh()"></div>
+            <div class="fg"><label for="pv-h">Height</label><input type="number" id="pv-h" min="1" step="0.25" inputmode="decimal" placeholder="12" oninput="refresh()"></div>
+          </div>
+          <div class="pv-hint" id="pv-hint"></div>
+          <div class="pv-warn" id="pv-warn"></div>
         </div>
+
+        <div class="pv-card">
+          <span class="field-label">3. Quantity</span>
+          <div class="qty-stepper">
+            <button class="qty-btn" type="button" onclick="changeQty(-1)">−</button>
+            <div class="qty-display" id="qty-display">1</div>
+            <button class="qty-btn" type="button" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <div class="pv-card">
+          <span class="field-label">4. Pickup or Ship</span>
+          <div class="pv-pills">
+            <button type="button" class="pv-pill sel" id="f-pickup" onclick="setFulfill('pickup')">Pickup<small>Free · Port Richey, FL</small></button>
+            <button type="button" class="pv-pill" id="f-ship" onclick="setFulfill('ship')">Ship to Me<small>Cost emailed to you</small></button>
+          </div>
+        </div>
+
+        <div class="pv-card">
+          <span class="field-label">5. Your Info</span>
+          <div class="fg" style="margin-bottom:12px"><label for="pv-name">Name</label><input type="text" id="pv-name" autocomplete="name"></div>
+          <div class="pv-row">
+            <div class="fg"><label for="pv-phone">Phone</label><input type="tel" id="pv-phone" autocomplete="tel"></div>
+            <div class="fg"><label for="pv-email">Email</label><input type="email" id="pv-email" autocomplete="email"></div>
+          </div>
+        </div>
+
+        <div class="pv-total"><span>Total</span><strong id="pv-total">—</strong></div>
+        <div class="pv-each" id="pv-each"></div>
+
+        <div id="pv-error" class="alert alert-err" style="margin:0 0 14px"></div>
+        <button class="btn-primary" id="pv-submit" type="button" onclick="submitOrder()">Pay with Card</button>
+        <p style="color:var(--dim);font-size:12px;margin-top:10px;text-align:center">Secure checkout by Stripe</p>
       </div>
 
-    </section>
-  </main>
-
-  <!-- ── TRUST BAR ───────────────────────────────────────────────── -->
-  <div id="trust-bar">
-    <div class="trust-grid">
-      <div>
-        <span class="trust-val">10%</span>
-        <span class="trust-lbl">Price Match Guarantee</span>
-      </div>
-      <div>
-        <span class="trust-val">500+</span>
-        <span class="trust-lbl">Projects Completed</span>
-      </div>
-      <div>
-        <span class="trust-val">3M</span>
-        <span class="trust-lbl">3M &amp; Avery Dennison Certified</span>
-      </div>
-      <div>
-        <span class="trust-val">FL</span>
-        <span class="trust-lbl">Pasco County Local Shop</span>
-      </div>
     </div>
-  </div>
+  </main>
 
   <!-- ── FOOTER ──────────────────────────────────────────────────── -->
   <footer id="store-footer">
@@ -1311,295 +1238,136 @@
     </div>
   </footer>
 
-  <div id="mpb">
-    <div class="mpb-left">
-      <span class="mpb-lbl">Your Total</span>
-      <span class="mpb-price" id="mpb-price">—</span>
-    </div>
-    <button class="mpb-cta" type="button" onclick="submitOrder()">Pay Now</button>
-  </div>
-
   <script src="/products/pricing.js"></script>
   <script src="/products/price-display.js"></script>
   <script>
-    // Materials: written by generate-print-page.js from products/products-data.json.
-    const MATERIALS = [{"slug":"vinyl-banners","label":"Vinyl Banners","category":"Banners","desc":"Full-color vinyl banners for grand openings, events, and promotions.","image":"/product-photos/vinyl-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":100,"maxHeight":150,"minimumPrice":35.5,"brackets":[{"fromSqft":6,"toSqft":6,"ratePerSqft":6.2},{"fromSqft":7,"toSqft":9,"ratePerSqft":7.51},{"fromSqft":10,"toSqft":15,"ratePerSqft":5.51},{"fromSqft":16,"toSqft":19,"ratePerSqft":4.02},{"fromSqft":20,"toSqft":24,"ratePerSqft":3.71},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.41},{"fromSqft":35,"toSqft":49,"ratePerSqft":3.21},{"fromSqft":50,"toSqft":74,"ratePerSqft":3.11},{"fromSqft":75,"toSqft":99,"ratePerSqft":2.99},{"fromSqft":100,"toSqft":199,"ratePerSqft":2.71},{"fromSqft":200,"toSqft":399,"ratePerSqft":2.41},{"fromSqft":400,"toSqft":600,"ratePerSqft":2.25},{"fromSqft":601,"toSqft":999,"ratePerSqft":2.21},{"fromSqft":1000,"toSqft":null,"ratePerSqft":2.12}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":30,"default":false}]},{"code":"banner_material","name":"Banner Material","choices":[{"code":"standard_13_oz_vinyl","label":"Standard 13 oz Vinyl","priceType":"included","value":0,"default":true},{"code":"premium_16_oz_vinyl","label":"Premium 16 oz Vinyl","priceType":"percent","value":30,"default":false}]},{"code":"lamination","name":"Lamination","choices":[{"code":"no_lamination","label":"No Lamination","priceType":"included","value":0,"default":true},{"code":"lamination_outdoor","label":"Lamination (outdoor)","priceType":"percent","value":20,"default":false}]},{"code":"mounting","name":"Mounting","choices":[{"code":"brass_grommets","label":"Brass Grommets","priceType":"included","value":0,"default":true},{"code":"none","label":"None","priceType":"included","value":0,"default":false},{"code":"adhesive_tabs","label":"Adhesive Tabs","priceType":"flat","value":9.99,"default":false},{"code":"pole_pockets","label":"Pole Pockets","priceType":"flat","value":9.99,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_only","label":"Pockets Top Only","priceType":"included","value":0,"default":true},{"code":"pockets_left_right","label":"Pockets Left & Right","priceType":"included","value":0,"default":false},{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":false}]},{"code":"wind_slits","name":"Wind Slits","choices":[{"code":"no_wind_slits","label":"No Wind Slits","priceType":"included","value":0,"default":true},{"code":"add_wind_slits","label":"Add Wind Slits","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"fabric-banners","label":"Fabric Banners","category":"Banners","desc":"Polyester fabric banner with dye-sublimation print. Wrinkle-resistant, premium look for indoor displays and trade shows.","image":"/product-photos/fabric-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":100,"maxHeight":150,"minimumPrice":35.5,"brackets":[{"fromSqft":4,"toSqft":6,"ratePerSqft":9.1},{"fromSqft":7,"toSqft":9,"ratePerSqft":7.43},{"fromSqft":10,"toSqft":15,"ratePerSqft":5.74},{"fromSqft":16,"toSqft":19,"ratePerSqft":4.63},{"fromSqft":20,"toSqft":24,"ratePerSqft":3.91},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.71},{"fromSqft":35,"toSqft":49,"ratePerSqft":3.61},{"fromSqft":50,"toSqft":74,"ratePerSqft":3.55},{"fromSqft":75,"toSqft":99,"ratePerSqft":3.31},{"fromSqft":100,"toSqft":199,"ratePerSqft":3.21},{"fromSqft":200,"toSqft":299,"ratePerSqft":3.1},{"fromSqft":300,"toSqft":399,"ratePerSqft":2.91},{"fromSqft":400,"toSqft":600,"ratePerSqft":2.85},{"fromSqft":601,"toSqft":999,"ratePerSqft":2.75},{"fromSqft":1000,"toSqft":null,"ratePerSqft":2.71}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":30,"default":false}]},{"code":"mounting","name":"Mounting","choices":[{"code":"brass_grommets","label":"Brass Grommets","priceType":"included","value":0,"default":true},{"code":"none","label":"None","priceType":"included","value":0,"default":false},{"code":"pole_pockets","label":"Pole Pockets","priceType":"flat","value":9.99,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_only","label":"Pockets Top Only","priceType":"included","value":0,"default":true},{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":false},{"code":"pockets_left_right","label":"Pockets Left & Right","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"fence-banners","label":"Fence Banners","category":"Banners","desc":"Custom banner for fences and barriers. Choose solid vinyl or mesh. Great for job sites, ball fields and events.","image":"/product-photos/fence-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":100,"maxHeight":150,"minimumPrice":35.5,"brackets":[{"fromSqft":6,"toSqft":6,"ratePerSqft":6.2},{"fromSqft":7,"toSqft":9,"ratePerSqft":7.51},{"fromSqft":10,"toSqft":15,"ratePerSqft":5.51},{"fromSqft":16,"toSqft":19,"ratePerSqft":4.02},{"fromSqft":20,"toSqft":24,"ratePerSqft":3.71},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.41},{"fromSqft":35,"toSqft":49,"ratePerSqft":3.21},{"fromSqft":50,"toSqft":74,"ratePerSqft":3.11},{"fromSqft":75,"toSqft":99,"ratePerSqft":2.99},{"fromSqft":100,"toSqft":199,"ratePerSqft":2.71},{"fromSqft":200,"toSqft":399,"ratePerSqft":2.41},{"fromSqft":400,"toSqft":600,"ratePerSqft":2.25},{"fromSqft":601,"toSqft":999,"ratePerSqft":2.21},{"fromSqft":1000,"toSqft":null,"ratePerSqft":2.12}]},"options":[{"code":"material","name":"Material","choices":[{"code":"13_oz_vinyl","label":"13 oz Vinyl","priceType":"included","value":0,"default":true},{"code":"8_oz_pvc_mesh","label":"8 oz PVC Mesh","priceType":"percent","value":30,"default":false}]},{"code":"lamination","name":"Lamination","choices":[{"code":"no_lamination","label":"No Lamination","priceType":"included","value":0,"default":true},{"code":"lamination_outdoor","label":"Lamination (outdoor)","priceType":"percent","value":20,"default":false}]},{"code":"mounting","name":"Mounting","choices":[{"code":"brass_grommets","label":"Brass Grommets","priceType":"included","value":0,"default":true},{"code":"none","label":"None","priceType":"included","value":0,"default":false},{"code":"adhesive_tabs","label":"Adhesive Tabs","priceType":"flat","value":9.99,"default":false},{"code":"pole_pockets","label":"Pole Pockets","priceType":"flat","value":9.99,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_only","label":"Pockets Top Only","priceType":"included","value":0,"default":true},{"code":"pockets_left_right","label":"Pockets Left & Right","priceType":"included","value":0,"default":false},{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":false}]},{"code":"wind_slits","name":"Wind Slits","choices":[{"code":"no_wind_slits","label":"No Wind Slits","priceType":"included","value":0,"default":true},{"code":"add_wind_slits","label":"Add Wind Slits","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"outdoor-banners","label":"Outdoor Banners","category":"Banners","desc":"Heavy-duty custom banner built for outdoor promotion. Weather-resistant with hemmed edges and grommets.","image":"/product-photos/outdoor-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":100,"maxHeight":150,"minimumPrice":35.5,"brackets":[{"fromSqft":6,"toSqft":6,"ratePerSqft":6.2},{"fromSqft":7,"toSqft":9,"ratePerSqft":8.261},{"fromSqft":10,"toSqft":15,"ratePerSqft":6.061},{"fromSqft":16,"toSqft":19,"ratePerSqft":4.422},{"fromSqft":20,"toSqft":24,"ratePerSqft":4.081},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.751},{"fromSqft":35,"toSqft":49,"ratePerSqft":3.531},{"fromSqft":50,"toSqft":74,"ratePerSqft":3.421},{"fromSqft":75,"toSqft":99,"ratePerSqft":3.289},{"fromSqft":100,"toSqft":199,"ratePerSqft":2.981},{"fromSqft":200,"toSqft":399,"ratePerSqft":2.651},{"fromSqft":400,"toSqft":600,"ratePerSqft":2.475},{"fromSqft":601,"toSqft":999,"ratePerSqft":2.431},{"fromSqft":1000,"toSqft":null,"ratePerSqft":2.332}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":30,"default":false}]},{"code":"banner_material","name":"Banner Material","choices":[{"code":"standard_13_oz_vinyl","label":"Standard 13 oz Vinyl","priceType":"included","value":0,"default":true},{"code":"premium_16_oz_vinyl","label":"Premium 16 oz Vinyl","priceType":"percent","value":30,"default":false}]},{"code":"mounting","name":"Mounting","choices":[{"code":"brass_grommets","label":"Brass Grommets","priceType":"included","value":0,"default":true},{"code":"none","label":"None","priceType":"included","value":0,"default":false},{"code":"adhesive_tabs","label":"Adhesive Tabs","priceType":"flat","value":9.99,"default":false},{"code":"pole_pockets","label":"Pole Pockets","priceType":"flat","value":9.99,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_only","label":"Pockets Top Only","priceType":"included","value":0,"default":true},{"code":"pockets_left_right","label":"Pockets Left & Right","priceType":"included","value":0,"default":false},{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"pole-banners","label":"Pole Banners","category":"Banners","desc":"Custom printed banner made to hang from light poles and posts. Weather-resistant for street and campus use.","image":"/product-photos/pole-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":2.5,"maxHeight":100,"minimumPrice":35.5,"brackets":[{"fromSqft":6,"toSqft":6,"ratePerSqft":6.2},{"fromSqft":7,"toSqft":9,"ratePerSqft":8.426},{"fromSqft":10,"toSqft":15,"ratePerSqft":6.182},{"fromSqft":16,"toSqft":19,"ratePerSqft":4.51},{"fromSqft":20,"toSqft":24,"ratePerSqft":4.163},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.826},{"fromSqft":35,"toSqft":49,"ratePerSqft":3.602},{"fromSqft":50,"toSqft":74,"ratePerSqft":3.489},{"fromSqft":75,"toSqft":99,"ratePerSqft":3.355},{"fromSqft":100,"toSqft":199,"ratePerSqft":3.041},{"fromSqft":200,"toSqft":null,"ratePerSqft":2.704}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":30,"default":false}]},{"code":"lamination","name":"Lamination","choices":[{"code":"no_lamination","label":"No Lamination","priceType":"included","value":0,"default":true},{"code":"lamination_outdoor","label":"Lamination (outdoor)","priceType":"percent","value":50,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":true}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"vinyl-mesh-banners","label":"Vinyl Mesh Banners","category":"Banners","desc":"8 oz PVC mesh banner that lets wind pass through. Ideal for fences, construction sites and windy locations.","image":"/product-photos/vinyl-mesh-banners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":100,"maxHeight":150,"minimumPrice":35.5,"brackets":[{"fromSqft":4,"toSqft":6,"ratePerSqft":10.47},{"fromSqft":7,"toSqft":9,"ratePerSqft":8.74},{"fromSqft":10,"toSqft":14,"ratePerSqft":7.05},{"fromSqft":15,"toSqft":19,"ratePerSqft":6.31},{"fromSqft":20,"toSqft":24,"ratePerSqft":5.51},{"fromSqft":25,"toSqft":34,"ratePerSqft":4.91},{"fromSqft":35,"toSqft":49,"ratePerSqft":4.75},{"fromSqft":50,"toSqft":74,"ratePerSqft":4.61},{"fromSqft":75,"toSqft":99,"ratePerSqft":4.51},{"fromSqft":100,"toSqft":149,"ratePerSqft":4.45},{"fromSqft":150,"toSqft":211,"ratePerSqft":4.41},{"fromSqft":212,"toSqft":399,"ratePerSqft":4.38},{"fromSqft":400,"toSqft":600,"ratePerSqft":4.31},{"fromSqft":601,"toSqft":999,"ratePerSqft":4.21},{"fromSqft":1000,"toSqft":null,"ratePerSqft":4.11}]},"options":[{"code":"lamination","name":"Lamination","choices":[{"code":"no_lamination","label":"No Lamination","priceType":"included","value":0,"default":true},{"code":"lamination_outdoor","label":"Lamination (outdoor)","priceType":"percent","value":20,"default":false}]},{"code":"mounting","name":"Mounting","choices":[{"code":"brass_grommets","label":"Brass Grommets","priceType":"included","value":0,"default":true},{"code":"none","label":"None","priceType":"included","value":0,"default":false},{"code":"pole_pockets","label":"Pole Pockets","priceType":"flat","value":9.99,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"pockets_top_only","label":"Pockets Top Only","priceType":"included","value":0,"default":true},{"code":"pockets_left_right","label":"Pockets Left & Right","priceType":"included","value":0,"default":false},{"code":"pockets_top_bottom","label":"Pockets Top & Bottom","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"big-head-cutouts","label":"Big Head Cutouts","category":"Custom Signs","desc":"Custom cut-to-shape face cutout sign. Fun for sports games, graduations and parties.","image":"/product-photos/big-head-cutouts.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":36,"maxHeight":36,"minimumPrice":41.5,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":35},{"fromSqft":3,"toSqft":3,"ratePerSqft":26},{"fromSqft":4,"toSqft":4,"ratePerSqft":25.875},{"fromSqft":5,"toSqft":5,"ratePerSqft":20.7},{"fromSqft":6,"toSqft":6,"ratePerSqft":19.5},{"fromSqft":7,"toSqft":7,"ratePerSqft":20.357},{"fromSqft":8,"toSqft":8,"ratePerSqft":17.813},{"fromSqft":9,"toSqft":null,"ratePerSqft":16}]},"options":null,"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":3,"percentOff":12},{"minQty":4,"percentOff":15},{"minQty":5,"percentOff":18}]},{"slug":"gator-boards","label":"Gator Boards","category":"Custom Signs","desc":"Lightweight, warp-resistant foam board sign for presentations, displays and events.","image":"/product-photos/gator-boards.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":44,"maxHeight":92,"minimumPrice":41.5,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":30.1},{"fromSqft":3,"toSqft":3,"ratePerSqft":24},{"fromSqft":4,"toSqft":4,"ratePerSqft":21},{"fromSqft":5,"toSqft":5,"ratePerSqft":17.956},{"fromSqft":6,"toSqft":6,"ratePerSqft":14.963},{"fromSqft":7,"toSqft":7,"ratePerSqft":17.1},{"fromSqft":8,"toSqft":8,"ratePerSqft":14.963},{"fromSqft":9,"toSqft":9,"ratePerSqft":15.07},{"fromSqft":10,"toSqft":10,"ratePerSqft":13.563},{"fromSqft":11,"toSqft":11,"ratePerSqft":12.695},{"fromSqft":12,"toSqft":14,"ratePerSqft":13.578},{"fromSqft":15,"toSqft":15,"ratePerSqft":12.413},{"fromSqft":16,"toSqft":16,"ratePerSqft":12.305},{"fromSqft":17,"toSqft":19,"ratePerSqft":11.581},{"fromSqft":20,"toSqft":20,"ratePerSqft":12.032},{"fromSqft":21,"toSqft":21,"ratePerSqft":11.459},{"fromSqft":22,"toSqft":24,"ratePerSqft":10.977},{"fromSqft":25,"toSqft":25,"ratePerSqft":11.27},{"fromSqft":26,"toSqft":27,"ratePerSqft":10.837},{"fromSqft":28,"toSqft":null,"ratePerSqft":10.406}]},"options":[{"code":"mounting_holes","name":"Mounting Holes","choices":[{"code":"no_holes","label":"No Holes","priceType":"included","value":0,"default":true},{"code":"holes_top_bottom","label":"Holes Top & Bottom","priceType":"flat","value":1.99,"default":false},{"code":"holes_left_right","label":"Holes Left & Right","priceType":"flat","value":1.99,"default":false},{"code":"holes_4_corners","label":"Holes 4 Corners","priceType":"flat","value":3.99,"default":false}]},{"code":"standoffs","name":"Standoffs","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"set_of_2","label":"Set of 2","priceType":"flat","value":6.99,"default":false},{"code":"set_of_4","label":"Set of 4","priceType":"flat","value":12.99,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"poster-signs","label":"Poster Signs","category":"Custom Signs","desc":"Full-color printed poster on premium paper. Standard or custom sizes for retail, office and events.","image":"/product-photos/poster-signs.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":42,"maxHeight":144,"minimumPrice":40,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":27.5},{"fromSqft":3,"toSqft":3,"ratePerSqft":24.3},{"fromSqft":4,"toSqft":4,"ratePerSqft":19.1},{"fromSqft":5,"toSqft":7,"ratePerSqft":15.2},{"fromSqft":8,"toSqft":9,"ratePerSqft":13.1},{"fromSqft":10,"toSqft":12,"ratePerSqft":9.21},{"fromSqft":13,"toSqft":14,"ratePerSqft":8.502},{"fromSqft":15,"toSqft":15,"ratePerSqft":10.332},{"fromSqft":16,"toSqft":16,"ratePerSqft":9.686},{"fromSqft":17,"toSqft":19,"ratePerSqft":9.116},{"fromSqft":20,"toSqft":20,"ratePerSqft":7.749},{"fromSqft":21,"toSqft":21,"ratePerSqft":9.84},{"fromSqft":22,"toSqft":24,"ratePerSqft":9.393},{"fromSqft":25,"toSqft":25,"ratePerSqft":8.266},{"fromSqft":26,"toSqft":26,"ratePerSqft":7.948},{"fromSqft":27,"toSqft":29,"ratePerSqft":9.344},{"fromSqft":30,"toSqft":30,"ratePerSqft":8.41},{"fromSqft":31,"toSqft":31,"ratePerSqft":8.139},{"fromSqft":32,"toSqft":34,"ratePerSqft":7.884},{"fromSqft":35,"toSqft":35,"ratePerSqft":8.547},{"fromSqft":36,"toSqft":36,"ratePerSqft":8.31},{"fromSqft":37,"toSqft":39,"ratePerSqft":8.085},{"fromSqft":40,"toSqft":40,"ratePerSqft":8.726},{"fromSqft":41,"toSqft":41,"ratePerSqft":8.513},{"fromSqft":42,"toSqft":null,"ratePerSqft":8.31}]},"options":[{"code":"paper","name":"Paper","choices":[{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":true},{"code":"canvas","label":"Canvas","priceType":"percent","value":15,"default":false},{"code":"satin","label":"Satin","priceType":"percent","value":35,"default":false}]},{"code":"lamination","name":"Lamination","choices":[{"code":"no_lamination","label":"No Lamination","priceType":"included","value":0,"default":true},{"code":"lamination_outdoor","label":"Lamination (outdoor)","priceType":"percent","value":20,"default":false}]},{"code":"finish_type","name":"Finish Type","choices":[{"code":"print_only","label":"Print Only","priceType":"included","value":0,"default":true},{"code":"mounted","label":"Mounted","priceType":"included","value":0,"default":false},{"code":"framed","label":"Framed","priceType":"included","value":0,"default":false}]},{"code":"mount_board","name":"Mount Board","choices":[{"code":"3_16_black_gator","label":"3/16\" Black Gator","priceType":"percent","value":30,"default":true},{"code":"3_16_white_gator","label":"3/16\" White Gator","priceType":"percent","value":50,"default":false}]},{"code":"frame_width","name":"Frame Width","choices":[{"code":"1_25","label":"1.25\"","priceType":"included","value":0,"default":true},{"code":"1_5","label":"1.5\"","priceType":"included","value":0,"default":false},{"code":"2","label":"2\"","priceType":"included","value":0,"default":false}]},{"code":"frame_style","name":"Frame Style","choices":[{"code":"simple_black_1_25","label":"Simple Black 1.25\"","priceType":"percent","value":50,"default":true},{"code":"simple_natural_1_25","label":"Simple Natural 1.25\"","priceType":"percent","value":50,"default":false},{"code":"traditional_faux_cherry_1_5","label":"Traditional Faux Cherry 1.5\"","priceType":"percent","value":60,"default":false},{"code":"traditional_black_1_5","label":"Traditional Black 1.5\"","priceType":"percent","value":60,"default":false},{"code":"traditional_black_angled_2","label":"Traditional Black Angled 2\"","priceType":"percent","value":70,"default":false},{"code":"simple_white_2","label":"Simple White 2\"","priceType":"percent","value":70,"default":false}]},{"code":"glazing","name":"Glazing","choices":[{"code":"no_glazing","label":"No Glazing","priceType":"included","value":0,"default":true},{"code":"acrylic","label":"Acrylic","priceType":"included","value":0,"default":false}]},{"code":"mount_color","name":"Mount Color","choices":[{"code":"black","label":"Black","priceType":"included","value":0,"default":true},{"code":"white","label":"White","priceType":"included","value":0,"default":false}]},{"code":"mat","name":"Mat","choices":[{"code":"no_mat","label":"No Mat","priceType":"included","value":0,"default":true},{"code":"spice_cream","label":"Spice Cream","priceType":"percent","value":20,"default":false},{"code":"midnight_blue","label":"Midnight Blue","priceType":"percent","value":20,"default":false},{"code":"smooth_black","label":"Smooth Black","priceType":"percent","value":20,"default":false},{"code":"white","label":"White","priceType":"percent","value":20,"default":false}]},{"code":"hanging","name":"Hanging","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"easel_back","label":"Easel Back","priceType":"flat","value":6,"default":false},{"code":"floating_hanger","label":"Floating Hanger","priceType":"flat","value":11,"default":false},{"code":"steel_standoffs_1","label":"Steel Standoffs 1\"","priceType":"flat","value":31,"default":false},{"code":"steel_standoffs_5_8","label":"Steel Standoffs 5/8\"","priceType":"flat","value":21,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"pvc-foam-board-signs","label":"PVC Foam Board Signs","category":"Custom Signs","desc":"Rigid PVC foam board sign printed in full color. Lightweight for indoor signage and displays.","image":"/product-photos/pvc-foam-board-signs.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":48,"maxHeight":72,"minimumPrice":14.37,"brackets":[{"fromSqft":2,"toSqft":4,"ratePerSqft":14.37},{"fromSqft":5,"toSqft":5,"ratePerSqft":14.112},{"fromSqft":6,"toSqft":6,"ratePerSqft":11.76},{"fromSqft":7,"toSqft":7,"ratePerSqft":13.44},{"fromSqft":8,"toSqft":8,"ratePerSqft":11.76},{"fromSqft":9,"toSqft":9,"ratePerSqft":13.067},{"fromSqft":10,"toSqft":14,"ratePerSqft":11.76},{"fromSqft":15,"toSqft":19,"ratePerSqft":12.544},{"fromSqft":20,"toSqft":22,"ratePerSqft":11.76},{"fromSqft":23,"toSqft":23,"ratePerSqft":15.757},{"fromSqft":24,"toSqft":null,"ratePerSqft":15.1}]},"options":[{"code":"material","name":"Material","choices":[{"code":"non_reflective","label":"Non-Reflective","priceType":"included","value":0,"default":true},{"code":"reflective","label":"Reflective","priceType":"percent","value":15,"default":false},{"code":"ultra_reflective","label":"Ultra Reflective","priceType":"percent","value":35,"default":false}]},{"code":"mounting_holes","name":"Mounting Holes","choices":[{"code":"no_holes","label":"No Holes","priceType":"included","value":0,"default":true},{"code":"holes_top_bottom","label":"Holes Top & Bottom","priceType":"flat","value":1.99,"default":false},{"code":"holes_left_right","label":"Holes Left & Right","priceType":"flat","value":1.99,"default":false},{"code":"holes_4_corners","label":"Holes 4 Corners","priceType":"flat","value":3.99,"default":false}]},{"code":"standoffs","name":"Standoffs","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"set_of_2","label":"Set of 2","priceType":"flat","value":6.99,"default":false},{"code":"set_of_4","label":"Set of 4","priceType":"flat","value":12.99,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"sintra-boards","label":"Sintra Boards","category":"Custom Signs","desc":"Durable Sintra PVC board sign. Smooth, rigid and good for indoor or covered outdoor use.","image":"/product-photos/sintra-boards.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":44,"maxHeight":92,"minimumPrice":40.5,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":28},{"fromSqft":3,"toSqft":3,"ratePerSqft":22},{"fromSqft":4,"toSqft":4,"ratePerSqft":19.25},{"fromSqft":5,"toSqft":5,"ratePerSqft":15.75},{"fromSqft":6,"toSqft":6,"ratePerSqft":13.125},{"fromSqft":7,"toSqft":7,"ratePerSqft":15},{"fromSqft":8,"toSqft":8,"ratePerSqft":13.125},{"fromSqft":9,"toSqft":9,"ratePerSqft":13.028},{"fromSqft":10,"toSqft":10,"ratePerSqft":11.725},{"fromSqft":11,"toSqft":11,"ratePerSqft":10.977},{"fromSqft":12,"toSqft":14,"ratePerSqft":11.74},{"fromSqft":15,"toSqft":15,"ratePerSqft":10.733},{"fromSqft":16,"toSqft":16,"ratePerSqft":10.336},{"fromSqft":17,"toSqft":19,"ratePerSqft":9.728},{"fromSqft":20,"toSqft":20,"ratePerSqft":10.107},{"fromSqft":21,"toSqft":21,"ratePerSqft":9.625},{"fromSqft":22,"toSqft":24,"ratePerSqft":9.068},{"fromSqft":25,"toSqft":25,"ratePerSqft":9.31},{"fromSqft":26,"toSqft":26,"ratePerSqft":8.952},{"fromSqft":27,"toSqft":27,"ratePerSqft":8.944},{"fromSqft":28,"toSqft":null,"ratePerSqft":8.625}]},"options":null,"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"yard-signs","label":"Yard Signs","category":"Custom Signs","desc":"Coroplast yard signs for real estate, contractors, and events. 2–3 day turnaround.","image":"/product-photos/yard-signs.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":48,"maxHeight":72,"minimumPrice":40.7,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":23.1},{"fromSqft":3,"toSqft":3,"ratePerSqft":18.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":14.5},{"fromSqft":5,"toSqft":5,"ratePerSqft":13.812},{"fromSqft":6,"toSqft":6,"ratePerSqft":11.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":13.154},{"fromSqft":8,"toSqft":8,"ratePerSqft":11.51},{"fromSqft":9,"toSqft":9,"ratePerSqft":10.567},{"fromSqft":10,"toSqft":12,"ratePerSqft":9.51},{"fromSqft":13,"toSqft":14,"ratePerSqft":9.38},{"fromSqft":15,"toSqft":16,"ratePerSqft":8.224},{"fromSqft":17,"toSqft":17,"ratePerSqft":8.164},{"fromSqft":18,"toSqft":18,"ratePerSqft":7.71},{"fromSqft":19,"toSqft":19,"ratePerSqft":7.905},{"fromSqft":20,"toSqft":null,"ratePerSqft":7.51}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":5,"default":false}]},{"code":"material","name":"Material","choices":[{"code":"non_reflective","label":"Non-Reflective","priceType":"included","value":0,"default":true},{"code":"reflective","label":"Reflective","priceType":"percent","value":25,"default":false},{"code":"high_reflective","label":"High Reflective","priceType":"percent","value":50,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"clear-vehicle-decals","label":"Clear Vehicle Decals","category":"Stickers and Decals","desc":"Clear vinyl vehicle decal for windows and paint.","image":"/product-photos/clear-vehicle-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":240,"maxHeight":240,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"white_ink","name":"White Ink","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"partial_white_ink","label":"Partial White Ink","priceType":"percent","value":35,"default":false},{"code":"full_white_ink","label":"Full White Ink","priceType":"percent","value":35,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"clear-window-clings","label":"Clear Window Clings","category":"Stickers and Decals","desc":"Static cling on clear film. No adhesive, removable and reusable.","image":"/product-photos/clear-window-clings.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"white_ink","name":"White Ink","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"partial_white_ink","label":"Partial White Ink","priceType":"included","value":0,"default":false},{"code":"full_white_ink","label":"Full White Ink","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"clear-window-decals","label":"Clear Window Decals","category":"Stickers and Decals","desc":"Adhesive window decal on clear vinyl.","image":"/product-photos/clear-window-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"white_ink","name":"White Ink","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"partial_white_ink","label":"Partial White Ink","priceType":"included","value":0,"default":false},{"code":"full_white_ink","label":"Full White Ink","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"floor-decals","label":"Floor Decals","category":"Stickers and Decals","desc":"Textured, slip-resistant floor decal for directions, promos and social distancing.","image":"/product-photos/floor-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":360,"maxHeight":1200,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"white_ink","name":"White Ink","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"partial_white_ink","label":"Partial White Ink","priceType":"included","value":0,"default":false},{"code":"full_white_ink","label":"Full White Ink","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"frosted-window-decals","label":"Frosted Window Decals","category":"Stickers and Decals","desc":"Printed frosted window decal for privacy and branding on glass.","image":"/product-photos/frosted-window-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"white_ink","name":"White Ink","choices":[{"code":"none","label":"None","priceType":"included","value":0,"default":true},{"code":"partial_white_ink","label":"Partial White Ink","priceType":"percent","value":35,"default":false},{"code":"full_white_ink","label":"Full White Ink","priceType":"percent","value":35,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"opaque-vehicle-decals","label":"Opaque Vehicle Decals","category":"Stickers and Decals","desc":"White vinyl vehicle decal for bold full-color graphics on cars, vans and trucks.","image":"/product-photos/opaque-vehicle-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":240,"maxHeight":240,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"finish","name":"Finish","choices":[{"code":"matte","label":"Matte","priceType":"included","value":0,"default":true},{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"opaque-window-clings","label":"Opaque Window Clings","category":"Stickers and Decals","desc":"Static cling on white film for bold, full-color window graphics. Removable.","image":"/product-photos/opaque-window-clings.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"opaque-window-decals","label":"Opaque Window Decals","category":"Stickers and Decals","desc":"Adhesive window decal on white vinyl for solid, full-color graphics.","image":"/product-photos/opaque-window-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"application","name":"Application","choices":[{"code":"outside_glass","label":"Outside Glass","priceType":"included","value":0,"default":true},{"code":"inside_glass","label":"Inside Glass","priceType":"included","value":0,"default":false}]},{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"finish","name":"Finish","choices":[{"code":"matte","label":"Matte","priceType":"included","value":0,"default":true},{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"perforated-window-decals","label":"Perforated Window Decals","category":"Stickers and Decals","desc":"One-way vision perforated window decal. Graphic outside, see-through from inside.","image":"/product-photos/perforated-window-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":36,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":25.5},{"fromSqft":3,"toSqft":3,"ratePerSqft":21.3},{"fromSqft":4,"toSqft":4,"ratePerSqft":16.5},{"fromSqft":5,"toSqft":6,"ratePerSqft":13.5},{"fromSqft":7,"toSqft":9,"ratePerSqft":12.5},{"fromSqft":10,"toSqft":14,"ratePerSqft":10.81},{"fromSqft":15,"toSqft":19,"ratePerSqft":10.78},{"fromSqft":20,"toSqft":22,"ratePerSqft":10.75},{"fromSqft":23,"toSqft":24,"ratePerSqft":10.71},{"fromSqft":25,"toSqft":34,"ratePerSqft":10.68},{"fromSqft":35,"toSqft":49,"ratePerSqft":10.65},{"fromSqft":50,"toSqft":50,"ratePerSqft":9.91},{"fromSqft":51,"toSqft":52,"ratePerSqft":9.716},{"fromSqft":53,"toSqft":55,"ratePerSqft":9.349},{"fromSqft":56,"toSqft":61,"ratePerSqft":8.848},{"fromSqft":62,"toSqft":74,"ratePerSqft":7.992},{"fromSqft":75,"toSqft":75,"ratePerSqft":9.81},{"fromSqft":76,"toSqft":77,"ratePerSqft":9.681},{"fromSqft":78,"toSqft":80,"ratePerSqft":9.433},{"fromSqft":81,"toSqft":86,"ratePerSqft":9.083},{"fromSqft":87,"toSqft":99,"ratePerSqft":8.457},{"fromSqft":100,"toSqft":125,"ratePerSqft":9.71},{"fromSqft":126,"toSqft":127,"ratePerSqft":9.633},{"fromSqft":128,"toSqft":130,"ratePerSqft":9.482},{"fromSqft":131,"toSqft":136,"ratePerSqft":9.265},{"fromSqft":137,"toSqft":149,"ratePerSqft":8.859},{"fromSqft":150,"toSqft":175,"ratePerSqft":9.61},{"fromSqft":176,"toSqft":177,"ratePerSqft":9.555},{"fromSqft":178,"toSqft":180,"ratePerSqft":9.448},{"fromSqft":181,"toSqft":186,"ratePerSqft":9.291},{"fromSqft":187,"toSqft":199,"ratePerSqft":8.993},{"fromSqft":200,"toSqft":275,"ratePerSqft":9.01},{"fromSqft":276,"toSqft":277,"ratePerSqft":8.977},{"fromSqft":278,"toSqft":280,"ratePerSqft":8.913},{"fromSqft":281,"toSqft":286,"ratePerSqft":8.818},{"fromSqft":287,"toSqft":299,"ratePerSqft":8.633},{"fromSqft":300,"toSqft":575,"ratePerSqft":8.91},{"fromSqft":576,"toSqft":577,"ratePerSqft":8.895},{"fromSqft":578,"toSqft":580,"ratePerSqft":8.864},{"fromSqft":581,"toSqft":586,"ratePerSqft":8.818},{"fromSqft":587,"toSqft":599,"ratePerSqft":8.728},{"fromSqft":600,"toSqft":null,"ratePerSqft":8.81}]},"options":[{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":11,"percentOff":12},{"minQty":21,"percentOff":15},{"minQty":31,"percentOff":18},{"minQty":51,"percentOff":20}]},{"slug":"wall-decals","label":"Wall Decals","category":"Stickers and Decals","desc":"Adhesive vinyl wall decal for offices, stores and event spaces.","image":"/product-photos/wall-decals.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"finish","name":"Finish","choices":[{"code":"matte","label":"Matte","priceType":"included","value":0,"default":true},{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]},{"slug":"personalized-flags","label":"Personalized Flags","category":"Outdoor Displays","desc":"Custom flag printed with your design, logo or photo.","image":"/product-photos/personalized-flags.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":50,"maxHeight":100,"minimumPrice":35.5,"brackets":[{"fromSqft":5,"toSqft":9,"ratePerSqft":8.47},{"fromSqft":10,"toSqft":14,"ratePerSqft":5.51},{"fromSqft":15,"toSqft":19,"ratePerSqft":4.91},{"fromSqft":20,"toSqft":22,"ratePerSqft":4.1},{"fromSqft":23,"toSqft":24,"ratePerSqft":3.71},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.51},{"fromSqft":35,"toSqft":54,"ratePerSqft":3.11},{"fromSqft":55,"toSqft":74,"ratePerSqft":2.81},{"fromSqft":75,"toSqft":99,"ratePerSqft":2.41},{"fromSqft":100,"toSqft":149,"ratePerSqft":2.1},{"fromSqft":150,"toSqft":199,"ratePerSqft":1.91},{"fromSqft":200,"toSqft":399,"ratePerSqft":1.75},{"fromSqft":400,"toSqft":599,"ratePerSqft":1.61},{"fromSqft":600,"toSqft":null,"ratePerSqft":1.58}]},"options":[{"code":"material","name":"Material","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":35,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"grommets_left_side","label":"Grommets Left Side","priceType":"included","value":0,"default":true},{"code":"grommets_top","label":"Grommets Top","priceType":"included","value":0,"default":false},{"code":"3_pole_pocket_left","label":"3\" Pole Pocket Left","priceType":"included","value":0,"default":false},{"code":"3_pole_pocket_top","label":"3\" Pole Pocket Top","priceType":"included","value":0,"default":false},{"code":"flash_cut_none","label":"Flash Cut (none)","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":3,"percentOff":12},{"minQty":4,"percentOff":15},{"minQty":5,"percentOff":18}]},{"slug":"rectangle-flags","label":"Rectangle Flags","category":"Outdoor Displays","desc":"Custom printed rectangle flag for poles, walls and events.","image":"/product-photos/rectangle-flags.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":50,"maxHeight":100,"minimumPrice":35.5,"brackets":[{"fromSqft":5,"toSqft":9,"ratePerSqft":8.47},{"fromSqft":10,"toSqft":14,"ratePerSqft":5.51},{"fromSqft":15,"toSqft":19,"ratePerSqft":4.91},{"fromSqft":20,"toSqft":22,"ratePerSqft":4.1},{"fromSqft":23,"toSqft":24,"ratePerSqft":3.71},{"fromSqft":25,"toSqft":34,"ratePerSqft":3.51},{"fromSqft":35,"toSqft":54,"ratePerSqft":3.11},{"fromSqft":55,"toSqft":74,"ratePerSqft":2.81},{"fromSqft":75,"toSqft":99,"ratePerSqft":2.41},{"fromSqft":100,"toSqft":149,"ratePerSqft":2.1},{"fromSqft":150,"toSqft":199,"ratePerSqft":1.91},{"fromSqft":200,"toSqft":399,"ratePerSqft":1.75},{"fromSqft":400,"toSqft":599,"ratePerSqft":1.61},{"fromSqft":600,"toSqft":null,"ratePerSqft":1.58}]},"options":[{"code":"print_sides","name":"Print Sides","choices":[{"code":"single_sided","label":"Single Sided","priceType":"included","value":0,"default":true},{"code":"double_sided","label":"Double Sided","priceType":"percent","value":80,"default":false}]},{"code":"finishing","name":"Finishing","choices":[{"code":"3_pole_pocket_left","label":"3\" Pole Pocket Left","priceType":"included","value":0,"default":true},{"code":"grommets_left_side","label":"Grommets Left Side","priceType":"included","value":0,"default":false},{"code":"grommets_top","label":"Grommets Top","priceType":"included","value":0,"default":false},{"code":"3_pole_pocket_top","label":"3\" Pole Pocket Top","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":10},{"minQty":3,"percentOff":12},{"minQty":4,"percentOff":15},{"minQty":5,"percentOff":18}]},{"slug":"table-runners","label":"Table Runners","category":"Trade Show Displays","desc":"Printed fabric table runner to brand any event table.","image":"/product-photos/table-runners.jpg","markup":0.9,"sizes":[],"customSize":{"unit":"ft","maxWidth":5,"maxHeight":12.5,"minimumPrice":40.7,"brackets":[{"fromSqft":6,"toSqft":9,"ratePerSqft":7.1},{"fromSqft":10,"toSqft":14,"ratePerSqft":6.81},{"fromSqft":15,"toSqft":17,"ratePerSqft":5.41},{"fromSqft":18,"toSqft":19,"ratePerSqft":5.1},{"fromSqft":20,"toSqft":24,"ratePerSqft":4.81},{"fromSqft":25,"toSqft":29,"ratePerSqft":4.61},{"fromSqft":30,"toSqft":34,"ratePerSqft":4.31},{"fromSqft":35,"toSqft":49,"ratePerSqft":4.1},{"fromSqft":50,"toSqft":null,"ratePerSqft":3.51}]},"options":[{"code":"edge_finish","name":"Edge Finish","choices":[{"code":"hot_knife_cut","label":"Hot-Knife Cut","priceType":"included","value":0,"default":true},{"code":"stitched_edges","label":"Stitched Edges","priceType":"flat","value":5,"default":false}]},{"code":"fabric_color","name":"Fabric Color","choices":[{"code":"white","label":"White","priceType":"included","value":0,"default":true},{"code":"black","label":"Black","priceType":"included","value":0,"default":false},{"code":"blue","label":"Blue","priceType":"included","value":0,"default":false},{"code":"gray","label":"Gray","priceType":"included","value":0,"default":false},{"code":"pink","label":"Pink","priceType":"included","value":0,"default":false},{"code":"red","label":"Red","priceType":"included","value":0,"default":false},{"code":"green","label":"Green","priceType":"included","value":0,"default":false},{"code":"brown","label":"Brown","priceType":"included","value":0,"default":false},{"code":"orange","label":"Orange","priceType":"included","value":0,"default":false},{"code":"sky_blue","label":"Sky Blue","priceType":"included","value":0,"default":false},{"code":"yellow","label":"Yellow","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":5},{"minQty":6,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15}]}];
+    // Pricing: written by generate-print-page.js (printed vinyl, priced like "wall-decals").
+    const PRODUCT = {"key":"printed-vinyl","label":"Printed Vinyl","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"finish","name":"Finish","choices":[{"code":"matte","label":"Matte","priceType":"included","value":0,"default":true},{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]};
     const MAX_BYTES = 8 * 1024 * 1024;
-    const STORE = { name: 'Fly Visuals — Port Richey, FL store', address: '8132 Cormel St, Port Richey, FL 34668', phone: '(727) 494-6162', phoneHref: 'tel:7274946162' };
-
     const $ = id => document.getElementById(id);
     const fmt = n => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const r2 = n => Math.round(n * 100) / 100;
     const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const S = { qty: 1, fulfill: 'pickup', file: null, imgW: 0, imgH: 0 };
+    const MAX = PRODUCT.customSize.maxWidth;
 
-    const S = { mat: null, options: {}, unit: 'in', qty: 1, fulfill: 'pickup', file: null, imgW: 0, imgH: 0 };
-
-    // ── Materials ──
-    function buildMaterialSelect() {
-      const groups = {};
-      MATERIALS.forEach(m => { (groups[m.category] = groups[m.category] || []).push(m); });
-      $('cp-material').innerHTML = Object.keys(groups).map(cat =>
-        '<optgroup label="' + esc(cat) + '">' + groups[cat].map(m => '<option value="' + m.slug + '">' + esc(m.label) + '</option>').join('') + '</optgroup>'
-      ).join('');
-      const want = new URLSearchParams(location.search).get('material');
-      $('cp-material').value = MATERIALS.some(m => m.slug === want) ? want : 'vinyl-banners';
-      if (!$('cp-material').value) $('cp-material').selectedIndex = 0;
+    function size() {
+      const w = parseFloat($('pv-w').value), h = parseFloat($('pv-h').value);
+      return w > 0 && h > 0 ? { width: r2(w), height: r2(h) } : null;
+    }
+    function price() {
+      const s = size(); if (!s) return null;
+      if (s.width > PRODUCT.customSize.maxWidth || s.height > PRODUCT.customSize.maxHeight) return { err: 'Max size is ' + MAX + ' x ' + PRODUCT.customSize.maxHeight + ' inches.' };
+      try { return calcDisplayPrice(PRODUCT, { custom: s, qty: S.qty }); } catch (e) { return { err: e.message }; }
     }
 
-    function onMaterial() {
-      S.mat = MATERIALS.find(m => m.slug === $('cp-material').value) || MATERIALS[0];
-      S.options = {};
-      (S.mat.options || []).forEach(g => { const d = g.choices.find(c => c.default) || g.choices[0]; if (d) S.options[g.code] = d.code; });
-      $('cp-mat').innerHTML = (S.mat.image ? '<img src="' + S.mat.image + '" alt="">' : '<span></span>') +
-        '<p>' + esc(S.mat.desc) + ' <a href="/products/' + S.mat.slug + '/" target="_blank" rel="noopener">See product</a></p>';
-      const cs = S.mat.customSize;
-      $('cp-max').textContent = 'Max size for ' + S.mat.label + ': ' + cs.maxWidth + ' x ' + cs.maxHeight + ' ' + cs.unit + (cs.unit === 'ft' ? ' (' + cs.maxWidth * 12 + ' x ' + cs.maxHeight * 12 + ' in)' : '') + '.';
-      buildOptions();
-      refresh();
+    function refresh() {
+      const s = size(), p = price();
+      $('qty-display').textContent = S.qty;
+      $('pv-hint').textContent = s ? r2(s.width * s.height / 144) + ' sq ft' + (s.width >= 24 || s.height >= 24 ? ' · ' + r2(s.width / 12) + "' x " + r2(s.height / 12) + "'" : '') : 'Max ' + MAX + ' inches each way.';
+      $('pv-total').textContent = p && !p.err ? fmt(p.subtotal) : '—';
+      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' + (p.qtyDiscountPct ? ' · ' + p.qtyDiscountPct + '% bulk discount' : '') : '';
+      showErr(p && p.err ? p.err : ($('pv-error').dataset.keep ? $('pv-error').textContent : ''));
+      // Only warn when the image will clearly print blurry.
+      const dpi = s && S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) : 0;
+      $('pv-warn').style.display = dpi && dpi < 50 ? 'block' : 'none';
+      if (dpi && dpi < 50) $('pv-warn').textContent = 'Your image is small for this size and may print blurry. We\'ll check it and contact you before printing.';
     }
 
-    function buildOptions() {
-      const groups = S.mat.options || [];
-      $('option-groups').innerHTML = groups.map(g => {
-        const chips = g.choices.map(c => {
-          let add = 'included';
-          if (c.priceType === 'percent' && c.value) add = '+' + c.value + '%';
-          else if (c.priceType === 'flat' && c.value) add = '+' + fmt(c.value * (S.mat.markup || 1));
-          return '<div class="choice-chip ' + (S.options[g.code] === c.code ? 'sel' : '') + '" onclick="selectOption(\'' + g.code + '\',\'' + c.code + '\')"><span class="ch-lbl">' + esc(c.label) + '</span><span class="ch-price">' + add + '</span></div>';
-        }).join('');
-        return '<div class="opt-group"><span class="field-label">' + esc(g.name) + '</span><div class="choice-row">' + chips + '</div></div>';
-      }).join('');
-    }
-    function selectOption(g, c) { S.options[g] = c; buildOptions(); refresh(); }
-
-    // ── Size ──
-    function setUnit(u) {
-      const w = parseFloat($('cp-w').value), h = parseFloat($('cp-h').value);
-      if (u !== S.unit) {
-        const f = u === 'ft' ? 1 / 12 : 12;
-        if (w > 0) $('cp-w').value = r2(w * f);
-        if (h > 0) $('cp-h').value = r2(h * f);
-      }
-      S.unit = u;
-      $('u-in').classList.toggle('sel', u === 'in');
-      $('u-ft').classList.toggle('sel', u === 'ft');
-      refresh();
-    }
-    function onDim(which) {
-      if ($('cp-lock').checked && S.imgW && S.imgH) {
-        const ratio = S.imgH / S.imgW;
-        const w = parseFloat($('cp-w').value), h = parseFloat($('cp-h').value);
-        if (which === 'w' && w > 0) $('cp-h').value = r2(w * ratio);
-        if (which === 'h' && h > 0) $('cp-w').value = r2(h / ratio);
-      }
-      refresh();
-    }
-    // Size in inches as typed
-    function sizeIn() {
-      const w = parseFloat($('cp-w').value), h = parseFloat($('cp-h').value);
-      if (!(w > 0 && h > 0)) return null;
-      const f = S.unit === 'ft' ? 12 : 1;
-      return { w: w * f, h: h * f };
-    }
-    // Size in the material's own pricing unit
-    function sizeInMatUnit() {
-      const s = sizeIn(); if (!s) return null;
-      const f = S.mat.customSize.unit === 'ft' ? 1 / 12 : 1;
-      return { width: r2(s.w * f), height: r2(s.h * f) };
-    }
-    function niceSize(s) {
-      const ft = v => r2(v / 12);
-      return r2(s.w) + '" x ' + r2(s.h) + '"' + (s.w >= 24 || s.h >= 24 ? ' (' + ft(s.w) + "' x " + ft(s.h) + "')" : '');
-    }
-
-    // ── Quantity ──
     function changeQty(d) { S.qty = Math.max(1, Math.min(1000, S.qty + d)); refresh(); }
+    function setFulfill(v) { S.fulfill = v; $('f-pickup').classList.toggle('sel', v === 'pickup'); $('f-ship').classList.toggle('sel', v === 'ship'); }
 
-    // ── Pickup / shipping ──
-    function setFulfill(v) { S.fulfill = v; renderFulfillment(); refresh(); }
-    function renderFulfillment() {
-      const html =
-        '<button type="button" class="ful-opt' + (S.fulfill === 'pickup' ? ' sel' : '') + '" onclick="setFulfill(\'pickup\')">' +
-          '<div class="ful-head"><span class="ful-radio"></span>In-Store Pickup<span class="ful-price">FREE</span></div>' +
-          '<div class="ful-detail"><strong>' + STORE.name + '</strong><br>' + STORE.address + '<br><a href="' + STORE.phoneHref + '" onclick="event.stopPropagation()">' + STORE.phone + '</a><br>We\'ll text or email you when it\'s ready.</div>' +
-        '</button>' +
-        '<button type="button" class="ful-opt' + (S.fulfill === 'ship' ? ' sel' : '') + '" onclick="setFulfill(\'ship\')">' +
-          '<div class="ful-head"><span class="ful-radio"></span>Ship to Me<span class="ful-price">QUOTED</span></div>' +
-          '<div class="ful-detail">Lower 48 only. You\'ll enter your address at checkout, and we\'ll email your shipping cost to approve before it ships. <a href="/shipping-policy/" onclick="event.stopPropagation()">Shipping policy</a></div>' +
-        '</button>';
-      document.querySelectorAll('.ful-choices').forEach(el => { el.innerHTML = html; });
-    }
-
-    // ── Upload ──
-    function setupDrop() {
-      const drop = $('cp-drop'), input = $('cp-input');
-      input.addEventListener('change', () => { if (input.files[0]) takeFile(input.files[0]); });
-      ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('drag'); }));
-      ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('drag'); }));
-      drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) takeFile(f); });
-    }
     function takeFile(f) {
+      if (f.size > MAX_BYTES) { showErr('That file is ' + (f.size / 1048576).toFixed(1) + ' MB. Max is 8 MB.', true); return; }
       showErr('');
-      if (f.size > MAX_BYTES) { showErr('That file is ' + (f.size / 1048576).toFixed(1) + ' MB. The limit is 8 MB. Save a smaller JPG or PNG, or email the file to flyvisualsfl@gmail.com after you order.'); return; }
-      S.file = f; S.imgW = 0; S.imgH = 0;
-      $('cp-fname').textContent = f.name;
-      $('cp-fmeta').textContent = (f.size / 1048576).toFixed(2) + ' MB';
-      $('cp-thumb').style.backgroundImage = ''; $('cp-thumb').textContent = (f.name.split('.').pop() || '').toUpperCase();
-      $('cp-drop').style.display = 'none'; $('cp-file').classList.add('show');
+      S.file = f; S.imgW = S.imgH = 0;
+      $('pv-fname').textContent = f.name;
+      $('pv-thumb').style.backgroundImage = ''; $('pv-thumb').textContent = (f.name.split('.').pop() || '').toUpperCase();
+      $('pv-drop').style.display = 'none'; $('pv-file').classList.add('show');
       if (/^image\/(jpeg|png|webp|gif|svg\+xml|bmp)$/.test(f.type)) {
         const url = URL.createObjectURL(f), img = new Image();
         img.onload = () => {
           S.imgW = img.naturalWidth; S.imgH = img.naturalHeight;
-          $('cp-thumb').style.backgroundImage = 'url(' + url + ')'; $('cp-thumb').textContent = '';
-          $('cp-fmeta').textContent = (f.size / 1048576).toFixed(2) + ' MB · ' + S.imgW + ' x ' + S.imgH + ' px';
-          if (!sizeIn()) { // suggest a starting size: long side 24", same shape as the image
-            const long = Math.max(S.imgW, S.imgH), k = 24 / long;
-            setUnit('in'); $('cp-w').value = r2(S.imgW * k); $('cp-h').value = r2(S.imgH * k);
-          } else onDim('w');
+          $('pv-thumb').style.backgroundImage = 'url(' + url + ')'; $('pv-thumb').textContent = '';
+          if (!size()) { // start them at 24" on the long side, same shape as the image
+            const k = 24 / Math.max(S.imgW, S.imgH);
+            $('pv-w').value = r2(S.imgW * k); $('pv-h').value = r2(S.imgH * k);
+          }
           refresh();
         };
         img.src = url;
       }
       refresh();
     }
-    function clearFile() {
-      S.file = null; S.imgW = S.imgH = 0; $('cp-input').value = '';
-      $('cp-file').classList.remove('show'); $('cp-drop').style.display = '';
-      refresh();
-    }
-    // Effective print resolution = image pixels / print inches
-    function resolution() {
-      const s = sizeIn();
-      if (!s || !S.imgW) return null;
-      return Math.round(Math.min(S.imgW / s.w, S.imgH / s.h));
-    }
+    function clearFile() { S.file = null; S.imgW = S.imgH = 0; $('pv-input').value = ''; $('pv-file').classList.remove('show'); $('pv-drop').style.display = ''; refresh(); }
 
-    // ── Price ──
-    function priceNow() {
-      const sz = sizeInMatUnit(); if (!sz) return { err: null, p: null };
-      const cs = S.mat.customSize;
-      if (sz.width > cs.maxWidth || sz.height > cs.maxHeight) return { err: 'Too big for ' + S.mat.label + '. Max is ' + cs.maxWidth + ' x ' + cs.maxHeight + ' ' + cs.unit + '. Try a smaller size or a different material.', p: null };
-      try { return { err: null, p: calcDisplayPrice(S.mat, { custom: sz, options: S.options, qty: S.qty }) }; }
-      catch (e) { return { err: e.message, p: null }; }
-    }
-
-    function refresh() {
-      if (!S.mat) return;
-      const s = sizeIn(), pr = priceNow(), p = pr.p;
-      $('qty-display').textContent = S.qty;
-      $('sp-mat').textContent = S.mat.label;
-      $('sp-size').textContent = s ? niceSize(s) : '—';
-      $('sp-area').textContent = s ? r2(s.w * s.h / 144) + ' sq ft' : '—';
-      $('sp-opts').innerHTML = (S.mat.options || []).map(g => {
-        const c = g.choices.find(x => x.code === S.options[g.code]);
-        return c ? '<div class="sum-row"><span class="sr-lbl">' + esc(g.name) + '</span><span class="sr-val">' + esc(c.label) + '</span></div>' : '';
-      }).join('');
-      $('sp-qty').textContent = S.qty;
-      $('sp-each').textContent = p ? fmt(p.each) : '—';
-      $('sp-disc').textContent = p && p.qtyDiscountPct ? p.qtyDiscountPct + '% off' : 'None';
-      $('sp-img').textContent = S.file ? 'Uploaded' : 'Not uploaded';
-      $('sp-ful-lbl').textContent = S.fulfill === 'ship' ? 'Shipping' : 'Pickup';
-      $('sp-ful').textContent = S.fulfill === 'ship' ? 'Quoted by email' : 'Free';
-      $('sp-total').textContent = p ? fmt(p.subtotal) : '—';
-      $('mpb-price').textContent = p ? fmt(p.subtotal) : '—';
-      if (pr.err) showErr(pr.err); else if ($('cp-error').dataset.kind === 'size') showErr('');
-      if (pr.err) $('cp-error').dataset.kind = 'size';
-
-      // Volume tiers
-      const tiers = S.mat.quantityDiscounts || [];
-      const act = tiers.slice().reverse().find(t => S.qty >= t.minQty);
-      $('vol-tiers').innerHTML = tiers.map(t => '<div class="vol-badge' + (act === t ? ' active' : '') + '">' + t.minQty + '+ (' + t.percentOff + '% off)</div>').join('');
-
-      // Resolution check
-      const dpi = resolution(), el = $('cp-res');
-      el.className = 'cp-res';
-      if (dpi) {
-        if (dpi >= 100) { el.classList.add('good'); el.textContent = 'Image quality looks great at this size (' + dpi + ' pixels per inch).'; }
-        else if (dpi >= 50) { el.classList.add('fair'); el.textContent = 'Image quality is OK at this size (' + dpi + ' pixels per inch). Fine for banners seen from a few feet away; may look soft up close.'; }
-        else { el.classList.add('low'); el.textContent = 'Low resolution at this size (' + dpi + ' pixels per inch). It will likely print blurry. Upload a larger image or pick a smaller size, and we\'ll check it before printing.'; }
-      }
-    }
-
-    // ── Submit ──
-    function showErr(msg) { const el = $('cp-error'); el.textContent = msg; el.style.display = msg ? 'block' : 'none'; el.dataset.kind = ''; }
+    function showErr(msg, keep) { const el = $('pv-error'); el.textContent = msg; el.style.display = msg ? 'block' : 'none'; el.dataset.keep = keep ? '1' : ''; }
     function orderId() {
       const d = new Date(), pad = n => String(n).padStart(2, '0');
       return 'FV-' + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
     }
 
     async function submitOrder() {
-      const name = $('cp-name').value.trim(), email = $('cp-email').value.trim(), phone = $('cp-phone').value.trim();
-      const pr = priceNow(), s = sizeIn(), sz = sizeInMatUnit();
-      if (!S.file) { showErr('Please upload your image first.'); $('cp-drop').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-      if (!s) { showErr('Please enter the width and height you need.'); $('cp-w').focus(); return; }
-      if (pr.err || !pr.p) { showErr(pr.err || 'Could not price that size. Call (727) 494-6162.'); return; }
-      if (!name || !phone || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { showErr('Please fill in your name, phone and a valid email.'); $('cp-name').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      const name = $('pv-name').value.trim(), phone = $('pv-phone').value.trim(), email = $('pv-email').value.trim();
+      const s = size(), p = price();
+      if (!S.file) return showErr('Please upload your image.', true);
+      if (!s) return showErr('Please enter your width and height.', true);
+      if (!p || p.err) return showErr((p && p.err) || 'Please check your size.', true);
+      if (!name || !phone || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return showErr('Please enter your name, phone and email.', true);
       showErr('');
-
-      const id = orderId();
-      const optText = (S.mat.options || []).map(g => { const c = g.choices.find(x => x.code === S.options[g.code]); return c ? g.name + ': ' + c.label : ''; }).filter(Boolean).join('; ');
-      const btns = document.querySelectorAll('#cp-submit, .signs-panel .btn-primary, .mpb-cta');
-      const setBtns = (t, dis) => btns.forEach(b => { b.disabled = dis; b.textContent = t; });
-      setBtns('Uploading your image...', true);
-
+      const id = orderId(), btn = $('pv-submit');
+      btn.disabled = true; btn.textContent = 'Uploading...';
       try {
         const fd = new FormData();
         fd.append('form-name', 'custom-print-order');
         fd.append('order-id', id);
         fd.append('name', name); fd.append('email', email); fd.append('phone', phone);
-        fd.append('material', S.mat.label);
-        fd.append('size', niceSize(s) + ' [priced as ' + sz.width + ' x ' + sz.height + ' ' + S.mat.customSize.unit + ']');
-        fd.append('options', optText);
+        fd.append('material', 'Printed Vinyl');
+        fd.append('size', s.width + '" x ' + s.height + '"');
+        fd.append('options', '');
         fd.append('quantity', String(S.qty));
-        fd.append('image-resolution', resolution() ? resolution() + ' ppi at print size (' + S.imgW + 'x' + S.imgH + ' px)' : 'n/a (not a previewable image)');
-        fd.append('total', fmt(pr.p.subtotal) + (S.fulfill === 'ship' ? ' + shipping (quoted)' : ''));
-        fd.append('fulfillment', S.fulfill === 'ship' ? 'Ship to customer (quote shipping by email)' : 'In-store pickup, Port Richey');
-        fd.append('notes', $('cp-notes').value.trim());
+        fd.append('image-resolution', S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) + ' ppi (' + S.imgW + 'x' + S.imgH + ' px)' : 'n/a');
+        fd.append('total', fmt(p.subtotal) + (S.fulfill === 'ship' ? ' + shipping (quoted)' : ''));
+        fd.append('fulfillment', S.fulfill === 'ship' ? 'Ship (quote shipping by email)' : 'Pickup, Port Richey');
+        fd.append('notes', '');
         fd.append('artwork', S.file, S.file.name);
         const up = await fetch('/', { method: 'POST', body: fd });
         if (!up.ok) throw new Error('upload');
       } catch (e) {
-        setBtns('Pay Securely with Stripe', false);
-        showErr('We couldn\'t upload your image. Check your connection and try again, or call (727) 494-6162.');
-        return;
+        btn.disabled = false; btn.textContent = 'Pay with Card';
+        return showErr('Upload failed. Please try again or call (727) 494-6162.', true);
       }
-
-      setBtns('Opening secure checkout...', true);
+      btn.textContent = 'Opening checkout...';
       try {
         const r = await fetch('/.netlify/functions/create-checkout', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ orderId: id, slug: S.mat.slug, width: sz.width, height: sz.height, qty: S.qty, options: S.options, fulfillment: S.fulfill, email: email }),
+          body: JSON.stringify({ orderId: id, product: 'printed-vinyl', width: s.width, height: s.height, qty: S.qty, fulfillment: S.fulfill, email: email }),
         });
         const out = await r.json().catch(() => ({}));
-        if (out.url) { window.location.href = out.url; return; }
-        showDone(id, false);
-      } catch (e) {
-        showDone(id, false);
-      }
+        if (out.url) { location.href = out.url; return; }
+      } catch (e) {}
+      showDone(id, false);
     }
 
     function showDone(id, paid) {
-      const box = $('cp-done');
-      box.innerHTML = paid
-        ? '<h2>Payment Received. Thank You!</h2><p>Your order number is <strong>' + esc(id) + '</strong>.</p><p>We\'ll email you a proof within 1 business day. Questions? Call <a href="tel:7274946162">(727) 494-6162</a>.</p>'
-        : '<h2>We Got Your Order</h2><p>Your order number is <strong>' + esc(id) + '</strong> and your image was uploaded.</p><p>Online payment isn\'t available right this minute, so we\'ll call or email you within 1 business day to confirm and take payment. Questions? Call <a href="tel:7274946162">(727) 494-6162</a>.</p>';
-      box.style.display = 'block';
-      $('cp-form').style.display = 'none';
-      if ($('mpb')) $('mpb').style.display = 'none';
+      $('pv-done').innerHTML = paid
+        ? '<h2>Thank You!</h2><p>Payment received for order <strong>' + esc(id) + '</strong>.</p><p>We\'ll email your proof within 1 business day.</p>'
+        : '<h2>Order Received</h2><p>Order <strong>' + esc(id) + '</strong> and your image are saved.</p><p>We\'ll call or email you within 1 business day to take payment.</p>';
+      $('pv-done').style.display = 'block'; $('pv-form').style.display = 'none';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function init() {
-      buildMaterialSelect();
-      setupDrop();
-      setUnit('in');
-      renderFulfillment();
-      onMaterial();
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = $('pv-input'), drop = $('pv-drop');
+      input.addEventListener('change', () => { if (input.files[0]) takeFile(input.files[0]); });
+      ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('drag'); }));
+      ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('drag'); }));
+      drop.addEventListener('drop', e => { if (e.dataTransfer.files[0]) takeFile(e.dataTransfer.files[0]); });
+      refresh();
       const q = new URLSearchParams(location.search);
       if (q.get('paid') === '1') showDone(q.get('order') || '', true);
-      else if (q.get('canceled') === '1') showErr('Checkout was canceled, so you have not been charged. Your image is saved with order ' + (q.get('order') || '') + '. Fill in the form again to pay, or call (727) 494-6162.');
-    }
-    document.addEventListener('DOMContentLoaded', init);
+      else if (q.get('canceled') === '1') showErr('Checkout canceled. You were not charged.', true);
+    });
 
     function toggleMobile() {
       const menu = document.getElementById('mobileMenu');
