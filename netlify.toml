@@ -7,3 +7,9 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Private custom print page: keep out of search engines.
+[[headers]]
+  for = "/logan/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

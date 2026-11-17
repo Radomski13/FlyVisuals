@@ -1,6 +1,6 @@
 // Netlify Function: POST /.netlify/functions/create-checkout
 //
-// Used by the Custom Print page (/custom-print/). Recomputes the price on the
+// Used by the Custom Print page (/logan/). Recomputes the price on the
 // server from products/products-data.json with the same pricing code the
 // product pages use (so a customer can't edit the price in their browser),
 // then creates a Stripe Checkout Session for that exact amount and returns
@@ -102,8 +102,8 @@ exports.handler = async (event) => {
   if (ship) f.append('shipping_address_collection[allowed_countries][0]', 'US');
   const email = String(req.email || '').trim();
   if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) f.append('customer_email', email);
-  f.append('success_url', `${site}/custom-print/?paid=1&order=${encodeURIComponent(orderId)}`);
-  f.append('cancel_url', `${site}/custom-print/?canceled=1&order=${encodeURIComponent(orderId)}`);
+  f.append('success_url', `${site}/logan/?paid=1&order=${encodeURIComponent(orderId)}`);
+  f.append('cancel_url', `${site}/logan/?canceled=1&order=${encodeURIComponent(orderId)}`);
 
   try {
     const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {

@@ -2,7 +2,7 @@
 /**
  * generate-print-page.js
  *
- * Builds the "Custom Print" page at /custom-print/ (dist/custom-print/index.html):
+ * Builds the private "Custom Print" page at /logan/ (dist/logan/index.html, noindex):
  * the customer uploads an image, picks a material, types the size they need,
  * sees the price instantly, and pays through Stripe Checkout.
  *
@@ -24,7 +24,7 @@ const path = require('path');
 const ROOT = __dirname;
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'products', 'products-data.json'), 'utf8'));
 const TPL = fs.readFileSync(path.join(ROOT, 'products', '_product-template.html'), 'utf8');
-const OUT_DIR = path.join(ROOT, 'dist', 'custom-print');
+const OUT_DIR = path.join(ROOT, 'dist', 'logan');
 
 const CATEGORY_ORDER = ['Banners', 'Custom Signs', 'Stickers and Decals', 'Outdoor Displays', 'Trade Show Displays', 'Banner Stands'];
 
@@ -59,9 +59,7 @@ const DESC = 'Upload your image, enter the size you need and get an instant pric
 let head = TPL.slice(0, TPL.indexOf('  <!-- ── NETLIFY FORM DECLARATIONS'))
   .replace('{{SEO_TITLE}}', TITLE)
   .replace('{{SEO_DESCRIPTION}}', DESC)
-  .replace('<meta name="robots" content="index, follow">',
-    '<meta name="robots" content="index, follow">\n  <link rel="canonical" href="https://flyvisualsfl.com/custom-print/">\n' +
-    `  <meta property="og:title" content="Custom Print Upload | Fly Visuals">\n  <meta property="og:description" content="${DESC}">\n  <meta property="og:url" content="https://flyvisualsfl.com/custom-print/">`);
+  .replace('<meta name="robots" content="index, follow">', '<meta name="robots" content="noindex, nofollow">');
 if (head.includes('{{')) throw new Error('Unreplaced placeholder in template head');
 
 const EXTRA_CSS = `
@@ -547,4 +545,4 @@ ${navJs}  </script>
 const html = head + FORM_DECL + nav + MAIN + trustAndFooter + MPB + SCRIPT;
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html, 'utf8');
-console.log(`Wrote dist/custom-print/index.html (${materials.length} materials)`);
+console.log(`Wrote dist/logan/index.html (${materials.length} materials)`);
