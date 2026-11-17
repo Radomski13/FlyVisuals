@@ -1214,15 +1214,7 @@
         </div>
 
         <div class="pv-card">
-          <span class="field-label">4. Pickup or Ship</span>
-          <div class="pv-pills">
-            <button type="button" class="pv-pill sel" id="f-pickup" onclick="setFulfill('pickup')">Pickup<small>Free · Port Richey, FL</small></button>
-            <button type="button" class="pv-pill" id="f-ship" onclick="setFulfill('ship')">Ship to Me<small>Cost emailed to you</small></button>
-          </div>
-        </div>
-
-        <div class="pv-card">
-          <span class="field-label">5. Comments</span>
+          <span class="field-label">4. Comments</span>
           <div class="fg"><textarea id="pv-notes" placeholder="Anything we should know? Colors, text, deadline, how it will be used..."></textarea></div>
         </div>
 
@@ -1256,7 +1248,8 @@
     const fmt = n => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const r2 = n => Math.round(n * 100) / 100;
     const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    const S = { qty: 1, fulfill: 'pickup', file: null, imgW: 0, imgH: 0 };
+    const S = { qty: 1, fulfill: 'pickup', // no pickup/ship choice on this page (Brian 2026-11-17)
+      file: null, imgW: 0, imgH: 0 };
 
     function size() {
       const w = parseFloat($('pv-w').value), h = parseFloat($('pv-h').value);
@@ -1298,7 +1291,6 @@
       refresh();
     }
     function changeQty(d) { S.qty = Math.max(1, Math.min(1000, S.qty + d)); refresh(); }
-    function setFulfill(v) { S.fulfill = v; $('f-pickup').classList.toggle('sel', v === 'pickup'); $('f-ship').classList.toggle('sel', v === 'ship'); }
 
     function takeFile(f) {
       if (f.size > MAX_BYTES) { showErr('That file is ' + (f.size / 1048576).toFixed(1) + ' MB. Max is 8 MB.', true); return; }
