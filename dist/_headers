@@ -1,0 +1,7 @@
+# Private custom print page: keep out of search engines.
+/logan
+  X-Robots-Tag: noindex, nofollow
+/logan/
+  X-Robots-Tag: noindex, nofollow
+/logan/*
+  X-Robots-Tag: noindex, nofollow
