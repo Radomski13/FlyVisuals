@@ -155,6 +155,9 @@ function main() {
   console.log('\nRunning generate-products.js...');
   execSync('node generate-products.js', { cwd: ROOT, stdio: 'inherit' });
 
+  console.log('\nRunning generate-print-page.js...');
+  execSync('node generate-print-page.js', { cwd: ROOT, stdio: 'inherit' });
+
   console.log('\nRunning generate-merchant-feed.js...');
   execSync('node generate-merchant-feed.js', { cwd: ROOT, stdio: 'inherit' });
 

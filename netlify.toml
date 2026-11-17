@@ -1,3 +1,9 @@
 # Netlify serves the generated site in dist/ (no build step).
 [build]
   publish = "dist"
+
+# Serverless functions (Custom Print checkout -> Stripe). Needs the
+# STRIPE_SECRET_KEY environment variable set in Netlify site settings.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

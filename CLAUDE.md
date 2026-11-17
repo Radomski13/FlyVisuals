@@ -227,3 +227,9 @@ Pages are not final — content, copy, and images are still being reviewed and u
 ## Merchant feed titles (2026-11-05)
 - Feed `<title>` = `products/feed-titles.json` SHORT base title (Brian 2026-11-06: keep total under ~70 chars, no size in base) + " - " + size (units added: ft/in lists in that file). Titles were modeled on Bing/Google Shopping sponsored listing titles, fact-checked against each product's catalog description, no competitor brands or unverifiable claims. Edit that file (not the dashboard) and rerun `node generate-merchant-feed.js`.
 - Product pages no longer have a "Your Info" section (name/email/phone/address/notes removed 2026-11-05). Stripe Payment Links must collect phone + shipping address.
+
+## Custom Print upload page (2026-11-17)
+- `/custom-print/` = `dist/custom-print/index.html`, built by `generate-print-page.js` (run by `sync-and-publish.js`; or `node generate-print-page.js`). Customer uploads an image (Netlify form `custom-print-order`, file field `artwork`, 8 MB max), picks a material, types width/height (in or ft), sees an instant price and a print-resolution check, then pays via Stripe Checkout.
+- Materials = every product with `pricing.customSize` in products-data.json (25 as of 2026-11-17), priced with the same pricing.js + price-display.js as product pages. Page chrome (nav/CSS/footer) is copied from `products/_product-template.html` at build time.
+- Payment: `netlify/functions/create-checkout.js` recomputes the price server-side and creates a Stripe Checkout Session (exact amount, phone collected, US shipping address when "Ship to Me"). Needs Netlify env var `STRIPE_SECRET_KEY`; without it the page saves the order + image and tells the customer we'll call to take payment. Order ID (FV-YYYYMMDD-XXXX) is on the Netlify form submission and in the Stripe session metadata/client_reference_id.
+- Linked from a promo box at the top of products.html and added to dist/sitemap.xml.
