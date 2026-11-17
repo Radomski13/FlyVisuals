@@ -5,13 +5,12 @@
  * Builds the private "Printed Vinyl" order page at /logan/ (dist/logan/index.html,
  * noindex, not linked anywhere, not in the sitemap).
  *
- * Deliberately simple: upload an image -> type width x height in inches ->
+ * Deliberately simple: upload an image -> type width x length in inches ->
  * quantity -> pickup or ship -> name/phone/email -> pay with Stripe.
  *
- *  - Pricing = the "wall-decals" product in products/products-data.json
- *    (printed white adhesive vinyl, per-sq-ft brackets) with its default options,
- *    via the same pricing.js + price-display.js the product pages use.
- *    Change PRICE_SOURCE below to price from a different product.
+ *  - Pricing = products/printed-vinyl-pricing.js: $6/sq ft billed at the full
+ *    52" roll width x the customer's length (waste included). That file is
+ *    copied to dist/products/ and also used by the checkout function.
  *  - Page chrome (head CSS, navbar, footer, mobile-menu JS) is copied from
  *    products/_product-template.html so it matches the product pages.
  *  - The image + order details go to the Netlify form "custom-print-order"
@@ -24,22 +23,13 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
-const PRICE_SOURCE = 'wall-decals'; // keep in sync with ALIASES in netlify/functions/create-checkout.js
-const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'products', 'products-data.json'), 'utf8'));
 const TPL = fs.readFileSync(path.join(ROOT, 'products', '_product-template.html'), 'utf8');
 const OUT_DIR = path.join(ROOT, 'dist', 'logan');
 
-const src = DATA.products.find((p) => p.slug === PRICE_SOURCE);
-if (!src || !src.pricing.customSize) throw new Error(`Price source "${PRICE_SOURCE}" missing or has no customSize`);
-const PRODUCT = {
-  key: 'printed-vinyl',
-  label: 'Printed Vinyl',
-  markup: src.pricing.markup != null ? src.pricing.markup : 1,
-  sizes: [],
-  customSize: src.pricing.customSize, // unit: in
-  options: src.pricing.options || null, // defaults are used; customer doesn't pick
-  quantityDiscounts: src.pricing.quantityDiscounts || [],
-};
+// Copy the shared pricing file into the published site.
+fs.mkdirSync(path.join(ROOT, 'dist', 'products'), { recursive: true });
+fs.copyFileSync(path.join(ROOT, 'products', 'printed-vinyl-pricing.js'), path.join(ROOT, 'dist', 'products', 'printed-vinyl-pricing.js'));
+const { PV } = require('./products/printed-vinyl-pricing.js');
 
 function between(s, a, b) {
   const i = s.indexOf(a), j = s.indexOf(b, i + 1);
@@ -139,8 +129,8 @@ const MAIN = `  <main id="store-main">
         <div class="pv-card">
           <span class="field-label">2. Size (inches)</span>
           <div class="pv-row">
-            <div class="fg"><label for="pv-w">Width</label><input type="number" id="pv-w" min="1" step="0.25" inputmode="decimal" placeholder="24" oninput="refresh()"></div>
-            <div class="fg"><label for="pv-h">Height</label><input type="number" id="pv-h" min="1" step="0.25" inputmode="decimal" placeholder="12" oninput="refresh()"></div>
+            <div class="fg"><label for="pv-w">Width (max ${PV.ROLL_WIDTH_IN}")</label><input type="number" id="pv-w" min="1" max="${PV.ROLL_WIDTH_IN}" step="0.25" inputmode="decimal" placeholder="24" oninput="refresh()"></div>
+            <div class="fg"><label for="pv-h">Length</label><input type="number" id="pv-h" min="1" step="0.25" inputmode="decimal" placeholder="12" oninput="refresh()"></div>
           </div>
           <div class="pv-hint" id="pv-hint"></div>
           <div class="pv-warn" id="pv-warn"></div>
@@ -185,18 +175,15 @@ const MAIN = `  <main id="store-main">
 
 `;
 
-const SCRIPT = `  <script src="/products/pricing.js"></script>
-  <script src="/products/price-display.js"></script>
+const SCRIPT = `  <script src="/products/printed-vinyl-pricing.js"></script>
   <script>
-    // Pricing: written by generate-print-page.js (printed vinyl, priced like "${PRICE_SOURCE}").
-    const PRODUCT = ${JSON.stringify(PRODUCT)};
+    // Pricing lives in /products/printed-vinyl-pricing.js (shared with the checkout function).
     const MAX_BYTES = 8 * 1024 * 1024;
     const $ = id => document.getElementById(id);
     const fmt = n => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const r2 = n => Math.round(n * 100) / 100;
     const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const S = { qty: 1, fulfill: 'pickup', file: null, imgW: 0, imgH: 0 };
-    const MAX = PRODUCT.customSize.maxWidth;
 
     function size() {
       const w = parseFloat($('pv-w').value), h = parseFloat($('pv-h').value);
@@ -204,16 +191,17 @@ const SCRIPT = `  <script src="/products/pricing.js"></script>
     }
     function price() {
       const s = size(); if (!s) return null;
-      if (s.width > PRODUCT.customSize.maxWidth || s.height > PRODUCT.customSize.maxHeight) return { err: 'Max size is ' + MAX + ' x ' + PRODUCT.customSize.maxHeight + ' inches.' };
-      try { return calcDisplayPrice(PRODUCT, { custom: s, qty: S.qty }); } catch (e) { return { err: e.message }; }
+      return printedVinylPrice(s.width, s.height, S.qty);
     }
 
     function refresh() {
       const s = size(), p = price();
       $('qty-display').textContent = S.qty;
-      $('pv-hint').textContent = s ? r2(s.width * s.height / 144) + ' sq ft' + (s.width >= 24 || s.height >= 24 ? ' · ' + r2(s.width / 12) + "' x " + r2(s.height / 12) + "'" : '') : 'Max ' + MAX + ' inches each way.';
+      $('pv-hint').textContent = p && !p.err
+        ? 'Billed at the full ' + PV.ROLL_WIDTH_IN + '" roll width: ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft x $' + PV.RATE_PER_SQFT + '/sq ft (includes ' + p.wasteSqft + ' sq ft of trim waste).'
+        : 'Printed on a ' + PV.ROLL_WIDTH_IN + '" roll. Price = ' + PV.ROLL_WIDTH_IN + '" x your length at $' + PV.RATE_PER_SQFT + '/sq ft.';
       $('pv-total').textContent = p && !p.err ? fmt(p.subtotal) : '—';
-      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' + (p.qtyDiscountPct ? ' · ' + p.qtyDiscountPct + '% bulk discount' : '') : '';
+      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' : '';
       showErr(p && p.err ? p.err : ($('pv-error').dataset.keep ? $('pv-error').textContent : ''));
       // Only warn when the image will clearly print blurry.
       const dpi = s && S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) : 0;
@@ -237,7 +225,7 @@ const SCRIPT = `  <script src="/products/pricing.js"></script>
           S.imgW = img.naturalWidth; S.imgH = img.naturalHeight;
           $('pv-thumb').style.backgroundImage = 'url(' + url + ')'; $('pv-thumb').textContent = '';
           if (!size()) { // start them at 24" on the long side, same shape as the image
-            const k = 24 / Math.max(S.imgW, S.imgH);
+            const k = Math.min(24 / Math.max(S.imgW, S.imgH), PV.ROLL_WIDTH_IN / S.imgW);
             $('pv-w').value = r2(S.imgW * k); $('pv-h').value = r2(S.imgH * k);
           }
           refresh();
@@ -270,7 +258,7 @@ const SCRIPT = `  <script src="/products/pricing.js"></script>
         fd.append('order-id', id);
         fd.append('name', name); fd.append('email', email); fd.append('phone', phone);
         fd.append('material', 'Printed Vinyl');
-        fd.append('size', s.width + '" x ' + s.height + '"');
+        fd.append('size', s.width + '" wide x ' + s.height + '" long (billed ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft)');
         fd.append('options', '');
         fd.append('quantity', String(S.qty));
         fd.append('image-resolution', S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) + ' ppi (' + S.imgW + 'x' + S.imgH + ' px)' : 'n/a');
@@ -324,4 +312,4 @@ ${navJs}  </script>
 const html = head + FORM_DECL + nav + MAIN + footer + SCRIPT;
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(path.join(OUT_DIR, 'index.html'), html, 'utf8');
-console.log('Wrote dist/logan/index.html (Printed Vinyl, priced like ' + PRICE_SOURCE + ')');
+console.log('Wrote dist/logan/index.html (Printed Vinyl, $' + PV.RATE_PER_SQFT + '/sq ft x ' + PV.ROLL_WIDTH_IN + '" roll width)');

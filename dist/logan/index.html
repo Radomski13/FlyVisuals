@@ -1183,8 +1183,8 @@
         <div class="pv-card">
           <span class="field-label">2. Size (inches)</span>
           <div class="pv-row">
-            <div class="fg"><label for="pv-w">Width</label><input type="number" id="pv-w" min="1" step="0.25" inputmode="decimal" placeholder="24" oninput="refresh()"></div>
-            <div class="fg"><label for="pv-h">Height</label><input type="number" id="pv-h" min="1" step="0.25" inputmode="decimal" placeholder="12" oninput="refresh()"></div>
+            <div class="fg"><label for="pv-w">Width (max 52")</label><input type="number" id="pv-w" min="1" max="52" step="0.25" inputmode="decimal" placeholder="24" oninput="refresh()"></div>
+            <div class="fg"><label for="pv-h">Length</label><input type="number" id="pv-h" min="1" step="0.25" inputmode="decimal" placeholder="12" oninput="refresh()"></div>
           </div>
           <div class="pv-hint" id="pv-hint"></div>
           <div class="pv-warn" id="pv-warn"></div>
@@ -1238,18 +1238,15 @@
     </div>
   </footer>
 
-  <script src="/products/pricing.js"></script>
-  <script src="/products/price-display.js"></script>
+  <script src="/products/printed-vinyl-pricing.js"></script>
   <script>
-    // Pricing: written by generate-print-page.js (printed vinyl, priced like "wall-decals").
-    const PRODUCT = {"key":"printed-vinyl","label":"Printed Vinyl","markup":0.9,"sizes":[],"customSize":{"unit":"in","maxWidth":600,"maxHeight":600,"minimumPrice":25,"brackets":[{"fromSqft":2,"toSqft":2,"ratePerSqft":17},{"fromSqft":3,"toSqft":3,"ratePerSqft":14.5},{"fromSqft":4,"toSqft":4,"ratePerSqft":13.1},{"fromSqft":5,"toSqft":5,"ratePerSqft":11.5},{"fromSqft":6,"toSqft":6,"ratePerSqft":9.51},{"fromSqft":7,"toSqft":7,"ratePerSqft":9.03},{"fromSqft":8,"toSqft":8,"ratePerSqft":8.9},{"fromSqft":9,"toSqft":9,"ratePerSqft":8.77},{"fromSqft":10,"toSqft":11,"ratePerSqft":8.63},{"fromSqft":12,"toSqft":14,"ratePerSqft":8.5},{"fromSqft":15,"toSqft":15,"ratePerSqft":6.1},{"fromSqft":16,"toSqft":19,"ratePerSqft":6.01},{"fromSqft":20,"toSqft":20,"ratePerSqft":5.92},{"fromSqft":21,"toSqft":null,"ratePerSqft":5.83}]},"options":[{"code":"shape","name":"Shape","choices":[{"code":"standard_rectangle","label":"Standard (Rectangle)","priceType":"included","value":0,"default":true},{"code":"die_cut_custom_shape","label":"Die-Cut (Custom Shape)","priceType":"percent","value":20,"default":false}]},{"code":"finish","name":"Finish","choices":[{"code":"matte","label":"Matte","priceType":"included","value":0,"default":true},{"code":"gloss","label":"Gloss","priceType":"included","value":0,"default":false}]},{"code":"squeegee_tool","name":"Squeegee Tool","choices":[{"code":"include_squeegee","label":"Include Squeegee","priceType":"included","value":0,"default":true},{"code":"no_squeegee","label":"No Squeegee","priceType":"included","value":0,"default":false}]}],"quantityDiscounts":[{"minQty":2,"percentOff":8},{"minQty":11,"percentOff":10},{"minQty":21,"percentOff":12},{"minQty":31,"percentOff":15},{"minQty":51,"percentOff":18}]};
+    // Pricing lives in /products/printed-vinyl-pricing.js (shared with the checkout function).
     const MAX_BYTES = 8 * 1024 * 1024;
     const $ = id => document.getElementById(id);
     const fmt = n => '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const r2 = n => Math.round(n * 100) / 100;
     const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const S = { qty: 1, fulfill: 'pickup', file: null, imgW: 0, imgH: 0 };
-    const MAX = PRODUCT.customSize.maxWidth;
 
     function size() {
       const w = parseFloat($('pv-w').value), h = parseFloat($('pv-h').value);
@@ -1257,16 +1254,17 @@
     }
     function price() {
       const s = size(); if (!s) return null;
-      if (s.width > PRODUCT.customSize.maxWidth || s.height > PRODUCT.customSize.maxHeight) return { err: 'Max size is ' + MAX + ' x ' + PRODUCT.customSize.maxHeight + ' inches.' };
-      try { return calcDisplayPrice(PRODUCT, { custom: s, qty: S.qty }); } catch (e) { return { err: e.message }; }
+      return printedVinylPrice(s.width, s.height, S.qty);
     }
 
     function refresh() {
       const s = size(), p = price();
       $('qty-display').textContent = S.qty;
-      $('pv-hint').textContent = s ? r2(s.width * s.height / 144) + ' sq ft' + (s.width >= 24 || s.height >= 24 ? ' · ' + r2(s.width / 12) + "' x " + r2(s.height / 12) + "'" : '') : 'Max ' + MAX + ' inches each way.';
+      $('pv-hint').textContent = p && !p.err
+        ? 'Billed at the full ' + PV.ROLL_WIDTH_IN + '" roll width: ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft x $' + PV.RATE_PER_SQFT + '/sq ft (includes ' + p.wasteSqft + ' sq ft of trim waste).'
+        : 'Printed on a ' + PV.ROLL_WIDTH_IN + '" roll. Price = ' + PV.ROLL_WIDTH_IN + '" x your length at $' + PV.RATE_PER_SQFT + '/sq ft.';
       $('pv-total').textContent = p && !p.err ? fmt(p.subtotal) : '—';
-      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' + (p.qtyDiscountPct ? ' · ' + p.qtyDiscountPct + '% bulk discount' : '') : '';
+      $('pv-each').textContent = p && !p.err && S.qty > 1 ? fmt(p.each) + ' each' : '';
       showErr(p && p.err ? p.err : ($('pv-error').dataset.keep ? $('pv-error').textContent : ''));
       // Only warn when the image will clearly print blurry.
       const dpi = s && S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) : 0;
@@ -1290,7 +1288,7 @@
           S.imgW = img.naturalWidth; S.imgH = img.naturalHeight;
           $('pv-thumb').style.backgroundImage = 'url(' + url + ')'; $('pv-thumb').textContent = '';
           if (!size()) { // start them at 24" on the long side, same shape as the image
-            const k = 24 / Math.max(S.imgW, S.imgH);
+            const k = Math.min(24 / Math.max(S.imgW, S.imgH), PV.ROLL_WIDTH_IN / S.imgW);
             $('pv-w').value = r2(S.imgW * k); $('pv-h').value = r2(S.imgH * k);
           }
           refresh();
@@ -1323,7 +1321,7 @@
         fd.append('order-id', id);
         fd.append('name', name); fd.append('email', email); fd.append('phone', phone);
         fd.append('material', 'Printed Vinyl');
-        fd.append('size', s.width + '" x ' + s.height + '"');
+        fd.append('size', s.width + '" wide x ' + s.height + '" long (billed ' + PV.ROLL_WIDTH_IN + '" x ' + s.height + '" = ' + p.billedSqft + ' sq ft)');
         fd.append('options', '');
         fd.append('quantity', String(S.qty));
         fd.append('image-resolution', S.imgW ? Math.round(Math.min(S.imgW / s.width, S.imgH / s.height)) + ' ppi (' + S.imgW + 'x' + S.imgH + ' px)' : 'n/a');

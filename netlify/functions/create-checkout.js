@@ -15,6 +15,7 @@
 
 const DATA = require('../../products/products-data.json');
 const { calcDisplayPrice } = require('../../products/price-display.js');
+const { printedVinylPrice, PV } = require('../../products/printed-vinyl-pricing.js');
 
 const json = (status, body) => ({
   statusCode: status,
@@ -39,18 +40,71 @@ function productFor(slug) {
   };
 }
 
+// Stripe Checkout Session for a single line item (used by Printed Vinyl).
+async function createSession(key, o) {
+  const f = new URLSearchParams();
+  f.append('mode', 'payment');
+  f.append('line_items[0][quantity]', String(o.qty));
+  f.append('line_items[0][price_data][currency]', 'usd');
+  f.append('line_items[0][price_data][unit_amount]', String(o.unitCents));
+  f.append('line_items[0][price_data][product_data][name]', o.name);
+  f.append('line_items[0][price_data][product_data][description]', [o.description, o.ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${o.orderId}`].join(' | ').slice(0, 500));
+  f.append('client_reference_id', o.orderId);
+  f.append('metadata[order_id]', o.orderId);
+  f.append('metadata[material]', o.material);
+  f.append('metadata[size]', o.sizeText);
+  f.append('metadata[qty]', String(o.qty));
+  f.append('metadata[fulfillment]', o.ship ? 'ship' : 'pickup');
+  f.append('payment_intent_data[metadata][order_id]', o.orderId);
+  f.append('payment_intent_data[description]', `${o.orderId}: ${o.name} x${o.qty}`);
+  f.append('phone_number_collection[enabled]', 'true');
+  if (o.ship) f.append('shipping_address_collection[allowed_countries][0]', 'US');
+  const email = String(o.email || '').trim();
+  if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) f.append('customer_email', email);
+  f.append('success_url', `${o.site}/logan/?paid=1&order=${encodeURIComponent(o.orderId)}`);
+  f.append('cancel_url', `${o.site}/logan/?canceled=1&order=${encodeURIComponent(o.orderId)}`);
+  try {
+    const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: f.toString(),
+    });
+    const out = await r.json();
+    if (!r.ok || !out.url) return json(502, { error: 'stripe_error', message: (out.error && out.error.message) || 'Stripe error' });
+    return json(200, { url: out.url, total: o.total, orderId: o.orderId });
+  } catch (e) {
+    return json(502, { error: 'stripe_unreachable' });
+  }
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') return json(405, { error: 'method_not_allowed' });
 
   let req;
   try { req = JSON.parse(event.body || '{}'); } catch (e) { return json(400, { error: 'bad_json' }); }
 
-  // Named products the page can ask for, priced from an existing product's data.
-  const ALIASES = { 'printed-vinyl': { slug: 'wall-decals', label: 'Printed Vinyl' } }; // keep in sync with PRICE_SOURCE in generate-print-page.js
-  const alias = ALIASES[String(req.product || '')];
-  const product = productFor(alias ? alias.slug : String(req.slug || ''));
+  const key = process.env.STRIPE_SECRET_KEY;
+  const site = process.env.URL || 'https://flyvisualsfl.com';
+  const orderId = String(req.orderId || '').replace(/[^A-Za-z0-9-]/g, '').slice(0, 40) || ('FV-' + Date.now());
+  const ship = req.fulfillment === 'ship';
+
+  // ── Printed Vinyl (/logan/): $6/sq ft at the full 52" roll width x length ──
+  if (req.product === 'printed-vinyl') {
+    const pv = printedVinylPrice(req.width, req.height, req.qty);
+    if (pv.err) return json(400, { error: 'bad_size', message: pv.err });
+    if (!key) return json(503, { error: 'not_configured', total: pv.subtotal });
+    const w = Number(req.width), l = Number(req.height);
+    const sizeText = `${w}" W x ${l}" L`;
+    return createSession(key, {
+      orderId, ship, site, email: req.email, qty: pv.qty, unitCents: Math.round(pv.each * 100),
+      name: `Printed Vinyl (${sizeText})`,
+      description: `Billed ${PV.ROLL_WIDTH_IN}" roll width x ${l}" = ${pv.billedSqft} sq ft @ $${PV.RATE_PER_SQFT}/sq ft`,
+      material: 'Printed Vinyl', sizeText, total: pv.subtotal,
+    });
+  }
+
+  const product = productFor(String(req.slug || ''));
   if (!product) return json(400, { error: 'unknown_material' });
-  if (alias) { product.label = alias.label; req.options = {}; }
 
   const cs = product.customSize;
   const width = Number(req.width), height = Number(req.height);
@@ -74,26 +128,22 @@ exports.handler = async (event) => {
     return json(400, { error: 'price_error', message: e.message });
   }
 
-  const key = process.env.STRIPE_SECRET_KEY;
   if (!key) return json(503, { error: 'not_configured', total: price.subtotal });
 
-  const orderId = String(req.orderId || '').replace(/[^A-Za-z0-9-]/g, '').slice(0, 40) || ('FV-' + Date.now());
-  const ship = req.fulfillment === 'ship';
   const optLabels = (product.options || []).map((grp) => {
     const ch = grp.choices.find((c) => c.code === options[grp.code]) || grp.choices.find((c) => c.default) || grp.choices[0];
     return ch ? `${grp.name}: ${ch.label}` : null;
   }).filter(Boolean);
   const sizeText = `${width} x ${height} ${cs.unit}`;
-  const site = process.env.URL || 'https://flyvisualsfl.com';
 
   const f = new URLSearchParams();
   f.append('mode', 'payment');
   f.append('line_items[0][quantity]', String(qty));
   f.append('line_items[0][price_data][currency]', 'usd');
   f.append('line_items[0][price_data][unit_amount]', String(Math.round(price.each * 100)));
-  f.append('line_items[0][price_data][product_data][name]', `${product.label} (${sizeText})`);
+  f.append('line_items[0][price_data][product_data][name]', `Custom Print: ${product.label} (${sizeText})`);
   f.append('line_items[0][price_data][product_data][description]',
-    [alias ? '' : optLabels.join(' · '), ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${orderId}`].filter(Boolean).join(' | ').slice(0, 500));
+    [optLabels.join(' · '), ship ? 'Ship to me' : 'In-store pickup, Port Richey FL', `Order ${orderId}`].filter(Boolean).join(' | ').slice(0, 500));
   f.append('client_reference_id', orderId);
   f.append('metadata[order_id]', orderId);
   f.append('metadata[material]', product.label);
