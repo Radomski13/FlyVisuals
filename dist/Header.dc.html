@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Header</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.fv-nav{display:flex}
+.fv-cta{display:inline-flex}
+.fv-wide{display:inline}
+.fv-burger{display:none}
+.fv-callm{display:none}
+.fv-mwrap{display:none}
+.fv-acc>summary{list-style:none}
+.fv-acc>summary::-webkit-details-marker{display:none}
+.fv-acc[open] .fv-chev{transform:rotate(180deg)}
+.fv-mi:active{background:#F7F7F7}
+.fv-dd{position:relative}
+.fv-ddb{background:none;border:none;font:inherit;color:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:10px 0;margin:0}
+.fv-ddb svg{transition:transform .2s}
+.fv-ddp{display:none;position:absolute;top:100%;left:-18px;z-index:60;padding-top:10px}
+.fv-ddc{background:#FFFFFF;border:1px solid #E5E5E5;border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.14);padding:12px;display:grid;gap:2px}
+.fv-dd:hover .fv-ddp,.fv-dd:focus-within .fv-ddp{display:block}
+.fv-dd:hover .fv-ddb svg,.fv-dd:focus-within .fv-ddb svg{transform:rotate(180deg)}
+.fv-ddc2{grid-template-columns:repeat(2,minmax(0,1fr));width:660px}
+.fv-ddc1{width:380px}
+.fv-di{display:flex;gap:12px;align-items:center;padding:10px;border-radius:8px;text-decoration:none;color:#111111}
+.fv-di:hover,.fv-di:focus{background:#F7F7F7}
+@media (max-width: 960px){
+.fv-nav,.fv-cta{display:none !important}
+.fv-wide{display:none !important}
+.fv-burger{display:inline-flex !important}
+.fv-callm{display:inline-flex !important}
+.fv-topbar{display:none !important}
+.fv-mwrap{display:flex !important}
+}
+@media (max-width: 640px){
+section[style*="padding: 4"],section[style*="padding: 5"],section[style*="padding: 6"],section[style*="padding: 7"],section[style*="padding: 8"],section[style*="padding: 9"]{padding-top:40px !important;padding-bottom:44px !important}
+div[style*="padding: 120px 24px 140px"]{padding-top:28px !important;padding-bottom:84px !important}
+footer[style*="padding: 56px"]{padding-top:40px !important}
+}
+</style>
+</helmet>
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: #1A1A1A; background: #FFFFFF">
+<div class="fv-topbar" style="background: #111111; color: #FFFFFF; font-size: 14px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px">
+<a href="/locations/" class="fv-wide" style="color: #FFFFFF; text-decoration: none">Serving Pasco, Pinellas, Hernando &amp; Hillsborough</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px">
+<a href="/about/" class="fv-wide" style="color: #FFFFFF; text-decoration: none">About Us</a>
+<span class="fv-wide">Mon–Fri 9 AM – 5 PM</span>
+<a href="tel:7274946162" style="color: #FFFFFF; font-weight: 700; text-decoration: none">Call (727) 494-6162</a>
+</div>
+</div>
+</div>
+<header style="background: #FFFFFF; border-bottom: 1px solid #E5E5E5">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="/" style="text-decoration: none; display: flex; align-items: center">
+<img src="/images/fly-visuals-logo.png" alt="Fly Visuals" style="height: 52px; width: auto; display: block">
+</a>
+<nav aria-label="Main" class="fv-nav" style="flex-wrap: wrap; align-items: center; gap: 6px 22px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 15px">
+<div class="fv-dd">
+<button type="button" class="fv-ddb" aria-haspopup="true" style="{{prodStyle}}">Products<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div class="fv-ddp"><div class="fv-ddc fv-ddc2">
+<sc-for list="{{mprod}}" as="x" hint-placeholder-count="4">
+<a href="{{x.href}}" class="fv-di">
+<span style="width: 42px; height: 42px; border-radius: 10px; background: #FDEDED; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#DC1A21" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{x.icon}}"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #111111">{{x.t}}</span><span style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.4; color: #555555">{{x.d}}</span></span>
+</a>
+</sc-for>
+</div></div>
+</div>
+<div class="fv-dd">
+<button type="button" class="fv-ddb" aria-haspopup="true" style="{{servStyle}}">Services<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div class="fv-ddp"><div class="fv-ddc fv-ddc1">
+<sc-for list="{{mserv}}" as="x" hint-placeholder-count="4">
+<a href="{{x.href}}" class="fv-di">
+<span style="width: 42px; height: 42px; border-radius: 10px; background: #FDEDED; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#DC1A21" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{x.icon}}"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="font-size: 15px; font-weight: 700; color: #111111">{{x.t}}</span><span style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.4; color: #555555">{{x.d}}</span></span>
+</a>
+</sc-for>
+</div></div>
+</div>
+<sc-for list="{{links}}" as="l" hint-placeholder-count="4">
+<a href="{{l.href}}" style="{{l.style}}">{{l.label}}</a>
+</sc-for>
+</nav>
+<a href="/contact/" class="fv-cta" style="background: #DC1A21; color: #FFFFFF; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 13px 24px; border-radius: 4px; min-height: 46px; box-sizing: border-box; align-items: center">Request a Quote</a>
+<div class="fv-mwrap" style="align-items: center; gap: 10px">
+<a href="tel:7274946162" class="fv-callm" aria-label="Call (727) 494-6162" style="background: #DC1A21; color: #FFFFFF; text-decoration: none; border-radius: 4px; height: 48px; padding: 0 16px; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; box-sizing: border-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call</a>
+<button type="button" class="fv-burger" aria-label="{{menuLabel}}" aria-expanded="{{expanded}}" onClick="{{toggle}}" style="background: #111111; color: #FFFFFF; border: none; border-radius: 4px; width: 48px; height: 48px; align-items: center; justify-content: center; cursor: pointer">
+<sc-if value="{{closed}}" hint-placeholder-val="{{true}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+</button>
+</div>
+</div>
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}">
+<nav aria-label="Mobile" style="border-top: 1px solid #E5E5E5; padding: 8px 24px 24px; display: flex; flex-direction: column; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px">
+<details class="fv-acc" style="border-bottom: 1px solid #EFEFEF">
+<summary style="padding: 14px 0; display: flex; justify-content: space-between; align-items: center; min-height: 52px; box-sizing: border-box; cursor: pointer; color: #111111">Products<svg class="fv-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform 0.2s"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display: flex; flex-direction: column; padding: 0 0 12px">
+<sc-for list="{{mprod}}" as="x" hint-placeholder-count="4">
+<a href="{{x.href}}" class="fv-mi" style="display: flex; gap: 14px; align-items: center; padding: 10px 6px; border-radius: 8px; text-decoration: none; color: #111111">
+<span style="width: 46px; height: 46px; border-radius: 10px; background: #FDEDED; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC1A21" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{x.icon}}"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 3px; min-width: 0"><span style="font-size: 16px; font-weight: 700; color: #111111">{{x.t}}</span><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.4; color: #555555">{{x.d}}</span></span>
+</a>
+</sc-for>
+</div>
+</details>
+<details class="fv-acc" style="border-bottom: 1px solid #EFEFEF">
+<summary style="padding: 14px 0; display: flex; justify-content: space-between; align-items: center; min-height: 52px; box-sizing: border-box; cursor: pointer; color: #111111">Services<svg class="fv-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform 0.2s"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div style="display: flex; flex-direction: column; padding: 0 0 12px">
+<sc-for list="{{mserv}}" as="x" hint-placeholder-count="4">
+<a href="{{x.href}}" class="fv-mi" style="display: flex; gap: 14px; align-items: center; padding: 10px 6px; border-radius: 8px; text-decoration: none; color: #111111">
+<span style="width: 46px; height: 46px; border-radius: 10px; background: #FDEDED; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC1A21" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{x.icon}}"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 3px; min-width: 0"><span style="font-size: 16px; font-weight: 700; color: #111111">{{x.t}}</span><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.4; color: #555555">{{x.d}}</span></span>
+</a>
+</sc-for>
+</div>
+</details>
+<sc-for list="{{mlinks}}" as="m" hint-placeholder-count="4">
+<a href="{{m.href}}" style="color: #111111; text-decoration: none; padding: 14px 0; border-bottom: 1px solid #EFEFEF; display: flex; justify-content: space-between; align-items: center; min-height: 48px; box-sizing: border-box">{{m.label}}<span aria-hidden="true" style="color: #DC1A21">→</span></a>
+</sc-for>
+<a href="/contact/" style="margin-top: 18px; background: #DC1A21; color: #FFFFFF; text-decoration: none; font-size: 16px; padding: 16px; border-radius: 4px; min-height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center">Request a Quote</a>
+<a href="tel:7274946162" style="margin-top: 10px; border: 2px solid #111111; color: #111111; text-decoration: none; font-size: 16px; padding: 14px; border-radius: 4px; min-height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center">Call (727) 494-6162</a>
+</nav>
+</sc-if>
+</header>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"active":{"editor":"enum","options":["home","products","services","shop","industries","locations","process","financing","gallery","blog","none"],"default":"none"},"$preview":{"width":1440,"height":132}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false }; }
+  renderVals() {
+    var self = this;
+    var active = this.props.active ?? 'none';
+    var items = [
+      { key: 'industries', label: 'Industries', href: '/industries/' },
+      { key: 'locations', label: 'Locations', href: '/locations/' },
+      { key: 'financing', label: 'Financing', href: '/financing/' },
+      { key: 'gallery', label: 'Gallery', href: '/gallery/' }
+    ];
+    var open = this.state.open;
+    var ddStyle = function (on) { return 'color: ' + (on ? '#DC1A21' : '#111111') + '; border-bottom: 3px solid ' + (on ? '#DC1A21' : 'transparent'); };
+    var mprod = [{"t": "Building & Outdoor Signs", "d": "Channel letters, monument, pylon and lightbox signs.", "href": "/business-signs/", "icon": "M3 9l1.5-5h15L21 9M3 9h18M4 9v11h16V9M9 20v-6h6v6"}, {"t": "Vehicle Graphics & Fleet Wraps", "d": "Full and partial wraps, lettering and magnets.", "href": "/vehicle-wraps/", "icon": "M2 6h12v10H2zM14 10h4l3 3v3h-7M8 18a2 2 0 1 1-4 0 2 2 0 0 1 4 0M20 18a2 2 0 1 1-4 0 2 2 0 0 1 4 0"}, {"t": "Car Wraps", "d": "Color change wraps and chrome delete.", "href": "/car-wraps/", "icon": "M5 16h14v-4l-2-5H7l-2 5zM5 12h14M8 16v3M16 16v3M8 14h.01M16 14h.01"}, {"t": "Banners, Flags & Yard Signs", "d": "Vinyl banners, feather flags and yard signs.", "href": "/banners/", "icon": "M5 22V3M5 4h13l-3 4.5L18 13H5"}, {"t": "Custom Stickers & Decals", "d": "Die-cut stickers, labels and vinyl decals.", "href": "/custom-stickers/", "icon": "M14 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9l7-7V5a2 2 0 0 0-2-2h-5M14 21v-5a2 2 0 0 1 2-2h5"}, {"t": "Window Decals & Graphics", "d": "Window lettering, perforated and frosted film.", "href": "/window-graphics/", "icon": "M3 3h18v18H3zM12 3v18M3 12h18"}, {"t": "Office & Indoor Signs", "d": "Lobby logos, wall graphics and ADA signs.", "href": "/indoor-signs/", "icon": "M4 21V3h11v18M15 9h5v12M8 7h3M8 11h3M8 15h3M2 21h20"}, {"t": "Boat Wraps", "d": "Hull wraps, graphics and registration numbers.", "href": "/boat-wraps/", "icon": "M3 16l2 5h14l2-5zM12 3v13M12 4l6 9h-6"}, {"t": "Trade Show Displays", "d": "Banner stands, backdrops and table covers.", "href": "/trade-show-displays/", "icon": "M5 3h14v12H5zM12 15v6M8 21h8"}, {"t": "Order Online", "d": "Yard signs, banners and stickers shipped or picked up.", "href": "/products/", "icon": "M3 3h2l2.5 12h11L21 7H6.2M10 20a1 1 0 1 1-2 0 1 1 0 0 1 2 0M19 20a1 1 0 1 1-2 0 1 1 0 0 1 2 0"}];
+    var mserv = [{"t": "Large Format Printing", "d": "Banners, posters, murals and floor graphics.", "href": "/large-format-printing/", "icon": "M6 9V3h12v6M6 18H4v-8h16v8h-2M6 14h12v7H6z"}, {"t": "Logo & Graphic Design", "d": "Logos and artwork for signs, wraps and print.", "href": "/logo-design/", "icon": "M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"}, {"t": "Sign Repair & Installation", "d": "LED upgrades, new faces and installs.", "href": "/sign-repair-and-installation/", "icon": "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"}];
+    return {
+      open: open, closed: !open, expanded: open ? 'true' : 'false', menuLabel: open ? 'Close menu' : 'Open menu',
+      mprod: mprod, mserv: mserv,
+      mlinks: items.map(function (i) { return { label: i.label, href: i.href }; }),
+      prodStyle: ddStyle(active === 'products' || active === 'shop'), servStyle: ddStyle(active === 'services'),
+      toggle: function () { self.setState({ open: !self.state.open }); },
+      links: items.map(function (i) {
+        var on = i.key === active;
+        return { label: i.label, href: i.href, style: 'color: ' + (on ? '#DC1A21' : '#111111') + '; text-decoration: none; padding: 10px 0; border-bottom: 3px solid ' + (on ? '#DC1A21' : 'transparent') };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

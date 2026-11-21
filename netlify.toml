@@ -1,11 +1,13 @@
-# Netlify serves the generated site in dist/ (no build step).
+# Netlify serves the redesigned site in dist/ (no build step).
+# dist/ is built from the Radomski13/FlyVisuals-Redesign repo (launch/build/build.py --prod)
+# and copied here. Do not run the old generators in this repo: they would write old pages into dist/.
 [build]
   publish = "dist"
+  command = ""
 
-# Serverless functions (Custom Print checkout -> Stripe). Needs the
-# STRIPE_SECRET_KEY environment variable set in Netlify site settings.
+# Serverless functions: shop-checkout (online store -> Stripe) and create-checkout (/logan/ Custom Print).
+# Both need the STRIPE_SECRET_KEY environment variable in Netlify site settings.
 [functions]
-  directory = "netlify/functions"
+  directory = "dist/netlify/functions"
   node_bundler = "esbuild"
-
-# noindex header for /logan/ lives in dist/_headers.
+  included_files = ["dist/netlify/functions/data/**"]

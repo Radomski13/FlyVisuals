@@ -1,3 +1,10 @@
+> **Nov 21, 2026: the redesign is live.** `dist/` now holds the redesigned site, built from the
+> Radomski13/FlyVisuals-Redesign repo (`launch/build/build.py --prod`) and copied here. The old site
+> generators and the Product Manager publish flow (`sync-and-publish.js`, `generate-*.js`) are retired:
+> running them would write old pages into `dist/`. Make site changes in the redesign repo, rebuild, and
+> copy the build into `dist/`. Shop prices now live in the redesign (ShopProduct data and
+> `dist/netlify/functions/data/`).
+
 # Fly Visuals — Claude Project File
 
 ## What This Project Is
