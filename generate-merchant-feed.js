@@ -80,9 +80,11 @@ function sizeWithUnits(slug, label) {
   return label;
 }
 
+// ONE listing per product (Brian 2026-11-23). Price = the size the product page
+// opens with (its first size), so the feed price matches the landing page.
 function buildItem(product, size, unitPrice) {
-  const id = `${product.slug}-${size.key}`;
-  const title = `${FEED_TITLES.titles[product.slug] || product.panelHeading} - ${sizeWithUnits(product.slug, size.label)}`;
+  const id = product.slug;
+  const title = FEED_TITLES.titles[product.slug] || `Custom ${product.panelHeading}`;
   const description = product.catalogCard.desc +
     ` Volume discounts applied automatically at checkout.`;
   const link = `${SITE}/products/${product.slug}/`;
@@ -102,8 +104,7 @@ function buildItem(product, size, unitPrice) {
     `      <g:condition>new</g:condition>`,
     `      <g:identifier_exists>no</g:identifier_exists>`,
     `      <g:google_product_category>${esc(GOOGLE_CATEGORY)}</g:google_product_category>`,
-    `      <g:item_group_id>${esc(product.slug)}</g:item_group_id>`,
-    `      <g:size>${esc(size.label)}</g:size>`,
+    `      <g:size>${esc(sizeWithUnits(product.slug, size.label))}</g:size>`,
     `      <g:pickup_method>${esc(PICKUP_METHOD)}</g:pickup_method>`,
     `      <g:pickup_sla>${esc(PICKUP_SLA)}</g:pickup_sla>`,
     `      <g:store_code>${esc(STORE_CODE)}</g:store_code>`,
@@ -131,21 +132,16 @@ function main() {
       skipped.push(`${product.slug}: no fixed-price sizes to list (only "Custom Size" defined)`);
       continue;
     }
-    for (const size of fixedSizes) {
-      let unitPrice;
-      try {
-        unitPrice = calcDisplayPrice(product.pricing, { size: size.label, qty: 1 }).unit;
-      } catch (e) {
-        skipped.push(`${product.slug} / ${size.label}: could not price this size (${e.message}) — skipped`);
-        continue;
-      }
-      items.push(buildItem(product, size, unitPrice));
-      localRows.push([STORE_CODE, `${product.slug}-${size.key}`, LOCAL_QTY, 'in_stock', PICKUP_METHOD, PICKUP_SLA]);
+    const size = fixedSizes[0]; // the size the product page selects by default
+    let unitPrice;
+    try {
+      unitPrice = calcDisplayPrice(product.pricing, { size: size.label, qty: 1 }).unit;
+    } catch (e) {
+      skipped.push(`${product.slug} / ${size.label}: could not price this size (${e.message}) — skipped`);
+      continue;
     }
-    const customCount = (product.pricing.sizes || []).length - fixedSizes.length;
-    if (customCount > 0) {
-      skipped.push(`${product.slug}: skipped ${customCount} "Custom Size" option(s) — not shoppable listings`);
-    }
+    items.push(buildItem(product, size, unitPrice));
+    localRows.push([STORE_CODE, product.slug, LOCAL_QTY, 'in_stock', PICKUP_METHOD, PICKUP_SLA]);
   }
 
   const xml = [

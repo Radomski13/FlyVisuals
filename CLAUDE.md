@@ -231,8 +231,9 @@ Pages are not final — content, copy, and images are still being reviewed and u
 - Max 3 photos per product (pro / candid / simple). Main photo = dashboard Photo URL (`imageUrl`); up to 2 extras live in `products/product-images.json` (NOT the dashboard, so dashboard edits can't drop them) and are merged by `sync-and-publish.js` into `extraImages`. Product pages show main + thumbnails (`ppShow()` in the template); catalog cards on products.html show the main photo; the feed sends extras as `g:additional_image_link`. Files: `dist/product-photos/<slug>.jpg`, `<slug>-2.jpg`, `<slug>-3.jpg`.
 - Deploy = commit + push to `main`. Do NOT use the Netlify MCP zip-upload deploy for this site: because the site is git-connected, Netlify builds from the repo and ignores the uploaded zip (that's what happened on 2026-11-05).
 
-## Merchant feed titles (2026-11-05)
-- Feed `<title>` = `products/feed-titles.json` SHORT base title (Brian 2026-11-06: keep total under ~70 chars, no size in base) + " - " + size (units added: ft/in lists in that file). Titles were modeled on Bing/Google Shopping sponsored listing titles, fact-checked against each product's catalog description, no competitor brands or unverifiable claims. Edit that file (not the dashboard) and rerun `node generate-merchant-feed.js`.
+## Merchant feed: one listing per product (2026-11-23)
+- Brian 2026-11-23: ONE listing per product (58), not one per size. `g:id` = product slug, no `g:item_group_id`; price = the product's FIRST size (the size the product page selects on load, so feed price = landing page price); `g:size` = that size. Local inventory TSV ids = slugs too. Old per-size ids (slug-size) drop out of Merchant Center on the next fetch.
+- Titles: `products/feed-titles.json` full titles, buying-intent wording ("Custom <product> ... - <key feature>"), under ~70 chars, no size, no promo text. Edit that file (not the dashboard) and rerun `node generate-merchant-feed.js`. (Supersedes the 2026-11-05 per-size titles.)
 - Product pages no longer have a "Your Info" section (name/email/phone/address/notes removed 2026-11-05). Stripe Payment Links must collect phone + shipping address.
 
 ## Printed Vinyl order page /logan/ (2026-11-17)
